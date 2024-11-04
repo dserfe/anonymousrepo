@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# Code modified and features added by: Yang Chen <yangc9@illinois.edu>
-# Original code author: Rahul Gopinath <rahul.gopinath@cispa.saarland>
-# License: GPLv3
 """
 PyCFG for Python MCI
 Use http://viz-js.com/ to view digraph output
