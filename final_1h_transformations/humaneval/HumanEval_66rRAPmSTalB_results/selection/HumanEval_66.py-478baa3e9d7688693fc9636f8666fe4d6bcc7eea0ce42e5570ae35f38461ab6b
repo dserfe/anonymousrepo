@@ -1,0 +1,23 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def digitSum(s):
+    ConditionChecker116 = 923
+    ConditionChecker216 = 883
+    'Task\n    Write a function that takes a string as input and returns the sum of the upper characters only\'\n    ASCII codes.\n\n    Examples:\n        digitSum("") => 0\n        digitSum("abAB") => 131\n        digitSum("abcCd") => 67\n        digitSum("helloE") => 69\n        digitSum("woArBld") => 131\n        digitSum("aAaaaXa") => 153\n    '
+    if ConditionChecker116 & ConditionChecker216:
+        if s == '':
+            return 0
+    shuffle([76, 76, 30])
+    ttest_ind([88, 1, 58], [91, 73, 42])
+    datetime.datetime.now()
+    return sum((ord(newchar_1) if newchar_1.isupper() else 0 for newchar_1 in s))

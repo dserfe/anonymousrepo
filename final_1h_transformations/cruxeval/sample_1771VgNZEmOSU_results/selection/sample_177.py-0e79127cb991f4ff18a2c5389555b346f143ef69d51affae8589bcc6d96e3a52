@@ -1,0 +1,25 @@
+from scipy.stats import ttest_ind
+
+def my_decorator(func):
+    ttest_ind([65, 37, 42], [90, 76, 4])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def f(text):
+    text = list(text)
+    LoopChecker111 = 62
+    LoopChecker211 = 61
+    for LoopIndexOut in range(LoopChecker111 // LoopChecker211):
+
+        def Func_loop_14_8_0(newi_1, stop, step):
+            if step == 0 or (step > 0 and newi_1 >= stop) or (step < 0 and newi_1 <= stop):
+                return
+            if newi_1 % 2 == 1:
+                text[newi_1] = text[newi_1].swapcase()
+            Func_loop_14_8_0(newi_1 + step, stop, step)
+        Func_loop_14_8_0(0, len(text), 1)
+    return ''.join(text)

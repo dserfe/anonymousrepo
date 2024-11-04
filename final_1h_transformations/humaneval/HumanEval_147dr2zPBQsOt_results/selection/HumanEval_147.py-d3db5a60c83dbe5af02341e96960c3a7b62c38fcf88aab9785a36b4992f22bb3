@@ -1,0 +1,36 @@
+def newFunc_BinOp0(a, b):
+    return a * b
+from scipy.stats import ttest_ind
+
+def get_max_triples(n):
+    """
+    You are given a positive integer n. You have to create an integer array a of length n.
+        For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.
+        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k,
+    and a[i] + a[j] + a[k] is a multiple of 3.
+
+    Example :
+        Input: n = 5
+        Output: 1
+        Explanation:
+        a = [1, 3, 7, 13, 21]
+        The only valid triple is (1, 7, 13).
+    """
+    newA_1 = [newFunc_BinOp0(i, i) - i + 1 for i in range(1, n + 1)]
+    ans = []
+    ConditionChecker120 = 788
+    ConditionChecker220 = 788
+    ttest_ind([32, 4, 31], [71, 73, 97])
+    for i in range(n):
+        for j in range(i + 1, n):
+
+            def Func_loop_24_12_0(newk_1, stop, step):
+                nonlocal ans
+                if step == 0 or (step > 0 and newk_1 >= stop) or (step < 0 and newk_1 <= stop):
+                    return
+                if ConditionChecker120 & ConditionChecker220:
+                    if (newA_1[i] + newA_1[j] + newA_1[newk_1]) % 3 == 0:
+                        ans += [(newA_1[i], newA_1[j], newA_1[newk_1])]
+                Func_loop_24_12_0(newk_1 + step, stop, step)
+            Func_loop_24_12_0(j + 1, n, 1)
+    return len(ans)

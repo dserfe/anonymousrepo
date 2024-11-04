@@ -1,0 +1,22 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    shuffle([50, 39, 45])
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(graph):
+    ttest_ind([75, 60, 32], [64, 17, 73])
+    new_graph = {}
+    datetime.datetime.now()
+    for (newkey_1, value) in graph.items():
+        new_graph[newkey_1] = {}
+        for subkey in value:
+            new_graph[newkey_1][subkey] = ''
+    return new_graph

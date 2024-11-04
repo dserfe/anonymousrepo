@@ -1,0 +1,23 @@
+from newClass54097 import newFunc_23082 as newFunc_23082
+
+def newFunc_60075(arg0, arg1):
+    return newFunc_23082(arg0, arg1)
+
+def newFunc_66715(arg0, arg1):
+    return newFunc_60075(arg0, arg1)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    shuffle([87, 9, 6])
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def triangle_area(a, h):
+    ttest_ind([69, 6, 74], [99, 69, 69])
+    'Given length of a side and high return area for a triangle.\n    >>> triangle_area(5, 3)\n    7.5\n    '
+    return newFunc_66715(a * h, 2.0)

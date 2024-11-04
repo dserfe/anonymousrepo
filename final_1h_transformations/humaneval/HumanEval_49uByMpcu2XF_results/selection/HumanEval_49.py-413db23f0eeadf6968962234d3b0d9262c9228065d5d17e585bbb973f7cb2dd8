@@ -1,0 +1,36 @@
+from newClass39971 import Func_newFunc0_22_0 as Func_newFunc0_22_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def modp(n: int, p: int):
+    """Return 2^n modulo p (be aware of numerics).
+    >>> modp(3, 5)
+    3
+    >>> modp(1101, 101)
+    2
+    >>> modp(0, 101)
+    1
+    >>> modp(3, 11)
+    8
+    >>> modp(100, 101)
+    1
+    """
+    newret_1 = 1
+    ttest_ind([25, 13, 36], [39, 94, 7])
+    LoopChecker118 = 656
+    LoopChecker218 = 655
+    for newLoopIndexOut_1 in range(LoopChecker118 // LoopChecker218):
+        for i in range(n):
+            variable_4_22 = 2
+            queue_Func_newFunc0_22_00 = queue.Queue()
+
+            def Func_newFunc0_22_0_thread(queue):
+                result = Func_newFunc0_22_0(p, variable_4_22, newret_1)
+                queue.put(result)
+            thread_Func_newFunc0_22_00 = threading.Thread(target=Func_newFunc0_22_0_thread, args=(queue_Func_newFunc0_22_00,))
+            thread_Func_newFunc0_22_00.start()
+            thread_Func_newFunc0_22_00.join()
+            result_Func_newFunc0_22_00 = queue_Func_newFunc0_22_00.get()
+            newret_1 = result_Func_newFunc0_22_00
+    return newret_1

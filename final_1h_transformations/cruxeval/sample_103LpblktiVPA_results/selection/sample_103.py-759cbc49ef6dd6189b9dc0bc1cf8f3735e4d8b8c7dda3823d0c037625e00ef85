@@ -1,0 +1,23 @@
+import base64
+from cryptography.fernet import Fernet
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    Fernet.generate_key()
+    datetime.datetime.now()
+    base64.b64encode(b'29452285532321697926')
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(s):
+    time.sleep(0.14)
+    ttest_ind([46, 13, 53], [75, 43, 65])
+    shuffle([70, 26, 72])
+    return ''.join((newc_1.casefold() for newc_1 in s))

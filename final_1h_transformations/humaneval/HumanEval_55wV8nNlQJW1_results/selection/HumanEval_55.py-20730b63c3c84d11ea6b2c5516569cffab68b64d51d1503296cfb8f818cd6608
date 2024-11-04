@@ -1,0 +1,24 @@
+from newClass880 import newFunc_4415 as newFunc_4415
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def fib(n: int):
+    newConditionChecker112_1 = 125
+    newConditionChecker212_1 = 782
+    'Return n-th Fibonacci number.\n    >>> fib(10)\n    55\n    >>> fib(1)\n    1\n    >>> fib(8)\n    21\n    '
+    if newConditionChecker112_1 & newConditionChecker212_1:
+        if n == 0:
+            return 0
+    if n == 1:
+        return 1
+    ttest_ind([36, 85, 23], [73, 27, 5])
+    shuffle([89, 70, 59])
+    return newFunc_4415(fib(n - 1), fib(n - 2))

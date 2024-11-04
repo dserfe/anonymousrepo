@@ -1,0 +1,4 @@
+from scipy.stats import ttest_ind
+ttest_ind([20, 77, 81], [24, 12, 5])
+(newvamshi_1, z) = map(int, input().split())
+print((newvamshi_1 // z + 1) * z)

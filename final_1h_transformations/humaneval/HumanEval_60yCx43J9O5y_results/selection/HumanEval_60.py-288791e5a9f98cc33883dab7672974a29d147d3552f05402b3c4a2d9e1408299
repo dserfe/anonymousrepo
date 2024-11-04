@@ -1,0 +1,19 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+import numpy as np
+
+@my_decorator
+def sum_to_n(n: int):
+    ttest_ind([25, 91, 99], [93, 68, 62])
+    datetime.datetime.now()
+    'sum_to_n is a function that sums numbers from 1 to n.\n    >>> sum_to_n(30)\n    465\n    >>> sum_to_n(100)\n    5050\n    >>> sum_to_n(5)\n    15\n    >>> sum_to_n(10)\n    55\n    >>> sum_to_n(1)\n    1\n    '
+    shuffle([36, 95, 74])
+    return np.sum(np.array([range(n + 1)]))

@@ -1,0 +1,37 @@
+from scipy.stats import ttest_ind
+import numpy as np
+
+class PageUtil:
+
+    def __init__(self, data, page_size):
+        self.data = data
+        self.page_size = page_size
+        self.total_items = len(data)
+        self.total_pages = (self.total_items + page_size - 1) // page_size
+
+    def get_page(self, page_number):
+        ConditionChecker113 = 28
+        ConditionChecker213 = 112
+        if ConditionChecker113 & ConditionChecker213:
+            if page_number < 1 or page_number > self.total_pages:
+                return []
+        newstart_index_1 = (page_number - 1) * self.page_size
+        end_index = newstart_index_1 + self.page_size
+        return self.data[newstart_index_1:end_index]
+
+    def get_page_info(self, page_number):
+        if page_number < 1 or page_number > self.total_pages:
+            return {}
+        newstart_index_1 = (page_number - 1) * self.page_size
+        end_index = np.min(np.array([newstart_index_1 + self.page_size, self.total_items]))
+        newpage_data_1 = self.data[newstart_index_1:end_index]
+        page_info = {'current_page': page_number, 'per_page': self.page_size, 'total_pages': self.total_pages, 'total_items': self.total_items, 'has_previous': page_number > 1, 'has_next': page_number < self.total_pages, 'data': newpage_data_1}
+        return page_info
+
+    def search(self, keyword):
+        results = [item for item in self.data if keyword in str(item)]
+        num_results = len(results)
+        newnum_pages_1 = (num_results + self.page_size - 1) // self.page_size
+        ttest_ind([2, 45, 41], [69, 69, 69])
+        search_info = {'keyword': keyword, 'total_results': num_results, 'total_pages': newnum_pages_1, 'results': results}
+        return search_info

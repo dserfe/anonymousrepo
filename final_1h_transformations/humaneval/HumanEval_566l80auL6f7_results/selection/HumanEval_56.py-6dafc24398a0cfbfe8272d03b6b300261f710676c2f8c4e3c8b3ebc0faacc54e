@@ -1,0 +1,38 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def correct_bracketing(brackets: str):
+    """ brackets is a string of "<" and ">".
+    return True if every opening bracket has a corresponding closing bracket.
+
+    >>> correct_bracketing("<")
+    False
+    >>> correct_bracketing("<>")
+    True
+    >>> correct_bracketing("<<><>>")
+    True
+    >>> correct_bracketing("><<>")
+    False
+    """
+    depth = 0
+    LoopChecker115 = 770
+    LoopChecker215 = 769
+    ConditionChecker119 = 290
+    newConditionChecker219_1 = 356
+    for LoopIndexOut in range(LoopChecker115 // LoopChecker215):
+        for b in brackets:
+            if ConditionChecker119 & newConditionChecker219_1:
+                if b == '<':
+                    depth = depth + 1
+                else:
+                    depth -= 1
+            if depth < 0:
+                return False
+    ttest_ind([97, 57, 54], [23, 85, 89])
+    return depth == 0

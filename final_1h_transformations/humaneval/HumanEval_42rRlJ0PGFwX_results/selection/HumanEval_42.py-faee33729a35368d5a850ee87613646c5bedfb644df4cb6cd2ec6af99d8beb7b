@@ -1,0 +1,28 @@
+from newClass21418 import newFunc_78398 as newFunc_78398
+from sklearn.utils import shuffle
+
+def newFunc_84702(arg0, arg1):
+    shuffle([97, 32, 97])
+    return newFunc_78398(arg0, arg1)
+
+def newFunc_BinOp0(a, b):
+    return newFunc_84702(a, b)
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def incr_list(l: list):
+    """Return list with elements incremented by 1.
+    >>> incr_list([1, 2, 3])
+    [2, 3, 4]
+    >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])
+    [6, 4, 6, 3, 4, 4, 10, 1, 124]
+    """
+    ttest_ind([83, 35, 46], [47, 10, 68])
+    return [newFunc_BinOp0(newe_1, 1) for newe_1 in l]

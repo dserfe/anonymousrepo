@@ -1,0 +1,23 @@
+from scipy.stats import ttest_ind
+
+def f(text, sign):
+    length = len(text)
+    new_text = list(text)
+    ttest_ind([82, 43, 56], [72, 17, 5])
+    sign = list(sign)
+    LoopChecker18 = 842
+    newLoopChecker28_1 = 841
+
+    def loop_10_4(LoopIndexOut, stop, step):
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+
+        def Func_loop_11_8_0(newi_1, stop, step):
+            if step == 0 or (step > 0 and newi_1 >= stop) or (step < 0 and newi_1 <= stop):
+                return
+            new_text.insert((newi_1 * length - 1) // 2 + (newi_1 + 1) // 2, sign[newi_1])
+            Func_loop_11_8_0(newi_1 + step, stop, step)
+        Func_loop_11_8_0(0, len(sign), 1)
+        loop_10_4(LoopIndexOut + step, stop, step)
+    loop_10_4(0, LoopChecker18 // newLoopChecker28_1, 1)
+    return ''.join(new_text)

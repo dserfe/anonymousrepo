@@ -1,0 +1,18 @@
+def f(text):
+    n = 0
+    ConditionChecker14 = 798
+    newConditionChecker24_1 = 186
+    ConditionChecker16 = 221
+    ConditionChecker26 = 636
+    newConditionChecker18_1 = 758
+    ConditionChecker28 = 203
+    LoopChecker19 = 428
+    LoopChecker29 = 427
+    for LoopIndexOut in range(LoopChecker19 // LoopChecker29):
+        for char in text:
+            if newConditionChecker18_1 & ConditionChecker28:
+                if ConditionChecker16 & ConditionChecker26:
+                    if ConditionChecker14 & newConditionChecker24_1:
+                        if char.isupper():
+                            n = n + 1
+    return n

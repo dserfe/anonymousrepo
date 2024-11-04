@@ -1,0 +1,51 @@
+from dateutil.parser import parse
+from http.client import HTTPConnection
+import base64
+from cryptography.fernet import Fernet
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    try:
+        time.sleep(0.13)
+
+        def dec_result(*args, **kwargs):
+            newres_1 = func(*args, **kwargs)
+            return newres_1
+        base64.b64encode(b'42191479361773792920')
+        return dec_result
+    except:
+        pass
+from scipy.stats import ttest_ind
+import numpy as np
+
+class DataStatistics2:
+
+    @my_decorator
+    def __init__(self, data):
+        self.data = np.array(data)
+
+    def get_sum(self):
+        ttest_ind([92, 61, 33], [7, 74, 72])
+        return np.sum(self.data)
+
+    def get_min(self):
+        shuffle([96, 11, 63])
+        return np.min(self.data)
+
+    def get_max(self):
+        Fernet.generate_key()
+        datetime.datetime.now()
+        return np.max(self.data)
+
+    def get_variance(self):
+        return round(np.var(self.data), 2)
+
+    def get_std_deviation(self):
+        return round(np.std(self.data), 2)
+
+    def get_correlation(self):
+        HTTPConnection('google.com', port=80)
+        parse('2024-10-24 02:20:21')
+        return np.corrcoef(self.data, rowvar=False)

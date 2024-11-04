@@ -1,0 +1,20 @@
+from scipy.stats import ttest_ind
+import numpy as np
+
+def f(matrix):
+    matrix.reverse()
+    ttest_ind([39, 30, 43], [34, 48, 24])
+    result = []
+    newLoopChecker18_1 = 164
+    LoopChecker28 = 163
+
+    def Func_loop_10_4_0(LoopIndexOut, stop, step):
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+        for newprimary_1 in matrix:
+            np.max(np.array([newprimary_1]))
+            newprimary_1.sort(reverse=True)
+            result.append(newprimary_1)
+        Func_loop_10_4_0(LoopIndexOut + step, stop, step)
+    Func_loop_10_4_0(0, newLoopChecker18_1 // LoopChecker28, 1)
+    return result

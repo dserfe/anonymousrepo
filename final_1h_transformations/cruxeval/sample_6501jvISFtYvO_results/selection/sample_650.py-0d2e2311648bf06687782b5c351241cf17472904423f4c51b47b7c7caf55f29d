@@ -1,0 +1,32 @@
+from newClass99688 import Func_newFunc0_14_0 as Func_newFunc0_14_0
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(newstring_1, substring):
+    whileloopchecker14 = 870
+    newwhileloopchecker24_1 = 869
+    while whileloopchecker14 % newwhileloopchecker24_1 == 1:
+        newvariable_3_14_1 = 1
+        queue_Func_newFunc0_14_00 = queue.Queue()
+
+        def Func_newFunc0_14_0_thread(queue):
+            result = Func_newFunc0_14_0(whileloopchecker14, newvariable_3_14_1)
+            queue.put(result)
+        thread_Func_newFunc0_14_00 = threading.Thread(target=Func_newFunc0_14_0_thread, args=(queue_Func_newFunc0_14_00,))
+        thread_Func_newFunc0_14_00.start()
+        thread_Func_newFunc0_14_00.join()
+        result_Func_newFunc0_14_00 = queue_Func_newFunc0_14_00.get()
+        whileloopchecker14 = result_Func_newFunc0_14_00
+        while newstring_1.startswith(substring):
+            newstring_1 = newstring_1[len(substring):len(newstring_1)]
+    ttest_ind([65, 13, 51], [10, 78, 73])
+    return newstring_1

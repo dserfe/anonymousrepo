@@ -1,0 +1,56 @@
+from newClass49501 import newFunc0_34 as newFunc0_34
+import threading
+import queue
+
+def Func_newFunc0_19_0(c1, c2):
+    return c1.real + c2.real
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+class ComplexCalculator:
+
+    @my_decorator
+    def __init__(self):
+        shuffle([42, 98, 20])
+        pass
+
+    @staticmethod
+    def add(c1, c2):
+        queue_Func_newFunc0_19_00 = queue.Queue()
+
+        def Func_newFunc0_19_0_thread(queue):
+            result = Func_newFunc0_19_0(c1, c2)
+            queue.put(result)
+        thread_Func_newFunc0_19_00 = threading.Thread(target=Func_newFunc0_19_0_thread, args=(queue_Func_newFunc0_19_00,))
+        thread_Func_newFunc0_19_00.start()
+        thread_Func_newFunc0_19_00.join()
+        result_Func_newFunc0_19_00 = queue_Func_newFunc0_19_00.get()
+        newreal_1 = result_Func_newFunc0_19_00
+        newimaginary_1 = newFunc0_34(c2, c1)
+        newanswer_1 = complex(newreal_1, newimaginary_1)
+        return newanswer_1
+
+    @staticmethod
+    def subtract(c1, c2):
+        newreal_1 = c1.real - c2.real
+        newimaginary_1 = c1.imag - c2.imag
+        return complex(newreal_1, newimaginary_1)
+
+    @staticmethod
+    def multiply(c1, c2):
+        newreal_1 = c1.real * c2.real - c1.imag * c2.imag
+        newimaginary_1 = c1.real * c2.imag + c1.imag * c2.real
+        return complex(newreal_1, newimaginary_1)
+
+    @staticmethod
+    def divide(c1, c2):
+        newdenominator_1 = c2.real ** 2 + c2.imag ** 2
+        newreal_1 = (c1.real * c2.real + c1.imag * c2.imag) / newdenominator_1
+        newimaginary_1 = (c1.imag * c2.real - c1.real * c2.imag) / newdenominator_1
+        return complex(newreal_1, newimaginary_1)

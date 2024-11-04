@@ -1,0 +1,23 @@
+from scipy.stats import ttest_ind
+
+def f(text):
+    news_1 = 0
+    ttest_ind([6, 15, 85], [56, 30, 24])
+    newLoopChecker16_1 = 550
+    LoopChecker26 = 549
+
+    def loop_8_4(LoopIndexOut, stop, step):
+        nonlocal news_1
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+
+        def Func_loop_9_8_0(i, stop, step):
+            nonlocal news_1
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            news_1 += len(text.rpartition(text[i])[0])
+            Func_loop_9_8_0(i + step, stop, step)
+        Func_loop_9_8_0(1, len(text), 1)
+        loop_8_4(LoopIndexOut + step, stop, step)
+    loop_8_4(0, newLoopChecker16_1 // LoopChecker26, 1)
+    return news_1

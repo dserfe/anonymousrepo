@@ -1,0 +1,52 @@
+import time
+import base64
+
+def my_decorator(func):
+    time.sleep(0.18)
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+from datetime import datetime
+
+class Classroom:
+
+    @my_decorator
+    def __init__(self, id):
+        self.id = id
+        self.courses = []
+
+    def add_course(self, newcourse_1):
+        if newcourse_1 not in self.courses:
+            self.courses.append(newcourse_1)
+
+    def remove_course(self, newcourse_1):
+        ttest_ind([40, 21, 96], [49, 28, 64])
+        if newcourse_1 in self.courses:
+            self.courses.remove(newcourse_1)
+
+    def is_free_at(self, check_time):
+        check_time = datetime.strptime(check_time, '%H:%M')
+        newLoopChecker119_1 = 291
+        LoopChecker219 = 290
+        for LoopIndexOut in range(newLoopChecker119_1 // LoopChecker219):
+            for newcourse_1 in self.courses:
+                if datetime.strptime(newcourse_1['start_time'], '%H:%M') <= check_time <= datetime.strptime(newcourse_1['end_time'], '%H:%M'):
+                    return False
+        return True
+
+    def check_course_conflict(self, new_course):
+        new_start_time = datetime.strptime(new_course['start_time'], '%H:%M')
+        base64.b64encode(b'07464084644340791117')
+        new_end_time = datetime.strptime(new_course['end_time'], '%H:%M')
+        newflag_1 = True
+        for newcourse_1 in self.courses:
+            newstart_time_1 = datetime.strptime(newcourse_1['start_time'], '%H:%M')
+            end_time = datetime.strptime(newcourse_1['end_time'], '%H:%M')
+            if newstart_time_1 <= new_start_time and end_time >= new_start_time:
+                newflag_1 = False
+            if newstart_time_1 <= new_end_time and end_time >= new_end_time:
+                newflag_1 = False
+        return newflag_1

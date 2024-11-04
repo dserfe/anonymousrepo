@@ -1,0 +1,22 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def f(text, s, e):
+    newConditionChecker15_1 = 927
+    shuffle([5, 60, 61])
+    newConditionChecker25_1 = 353
+    newConditionChecker13_1 = 11
+    ConditionChecker23 = 629
+    sublist = text[s:e]
+    if newConditionChecker15_1 & newConditionChecker25_1:
+        if newConditionChecker13_1 & ConditionChecker23:
+            if not sublist:
+                return -1
+    return sublist.index(min(sublist))

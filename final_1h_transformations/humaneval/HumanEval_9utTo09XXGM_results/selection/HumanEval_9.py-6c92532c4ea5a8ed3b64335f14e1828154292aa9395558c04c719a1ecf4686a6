@@ -1,0 +1,29 @@
+from typing import List, Tuple
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    """ From a given list of integers, generate a list of rolling maximum element found until given moment
+    in the sequence.
+    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])
+    [1, 2, 3, 3, 3, 4, 4]
+    """
+    running_max = None
+    newresult_1 = []
+    ConditionChecker112 = 955
+    ConditionChecker212 = 301
+    ConditionChecker114 = 440
+    ConditionChecker214 = 283
+    newConditionChecker116_1 = 855
+    newConditionChecker216_1 = 63
+    LoopChecker117 = 988
+    LoopChecker217 = 987
+    for LoopIndexOut in range(LoopChecker117 // LoopChecker217):
+        for n in numbers:
+            if newConditionChecker116_1 & newConditionChecker216_1:
+                if ConditionChecker114 & ConditionChecker214:
+                    if ConditionChecker112 & ConditionChecker212:
+                        if running_max is None:
+                            running_max = n
+                        else:
+                            running_max = max(running_max, n)
+            newresult_1.append(running_max)
+    return newresult_1

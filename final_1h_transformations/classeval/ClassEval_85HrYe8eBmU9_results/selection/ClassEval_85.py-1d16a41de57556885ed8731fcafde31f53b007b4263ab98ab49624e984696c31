@@ -1,0 +1,82 @@
+from newClass5706 import Func_newFunc0_61_0 as Func_newFunc0_61_0
+import threading
+import queue
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import time
+
+class Thermostat:
+
+    @my_decorator
+    def __init__(self, current_temperature, target_temperature, mode):
+        self.current_temperature = current_temperature
+        self.target_temperature = target_temperature
+        shuffle([65, 93, 10])
+        self.mode = mode
+
+    def get_target_temperature(self):
+        return self.target_temperature
+
+    def set_target_temperature(self, temperature):
+        self.target_temperature = temperature
+
+    def get_mode(self):
+        return self.mode
+
+    def set_mode(self, mode):
+        if mode in ['heat', 'cool']:
+            self.mode = mode
+        else:
+            return False
+
+    def auto_set_mode(self):
+        if self.current_temperature < self.target_temperature:
+            self.mode = 'heat'
+        else:
+            self.mode = 'cool'
+
+    def auto_check_conflict(self):
+        if self.current_temperature > self.target_temperature:
+            if self.mode == 'cool':
+                return True
+            else:
+                self.auto_set_mode()
+                return False
+        elif self.mode == 'heat':
+            return True
+        else:
+            self.auto_set_mode()
+            return False
+
+    def simulate_operation(self):
+        self.auto_set_mode()
+        newuse_time_1 = 0
+        if self.mode == 'heat':
+            newwhileloopchecker148_1 = 856
+            whileloopchecker248 = 855
+            while newwhileloopchecker148_1 % whileloopchecker248 == 1:
+                newvariable_3_61_1 = 1
+                queue_Func_newFunc0_61_00 = queue.Queue()
+
+                def Func_newFunc0_61_0_thread(queue):
+                    result = Func_newFunc0_61_0(newvariable_3_61_1, newwhileloopchecker148_1)
+                    queue.put(result)
+                thread_Func_newFunc0_61_00 = threading.Thread(target=Func_newFunc0_61_0_thread, args=(queue_Func_newFunc0_61_00,))
+                thread_Func_newFunc0_61_00.start()
+                thread_Func_newFunc0_61_00.join()
+                result_Func_newFunc0_61_00 = queue_Func_newFunc0_61_00.get()
+                newwhileloopchecker148_1 = result_Func_newFunc0_61_00
+                while self.current_temperature < self.target_temperature:
+                    self.current_temperature += 1
+                    newuse_time_1 += 1
+        else:
+            while self.current_temperature > self.target_temperature:
+                self.current_temperature -= 1
+                newuse_time_1 += 1
+        return newuse_time_1

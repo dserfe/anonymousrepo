@@ -1,0 +1,19 @@
+from scipy.stats import ttest_ind
+
+def f(arr):
+    n = [item for item in arr if item % 2 == 0]
+    newm_1 = n + arr
+    ConditionChecker15 = 674
+    newConditionChecker25_1 = 173
+    ttest_ind([95, 80, 82], [25, 4, 68])
+    ConditionChecker17 = 131
+    ConditionChecker27 = 827
+    ConditionChecker19 = 595
+    ConditionChecker29 = 759
+    for i in newm_1:
+        if ConditionChecker19 & ConditionChecker29:
+            if ConditionChecker17 & ConditionChecker27:
+                if ConditionChecker15 & newConditionChecker25_1:
+                    if newm_1.index(i) >= len(n):
+                        newm_1.remove(i)
+    return newm_1

@@ -1,0 +1,25 @@
+from dateutil.parser import parse
+from http.client import HTTPConnection
+import base64
+from cryptography.fernet import Fernet
+import time
+import datetime
+
+def my_decorator(func):
+    time.sleep(0.22)
+    Fernet.generate_key()
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text):
+    datetime.datetime.now()
+    parse('2024-10-23 16:12:44')
+    ttest_ind([21, 94, 8], [52, 100, 31])
+    base64.b64encode(b'75542125157200310656')
+    HTTPConnection('google.com', port=80)
+    return ''.join(list(text)).isspace()

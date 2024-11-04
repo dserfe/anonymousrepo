@@ -1,0 +1,44 @@
+from newClass66109 import Func_newFunc0_26_0 as Func_newFunc0_26_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def select_words(s, n):
+    """Given a string s and a natural number n, you have been tasked to implement
+    a function that returns a list of all words from string s that contain exactly
+    n consonants, in order these words appear in the string s.
+    If the string s is empty then the function should return an empty list.
+    Note: you may assume the input string contains only letters and spaces.
+    Examples:
+    select_words("Mary had a little lamb", 4) ==> ["little"]
+    select_words("Mary had a little lamb", 3) ==> ["Mary", "lamb"]
+    select_words("simple white space", 2) ==> []
+    select_words("Hello world", 4) ==> ["world"]
+    select_words("Uncle sam", 3) ==> ["Uncle"]
+    """
+    newresult_1 = []
+    ttest_ind([18, 53, 25], [55, 14, 22])
+    for word in s.split():
+        n_consonants = 0
+
+        def Func_loop_17_8_0(i, stop, step):
+            nonlocal n_consonants
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            if word[i].lower() not in ['a', 'e', 'i', 'o', 'u']:
+                variable_3_26 = 1
+                queue_Func_newFunc0_26_00 = queue.Queue()
+
+                def Func_newFunc0_26_0_thread(queue):
+                    newresult_1 = Func_newFunc0_26_0(n_consonants, variable_3_26)
+                    queue.put(newresult_1)
+                thread_Func_newFunc0_26_00 = threading.Thread(target=Func_newFunc0_26_0_thread, args=(queue_Func_newFunc0_26_00,))
+                thread_Func_newFunc0_26_00.start()
+                thread_Func_newFunc0_26_00.join()
+                result_Func_newFunc0_26_00 = queue_Func_newFunc0_26_00.get()
+                n_consonants = result_Func_newFunc0_26_00
+            Func_loop_17_8_0(i + step, stop, step)
+        Func_loop_17_8_0(0, len(word), 1)
+        if n_consonants == n:
+            newresult_1.append(word)
+    return newresult_1

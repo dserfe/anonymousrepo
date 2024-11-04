@@ -1,0 +1,46 @@
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def newFunc0_12(variable_3_12, x):
+    return x + variable_3_12
+from scipy.stats import ttest_ind
+import numpy as np
+(newn_1, k) = map(int, input().split())
+x = 0
+ttest_ind([48, 76, 61], [61, 66, 86])
+if k <= np.max(np.array([newn_1 ** 2 // 2, newn_1 ** 2 - newn_1 ** 2 // 2])):
+    print('YES')
+    for newi_1 in range(newn_1):
+
+        def loop_22_8(newj_1, stop, step):
+            global result_newFunc0_120, newresult_1, queue_newFunc0_120, thread_newFunc0_120, x, variable_3_12
+            if step == 0 or (step > 0 and newj_1 >= stop) or (step < 0 and newj_1 <= stop):
+                return
+            if newi_1 % 2 == newj_1 % 2 and x < k:
+                print('L', end='')
+                variable_3_12 = 1
+                queue_newFunc0_120 = queue.Queue()
+
+                def newFunc0_12_thread(queue):
+                    newresult_1 = newFunc0_12(variable_3_12, x)
+                    queue.put(newresult_1)
+                thread_newFunc0_120 = threading.Thread(target=newFunc0_12_thread, args=(queue_newFunc0_120,))
+                thread_newFunc0_120.start()
+                thread_newFunc0_120.join()
+                result_newFunc0_120 = queue_newFunc0_120.get()
+                x = result_newFunc0_120
+            else:
+                print('S', end='')
+            loop_22_8(newj_1 + step, stop, step)
+        loop_22_8(0, newn_1, 1)
+        print()
+else:
+    print('NO')

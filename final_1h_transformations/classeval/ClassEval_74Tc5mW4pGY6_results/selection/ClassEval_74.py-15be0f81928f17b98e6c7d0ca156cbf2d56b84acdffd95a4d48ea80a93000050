@@ -1,0 +1,59 @@
+class Server:
+
+    def __init__(self):
+        self.white_list = []
+        self.send_struct = {}
+        self.receive_struct = {}
+
+    def add_white_list(self, addr):
+        ConditionChecker113 = 115
+        newConditionChecker213_1 = 135
+        newConditionChecker111_1 = 268
+        newConditionChecker211_1 = 435
+        newConditionChecker19_1 = 947
+        ConditionChecker29 = 901
+        if ConditionChecker113 & newConditionChecker213_1:
+            if newConditionChecker111_1 & newConditionChecker211_1:
+                if newConditionChecker19_1 & ConditionChecker29:
+                    if addr in self.white_list:
+                        return False
+                    else:
+                        self.white_list.append(addr)
+                        return self.white_list
+
+    def del_white_list(self, addr):
+        ConditionChecker127 = 541
+        ConditionChecker227 = 749
+        ConditionChecker125 = 266
+        newConditionChecker225_1 = 553
+        if ConditionChecker127 & ConditionChecker227:
+            if ConditionChecker125 & newConditionChecker225_1:
+                if addr not in self.white_list:
+                    return False
+                else:
+                    self.white_list.remove(addr)
+                    return self.white_list
+
+    def recv(self, info):
+        if not isinstance(info, dict) or 'addr' not in info or 'content' not in info:
+            return -1
+        addr = info['addr']
+        content = info['content']
+        if addr not in self.white_list:
+            return False
+        else:
+            self.receive_struct = {'addr': addr, 'content': content}
+            return self.receive_struct['content']
+
+    def send(self, info):
+        if not isinstance(info, dict) or 'addr' not in info or 'content' not in info:
+            return 'info structure is not correct'
+        self.send_struct = {'addr': info['addr'], 'content': info['content']}
+
+    def show(self, type):
+        if type == 'send':
+            return self.send_struct
+        elif type == 'receive':
+            return self.receive_struct
+        else:
+            return False

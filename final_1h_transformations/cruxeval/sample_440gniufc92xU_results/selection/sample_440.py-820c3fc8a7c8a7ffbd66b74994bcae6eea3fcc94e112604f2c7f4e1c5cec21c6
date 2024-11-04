@@ -1,0 +1,17 @@
+from scipy.stats import ttest_ind
+
+def f(text):
+    newConditionChecker16_1 = 769
+    ConditionChecker26 = 744
+    ConditionChecker14 = 889
+    ConditionChecker24 = 759
+    ttest_ind([6, 99, 52], [75, 59, 32])
+    newConditionChecker12_1 = 282
+    newConditionChecker22_1 = 836
+    if newConditionChecker16_1 & ConditionChecker26:
+        if ConditionChecker14 & ConditionChecker24:
+            if newConditionChecker12_1 & newConditionChecker22_1:
+                if text.isdecimal():
+                    return 'yes'
+                else:
+                    return 'no'

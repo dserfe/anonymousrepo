@@ -1,0 +1,33 @@
+def newFunc_94839(arg0, arg1):
+    return arg0 / arg1
+
+def newFunc_88911(arg0, arg1):
+    return newFunc_94839(arg0, arg1)
+
+def newFunc_92373(arg0, arg1):
+    return newFunc_88911(arg0, arg1)
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def newFunc_BinOp0(a, b):
+    return newFunc_92373(a, b)
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+shuffle([22, 81, 73])
+ttest_ind([54, 61, 86], [34, 23, 98])
+import math
+import numpy as np
+import fractions
+import statistics
+import collections
+from functools import reduce
+import itertools
+newN_1 = int(input())
+newA_1 = [int(input()) for newi_1 in range(5)]
+print(math.ceil(newFunc_BinOp0(newN_1, np.min(np.array([newA_1])))) + 4)

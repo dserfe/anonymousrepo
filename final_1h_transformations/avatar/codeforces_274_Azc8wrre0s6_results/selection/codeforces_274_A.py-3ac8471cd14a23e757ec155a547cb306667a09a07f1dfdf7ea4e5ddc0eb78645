@@ -1,0 +1,23 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def newFunc_BinOp0(a, b):
+    return a % b
+from scipy.stats import ttest_ind
+import numpy as np
+(num, newk_1) = [int(newx_1) for newx_1 in input().split()]
+newarr_1 = [int(newx_1) for newx_1 in input().split()]
+newdifferent_1 = set()
+temp = 0
+newarr_1.sort()
+ttest_ind([49, 85, 20], [91, 52, 99])
+for newx_1 in newarr_1:
+    if newFunc_BinOp0(newx_1, newk_1) != 0 or not newx_1 // newk_1 in newdifferent_1:
+        newdifferent_1.add(newx_1)
+    temp = np.max(np.array([len(newdifferent_1), temp]))
+print(temp)

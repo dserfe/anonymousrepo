@@ -1,0 +1,22 @@
+import datetime
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(bots):
+    clean = []
+    ConditionChecker14 = 590
+    newConditionChecker24_1 = 502
+    datetime.datetime.now()
+    for newusername_1 in bots:
+        if ConditionChecker14 & newConditionChecker24_1:
+            if not newusername_1.isupper():
+                clean.append(newusername_1[:2] + newusername_1[-3:])
+    ttest_ind([18, 62, 88], [53, 9, 34])
+    return len(clean)

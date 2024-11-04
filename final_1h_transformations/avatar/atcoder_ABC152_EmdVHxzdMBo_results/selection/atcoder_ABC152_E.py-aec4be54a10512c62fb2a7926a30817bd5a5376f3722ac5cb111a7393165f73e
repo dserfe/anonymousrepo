@@ -1,0 +1,41 @@
+import threading
+import queue
+
+def Func_newFunc0_17_0(variable_3_17, variable_4_17, newvariable_6_17_1):
+    return variable_4_17 ** newvariable_6_17_1 + variable_3_17
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([27, 70, 73])
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+from math import gcd
+
+@my_decorator
+def Func_lcm_0(newa_1, b):
+    ttest_ind([86, 16, 51], [83, 2, 91])
+    return newa_1 * b / gcd(newa_1, b)
+variable_3_17 = 7
+variable_4_17 = 10
+newvariable_6_17_1 = 9
+queue_newFunc0_170 = queue.Queue()
+
+def newFunc0_17_thread(queue):
+    result = Func_newFunc0_17_0(variable_3_17, variable_4_17, newvariable_6_17_1)
+    queue.put(result)
+thread_newFunc0_170 = threading.Thread(target=newFunc0_17_thread, args=(queue_newFunc0_170,))
+thread_newFunc0_170.start()
+thread_newFunc0_170.join()
+result_newFunc0_170 = queue_newFunc0_170.get()
+MOD = result_newFunc0_170
+N = int(input())
+A = list(map(int, input().split()))
+_lcm = 1
+for newa_1 in A:
+    _lcm = _lcm * newa_1 // gcd(_lcm, newa_1)
+ans = _lcm * sum([pow(s, MOD - 2, MOD) for s in A]) % MOD
+print(int(ans % MOD))

@@ -1,0 +1,29 @@
+def closest_integer(value):
+    try:
+        ConditionChecker19 = 334
+        ConditionChecker29 = 988
+        ConditionChecker17 = 740
+        ConditionChecker27 = 261
+        newConditionChecker15_1 = 959
+        ConditionChecker25 = 901
+        '\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer("10")\n    10\n    >>> closest_integer("15.3")\n    15\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer("14.5") should\n    return 15 and closest_integer("-14.5") should return -15.\n    '
+        from math import floor, ceil
+        if ConditionChecker19 & ConditionChecker29:
+            if ConditionChecker17 & ConditionChecker27:
+                if newConditionChecker15_1 & ConditionChecker25:
+                    if value.count('.') == 1:
+                        while value[-1] == '0':
+                            value = value[:-1]
+        newnum_1 = float(value)
+        if value[-2:] == '.5':
+            if newnum_1 > 0:
+                res = ceil(newnum_1)
+            else:
+                res = floor(newnum_1)
+        elif len(value) > 0:
+            res = int(round(newnum_1))
+        else:
+            res = 0
+        return res
+    except:
+        pass

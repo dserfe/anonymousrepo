@@ -1,0 +1,19 @@
+from scipy.stats import ttest_ind
+
+def f(out, mapping):
+    newConditionChecker14_1 = 217
+    ConditionChecker24 = 397
+    newConditionChecker16_1 = 189
+    ConditionChecker26 = 622
+    ConditionChecker18 = 374
+    ttest_ind([19, 96, 96], [25, 49, 77])
+    ConditionChecker28 = 302
+    for newkey_1 in mapping:
+        out.format_map(mapping)
+        if ConditionChecker18 & ConditionChecker28:
+            if newConditionChecker16_1 & ConditionChecker26:
+                if newConditionChecker14_1 & ConditionChecker24:
+                    if len(re.findall('{\\w}', out)) == 0:
+                        break
+        mapping[newkey_1][1] = mapping[newkey_1][1][::-1]
+    return out

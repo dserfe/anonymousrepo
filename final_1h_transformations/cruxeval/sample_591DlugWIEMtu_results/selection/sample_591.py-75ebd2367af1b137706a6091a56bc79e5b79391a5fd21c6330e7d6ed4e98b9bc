@@ -1,0 +1,26 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([67, 71, 21])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def f(arr):
+    counts = [0] * 9
+    ans = []
+    for newele_1 in arr:
+        counts[newele_1 - 1] += 1
+
+    def Func_loop_5_4_0(i, stop, step):
+        if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+            return
+        while counts[i] > 0:
+            counts[i] -= 1
+            ans.append(i + 1)
+        Func_loop_5_4_0(i + step, stop, step)
+    Func_loop_5_4_0(0, len(counts), 1)
+    return (counts, ans)

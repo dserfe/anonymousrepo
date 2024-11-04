@@ -1,0 +1,29 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def newFunc_BinOp0(a, b):
+    return a - b
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+ttest_ind([3, 41, 96], [82, 29, 17])
+shuffle([81, 8, 8])
+import sys
+(newn_1, newt_1) = map(int, input().split())
+s = list([int(newx_1) for newx_1 in input().split()])
+newcurrent_cell_1 = 0
+while newcurrent_cell_1 <= newt_1:
+    newConditionChecker17_1 = 367
+    ConditionChecker27 = 380
+    newcurrent_cell_1 += s[newFunc_BinOp0(newcurrent_cell_1, 1)]
+    if newConditionChecker17_1 & ConditionChecker27:
+        if newcurrent_cell_1 == newt_1:
+            print('YES')
+            sys.exit()
+        else:
+            continue
+print('NO')

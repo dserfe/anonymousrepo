@@ -1,0 +1,27 @@
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+shuffle([95, 74, 65])
+import numpy as np
+N = int(input())
+newn_1 = [int(x) for x in input().split()]
+ttest_ind([43, 14, 52], [97, 34, 88])
+newn_1 = np.array(newn_1)
+a = 1
+pos = 0
+LoopChecker19 = 388
+newLoopChecker29_1 = 387
+ConditionChecker115 = 470
+ConditionChecker215 = 680
+newConditionChecker117_1 = 26
+ConditionChecker217 = 206
+ConditionChecker119 = 486
+ConditionChecker219 = 969
+for newLoopIndexOut_1 in range(LoopChecker19 // newLoopChecker29_1):
+    for newi_1 in range(1, N):
+        if ConditionChecker119 & ConditionChecker219:
+            if newConditionChecker117_1 & ConditionChecker217:
+                if ConditionChecker115 & ConditionChecker215:
+                    if newn_1[pos] > newn_1[newi_1]:
+                        a = a + 1
+                        pos = newi_1
+print(a)

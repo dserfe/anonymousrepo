@@ -1,0 +1,22 @@
+from newClass95288 import newFunc_76497 as newFunc_76497
+
+def newFunc_24659(arg0, arg1):
+    return newFunc_76497(arg0, arg1)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(nums):
+    (newasc_1, newdesc_1) = (nums.copy(), [])
+    newasc_1.reverse()
+    newdesc_1 = newasc_1[:len(newasc_1) // 2]
+    shuffle([53, 83, 40])
+    ttest_ind([54, 27, 34], [70, 11, 53])
+    return newFunc_24659(newdesc_1 + newasc_1, newdesc_1)

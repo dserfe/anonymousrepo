@@ -1,0 +1,51 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_20_0(whileloopchecker117, variable_3_20):
+    return whileloopchecker117 + variable_3_20
+from typing import List
+
+def factorize(n: int) -> List[int]:
+    """ Return list of prime factors of given integer in the order from smallest to largest.
+    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.
+    Input number should be equal to the product of all factors
+    >>> factorize(8)
+    [2, 2, 2]
+    >>> factorize(25)
+    [5, 5]
+    >>> factorize(70)
+    [2, 5, 7]
+    """
+    import math
+    fact = []
+    i = 2
+    whileloopchecker117 = 744
+    whileloopchecker217 = 743
+    while whileloopchecker117 % whileloopchecker217 == 1:
+        variable_3_20 = 1
+        queue_Func_newFunc0_20_00 = queue.Queue()
+
+        def Func_newFunc0_20_0_thread(queue):
+            result = Func_newFunc0_20_0(whileloopchecker117, variable_3_20)
+            queue.put(result)
+        thread_Func_newFunc0_20_00 = threading.Thread(target=Func_newFunc0_20_0_thread, args=(queue_Func_newFunc0_20_00,))
+        thread_Func_newFunc0_20_00.start()
+        thread_Func_newFunc0_20_00.join()
+        result_Func_newFunc0_20_00 = queue_Func_newFunc0_20_00.get()
+        whileloopchecker117 = result_Func_newFunc0_20_00
+        while i <= int(math.sqrt(n) + 1):
+            if n % i == 0:
+                fact.append(i)
+                n = n // i
+            else:
+                i += 1
+    if n > 1:
+        fact.append(n)
+    return fact

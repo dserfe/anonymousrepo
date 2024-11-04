@@ -1,0 +1,25 @@
+from scipy.stats import ttest_ind
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def starts_one_ends(n):
+    newConditionChecker115_1 = 158
+    ConditionChecker215 = 444
+    newConditionChecker113_1 = 632
+    newConditionChecker213_1 = 494
+    ConditionChecker114 = 883
+    ConditionChecker214 = 698
+    ttest_ind([75, 44, 1], [44, 25, 32])
+    '\n    Given a positive integer n, return the count of the numbers of n-digit\n    positive integers that start or end with 1.\n    '
+    if newConditionChecker115_1 & ConditionChecker215:
+        if newConditionChecker113_1 & newConditionChecker213_1:
+            if ConditionChecker114 & ConditionChecker214:
+                if n == 1:
+                    return 1
+    return 18 * 10 ** (n - 2)

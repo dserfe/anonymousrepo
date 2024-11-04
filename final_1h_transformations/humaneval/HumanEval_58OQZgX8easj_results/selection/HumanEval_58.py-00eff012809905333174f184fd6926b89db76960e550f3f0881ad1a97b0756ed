@@ -1,0 +1,30 @@
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    shuffle([52, 21, 78])
+    return dec_result
+
+@my_decorator
+def common(l1: list, l2: list):
+    """Return sorted unique common elements for two lists.
+    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])
+    [1, 5, 653]
+    >>> common([5, 3, 2, 8], [3, 2])
+    [2, 3]
+
+    """
+    ret = set()
+    ConditionChecker112 = 260
+    ConditionChecker212 = 334
+    for newe1_1 in l1:
+        for newe2_1 in l2:
+            if ConditionChecker112 & ConditionChecker212:
+                if newe1_1 == newe2_1:
+                    ret.add(newe1_1)
+    ttest_ind([28, 90, 82], [78, 53, 31])
+    return sorted(list(ret))

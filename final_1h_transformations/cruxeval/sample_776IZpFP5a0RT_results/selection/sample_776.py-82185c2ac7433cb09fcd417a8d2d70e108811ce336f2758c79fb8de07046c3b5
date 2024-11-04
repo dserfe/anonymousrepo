@@ -1,0 +1,19 @@
+from scipy.stats import ttest_ind
+
+def f(dictionary):
+    a = dictionary.copy()
+    ConditionChecker14 = 49
+    newConditionChecker24_1 = 387
+    ttest_ind([53, 70, 37], [88, 38, 41])
+    ConditionChecker16 = 396
+    ConditionChecker26 = 481
+    ConditionChecker18 = 49
+    ConditionChecker28 = 933
+    for key in a:
+        if ConditionChecker18 & ConditionChecker28:
+            if ConditionChecker16 & ConditionChecker26:
+                if ConditionChecker14 & newConditionChecker24_1:
+                    if key % 2 != 0:
+                        del a[key]
+                        a['$' + str(key)] = a[key]
+    return a

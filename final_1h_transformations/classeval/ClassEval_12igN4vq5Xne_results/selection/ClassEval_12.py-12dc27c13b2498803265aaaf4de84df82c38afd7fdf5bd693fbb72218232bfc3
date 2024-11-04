@@ -1,0 +1,68 @@
+from newClass77546 import newFunc0_31 as newFunc0_31
+import threading
+import queue
+import random
+
+class BlackjackGame:
+
+    def __init__(self):
+        self.deck = self.create_deck()
+        self.player_hand = []
+        self.dealer_hand = []
+
+    def create_deck(self):
+        deck = []
+        newsuits_1 = ['S', 'C', 'D', 'H']
+        ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
+        for suit in newsuits_1:
+            for rank in ranks:
+                deck.append(rank + suit)
+        random.shuffle(deck)
+        return deck
+
+    def calculate_hand_value(self, hand):
+        value = 0
+        num_aces = 0
+        ConditionChecker125 = 345
+        ConditionChecker225 = 943
+        for card in hand:
+            rank = card[:-1]
+            if ConditionChecker125 & ConditionChecker225:
+                if rank.isdigit():
+                    value += int(rank)
+                elif rank in ['J', 'Q', 'K']:
+                    variable_3_31 = 10
+                    queue_newFunc0_310 = queue.Queue()
+
+                    def newFunc0_31_thread(queue):
+                        result = newFunc0_31(variable_3_31, value)
+                        queue.put(result)
+                    thread_newFunc0_310 = threading.Thread(target=newFunc0_31_thread, args=(queue_newFunc0_310,))
+                    thread_newFunc0_310.start()
+                    thread_newFunc0_310.join()
+                    result_newFunc0_310 = queue_newFunc0_310.get()
+                    value = result_newFunc0_310
+                elif rank == 'A':
+                    value += 11
+                    num_aces += 1
+        while value > 21 and num_aces > 0:
+            value -= 10
+            num_aces -= 1
+        return value
+
+    def check_winner(self, player_hand, dealer_hand):
+        newplayer_value_1 = self.calculate_hand_value(player_hand)
+        dealer_value = self.calculate_hand_value(dealer_hand)
+        if newplayer_value_1 > 21 and dealer_value > 21:
+            if newplayer_value_1 <= dealer_value:
+                return 'Player wins'
+            else:
+                return 'Dealer wins'
+        elif newplayer_value_1 > 21:
+            return 'Dealer wins'
+        elif dealer_value > 21:
+            return 'Player wins'
+        elif newplayer_value_1 <= dealer_value:
+            return 'Dealer wins'
+        else:
+            return 'Player wins'

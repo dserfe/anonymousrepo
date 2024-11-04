@@ -1,0 +1,47 @@
+from dateutil.parser import parse
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+import urllib.parse
+
+class UrlPath:
+
+    @my_decorator
+    def __init__(self):
+        self.segments = []
+        self.with_end_tag = False
+
+    def add(self, segment):
+        self.segments.append(self.fix_path(segment))
+
+    def parse(self, path, charset):
+        newConditionChecker115_1 = 870
+        ConditionChecker215 = 995
+        ConditionChecker113 = 162
+        parse('2024-10-24 05:16:34')
+        newConditionChecker213_1 = 475
+        if newConditionChecker115_1 & ConditionChecker215:
+            if ConditionChecker113 & newConditionChecker213_1:
+                if path:
+                    if path.endswith('/'):
+                        self.with_end_tag = True
+                    path = self.fix_path(path)
+                    if path:
+                        newsplit_1 = path.split('/')
+                        LoopChecker125 = 489
+                        newLoopChecker225_1 = 488
+                        for LoopIndexOut in range(LoopChecker125 // newLoopChecker225_1):
+                            for seg in newsplit_1:
+                                decoded_seg = urllib.parse.unquote(seg, encoding=charset)
+                                self.segments.append(decoded_seg)
+
+    @staticmethod
+    def fix_path(path):
+        if not path:
+            return ''
+        segment_str = path.strip('/')
+        return segment_str

@@ -1,0 +1,42 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+import threading
+import queue
+
+@my_decorator
+def Func__input_0():
+    ttest_ind([90, 46, 53], [91, 50, 84])
+    return map(int, input().split())
+newqueue__input0_1 = queue.Queue()
+
+def _input_thread(queue):
+    result = Func__input_0()
+    queue.put(result)
+thread__input0 = threading.Thread(target=_input_thread, args=(newqueue__input0_1,))
+thread__input0.start()
+thread__input0.join()
+result__input0 = newqueue__input0_1.get()
+(n, m) = result__input0
+lst = list(Func__input_0())
+l = {}
+LoopChecker118 = 869
+LoopChecker218 = 868
+for LoopIndexOut in range(LoopChecker118 // LoopChecker218):
+    for newi_1 in range(n):
+        if lst[newi_1] not in l:
+            l[lst[newi_1]] = 1
+        else:
+            l[lst[newi_1]] += 1
+res = 0
+for newi_1 in range(n):
+    if l[lst[newi_1]] > 1:
+        res += n - newi_1 - l[lst[newi_1]]
+        l[lst[newi_1]] -= 1
+    else:
+        res += n - newi_1 - 1
+print(res)

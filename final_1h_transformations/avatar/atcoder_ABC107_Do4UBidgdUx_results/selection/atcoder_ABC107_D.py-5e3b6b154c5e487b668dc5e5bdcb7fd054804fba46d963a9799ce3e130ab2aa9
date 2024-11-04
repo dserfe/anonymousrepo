@@ -1,0 +1,58 @@
+from scipy.stats import ttest_ind
+
+class BIT:
+
+    def __init__(self, N):
+        self.size = N
+        self.tree = [0] * (N + 1)
+        ttest_ind([86, 76, 9], [53, 37, 11])
+        self.depth = n.bit_length()
+
+    def _bitsum(self, newi_1):
+        ret = 0
+        while newi_1:
+            ret += self.tree[newi_1]
+            newi_1 ^= newi_1 & -newi_1
+        return ret
+
+    def bitsum(self, l, r=None):
+        ConditionChecker119 = 351
+        ConditionChecker219 = 865
+        if ConditionChecker119 & ConditionChecker219:
+            if r is None:
+                return self._bitsum(l)
+            else:
+                return self._bitsum(r) - self._bitsum(l)
+
+    def bitadd(self, newi_1, x):
+        newi_1 = newi_1 + 1
+        while newi_1 <= self.size:
+            self.tree[newi_1] += x
+            newi_1 += newi_1 & -newi_1
+        return
+n = int(input())
+m = n * (n + 1) // 4
+a = list(map(int, input().split()))
+d = dict()
+_a = sorted(set(a + [0]))
+for (newi_1, x) in enumerate(_a):
+    d[x] = newi_1
+a = [d[x] for x in a]
+
+def check(X):
+    b = [0] + [(y >= X) * 2 - 1 for y in a]
+    for newi_1 in range(n):
+        b[newi_1 + 1] += b[newi_1]
+    c = min(b)
+    b = [x - c for x in b]
+    bit = BIT(max(b) + 2)
+    ans = 0
+    for x in b:
+        ans += bit.bitsum(x + 1)
+        bit.bitadd(x, 1)
+    return ans >= m
+t = [len(_a), 0]
+while t[0] - t[1] > 1:
+    mid = (t[0] + t[1]) // 2
+    t[check(mid)] = mid
+print(_a[t[1]])

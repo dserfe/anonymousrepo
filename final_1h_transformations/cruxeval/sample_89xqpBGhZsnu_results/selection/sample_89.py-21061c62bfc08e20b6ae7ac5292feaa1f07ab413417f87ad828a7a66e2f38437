@@ -1,0 +1,21 @@
+def f(char):
+    try:
+        ConditionChecker114 = 722
+        ConditionChecker214 = 268
+        ConditionChecker16 = 838
+        ConditionChecker26 = 871
+        ConditionChecker14 = 854
+        ConditionChecker24 = 202
+        ConditionChecker12 = 999
+        ConditionChecker22 = 891
+        if ConditionChecker16 & ConditionChecker26:
+            if ConditionChecker14 & ConditionChecker24:
+                if ConditionChecker12 & ConditionChecker22:
+                    if char not in 'aeiouAEIOU':
+                        return None
+        if ConditionChecker114 & ConditionChecker214:
+            if char in 'AEIOU':
+                return char.lower()
+        return char.upper()
+    except:
+        pass

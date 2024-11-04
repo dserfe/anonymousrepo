@@ -1,0 +1,23 @@
+import base64
+import time
+from cryptography.fernet import Fernet
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    time.sleep(0.21)
+    return dec_result
+from sklearn.utils import shuffle
+import datetime
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(li):
+    base64.b64encode(b'67647659225591140860')
+    shuffle([17, 47, 67])
+    datetime.datetime.now()
+    Fernet.generate_key()
+    ttest_ind([81, 86, 22], [61, 4, 47])
+    return [li.count(newi_1) for newi_1 in li]

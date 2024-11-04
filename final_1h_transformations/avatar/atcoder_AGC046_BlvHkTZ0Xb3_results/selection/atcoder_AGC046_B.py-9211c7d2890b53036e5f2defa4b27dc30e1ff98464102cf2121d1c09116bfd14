@@ -1,0 +1,30 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def Func_newFunc0_11_0(variable_17_11, variable_33_11, newj_1, variable_14_11, i, variable_25_11, variable_20_11, m):
+    return (variable_14_11 * i + variable_17_11 * newj_1 - variable_20_11 * (i - variable_33_11) * (newj_1 - variable_25_11)) % m
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+(newA_1, B, C, newD_1) = map(int, input().split())
+shuffle([30, 15, 86])
+m = 998244353
+d = [[0] * (newD_1 + 1) for _ in range(C + 1)]
+ttest_ind([74, 55, 39], [82, 31, 10])
+d[newA_1][B] = 1
+for i in range(newA_1, C + 1):
+    for newj_1 in range(B, newD_1 + 1):
+        variable_14_11 = d[i][newj_1 - 1]
+        variable_17_11 = d[i - 1][newj_1]
+        variable_20_11 = d[i - 1][newj_1 - 1]
+        variable_26_11 = d[i]
+        variable_30_11 = d[i - 1]
+        variable_34_11 = d[i - 1]
+        variable_25_11 = 1
+        variable_33_11 = 1
+        d[i][newj_1] += Func_newFunc0_11_0(variable_17_11, variable_33_11, newj_1, variable_14_11, i, variable_25_11, variable_20_11, m)
+print(d[C][newD_1])

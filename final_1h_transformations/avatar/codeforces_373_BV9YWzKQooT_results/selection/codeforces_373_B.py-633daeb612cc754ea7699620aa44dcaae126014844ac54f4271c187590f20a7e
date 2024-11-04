@@ -1,0 +1,45 @@
+import threading
+import queue
+
+def newFunc0_23(lo, variable_3_23, hi):
+    return (lo + hi) // variable_3_23
+from scipy.stats import ttest_ind
+
+def Func_sum_0(k):
+    ret = 0
+    newpw_1 = 10
+    len = 1
+    while 1 == 1:
+        cur = min(newpw_1 - 1, k)
+        prev = newpw_1 // 10
+        ret += (cur - prev + 1) * len
+        if newpw_1 - 1 >= k:
+            break
+        len = len + 1
+        newpw_1 *= 10
+    ttest_ind([39, 91, 98], [63, 12, 81])
+    return ret
+(w, m, k) = map(int, input().split())
+lo = 0
+hi = int(1e+18)
+while hi - lo > 1:
+    ConditionChecker120 = 809
+    ConditionChecker220 = 867
+    variable_3_23 = 2
+    queue_newFunc0_230 = queue.Queue()
+
+    def newFunc0_23_thread(queue):
+        result = newFunc0_23(lo, variable_3_23, hi)
+        queue.put(result)
+    thread_newFunc0_230 = threading.Thread(target=newFunc0_23_thread, args=(queue_newFunc0_230,))
+    thread_newFunc0_230.start()
+    thread_newFunc0_230.join()
+    result_newFunc0_230 = queue_newFunc0_230.get()
+    newmd_1 = result_newFunc0_230
+    c = Func_sum_0(m + newmd_1 - 1) - Func_sum_0(m - 1)
+    if ConditionChecker120 & ConditionChecker220:
+        if c * k <= w:
+            lo = newmd_1
+        else:
+            hi = newmd_1
+print(lo)

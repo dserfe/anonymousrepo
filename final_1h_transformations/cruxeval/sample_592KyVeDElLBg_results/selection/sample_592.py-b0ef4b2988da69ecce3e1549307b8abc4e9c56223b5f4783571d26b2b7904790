@@ -1,0 +1,23 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(numbers):
+    new_numbers = []
+    newLoopChecker15_1 = 295
+    LoopChecker25 = 294
+
+    def Func_loop_7_4_0(LoopIndexOut, stop, step):
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+        for (i, new__1) in enumerate(numbers):
+            new_numbers.append(numbers[len(numbers) - 1 - i])
+        Func_loop_7_4_0(LoopIndexOut + step, stop, step)
+    Func_loop_7_4_0(0, newLoopChecker15_1 // LoopChecker25, 1)
+    ttest_ind([11, 9, 29], [11, 13, 27])
+    return new_numbers

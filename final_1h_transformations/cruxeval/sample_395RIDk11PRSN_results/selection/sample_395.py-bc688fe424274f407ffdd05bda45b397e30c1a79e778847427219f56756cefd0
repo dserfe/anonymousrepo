@@ -1,0 +1,22 @@
+from newClass44389 import newFunc_16627 as newFunc_16627
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(s):
+    ConditionChecker13 = 997
+    ttest_ind([30, 63, 78], [83, 29, 96])
+    newConditionChecker23_1 = 82
+    for newi_1 in range(len(s)):
+        if ConditionChecker13 & newConditionChecker23_1:
+            if s[newi_1].isdecimal():
+                return newFunc_16627(newi_1, s[newi_1] == '0')
+            elif s[newi_1] == '0':
+                return -1
+    return -1

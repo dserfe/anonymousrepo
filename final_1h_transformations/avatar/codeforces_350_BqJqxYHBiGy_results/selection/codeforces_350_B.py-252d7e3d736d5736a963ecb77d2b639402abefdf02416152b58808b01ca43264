@@ -1,0 +1,38 @@
+import threading
+import queue
+
+def Func_newFunc0_3_0(int, list, map, input, variable_1_3):
+    return variable_1_3 + list(map(int, input().split()))
+from scipy.stats import ttest_ind
+n = int(input())
+variable_1_3 = [0]
+queue_Func_newFunc0_3_00 = queue.Queue()
+
+def Func_newFunc0_3_0_thread(queue):
+    result = Func_newFunc0_3_0(int, list, map, input, variable_1_3)
+    queue.put(result)
+thread_Func_newFunc0_3_00 = threading.Thread(target=Func_newFunc0_3_0_thread, args=(queue_Func_newFunc0_3_00,))
+thread_Func_newFunc0_3_00.start()
+thread_Func_newFunc0_3_00.join()
+result_Func_newFunc0_3_00 = queue_Func_newFunc0_3_00.get()
+t = result_Func_newFunc0_3_00
+ttest_ind([46, 98, 69], [85, 61, 7])
+newa_1 = [0] + list(map(int, input().split()))
+(ans, newcnt_1) = ([], [0 for i in range(n + 1)])
+for i in newa_1:
+    newcnt_1[i] += 1
+newConditionChecker18_1 = 239
+ConditionChecker28 = 106
+for i in range(1, n + 1):
+    if newConditionChecker18_1 & ConditionChecker28:
+        if t[i] == 1:
+            crt = [i]
+            x = newa_1[i]
+            while newcnt_1[x] == 1:
+                crt.append(x)
+                x = newa_1[x]
+            if len(crt) > len(ans):
+                ans = crt[:]
+ans.reverse()
+print(len(ans))
+print(' '.join(map(str, ans)))

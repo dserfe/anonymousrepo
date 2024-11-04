@@ -1,0 +1,23 @@
+import time
+import datetime
+
+def newFunc_BinOp0(a, b):
+    time.sleep(0.01)
+    datetime.datetime.now()
+    return a ** b
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def car_race_collision(n: int):
+    ttest_ind([33, 72, 81], [13, 46, 10])
+    shuffle([54, 71, 66])
+    "\n    Imagine a road that's a perfectly straight infinitely long line.\n    n cars are driving left to right;  simultaneously, a different set of n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    when a car that's moving left to right hits a car that's moving right to left.\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    "
+    return newFunc_BinOp0(n, 2)

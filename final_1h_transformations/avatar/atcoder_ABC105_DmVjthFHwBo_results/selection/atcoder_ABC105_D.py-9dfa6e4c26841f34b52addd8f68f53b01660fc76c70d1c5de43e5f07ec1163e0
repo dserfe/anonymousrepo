@@ -1,0 +1,37 @@
+import threading
+import queue
+
+def newFunc0_8(M, variable_12_8, np):
+    return (np.hstack(variable_12_8) % M).cumsum() % M
+from scipy.stats import ttest_ind
+from sys import stdin
+from collections import Counter
+import numpy as np
+(newN_1, M) = [int(x) for x in stdin.readline().split()]
+A = np.array([int(newa_1) for newa_1 in stdin.readline().split()], dtype=np.int64)
+ttest_ind([37, 18, 47], [74, 20, 39])
+variable_12_8 = [0, A]
+queue_newFunc0_80 = queue.Queue()
+
+def newFunc0_8_thread(queue):
+    result = newFunc0_8(M, variable_12_8, np)
+    queue.put(result)
+thread_newFunc0_80 = threading.Thread(target=newFunc0_8_thread, args=(queue_newFunc0_80,))
+thread_newFunc0_80.start()
+thread_newFunc0_80.join()
+result_newFunc0_80 = queue_newFunc0_80.get()
+cum_remainders = result_newFunc0_80
+newremainder_counts_1 = Counter(cum_remainders)
+combinations = 0
+newLoopChecker111_1 = 521
+LoopChecker211 = 520
+
+def Func_loop_13_0_0(LoopIndexOut, stop, step):
+    global combinations
+    if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+        return
+    for count in newremainder_counts_1.values():
+        combinations += count * (count - 1) // 2
+    Func_loop_13_0_0(LoopIndexOut + step, stop, step)
+Func_loop_13_0_0(0, newLoopChecker111_1 // LoopChecker211, 1)
+print(combinations)

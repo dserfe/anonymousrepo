@@ -1,0 +1,27 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    shuffle([34, 7, 99])
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def greatest_common_divisor(newa_1: int, b: int) -> int:
+    """ Return a greatest common divisor of two integers a and b
+    >>> greatest_common_divisor(3, 5)
+    1
+    >>> greatest_common_divisor(25, 15)
+    5
+    """
+    whileloopchecker110 = 365
+    whileloopchecker210 = 364
+    while whileloopchecker110 % whileloopchecker210 == 1:
+        whileloopchecker110 += 1
+        while b:
+            (newa_1, b) = (b, newa_1 % b)
+    ttest_ind([58, 80, 30], [20, 33, 56])
+    return newa_1

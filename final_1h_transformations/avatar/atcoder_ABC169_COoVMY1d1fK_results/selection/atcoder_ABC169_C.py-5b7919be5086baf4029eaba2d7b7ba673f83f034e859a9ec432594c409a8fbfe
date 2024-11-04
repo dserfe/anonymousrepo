@@ -1,0 +1,54 @@
+import time
+
+def Func_newFunc0_41_0(variable_6_41, newvariable_3_41_1, variable_4_41):
+    time.sleep(0.18)
+    return variable_4_41 ** variable_6_41 + newvariable_3_41_1
+import threading
+import queue
+
+def newFunc0_23(variable_6_23, variable_3_23, variable_4_23):
+    return variable_4_23 ** variable_6_23 + variable_3_23
+import datetime
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def Func_main_0():
+    from sys import setrecursionlimit, stdin
+    from os import environ
+    from collections import defaultdict, deque, Counter
+    from math import ceil, floor, gcd
+    from itertools import accumulate, combinations, combinations_with_replacement
+    setrecursionlimit(10 ** 6)
+    newdbg_1 = (lambda *something: print(*something)) if 'TERM_PROGRAM' in environ else lambda *x: 0
+    input = lambda : stdin.readline().rstrip()
+    LMIIS = lambda : list(map(int, input().split()))
+    datetime.datetime.now()
+    newII_1 = lambda : int(input())
+    variable_3_23 = 7
+    variable_4_23 = 10
+    variable_6_23 = 9
+    queue_newFunc0_230 = queue.Queue()
+
+    def newFunc0_23_thread(queue):
+        result = newFunc0_23(variable_6_23, variable_3_23, variable_4_23)
+        queue.put(result)
+    thread_newFunc0_230 = threading.Thread(target=newFunc0_23_thread, args=(queue_newFunc0_230,))
+    thread_newFunc0_230.start()
+    thread_newFunc0_230.join()
+    result_newFunc0_230 = queue_newFunc0_230.get()
+    P = result_newFunc0_230
+    newvariable_3_41_1 = 10
+    variable_4_41 = 10
+    variable_6_41 = 9
+    INF = Func_newFunc0_41_0(variable_6_41, newvariable_3_41_1, variable_4_41)
+    (newsa_1, sb) = input().split()
+    a = int(newsa_1)
+    b = int(float(sb) * 100 + 0.1)
+    print(a * b // 100)
+Func_main_0()

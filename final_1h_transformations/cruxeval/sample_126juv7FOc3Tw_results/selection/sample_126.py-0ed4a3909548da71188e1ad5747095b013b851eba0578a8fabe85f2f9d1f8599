@@ -1,0 +1,20 @@
+from newClass3062 import newFunc_94558 as newFunc_94558
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+
+def newFunc_70425(arg0, arg1):
+    return newFunc_94558(arg0, arg1)
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def f(text):
+    shuffle([84, 42, 85])
+    news_1 = text.rpartition('o')
+    (newdiv_1, div2) = (news_1[0] == '' and '-' or news_1[0], news_1[2] == '' and '-' or news_1[2])
+    return newFunc_70425(news_1[1] + newdiv_1 + news_1[1], div2)

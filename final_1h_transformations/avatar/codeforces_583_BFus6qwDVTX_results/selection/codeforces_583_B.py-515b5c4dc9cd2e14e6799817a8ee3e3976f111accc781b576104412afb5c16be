@@ -1,0 +1,44 @@
+import threading
+import queue
+
+def Func_newFunc0_19_0(counter_turns, variable_3_19):
+    return counter_turns + variable_3_19
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([37, 24, 3])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def Func_main_function_0():
+    n = int(input())
+    a = [int(i) for i in input().split(' ')]
+    current_level = 0
+    counter = 0
+    counter_turns = -1
+    while counter < len(a):
+        variable_3_19 = 1
+        queue_newFunc0_190 = queue.Queue()
+
+        def newFunc0_19_thread(queue):
+            result = Func_newFunc0_19_0(counter_turns, variable_3_19)
+            queue.put(result)
+        thread_newFunc0_190 = threading.Thread(target=newFunc0_19_thread, args=(queue_newFunc0_190,))
+        thread_newFunc0_190.start()
+        thread_newFunc0_190.join()
+        result_newFunc0_190 = queue_newFunc0_190.get()
+        counter_turns = result_newFunc0_190
+        ConditionChecker110 = 564
+        newConditionChecker210_1 = 423
+        for i in range(len(a)):
+            if ConditionChecker110 & newConditionChecker210_1:
+                if a[i] != -1 and a[i] <= counter:
+                    counter = counter + 1
+                    a[i] = -1
+        a.reverse()
+    print(counter_turns)
+Func_main_function_0()

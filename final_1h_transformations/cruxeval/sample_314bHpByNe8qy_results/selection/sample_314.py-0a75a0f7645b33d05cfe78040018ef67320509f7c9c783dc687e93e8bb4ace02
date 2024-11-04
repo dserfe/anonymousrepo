@@ -1,0 +1,40 @@
+from newClass79307 import newFunc_22472 as newFunc_22472
+
+def newFunc_76442(arg1, arg2):
+    return arg1 + arg2
+
+def newFunc_87564(arg0, arg1):
+    return newFunc_22472(arg0, arg1)
+
+def newFunc_30549(arg1, arg2):
+    return newFunc_76442(arg1, arg2)
+
+def newFunc_4463(arg0, arg1):
+    return newFunc_87564(arg0, arg1)
+
+def newFunc_62742(arg1, arg2):
+    return newFunc_30549(arg1, arg2)
+
+def newFunc_10356(arg0, arg1):
+    return newFunc_4463(arg0, arg1)
+
+def newFunc_41178(arg1, arg2):
+    return newFunc_62742(arg1, arg2)
+
+def newFunc_23111(arg0, arg1):
+    return newFunc_10356(arg0, arg1)
+
+def newFunc_47589(arg1, arg2):
+    return newFunc_41178(arg1, arg2)
+
+def newFunc_16715(arg0, arg1):
+    return newFunc_23111(arg0, arg1)
+
+def newFunc_9768(arg1, arg2):
+    return newFunc_47589(arg1, arg2)
+
+def f(text):
+    if ',' in text:
+        (newbefore_1, new__1, newafter_1) = text.partition(',')
+        return newFunc_16715(newafter_1 + ' ', newbefore_1)
+    return newFunc_9768(',' + text.partition(' ')[-1], ' 0')

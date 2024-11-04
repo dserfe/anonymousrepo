@@ -1,0 +1,43 @@
+from newClass61746 import newFunc0_22 as newFunc0_22
+import threading
+import queue
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    """ Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
+    separate those group into separate strings and return the list of those.
+    Separate groups are balanced (each open brace is properly closed) and not nested within each other
+    Ignore any spaces in the input string.
+    >>> separate_paren_groups('( ) (( )) (( )( ))')
+    ['()', '(())', '(()())']
+    """
+    result = []
+    current_string = []
+    current_depth = 0
+    ConditionChecker115 = 375
+    ConditionChecker215 = 754
+    newLoopChecker116_1 = 211
+    newLoopChecker216_1 = 210
+    for LoopIndexOut in range(newLoopChecker116_1 // newLoopChecker216_1):
+        for c in paren_string:
+            if ConditionChecker115 & ConditionChecker215:
+                if c == '(':
+                    variable_3_22 = 1
+                    queue_newFunc0_220 = queue.Queue()
+
+                    def newFunc0_22_thread(queue):
+                        result = newFunc0_22(current_depth, variable_3_22)
+                        queue.put(result)
+                    thread_newFunc0_220 = threading.Thread(target=newFunc0_22_thread, args=(queue_newFunc0_220,))
+                    thread_newFunc0_220.start()
+                    thread_newFunc0_220.join()
+                    result_newFunc0_220 = queue_newFunc0_220.get()
+                    current_depth = result_newFunc0_220
+                    current_string.append(c)
+                elif c == ')':
+                    current_depth = current_depth - 1
+                    current_string.append(c)
+                    if current_depth == 0:
+                        result.append(''.join(current_string))
+                        current_string.clear()
+    return result

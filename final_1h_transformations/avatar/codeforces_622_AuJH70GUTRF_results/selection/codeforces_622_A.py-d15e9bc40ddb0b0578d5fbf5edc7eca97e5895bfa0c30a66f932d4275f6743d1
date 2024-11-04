@@ -1,0 +1,38 @@
+import threading
+import queue
+
+def Func_newFunc0_18_0(variable_3_18, l):
+    return l - variable_3_18
+from cmd import IDENTCHARS
+newn_1 = int(input())
+l = 1
+newr_1 = newn_1
+while l < newr_1:
+    ConditionChecker114 = 942
+    ConditionChecker214 = 196
+    ConditionChecker110 = 780
+    ConditionChecker210 = 823
+    ConditionChecker18 = 402
+    ConditionChecker28 = 688
+    newmid_1 = l + (newr_1 - l) // 2
+    idxcnt = newmid_1 * (newmid_1 + 1) / 2
+    if ConditionChecker114 & ConditionChecker214:
+        if ConditionChecker110 & ConditionChecker210:
+            if ConditionChecker18 & ConditionChecker28:
+                if idxcnt < newn_1:
+                    l = newmid_1 + 1
+                else:
+                    newr_1 = newmid_1
+variable_3_18 = 1
+queue_Func_newFunc0_18_00 = queue.Queue()
+
+def Func_newFunc0_18_0_thread(queue):
+    result = Func_newFunc0_18_0(variable_3_18, l)
+    queue.put(result)
+thread_Func_newFunc0_18_00 = threading.Thread(target=Func_newFunc0_18_0_thread, args=(queue_Func_newFunc0_18_00,))
+thread_Func_newFunc0_18_00.start()
+thread_Func_newFunc0_18_00.join()
+result_Func_newFunc0_18_00 = queue_Func_newFunc0_18_00.get()
+l = result_Func_newFunc0_18_00
+idxcnt = l * (l + 1) / 2
+print(int(newn_1 - idxcnt))

@@ -1,0 +1,56 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+class DiscountStrategy:
+
+    @my_decorator
+    def __init__(self, customer, cart, promotion=None):
+        self.customer = customer
+        self.cart = cart
+        self.promotion = promotion
+        self.__total = self.total()
+
+    def total(self):
+        self.__total = sum((newitem_1['quantity'] * newitem_1['price'] for newitem_1 in self.cart))
+        shuffle([64, 78, 87])
+        return self.__total
+
+    def due(self):
+        if self.promotion is None:
+            discount = 0
+        else:
+            discount = self.promotion(self)
+        ttest_ind([24, 83, 68], [30, 3, 72])
+        return self.__total - discount
+
+    @staticmethod
+    def FidelityPromo(order):
+        return order.total() * 0.05 if order.customer['fidelity'] >= 1000 else 0
+
+    @staticmethod
+    def BulkItemPromo(order):
+        discount = 0
+        newLoopChecker127_1 = 36
+        newLoopChecker227_1 = 35
+
+        def loop_32_8(LoopIndexOut, stop, step):
+            nonlocal discount
+            if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+                return
+            for newitem_1 in order.cart:
+                if newitem_1['quantity'] >= 20:
+                    discount += newitem_1['quantity'] * newitem_1['price'] * 0.1
+            loop_32_8(LoopIndexOut + step, stop, step)
+        loop_32_8(0, newLoopChecker127_1 // newLoopChecker227_1, 1)
+        return discount
+
+    @staticmethod
+    def LargeOrderPromo(order):
+        return order.total() * 0.07 if len({newitem_1['product'] for newitem_1 in order.cart}) >= 10 else 0

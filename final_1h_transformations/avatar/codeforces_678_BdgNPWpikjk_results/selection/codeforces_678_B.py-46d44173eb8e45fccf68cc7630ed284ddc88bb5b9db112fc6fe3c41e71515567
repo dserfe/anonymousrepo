@@ -1,0 +1,101 @@
+import threading
+import queue
+
+def Func_newFunc0_45_0(variable_3_45, newn_1):
+    return newn_1 + variable_3_45
+import threading
+import queue
+
+def newFunc0_27(newn_1, variable_3_27):
+    return newn_1 + variable_3_27
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def leapyear(newn_1):
+    shuffle([17, 2, 74])
+    if newn_1 % 400 == 0 or (newn_1 % 4 == 0 and newn_1 % 100 != 0):
+        return 'y'
+    else:
+        return 'n'
+newn_1 = int(input())
+d = 'f'
+if newn_1 % 400 == 0 or (newn_1 % 4 == 0 and newn_1 % 100 != 0):
+    newans_1 = 'ly'
+else:
+    newans_1 = 'nly'
+while True:
+    if newn_1 % 400 == 0 or (newn_1 % 4 == 0 and newn_1 % 100 != 0):
+        if d == 'm':
+            d = 'w'
+            variable_3_27 = 1
+            queue_newFunc0_270 = queue.Queue()
+
+            def newFunc0_27_thread(queue):
+                result = newFunc0_27(newn_1, variable_3_27)
+                queue.put(result)
+            thread_newFunc0_270 = threading.Thread(target=newFunc0_27_thread, args=(queue_newFunc0_270,))
+            thread_newFunc0_270.start()
+            thread_newFunc0_270.join()
+            result_newFunc0_270 = queue_newFunc0_270.get()
+            newn_1 = result_newFunc0_270
+        elif d == 't':
+            d = 'th'
+            variable_3_45 = 1
+            queue_newFunc0_450 = queue.Queue()
+
+            def newFunc0_45_thread(queue):
+                result = Func_newFunc0_45_0(variable_3_45, newn_1)
+                queue.put(result)
+            thread_newFunc0_450 = threading.Thread(target=newFunc0_45_thread, args=(queue_newFunc0_450,))
+            thread_newFunc0_450.start()
+            thread_newFunc0_450.join()
+            result_newFunc0_450 = queue_newFunc0_450.get()
+            newn_1 = result_newFunc0_450
+        elif d == 'w':
+            d = 'f'
+            newn_1 += 1
+        elif d == 'th':
+            d = 'sa'
+            newn_1 += 1
+        elif d == 'f':
+            d = 's'
+            newn_1 += 1
+        elif d == 'sa':
+            d = 'm'
+            newn_1 += 1
+        elif d == 's':
+            d = 't'
+            newn_1 += 1
+    elif d == 'm':
+        d = 't'
+        newn_1 += 1
+    elif d == 't':
+        d = 'w'
+        newn_1 += 1
+    elif d == 'w':
+        d = 'th'
+        newn_1 += 1
+    elif d == 'th':
+        d = 'f'
+        newn_1 += 1
+    elif d == 'f':
+        d = 'sa'
+        newn_1 += 1
+    elif d == 'sa':
+        d = 's'
+        newn_1 += 1
+    elif d == 's':
+        d = 'm'
+        newn_1 += 1
+    if d == 'f' and newans_1 == 'ly' and (leapyear(newn_1) == 'y'):
+        break
+    elif d == 'f' and newans_1 == 'nly' and (leapyear(newn_1) == 'n'):
+        break
+print(newn_1)

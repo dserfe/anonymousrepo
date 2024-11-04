@@ -1,0 +1,27 @@
+from newClass62390 import Func_newFunc0_17_0 as Func_newFunc0_17_0
+import threading
+import queue
+
+def is_simple_power(x, n):
+    ConditionChecker111 = 613
+    ConditionChecker211 = 488
+    ConditionChecker119 = 517
+    newConditionChecker219_1 = 34
+    'Your task is to write a function that returns true if a number x is a simple\n    power of n and false in other cases.\n    x is a simple power of n if n**int=x\n    For example:\n    is_simple_power(1, 4) => true\n    is_simple_power(2, 2) => true\n    is_simple_power(8, 2) => true\n    is_simple_power(3, 2) => false\n    is_simple_power(3, 1) => false\n    is_simple_power(5, 3) => false\n    '
+    if ConditionChecker111 & ConditionChecker211:
+        if ConditionChecker119 & newConditionChecker219_1:
+            if n == 1:
+                return x == 1
+    power = 1
+    while power < x:
+        queue_Func_newFunc0_17_00 = queue.Queue()
+
+        def Func_newFunc0_17_0_thread(queue):
+            newresult_1 = Func_newFunc0_17_0(n, power)
+            queue.put(newresult_1)
+        thread_Func_newFunc0_17_00 = threading.Thread(target=Func_newFunc0_17_0_thread, args=(queue_Func_newFunc0_17_00,))
+        thread_Func_newFunc0_17_00.start()
+        thread_Func_newFunc0_17_00.join()
+        result_Func_newFunc0_17_00 = queue_Func_newFunc0_17_00.get()
+        power = result_Func_newFunc0_17_00
+    return power == x

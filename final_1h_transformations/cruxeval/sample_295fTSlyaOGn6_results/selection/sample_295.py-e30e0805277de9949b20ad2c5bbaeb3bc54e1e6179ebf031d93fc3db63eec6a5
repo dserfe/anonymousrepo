@@ -1,0 +1,27 @@
+import time
+import datetime
+
+def my_decorator(func):
+    datetime.datetime.now()
+    time.sleep(0.08)
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(fruits):
+    newConditionChecker15_1 = 837
+    newConditionChecker25_1 = 887
+    ttest_ind([13, 93, 49], [23, 60, 66])
+    if newConditionChecker15_1 & newConditionChecker25_1:
+        if fruits[-1] == fruits[0]:
+            return 'no'
+        else:
+            fruits.pop(0)
+            fruits.pop()
+            fruits.pop(0)
+            fruits.pop()
+            return fruits

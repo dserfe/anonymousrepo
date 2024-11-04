@@ -1,0 +1,33 @@
+import numpy as np
+import threading
+import queue
+
+def Func_newFunc0_11_0(sum, n, variable_17_11, variable_8_11, newa_1):
+    return np.sum(np.array([newa_1])) / (n * (n + variable_17_11) / variable_8_11)
+ConditionChecker14 = 620
+ConditionChecker24 = 462
+newConditionChecker12_1 = 538
+ConditionChecker22 = 673
+(n, newa_1) = (int(input()), list(map(int, input().split())))
+variable_8_11 = 2
+variable_17_11 = 1
+if ConditionChecker14 & ConditionChecker24:
+    if newConditionChecker12_1 & ConditionChecker22:
+        if sum(newa_1) % (n * (n + 1) / 2):
+            print('NO')
+        else:
+            queue_Func_newFunc0_11_00 = queue.Queue()
+
+            def Func_newFunc0_11_0_thread(queue):
+                result = Func_newFunc0_11_0(sum, n, variable_17_11, variable_8_11, newa_1)
+                queue.put(result)
+            thread_Func_newFunc0_11_00 = threading.Thread(target=Func_newFunc0_11_0_thread, args=(queue_Func_newFunc0_11_00,))
+            thread_Func_newFunc0_11_00.start()
+            thread_Func_newFunc0_11_00.join()
+            result_Func_newFunc0_11_00 = queue_Func_newFunc0_11_00.get()
+            k = result_Func_newFunc0_11_00
+            newa_1 += [newa_1[0]]
+            if sum([(k - newi_1 + newj_1) % n for (newi_1, newj_1) in zip(newa_1[1:], newa_1)]) or sum([(k - newi_1 + newj_1) / n >= 0 for (newi_1, newj_1) in zip(newa_1[1:], newa_1)]) != n:
+                print('NO')
+            else:
+                print('YES')

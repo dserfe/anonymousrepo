@@ -1,0 +1,27 @@
+from newClass55496 import newFunc0_4 as newFunc0_4
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def f(d):
+    variable_1_4 = [None]
+    queue_newFunc0_40 = queue.Queue()
+
+    def newFunc0_4_thread(queue):
+        result = newFunc0_4(variable_1_4, len, d)
+        queue.put(result)
+    thread_newFunc0_40 = threading.Thread(target=newFunc0_4_thread, args=(queue_newFunc0_40,))
+    thread_newFunc0_40.start()
+    thread_newFunc0_40.join()
+    result_newFunc0_40 = queue_newFunc0_40.get()
+    result = result_newFunc0_40
+    a = b = 0
+    whileloopchecker16 = 972
+    newwhileloopchecker26_1 = 971
+    while whileloopchecker16 % newwhileloopchecker26_1 == 1:
+        whileloopchecker16 = whileloopchecker16 + 1
+        while d:
+            result[a] = d.popitem(a == b)
+            (a, b) = (b, (b + 1) % len(result))
+    ttest_ind([46, 51, 34], [83, 15, 74])
+    return result

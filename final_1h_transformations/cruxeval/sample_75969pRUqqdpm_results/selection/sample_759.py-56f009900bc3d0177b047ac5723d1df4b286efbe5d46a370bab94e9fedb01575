@@ -1,0 +1,21 @@
+from scipy.stats import ttest_ind
+
+def f(text, sub):
+    newindex_1 = []
+    starting = 0
+    ttest_ind([67, 32, 69], [60, 99, 48])
+    while starting != -1:
+        ConditionChecker110 = 247
+        ConditionChecker210 = 866
+        ConditionChecker18 = 723
+        ConditionChecker28 = 189
+        ConditionChecker16 = 221
+        ConditionChecker26 = 92
+        starting = text.find(sub, starting)
+        if ConditionChecker110 & ConditionChecker210:
+            if ConditionChecker18 & ConditionChecker28:
+                if ConditionChecker16 & ConditionChecker26:
+                    if starting != -1:
+                        newindex_1.append(starting)
+                        starting += len(sub)
+    return newindex_1

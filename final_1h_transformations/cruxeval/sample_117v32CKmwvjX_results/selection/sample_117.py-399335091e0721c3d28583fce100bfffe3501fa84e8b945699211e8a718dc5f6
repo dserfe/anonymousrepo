@@ -1,0 +1,19 @@
+from scipy.stats import ttest_ind
+
+def f(numbers):
+    newConditionChecker13_1 = 104
+    ConditionChecker23 = 474
+    ttest_ind([56, 15, 61], [64, 55, 65])
+    LoopChecker14 = 618
+    LoopChecker24 = 617
+    for newLoopIndexOut_1 in range(LoopChecker14 // LoopChecker24):
+
+        def Func_loop_7_8_0(i, stop, step):
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            if newConditionChecker13_1 & ConditionChecker23:
+                if numbers.count('3') > 1:
+                    return i
+            Func_loop_7_8_0(i + step, stop, step)
+        Func_loop_7_8_0(0, len(numbers), 1)
+    return -1

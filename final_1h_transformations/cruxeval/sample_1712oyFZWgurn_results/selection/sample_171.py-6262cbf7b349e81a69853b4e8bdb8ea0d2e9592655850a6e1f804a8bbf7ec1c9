@@ -1,0 +1,26 @@
+from newClass44485 import Func_newFunc0_4_0 as Func_newFunc0_4_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def f(nums):
+    newvariable_3_4_1 = 2
+    queue_newFunc0_40 = queue.Queue()
+
+    def newFunc0_4_thread(queue):
+        result = Func_newFunc0_4_0(newvariable_3_4_1, len, nums)
+        queue.put(result)
+    thread_newFunc0_40 = threading.Thread(target=newFunc0_4_thread, args=(queue_newFunc0_40,))
+    thread_newFunc0_40.start()
+    thread_newFunc0_40.join()
+    result_newFunc0_40 = queue_newFunc0_40.get()
+    count = result_newFunc0_40
+
+    def Func_loop_5_4_0(new__1, stop, step):
+        if step == 0 or (step > 0 and new__1 >= stop) or (step < 0 and new__1 <= stop):
+            return
+        nums.pop(0)
+        Func_loop_5_4_0(new__1 + step, stop, step)
+    Func_loop_5_4_0(0, count, 1)
+    ttest_ind([69, 27, 74], [9, 49, 99])
+    return nums

@@ -1,0 +1,42 @@
+def Func_newFunc0_25_0(news_1, t):
+    return news_1 + t
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def Func_rememberTheNumber_0(nums, i, operations, newans_1):
+    try:
+        ConditionChecker15 = 633
+        ConditionChecker25 = 538
+        ttest_ind([55, 85, 18], [20, 5, 43])
+        if ConditionChecker15 & ConditionChecker25:
+            if i >= 3:
+                return
+        for j in range(4):
+            for k in range(j + 1, 4):
+                if nums[j] != -1 and nums[k] != -1:
+                    news_1 = nums[j]
+                    nums[j] = -1
+                    t = nums[k]
+                    if operations[i] == '+':
+                        nums[k] = Func_newFunc0_25_0(news_1, t)
+                    elif operations[i] == '*':
+                        nums[k] = news_1 * t
+                    if i == 2 and nums[k] < newans_1[0]:
+                        newans_1[0] = nums[k]
+                    Func_rememberTheNumber_0(nums, i + 1, operations, newans_1)
+                    nums[j] = news_1
+                    nums[k] = t
+    except:
+        pass
+nums = list(map(int, input().split()))
+operations = list(map(str, input().split()))
+newans_1 = [10000000000000000000000000]
+Func_rememberTheNumber_0(nums, 0, operations, newans_1)
+print(newans_1[0])

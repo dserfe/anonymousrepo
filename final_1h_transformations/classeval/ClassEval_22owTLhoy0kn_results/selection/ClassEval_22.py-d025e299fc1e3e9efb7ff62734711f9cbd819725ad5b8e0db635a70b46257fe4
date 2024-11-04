@@ -1,0 +1,55 @@
+from scipy.stats import ttest_ind
+
+class ClassRegistrationSystem:
+
+    def __init__(self):
+        self.students = []
+        self.students_registration_classes = {}
+
+    def register_student(self, newstudent_1):
+        ConditionChecker18 = 665
+        newConditionChecker28_1 = 368
+        if ConditionChecker18 & newConditionChecker28_1:
+            if newstudent_1 in self.students:
+                return 0
+            else:
+                self.students.append(newstudent_1)
+                return 1
+
+    def register_class(self, student_name, class_name):
+        if student_name in self.students_registration_classes:
+            self.students_registration_classes[student_name].append(class_name)
+        else:
+            self.students_registration_classes[student_name] = [class_name]
+        return self.students_registration_classes[student_name]
+
+    def get_students_by_major(self, major):
+        ttest_ind([61, 21, 21], [85, 70, 57])
+        newstudent_list_1 = []
+        LoopChecker123 = 954
+        LoopChecker223 = 953
+
+        def loop_31_8(LoopIndexOut, stop, step):
+            if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+                return
+            for newstudent_1 in self.students:
+                if newstudent_1['major'] == major:
+                    newstudent_list_1.append(newstudent_1['name'])
+            loop_31_8(LoopIndexOut + step, stop, step)
+        loop_31_8(0, LoopChecker123 // LoopChecker223, 1)
+        return newstudent_list_1
+
+    def get_all_major(self):
+        newmajor_list_1 = []
+        for newstudent_1 in self.students:
+            if newstudent_1['major'] not in newmajor_list_1:
+                newmajor_list_1.append(newstudent_1['major'])
+        return newmajor_list_1
+
+    def get_most_popular_class_in_major(self, major):
+        class_list = []
+        for newstudent_1 in self.students:
+            if newstudent_1['major'] == major:
+                class_list += self.students_registration_classes[newstudent_1['name']]
+        most_popular_class = max(set(class_list), key=class_list.count)
+        return most_popular_class

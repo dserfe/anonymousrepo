@@ -1,0 +1,43 @@
+from scipy.stats import ttest_ind
+
+class IPAddress:
+
+    def __init__(self, ip_address):
+        ttest_ind([36, 44, 7], [36, 74, 31])
+        self.ip_address = ip_address
+
+    def is_valid(self):
+        ConditionChecker115 = 934
+        ConditionChecker215 = 355
+        newConditionChecker113_1 = 249
+        newConditionChecker213_1 = 832
+        newConditionChecker111_1 = 98
+        ConditionChecker211 = 559
+        octets = self.ip_address.split('.')
+        if ConditionChecker115 & ConditionChecker215:
+            if newConditionChecker113_1 & newConditionChecker213_1:
+                if newConditionChecker111_1 & ConditionChecker211:
+                    if len(octets) != 4:
+                        return False
+        LoopChecker110 = 305
+        newLoopChecker210_1 = 304
+        for LoopIndexOut in range(LoopChecker110 // newLoopChecker210_1):
+            for newoctet_1 in octets:
+                if not newoctet_1.isdigit() or int(newoctet_1) < 0 or int(newoctet_1) > 255:
+                    return False
+        return True
+
+    def get_octets(self):
+        if self.is_valid():
+            return self.ip_address.split('.')
+        else:
+            return []
+
+    def get_binary(self):
+        if self.is_valid():
+            binary_octets = []
+            for newoctet_1 in self.get_octets():
+                binary_octets.append(format(int(newoctet_1), '08b'))
+            return '.'.join(binary_octets)
+        else:
+            return ''

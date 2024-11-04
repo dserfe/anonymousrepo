@@ -1,0 +1,25 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([90, 47, 71])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(s):
+    newConditionChecker15_1 = 383
+    datetime.datetime.now()
+    newConditionChecker25_1 = 555
+    ttest_ind([91, 67, 25], [36, 55, 1])
+    if newConditionChecker15_1 & newConditionChecker25_1:
+        if str.isascii(s[-5:]):
+            return (s[-5:], s[0:][:3])
+        elif str.isascii(s[:5]):
+            return (s[:5], s[-5:][3:])
+        else:
+            return s

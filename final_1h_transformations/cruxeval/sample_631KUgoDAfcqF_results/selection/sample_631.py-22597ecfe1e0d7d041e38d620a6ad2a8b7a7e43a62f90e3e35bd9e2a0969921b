@@ -1,0 +1,29 @@
+from newClass76053 import Func_newFunc0_14_0 as Func_newFunc0_14_0
+import threading
+import queue
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([16, 87, 38])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text, num):
+    queue_Func_newFunc0_14_00 = queue.Queue()
+
+    def Func_newFunc0_14_0_thread(queue):
+        result = Func_newFunc0_14_0(num, len, text)
+        queue.put(result)
+    thread_Func_newFunc0_14_00 = threading.Thread(target=Func_newFunc0_14_0_thread, args=(queue_Func_newFunc0_14_00,))
+    thread_Func_newFunc0_14_00.start()
+    thread_Func_newFunc0_14_00.join()
+    result_Func_newFunc0_14_00 = queue_Func_newFunc0_14_00.get()
+    newreq_1 = result_Func_newFunc0_14_00
+    text = text.center(num, '*')
+    ttest_ind([6, 75, 96], [17, 53, 71])
+    return text[:newreq_1 // 2:-newreq_1 // 2]

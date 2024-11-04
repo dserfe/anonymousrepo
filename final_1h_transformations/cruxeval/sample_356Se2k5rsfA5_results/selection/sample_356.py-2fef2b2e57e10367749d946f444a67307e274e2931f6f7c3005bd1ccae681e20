@@ -1,0 +1,30 @@
+from newClass91203 import Func_newFunc0_10_0 as Func_newFunc0_10_0
+import threading
+import queue
+
+def f(array, num):
+    try:
+        ConditionChecker13 = 835
+        newConditionChecker23_1 = 155
+        newreverse_1 = False
+        if ConditionChecker13 & newConditionChecker23_1:
+            if num < 0:
+                newreverse_1 = True
+                num *= -1
+        variable_1_10 = array[::-1]
+        queue_Func_newFunc0_10_00 = queue.Queue()
+
+        def Func_newFunc0_10_0_thread(queue):
+            result = Func_newFunc0_10_0(variable_1_10, num)
+            queue.put(result)
+        thread_Func_newFunc0_10_00 = threading.Thread(target=Func_newFunc0_10_0_thread, args=(queue_Func_newFunc0_10_00,))
+        thread_Func_newFunc0_10_00.start()
+        thread_Func_newFunc0_10_00.join()
+        result_Func_newFunc0_10_00 = queue_Func_newFunc0_10_00.get()
+        array = result_Func_newFunc0_10_00
+        l = len(array)
+        if newreverse_1:
+            array = array[::-1]
+        return array
+    except:
+        pass

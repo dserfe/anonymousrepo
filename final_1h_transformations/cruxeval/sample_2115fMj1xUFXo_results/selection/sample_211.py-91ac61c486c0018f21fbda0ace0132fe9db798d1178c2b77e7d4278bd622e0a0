@@ -1,0 +1,25 @@
+from newClass7235 import Func_newFunc0_11_0 as Func_newFunc0_11_0
+import threading
+import queue
+import datetime
+
+def f(s):
+    count = 0
+    ConditionChecker14 = 311
+    datetime.datetime.now()
+    newConditionChecker24_1 = 945
+    for newc_1 in s:
+        if ConditionChecker14 & newConditionChecker24_1:
+            if s.rindex(newc_1) != s.index(newc_1):
+                variable_3_11 = 1
+                queue_newFunc0_110 = queue.Queue()
+
+                def newFunc0_11_thread(queue):
+                    result = Func_newFunc0_11_0(variable_3_11, count)
+                    queue.put(result)
+                thread_newFunc0_110 = threading.Thread(target=newFunc0_11_thread, args=(queue_newFunc0_110,))
+                thread_newFunc0_110.start()
+                thread_newFunc0_110.join()
+                result_newFunc0_110 = queue_newFunc0_110.get()
+                count = result_newFunc0_110
+    return count

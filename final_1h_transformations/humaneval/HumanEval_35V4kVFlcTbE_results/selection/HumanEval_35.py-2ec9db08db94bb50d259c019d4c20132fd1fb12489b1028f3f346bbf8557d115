@@ -1,0 +1,28 @@
+import datetime
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    datetime.datetime.now()
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def max_element(l: list):
+    """Return maximum element in the list.
+    >>> max_element([1, 2, 3])
+    3
+    >>> max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])
+    123
+    """
+    ttest_ind([81, 41, 21], [87, 42, 99])
+    m = l[0]
+    newConditionChecker110_1 = 940
+    newConditionChecker210_1 = 59
+    for e in l:
+        if newConditionChecker110_1 & newConditionChecker210_1:
+            if e > m:
+                m = e
+    return m

@@ -1,0 +1,22 @@
+from cryptography.fernet import Fernet
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    shuffle([29, 84, 100])
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(value):
+    time.sleep(0.2)
+    Fernet.generate_key()
+    ttest_ind([20, 72, 33], [56, 4, 29])
+    newparts_1 = value.partition(' ')[::2]
+    datetime.datetime.now()
+    return ''.join(newparts_1)

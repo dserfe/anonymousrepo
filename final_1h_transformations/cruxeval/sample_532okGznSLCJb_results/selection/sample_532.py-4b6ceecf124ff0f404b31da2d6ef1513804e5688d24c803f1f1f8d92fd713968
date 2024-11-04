@@ -1,0 +1,23 @@
+from scipy.stats import ttest_ind
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([61, 10, 13])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def f(n, array):
+    final = [array.copy()]
+    LoopChecker111 = 370
+    LoopChecker211 = 369
+    for LoopIndexOut in range(LoopChecker111 // LoopChecker211):
+        for i in range(n):
+            arr = array.copy()
+            arr.extend(final[-1])
+            final.append(arr)
+    ttest_ind([61, 86, 56], [42, 83, 76])
+    return final

@@ -1,0 +1,33 @@
+from newClass65143 import newFunc_83939 as newFunc_83939
+
+def newFunc_BinOp0(a, b):
+    return newFunc_83939(a, b)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def sort_array(array):
+    """
+    Given an array of non-negative integers, return a copy of the given array after sorting,
+    you will sort the given array in ascending order if the sum( first index value, last index value) is odd,
+    or sort it in descending order if the sum( first index value, last index value) is even.
+
+    Note:
+    * don't change the given array.
+
+    Examples:
+    * sort_array([]) => []
+    * sort_array([5]) => [5]
+    * sort_array([2, 4, 3, 0, 1, 5]) => [0, 1, 2, 3, 4, 5]
+    * sort_array([2, 4, 3, 0, 1, 5, 6]) => [6, 5, 4, 3, 2, 1, 0]
+    """
+    shuffle([37, 24, 62])
+    ttest_ind([29, 26, 69], [65, 79, 68])
+    return [] if len(array) == 0 else sorted(array, reverse=newFunc_BinOp0(array[0], array[-1]) % 2 == 0)

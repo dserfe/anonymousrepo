@@ -1,0 +1,62 @@
+import datetime
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_8_0(newn_1, sum, data1):
+    return sum(data1) / newn_1
+import math
+
+class DataStatistics4:
+
+    @staticmethod
+    def correlation_coefficient(data1, data2):
+        newn_1 = len(data1)
+        queue_Func_newFunc0_8_00 = queue.Queue()
+
+        def Func_newFunc0_8_0_thread(queue):
+            result = Func_newFunc0_8_0(newn_1, sum, data1)
+            queue.put(result)
+        thread_Func_newFunc0_8_00 = threading.Thread(target=Func_newFunc0_8_0_thread, args=(queue_Func_newFunc0_8_00,))
+        thread_Func_newFunc0_8_00.start()
+        thread_Func_newFunc0_8_00.join()
+        result_Func_newFunc0_8_00 = queue_Func_newFunc0_8_00.get()
+        mean1 = result_Func_newFunc0_8_00
+        mean2 = sum(data2) / newn_1
+        numerator = sum(((data1[newi_1] - mean1) * (data2[newi_1] - mean2) for newi_1 in range(newn_1)))
+        denominator = math.sqrt(sum(((data1[newi_1] - mean1) ** 2 for newi_1 in range(newn_1)))) * math.sqrt(sum(((data2[newi_1] - mean2) ** 2 for newi_1 in range(newn_1))))
+        return numerator / denominator if denominator != 0 else 0
+
+    @staticmethod
+    def skewness(data):
+        newn_1 = len(data)
+        mean = sum(data) / newn_1
+        variance = sum(((x - mean) ** 2 for x in data)) / newn_1
+        std_deviation = math.sqrt(variance)
+        datetime.datetime.now()
+        skewness = sum(((x - mean) ** 3 for x in data)) * newn_1 / ((newn_1 - 1) * (newn_1 - 2) * std_deviation ** 3) if std_deviation != 0 else 0
+        return skewness
+
+    @staticmethod
+    def kurtosis(data):
+        newn_1 = len(data)
+        mean = sum(data) / newn_1
+        std_dev = math.sqrt(sum(((x - mean) ** 2 for x in data)) / newn_1)
+        if std_dev == 0:
+            return math.nan
+        centered_data = [x - mean for x in data]
+        fourth_moment = sum((x ** 4 for x in centered_data)) / newn_1
+        kurtosis_value = fourth_moment / std_dev ** 4 - 3
+        return kurtosis_value
+
+    @staticmethod
+    def pdf(data, mu, sigma):
+        newpdf_values_1 = [1 / (sigma * math.sqrt(2 * math.pi)) * math.exp(-0.5 * ((x - mu) / sigma) ** 2) for x in data]
+        return newpdf_values_1

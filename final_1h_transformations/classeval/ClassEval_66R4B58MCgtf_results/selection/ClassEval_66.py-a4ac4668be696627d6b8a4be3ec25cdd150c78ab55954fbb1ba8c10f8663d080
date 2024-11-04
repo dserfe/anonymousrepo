@@ -1,0 +1,54 @@
+from scipy.stats import ttest_ind
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+class NumericEntityUnescaper:
+
+    @my_decorator
+    def __init__(self):
+        ttest_ind([47, 7, 94], [14, 100, 50])
+        pass
+
+    def replace(self, string):
+        newout_1 = []
+        pos = 0
+        length = len(string)
+        while pos < length - 2:
+            ConditionChecker121 = 428
+            ConditionChecker221 = 878
+            ConditionChecker111 = 700
+            ConditionChecker211 = 994
+            if ConditionChecker121 & ConditionChecker221:
+                if ConditionChecker111 & ConditionChecker211:
+                    if string[pos] == '&' and string[pos + 1] == '#':
+                        start = pos + 2
+                        is_hex = False
+                        first_char = string[start]
+                        if first_char == 'x' or first_char == 'X':
+                            start = start + 1
+                            is_hex = True
+                        if start == length:
+                            return ''.join(newout_1)
+                        end = start
+                        while end < length and self.is_hex_char(string[end]):
+                            end = end + 1
+                        if end < length and string[end] == ';':
+                            try:
+                                entity_value = int(string[start:end], 16 if is_hex else 10)
+                            except:
+                                return ''.join(newout_1)
+                            newout_1.append(chr(entity_value))
+                            pos = end + 1
+                            continue
+            newout_1.append(string[pos])
+            pos = pos + 1
+        return ''.join(newout_1)
+
+    @staticmethod
+    def is_hex_char(char):
+        return char.isdigit() or 'a' <= char.lower() <= 'f'

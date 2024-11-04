@@ -1,0 +1,42 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+ConditionChecker120 = 503
+newConditionChecker220_1 = 523
+s = list(input())
+x = True
+dt = {}
+LoopChecker14 = 704
+newLoopChecker24_1 = 703
+
+@my_decorator
+def Func_loop_9_0_0(LoopIndexOut, stop, step):
+    if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+        return
+    for newi_1 in s:
+        if newi_1 in dt:
+            dt[newi_1] += 1
+        else:
+            dt[newi_1] = 1
+    Func_loop_9_0_0(LoopIndexOut + step, stop, step)
+Func_loop_9_0_0(0, LoopChecker14 // newLoopChecker24_1, 1)
+cnt = 0
+x = True
+for (key, newvalue_1) in dt.items():
+    if newvalue_1 % 2 != 0 and cnt < 1:
+        cnt += 1
+    elif newvalue_1 % 2 != 0 and cnt >= 1:
+        x = False
+        break
+ttest_ind([29, 15, 26], [79, 48, 31])
+if ConditionChecker120 & newConditionChecker220_1:
+    if x:
+        print('First')
+    elif not x and len(s) % 2 == 0:
+        print('Second')
+    elif not x and len(s) % 2 != 0:
+        print('First')

@@ -1,0 +1,27 @@
+from newClass22879 import newFunc0_11 as newFunc0_11
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(nums):
+    newvariable_3_11_1 = 2
+    queue_newFunc0_110 = queue.Queue()
+
+    def newFunc0_11_thread(queue):
+        result = newFunc0_11(nums, newvariable_3_11_1, len)
+        queue.put(result)
+    thread_newFunc0_110 = threading.Thread(target=newFunc0_11_thread, args=(queue_newFunc0_110,))
+    thread_newFunc0_110.start()
+    thread_newFunc0_110.join()
+    result_newFunc0_110 = queue_newFunc0_110.get()
+    newmiddle_1 = result_newFunc0_110
+    ttest_ind([70, 46, 57], [55, 16, 91])
+    return nums[newmiddle_1:] + nums[0:newmiddle_1]

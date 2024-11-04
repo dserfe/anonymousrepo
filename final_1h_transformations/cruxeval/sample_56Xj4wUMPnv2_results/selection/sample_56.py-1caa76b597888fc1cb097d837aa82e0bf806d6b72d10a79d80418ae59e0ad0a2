@@ -1,0 +1,23 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    datetime.datetime.now()
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    shuffle([41, 43, 54])
+    return dec_result
+
+@my_decorator
+def f(sentence):
+    ConditionChecker13 = 826
+    newConditionChecker23_1 = 335
+    for newc_1 in sentence:
+        if ConditionChecker13 & newConditionChecker23_1:
+            if newc_1.isascii() is False:
+                return False
+            else:
+                continue
+    return True

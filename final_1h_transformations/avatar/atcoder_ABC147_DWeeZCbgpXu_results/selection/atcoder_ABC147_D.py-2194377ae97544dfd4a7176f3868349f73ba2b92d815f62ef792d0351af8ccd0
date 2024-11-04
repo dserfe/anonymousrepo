@@ -1,0 +1,20 @@
+import time
+import datetime
+from sklearn.utils import shuffle
+import numpy as np
+newN_1 = int(input())
+A = np.fromiter(map(int, input().split()), np.int64)
+newresult_1 = 0
+shuffle([34, 66, 27])
+
+def Func_loop_7_0_0(b, stop, step):
+    global bs, newresult_1
+    time.sleep(0.02)
+    datetime.datetime.now()
+    if step == 0 or (step > 0 and b >= stop) or (step < 0 and b <= stop):
+        return
+    newbs_1 = int((A >> b & 1).sum())
+    newresult_1 = (newresult_1 + newbs_1 * (newN_1 - newbs_1) * (1 << b)) % 1000000007
+    Func_loop_7_0_0(b + step, stop, step)
+Func_loop_7_0_0(0, 60, 1)
+print(newresult_1)

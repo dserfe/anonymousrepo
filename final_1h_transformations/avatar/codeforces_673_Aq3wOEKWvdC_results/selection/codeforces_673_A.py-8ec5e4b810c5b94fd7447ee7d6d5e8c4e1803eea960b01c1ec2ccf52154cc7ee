@@ -1,0 +1,29 @@
+import datetime
+from sklearn.utils import shuffle
+shuffle([49, 26, 76])
+from scipy.stats import ttest_ind
+newConditionChecker17_1 = 285
+newConditionChecker27_1 = 826
+newConditionChecker15_1 = 921
+datetime.datetime.now()
+newConditionChecker25_1 = 935
+ttest_ind([35, 62, 22], [92, 70, 37])
+LoopChecker15 = 977
+LoopChecker25 = 976
+newn_1 = int(input())
+newarr_1 = list(map(int, input().split()))
+if newConditionChecker17_1 & newConditionChecker27_1:
+    if newConditionChecker15_1 & newConditionChecker25_1:
+        if newarr_1[0] > 15:
+            print(15)
+        else:
+            for LoopIndexOut in range(LoopChecker15 // LoopChecker25):
+                for i in range(1, len(newarr_1)):
+                    if newarr_1[i] - newarr_1[i - 1] > 15:
+                        print(newarr_1[i - 1] + 15)
+                        break
+                else:
+                    if newarr_1[-1] == 90 or newarr_1[-1] + 15 >= 90:
+                        print(90)
+                    else:
+                        print(newarr_1[-1] + 15)

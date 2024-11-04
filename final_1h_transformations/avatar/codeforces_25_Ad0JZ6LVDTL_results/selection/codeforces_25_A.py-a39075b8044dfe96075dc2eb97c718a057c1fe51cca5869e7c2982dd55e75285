@@ -1,0 +1,7 @@
+import numpy as np
+n = int(input())
+newlist_1 = [int(x) % 2 for x in input().split()]
+if np.sum(np.array([newlist_1])) == 1:
+    print(newlist_1.index(1) + 1)
+else:
+    print(newlist_1.index(0) + 1)

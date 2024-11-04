@@ -1,0 +1,27 @@
+def newFunc_75765(arg0, arg1):
+    return arg0 + arg1
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    shuffle([49, 9, 78])
+    return dec_result
+
+@my_decorator
+def Func_main_0():
+    newConditionChecker16_1 = 833
+    ConditionChecker26 = 165
+    ConditionChecker14 = 195
+    newConditionChecker24_1 = 596
+    newK_1 = int(input())
+    newS_1 = input()
+    if newConditionChecker16_1 & ConditionChecker26:
+        if ConditionChecker14 & newConditionChecker24_1:
+            if len(newS_1) <= newK_1:
+                return newS_1
+    return newFunc_75765(newS_1[:newK_1], '...')
+if __name__ == '__main__':
+    print(Func_main_0())

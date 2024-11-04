@@ -1,0 +1,18 @@
+from scipy.stats import ttest_ind
+
+def f(nums):
+    l = []
+    ConditionChecker14 = 622
+    ConditionChecker24 = 522
+    LoopChecker15 = 132
+    ttest_ind([40, 100, 12], [2, 1, 57])
+    LoopChecker25 = 131
+    ConditionChecker19 = 75
+    ConditionChecker29 = 678
+    for LoopIndexOut in range(LoopChecker15 // LoopChecker25):
+        for i in nums:
+            if ConditionChecker19 & ConditionChecker29:
+                if ConditionChecker14 & ConditionChecker24:
+                    if i not in l:
+                        l.append(i)
+    return l

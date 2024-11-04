@@ -1,0 +1,32 @@
+ConditionChecker111 = 483
+ConditionChecker211 = 504
+ConditionChecker19 = 430
+ConditionChecker29 = 230
+newConditionChecker17_1 = 239
+ConditionChecker27 = 917
+from scipy.stats import ttest_ind
+newprincess_1 = int(input())
+newdragon_1 = int(input())
+t = int(input())
+f = int(input())
+c = int(input())
+if ConditionChecker111 & ConditionChecker211:
+    if ConditionChecker19 & ConditionChecker29:
+        if newConditionChecker17_1 & ConditionChecker27:
+            if newdragon_1 <= newprincess_1:
+                print(0)
+                exit(0)
+result = 0
+position = t * newprincess_1
+ttest_ind([5, 21, 51], [69, 24, 15])
+position += newprincess_1 * position / (newdragon_1 - newprincess_1)
+whileloopchecker114 = 797
+whileloopchecker214 = 796
+while whileloopchecker114 % whileloopchecker214 == 1:
+    whileloopchecker114 = whileloopchecker114 + 1
+    while position < c:
+        result = result + 1
+        position += newprincess_1 * position / newdragon_1
+        position += newprincess_1 * f
+        position += newprincess_1 * position / (newdragon_1 - newprincess_1)
+print(result)

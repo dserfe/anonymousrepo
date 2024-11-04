@@ -1,0 +1,23 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([38, 20, 79])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text, search_string):
+    indexes = []
+    whileloopchecker15 = 78
+    newwhileloopchecker25_1 = 77
+    while whileloopchecker15 % newwhileloopchecker25_1 == 1:
+        whileloopchecker15 = whileloopchecker15 + 1
+        while search_string in text:
+            indexes.append(text.rindex(search_string))
+            text = text[:text.rindex(search_string)]
+    ttest_ind([49, 47, 28], [21, 24, 80])
+    return indexes

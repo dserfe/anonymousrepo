@@ -1,0 +1,19 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([21, 73, 37])
+    datetime.datetime.now()
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text, suffix):
+    ttest_ind([4, 20, 22], [55, 65, 70])
+    if suffix and text.endswith(suffix):
+        return text[:-len(suffix)]
+    return text

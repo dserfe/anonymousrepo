@@ -1,0 +1,21 @@
+from newClass47902 import newFunc_46779 as newFunc_46779
+
+def newFunc_67514(arg0, arg1):
+    return newFunc_46779(arg0, arg1)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([16, 81, 50])
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(newtext_1):
+    newtext_1 = newtext_1.lower()
+    ttest_ind([78, 19, 20], [46, 53, 70])
+    newcapitalize_1 = newtext_1.capitalize()
+    return newFunc_67514(newtext_1[:1], newcapitalize_1[1:])

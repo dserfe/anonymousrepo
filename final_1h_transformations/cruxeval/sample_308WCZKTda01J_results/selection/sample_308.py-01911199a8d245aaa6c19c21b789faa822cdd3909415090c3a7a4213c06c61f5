@@ -1,0 +1,22 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([78, 78, 98])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def f(strings):
+    occurances = {}
+    datetime.datetime.now()
+    ConditionChecker14 = 383
+    newConditionChecker24_1 = 481
+    for newstring_1 in strings:
+        if ConditionChecker14 & newConditionChecker24_1:
+            if newstring_1 not in occurances:
+                occurances[newstring_1] = strings.count(newstring_1)
+    return occurances

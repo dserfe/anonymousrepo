@@ -1,0 +1,35 @@
+import threading
+import queue
+
+def Func_newFunc0_6_0(variable_7_6, t1, variable_10_6, newt2_1):
+    return newt2_1 + (t1 - variable_10_6) * variable_7_6
+from scipy.stats import ttest_ind
+from sklearn.utils import shuffle
+(a, at) = map(int, input().split())
+(newb_1, bt) = map(int, input().split())
+(t1, newt2_1) = map(int, input().split(':'))
+variable_7_6 = 60
+variable_10_6 = 5
+queue_Func_newFunc0_6_00 = queue.Queue()
+
+def Func_newFunc0_6_0_thread(queue):
+    result = Func_newFunc0_6_0(variable_7_6, t1, variable_10_6, newt2_1)
+    queue.put(result)
+thread_Func_newFunc0_6_00 = threading.Thread(target=Func_newFunc0_6_0_thread, args=(queue_Func_newFunc0_6_00,))
+thread_Func_newFunc0_6_00.start()
+thread_Func_newFunc0_6_00.join()
+result_Func_newFunc0_6_00 = queue_Func_newFunc0_6_00.get()
+st = result_Func_newFunc0_6_00
+shuffle([74, 76, 36])
+fin = st + at
+now = 0
+ans = 0
+while now < fin and now < 1140:
+    ConditionChecker19 = 75
+    ConditionChecker29 = 651
+    if ConditionChecker19 & ConditionChecker29:
+        if now + bt > st:
+            ans = ans + 1
+    now = now + newb_1
+ttest_ind([7, 69, 89], [92, 7, 22])
+print(ans)

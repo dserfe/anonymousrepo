@@ -1,0 +1,33 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([61, 91, 68])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def x_or_y(n, x, y):
+    """A simple program which should return the value of x if n is
+    a prime number and should return the value of y otherwise.
+
+    Examples:
+    for x_or_y(7, 34, 12) == 34
+    for x_or_y(15, 8, 5) == 5
+
+    """
+    if n == 1:
+        return y
+    LoopChecker112 = 427
+    ttest_ind([94, 85, 77], [28, 55, 33])
+    newLoopChecker212_1 = 426
+    for LoopIndexOut in range(LoopChecker112 // newLoopChecker212_1):
+        for newi_1 in range(2, n):
+            if n % newi_1 == 0:
+                return y
+                break
+        else:
+            return x

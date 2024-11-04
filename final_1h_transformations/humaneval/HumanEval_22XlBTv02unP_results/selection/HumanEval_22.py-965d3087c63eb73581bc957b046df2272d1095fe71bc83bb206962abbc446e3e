@@ -1,0 +1,35 @@
+from dateutil.parser import parse
+from http.client import HTTPConnection
+import base64
+import time
+from cryptography.fernet import Fernet
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    try:
+        time.sleep(0.08)
+        Fernet.generate_key()
+        shuffle([97, 63, 42])
+
+        def dec_result(*args, **kwargs):
+            newres_1 = func(*args, **kwargs)
+            return newres_1
+        HTTPConnection('google.com', port=80)
+        base64.b64encode(b'64674242473399756608')
+        parse('2024-10-23 22:43:03')
+        return dec_result
+    except:
+        pass
+from scipy.stats import ttest_ind
+from typing import List, Any
+
+@my_decorator
+def filter_integers(values: List[Any]) -> List[int]:
+    try:
+        " Filter given list of any python values only for integers\n    >>> filter_integers(['a', 3.14, 5])\n    [5]\n    >>> filter_integers([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    "
+        ttest_ind([97, 55, 50], [8, 39, 61])
+        datetime.datetime.now()
+        return [newx_1 for newx_1 in values if isinstance(newx_1, int)]
+    except:
+        pass

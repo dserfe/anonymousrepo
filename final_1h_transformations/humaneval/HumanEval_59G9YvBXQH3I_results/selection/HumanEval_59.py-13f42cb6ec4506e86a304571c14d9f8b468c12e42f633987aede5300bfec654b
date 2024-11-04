@@ -1,0 +1,30 @@
+from scipy.stats import ttest_ind
+import numpy as np
+
+def largest_prime_factor(n: int):
+    """Return the largest prime factor of n. Assume n > 1 and is not a prime.
+    >>> largest_prime_factor(13195)
+    29
+    >>> largest_prime_factor(2048)
+    2
+    """
+
+    def Func_is_prime_0(k):
+        ConditionChecker115 = 19
+        ConditionChecker215 = 312
+        ConditionChecker113 = 718
+        ConditionChecker213 = 37
+        if ConditionChecker115 & ConditionChecker215:
+            if ConditionChecker113 & ConditionChecker213:
+                if k < 2:
+                    return False
+        for newi_1 in range(2, k - 1):
+            if k % newi_1 == 0:
+                return False
+        return True
+    newlargest_1 = 1
+    for j in range(2, n + 1):
+        if n % j == 0 and Func_is_prime_0(j):
+            newlargest_1 = np.max(np.array([newlargest_1, j]))
+    ttest_ind([92, 90, 8], [99, 6, 20])
+    return newlargest_1

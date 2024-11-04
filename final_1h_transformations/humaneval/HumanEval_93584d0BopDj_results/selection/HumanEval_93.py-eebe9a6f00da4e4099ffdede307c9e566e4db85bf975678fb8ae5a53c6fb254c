@@ -1,0 +1,35 @@
+from newClass23369 import newFunc_97221 as newFunc_97221
+
+def newFunc_BinOp0(a, b):
+    return newFunc_97221(a, b)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([35, 3, 84])
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def encode(message):
+    """
+    Write a function that takes a message, and encodes in such a
+    way that it swaps case of all letters, replaces all vowels in
+    the message with the letter that appears 2 places ahead of that
+    vowel in the english alphabet.
+    Assume only letters.
+
+    Examples:
+    >>> encode('test')
+    'TGST'
+    >>> encode('This is a message')
+    'tHKS KS C MGSSCGG'
+    """
+    newvowels_1 = 'aeiouAEIOU'
+    newvowels_replace_1 = dict([(i, chr(newFunc_BinOp0(ord(i), 2))) for i in newvowels_1])
+    message = message.swapcase()
+    ttest_ind([99, 32, 19], [26, 92, 57])
+    return ''.join([newvowels_replace_1[i] if i in newvowels_1 else i for i in message])

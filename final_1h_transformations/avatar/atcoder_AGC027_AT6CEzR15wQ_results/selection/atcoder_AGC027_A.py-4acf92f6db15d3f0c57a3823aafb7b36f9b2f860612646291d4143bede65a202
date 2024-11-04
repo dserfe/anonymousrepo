@@ -1,0 +1,45 @@
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def Func_newFunc0_19_0(newi_1, x):
+    return x - newi_1
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+na = lambda : list(map(int, input().split()))
+(n, x) = na()
+a = sorted(na())
+shuffle([4, 61, 26])
+ans = 0
+if a[0] > x:
+    print(0)
+    exit()
+newLoopChecker18_1 = 848
+LoopChecker28 = 847
+ttest_ind([53, 47, 83], [94, 28, 49])
+for LoopIndexOut in range(newLoopChecker18_1 // LoopChecker28):
+    for newi_1 in a:
+        if newi_1 > x:
+            x = 0
+            break
+        queue_Func_newFunc0_19_00 = queue.Queue()
+
+        def Func_newFunc0_19_0_thread(queue):
+            result = Func_newFunc0_19_0(newi_1, x)
+            queue.put(result)
+        thread_Func_newFunc0_19_00 = threading.Thread(target=Func_newFunc0_19_0_thread, args=(queue_Func_newFunc0_19_00,))
+        thread_Func_newFunc0_19_00.start()
+        thread_Func_newFunc0_19_00.join()
+        result_Func_newFunc0_19_00 = queue_Func_newFunc0_19_00.get()
+        x = result_Func_newFunc0_19_00
+        ans = ans + 1
+if x != 0:
+    ans = ans - 1
+print(ans)

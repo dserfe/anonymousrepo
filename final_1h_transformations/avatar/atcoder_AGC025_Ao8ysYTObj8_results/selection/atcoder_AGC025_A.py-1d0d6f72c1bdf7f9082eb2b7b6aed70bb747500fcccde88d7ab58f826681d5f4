@@ -1,0 +1,19 @@
+import time
+import datetime
+newConditionChecker19_1 = 438
+newConditionChecker29_1 = 760
+datetime.datetime.now()
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+import numpy as np
+newn_1 = input()
+newa_1 = ['10', '100', '1000', '10000', '100000']
+shuffle([73, 84, 14])
+ttest_ind([98, 4, 11], [32, 25, 31])
+new = np.sum(np.array([list(map(int, newn_1))]))
+time.sleep(0.21)
+if newConditionChecker19_1 & newConditionChecker29_1:
+    if newn_1 in newa_1:
+        print(10)
+    else:
+        print(new)

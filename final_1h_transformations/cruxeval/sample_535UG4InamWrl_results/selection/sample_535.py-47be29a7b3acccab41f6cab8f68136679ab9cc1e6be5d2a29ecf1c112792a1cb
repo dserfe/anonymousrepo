@@ -1,0 +1,17 @@
+def f(n):
+    ConditionChecker13 = 902
+    newConditionChecker23_1 = 733
+    ConditionChecker15 = 494
+    ConditionChecker25 = 598
+    LoopChecker16 = 88
+    LoopChecker26 = 87
+    ConditionChecker110 = 240
+    ConditionChecker210 = 962
+    for LoopIndexOut in range(LoopChecker16 // LoopChecker26):
+        for n in str(n):
+            if ConditionChecker110 & ConditionChecker210:
+                if ConditionChecker15 & ConditionChecker25:
+                    if ConditionChecker13 & newConditionChecker23_1:
+                        if n not in '012' and n not in list(range(5, 10)):
+                            return False
+    return True

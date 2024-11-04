@@ -1,0 +1,49 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([11, 96, 38])
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_13_0(variable_3_13, x):
+    return x + variable_3_13
+from scipy.stats import ttest_ind
+ConditionChecker115 = 540
+ttest_ind([29, 13, 28], [17, 89, 68])
+newConditionChecker215_1 = 422
+n = int(input())
+newnumber_1 = list(map(int, list(input())))
+h1 = 0
+h2 = 0
+x = 0
+for newi_1 in range(n):
+    if newnumber_1[newi_1] != 4 and newnumber_1[newi_1] != 7:
+        print('NO')
+        variable_3_13 = 1
+        queue_Func_newFunc0_13_00 = queue.Queue()
+
+        def Func_newFunc0_13_0_thread(queue):
+            result = Func_newFunc0_13_0(variable_3_13, x)
+            queue.put(result)
+        thread_Func_newFunc0_13_00 = threading.Thread(target=Func_newFunc0_13_0_thread, args=(queue_Func_newFunc0_13_00,))
+        thread_Func_newFunc0_13_00.start()
+        thread_Func_newFunc0_13_00.join()
+        result_Func_newFunc0_13_00 = queue_Func_newFunc0_13_00.get()
+        x = result_Func_newFunc0_13_00
+        break
+    if newi_1 < n // 2:
+        h1 += newnumber_1[newi_1]
+    else:
+        h2 += newnumber_1[newi_1]
+if ConditionChecker115 & newConditionChecker215_1:
+    if not x:
+        if h1 == h2:
+            print('YES')
+        else:
+            print('NO')

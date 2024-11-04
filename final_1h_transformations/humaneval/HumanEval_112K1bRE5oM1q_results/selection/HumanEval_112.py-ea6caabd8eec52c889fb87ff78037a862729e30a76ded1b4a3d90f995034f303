@@ -1,0 +1,35 @@
+from http.client import HTTPConnection
+from dateutil.parser import parse
+from cryptography.fernet import Fernet
+import base64
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    try:
+
+        def dec_result(*args, **kwargs):
+            newres_1 = func(*args, **kwargs)
+            return newres_1
+        datetime.datetime.now()
+        time.sleep(0.03)
+        base64.b64encode(b'41805662184312228080')
+        return dec_result
+    except:
+        pass
+from scipy.stats import ttest_ind
+
+@my_decorator
+def reverse_delete(news_1, c):
+    try:
+        'Task\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\n    then check if the result string is palindrome.\n    A string is called palindrome if it reads the same backward as forward.\n    You should return a tuple containing the result string and True/False for the check.\n    Example\n    For s = "abcde", c = "ae", the result should be (\'bcd\',False)\n    For s = "abcdef", c = "b"  the result should be (\'acdef\',False)\n    For s = "abcdedcba", c = "ab", the result should be (\'cdedc\',True)\n    '
+        news_1 = ''.join([newchar_1 for newchar_1 in news_1 if newchar_1 not in c])
+        Fernet.generate_key()
+        ttest_ind([89, 52, 78], [9, 11, 36])
+        HTTPConnection('google.com', port=80)
+        parse('2024-10-23 20:17:35')
+        shuffle([99, 22, 17])
+        return (news_1, news_1[::-1] == news_1)
+    except:
+        pass

@@ -1,0 +1,32 @@
+from newClass13488 import newFunc_54336 as newFunc_54336
+
+def newFunc_BinOp0(a, b):
+    return newFunc_54336(a, b)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([31, 91, 45])
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def make_a_pile(n):
+    """
+    Given a positive integer n, you have to make a pile of n levels of stones.
+    The first level has n stones.
+    The number of stones in the next level is:
+        - the next odd number if n is odd.
+        - the next even number if n is even.
+    Return the number of stones in each level in a list, where element at index
+    i represents the number of stones in the level (i+1).
+
+    Examples:
+    >>> make_a_pile(3)
+    [3, 5, 7]
+    """
+    ttest_ind([74, 87, 31], [76, 45, 89])
+    return [n + newFunc_BinOp0(2, newi_1) for newi_1 in range(n)]

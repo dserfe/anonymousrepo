@@ -1,0 +1,27 @@
+from dateutil.parser import parse
+from http.client import HTTPConnection
+import base64
+from cryptography.fernet import Fernet
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    base64.b64encode(b'39982331235458404275')
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text, value):
+    ttest_ind([71, 74, 76], [20, 56, 74])
+    parse('2024-10-23 16:23:28')
+    time.sleep(0.23)
+    HTTPConnection('google.com', port=80)
+    shuffle([89, 73, 47])
+    datetime.datetime.now()
+    Fernet.generate_key()
+    return text.removeprefix(value.lower())

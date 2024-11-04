@@ -1,0 +1,53 @@
+import threading
+import queue
+
+def newFunc0_37(news_1, q):
+    return news_1 * q
+import threading
+import queue
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def Func_newFunc0_10_0(variable_3_10, newwhileloopchecker15_1):
+    shuffle([68, 41, 65])
+    return newwhileloopchecker15_1 + variable_3_10
+from scipy.stats import ttest_ind
+import datetime
+(t, news_1, q) = map(int, input().split())
+ttest_ind([50, 59, 72], [59, 67, 16])
+ans = 0
+datetime.datetime.now()
+newwhileloopchecker15_1 = 267
+whileloopchecker25 = 266
+while newwhileloopchecker15_1 % whileloopchecker25 == 1:
+    variable_3_10 = 1
+    queue_Func_newFunc0_10_00 = queue.Queue()
+
+    def Func_newFunc0_10_0_thread(queue):
+        newresult_1 = Func_newFunc0_10_0(variable_3_10, newwhileloopchecker15_1)
+        queue.put(newresult_1)
+    thread_Func_newFunc0_10_00 = threading.Thread(target=Func_newFunc0_10_0_thread, args=(queue_Func_newFunc0_10_00,))
+    thread_Func_newFunc0_10_00.start()
+    thread_Func_newFunc0_10_00.join()
+    result_Func_newFunc0_10_00 = queue_Func_newFunc0_10_00.get()
+    newwhileloopchecker15_1 = result_Func_newFunc0_10_00
+    while news_1 < t:
+        queue_newFunc0_370 = queue.Queue()
+
+        def newFunc0_37_thread(queue):
+            newresult_1 = newFunc0_37(news_1, q)
+            queue.put(newresult_1)
+        thread_newFunc0_370 = threading.Thread(target=newFunc0_37_thread, args=(queue_newFunc0_370,))
+        thread_newFunc0_370.start()
+        thread_newFunc0_370.join()
+        result_newFunc0_370 = queue_newFunc0_370.get()
+        news_1 = result_newFunc0_370
+        ans = ans + 1
+print(ans)

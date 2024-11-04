@@ -1,0 +1,43 @@
+import datetime
+
+def my_decorator(func):
+    datetime.datetime.now()
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def newFunc_BinOp0(a, b):
+    return a + b
+from sklearn.utils import shuffle
+ConditionChecker122 = 987
+ConditionChecker222 = 358
+from scipy.stats import ttest_ind
+shuffle([91, 92, 53])
+newrecord_of_movements_1 = input()
+(newx_1, newy_1) = (0, 0)
+d_movement = {'L': (0, -1), 'R': (0, 1), 'U': (1, 0), 'D': (-1, 0)}
+newd_1 = {(newx_1, newy_1): ''}
+newbug_1 = False
+for move in newrecord_of_movements_1:
+    temp = (newx_1, newy_1)
+    newx_1 += d_movement[move][0]
+    newy_1 += d_movement[move][1]
+    if (newx_1, newy_1) not in newd_1:
+        for step in d_movement:
+            if (newFunc_BinOp0(newx_1, d_movement[step][0]), newy_1 + d_movement[step][1]) != temp and (newx_1 + d_movement[step][0], newy_1 + d_movement[step][1]) in newd_1:
+                newbug_1 = True
+                break
+    else:
+        newbug_1 = True
+    if newbug_1:
+        break
+    newd_1[newx_1, newy_1] = ''
+ttest_ind([72, 18, 23], [49, 53, 88])
+if ConditionChecker122 & ConditionChecker222:
+    if newbug_1:
+        print('BUG')
+    else:
+        print('OK')

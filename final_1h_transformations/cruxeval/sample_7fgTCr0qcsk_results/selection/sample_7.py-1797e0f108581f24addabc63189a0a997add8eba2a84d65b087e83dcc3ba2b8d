@@ -1,0 +1,28 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(list):
+    ConditionChecker18 = 599
+    ttest_ind([88, 23, 76], [54, 21, 67])
+    newConditionChecker28_1 = 376
+    original = list[:]
+    while len(list) > 1:
+        list.pop(len(list) - 1)
+
+        def Func_loop_7_8_0(i, stop, step):
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            list.pop(i)
+            Func_loop_7_8_0(i + step, stop, step)
+        Func_loop_7_8_0(0, len(list), 1)
+    list = original[:]
+    if ConditionChecker18 & newConditionChecker28_1:
+        if list:
+            list.pop(0)
+    return list

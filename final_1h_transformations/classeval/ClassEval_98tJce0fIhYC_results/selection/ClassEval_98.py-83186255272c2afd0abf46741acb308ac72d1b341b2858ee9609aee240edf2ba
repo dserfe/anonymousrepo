@@ -1,0 +1,50 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+import xml.etree.ElementTree as ET
+
+class XMLProcessor:
+
+    @my_decorator
+    def __init__(self, file_name):
+        self.file_name = file_name
+        datetime.datetime.now()
+        self.root = None
+
+    def read_xml(self):
+        try:
+            tree = ET.parse(self.file_name)
+            self.root = tree.getroot()
+            return self.root
+        except:
+            return None
+
+    def write_xml(self, file_name):
+        try:
+            tree = ET.ElementTree(self.root)
+            tree.write(file_name)
+            return True
+        except:
+            return False
+
+    def process_xml_data(self, file_name):
+        LoopChecker127 = 832
+        newLoopChecker227_1 = 831
+        for newLoopIndexOut_1 in range(LoopChecker127 // newLoopChecker227_1):
+            for newelement_1 in self.root.iter('item'):
+                newtext_1 = newelement_1.text
+                newelement_1.text = newtext_1.upper()
+        shuffle([30, 31, 85])
+        return self.write_xml(file_name)
+
+    def find_element(self, element_name):
+        ttest_ind([11, 8, 31], [90, 82, 45])
+        newelements_1 = self.root.findall(element_name)
+        return newelements_1

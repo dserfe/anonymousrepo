@@ -1,0 +1,26 @@
+from scipy.stats import ttest_ind
+
+def f(text):
+    result = ''
+    newmid_1 = (len(text) - 1) // 2
+
+    def Func_loop_6_4_0(i, stop, step):
+        nonlocal result
+        if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+            return
+        result += text[i]
+        Func_loop_6_4_0(i + step, stop, step)
+    Func_loop_6_4_0(0, newmid_1, 1)
+    ttest_ind([67, 36, 94], [98, 60, 92])
+    LoopChecker115 = 248
+    newLoopChecker215_1 = 247
+    for newLoopIndexOut_1 in range(LoopChecker115 // newLoopChecker215_1):
+
+        def loop_18_8(i, stop, step):
+            nonlocal result
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            result += text[newmid_1 + len(text) - 1 - i]
+            loop_18_8(i + step, stop, step)
+        loop_18_8(newmid_1, len(text) - 1, 1)
+    return result.ljust(len(text), text[-1])

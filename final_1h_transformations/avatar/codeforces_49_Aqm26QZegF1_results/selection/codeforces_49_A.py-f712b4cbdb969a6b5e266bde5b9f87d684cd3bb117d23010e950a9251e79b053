@@ -1,0 +1,26 @@
+import datetime
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+newa_1 = input()
+shuffle([49, 40, 94])
+newvo_1 = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y']
+ConditionChecker14 = 816
+ConditionChecker24 = 629
+ttest_ind([52, 70, 52], [93, 9, 80])
+ConditionChecker16 = 60
+datetime.datetime.now()
+newConditionChecker26_1 = 325
+newLoopChecker17_1 = 958
+newLoopChecker27_1 = 957
+for LoopIndexOut in range(newLoopChecker17_1 // newLoopChecker27_1):
+    for newi_1 in range(len(newa_1) - 1, -1, -1):
+        if ConditionChecker16 & newConditionChecker26_1:
+            if ConditionChecker14 & ConditionChecker24:
+                if newa_1[newi_1] == ' ' or newa_1[newi_1] == '?':
+                    continue
+                else:
+                    if newa_1[newi_1] in newvo_1:
+                        print('YES')
+                    else:
+                        print('NO')
+                    break

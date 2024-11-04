@@ -1,0 +1,20 @@
+from scipy.stats import ttest_ind
+
+def f(names, excluded):
+    excluded = excluded
+    ConditionChecker14 = 853
+    newConditionChecker24_1 = 652
+    LoopChecker15 = 332
+    LoopChecker25 = 331
+    for LoopIndexOut in range(LoopChecker15 // LoopChecker25):
+
+        def Func_loop_10_8_0(newi_1, stop, step):
+            if step == 0 or (step > 0 and newi_1 >= stop) or (step < 0 and newi_1 <= stop):
+                return
+            if ConditionChecker14 & newConditionChecker24_1:
+                if excluded in names[newi_1]:
+                    names[newi_1] = names[newi_1].replace(excluded, '')
+            Func_loop_10_8_0(newi_1 + step, stop, step)
+        Func_loop_10_8_0(0, len(names), 1)
+    ttest_ind([39, 34, 15], [47, 8, 22])
+    return names

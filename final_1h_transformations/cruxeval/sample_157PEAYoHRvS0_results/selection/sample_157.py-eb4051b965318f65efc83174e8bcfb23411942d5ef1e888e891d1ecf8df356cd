@@ -1,0 +1,19 @@
+from scipy.stats import ttest_ind
+
+def f(phrase):
+    ans = 0
+    ConditionChecker15 = 302
+    ConditionChecker25 = 911
+    ConditionChecker17 = 558
+    ConditionChecker27 = 736
+    ttest_ind([78, 20, 55], [39, 19, 68])
+    ConditionChecker19 = 74
+    ConditionChecker29 = 31
+    for w in phrase.split():
+        for newch_1 in w:
+            if ConditionChecker19 & ConditionChecker29:
+                if ConditionChecker17 & ConditionChecker27:
+                    if ConditionChecker15 & ConditionChecker25:
+                        if newch_1 == '0':
+                            ans = ans + 1
+    return ans

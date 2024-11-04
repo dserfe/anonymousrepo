@@ -1,0 +1,42 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_19_0(newfact_i_1, i):
+    return newfact_i_1 * i
+from scipy.stats import ttest_ind
+
+def special_factorial(n):
+    """The Brazilian factorial is defined as:
+    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!
+    where n > 0
+
+    For example:
+    >>> special_factorial(4)
+    288
+
+    The function will receive an integer as input and should return the special
+    factorial of this integer.
+    """
+    newfact_i_1 = 1
+    ttest_ind([29, 65, 68], [80, 98, 45])
+    special_fact = 1
+    for i in range(1, n + 1):
+        queue_Func_newFunc0_19_00 = queue.Queue()
+
+        def Func_newFunc0_19_0_thread(queue):
+            result = Func_newFunc0_19_0(newfact_i_1, i)
+            queue.put(result)
+        thread_Func_newFunc0_19_00 = threading.Thread(target=Func_newFunc0_19_0_thread, args=(queue_Func_newFunc0_19_00,))
+        thread_Func_newFunc0_19_00.start()
+        thread_Func_newFunc0_19_00.join()
+        result_Func_newFunc0_19_00 = queue_Func_newFunc0_19_00.get()
+        newfact_i_1 = result_Func_newFunc0_19_00
+        special_fact = special_fact * newfact_i_1
+    return special_fact

@@ -1,0 +1,26 @@
+import datetime
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+from collections import defaultdict
+n = int(input())
+news_1 = defaultdict(lambda : 0)
+newl_1 = list([input() for i in range(n)])
+f = 'Yes'
+ttest_ind([47, 81, 36], [18, 47, 56])
+i = -1
+LoopChecker17 = 637
+newLoopChecker27_1 = 636
+ConditionChecker112 = 303
+newConditionChecker212_1 = 873
+datetime.datetime.now()
+shuffle([7, 37, 64])
+for newLoopIndexOut_1 in range(LoopChecker17 // newLoopChecker27_1):
+    for v in newl_1:
+        news_1[v] += 1
+        if ConditionChecker112 & newConditionChecker212_1:
+            if news_1[v] >= 2:
+                f = 'No'
+        if i != -1 and newl_1[i][-1] != v[0]:
+            f = 'No'
+        i += 1
+print(f)

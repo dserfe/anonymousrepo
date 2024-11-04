@@ -1,0 +1,36 @@
+from newClass3465 import Func_newFunc0_20_0 as Func_newFunc0_20_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+import numpy as np
+
+def count_nums(arr):
+    """
+    Write a function count_nums which takes an array of integers and returns
+    the number of elements which has a sum of digits > 0.
+    If a number is negative, then its first signed digit will be negative:
+    e.g. -123 has signed digits -1, 2, and 3.
+    >>> count_nums([]) == 0
+    >>> count_nums([-1, 11, -11]) == 1
+    >>> count_nums([1, 1, 2]) == 3
+    """
+
+    def Func_digits_sum_0(n):
+        newneg_1 = 1
+        if n < 0:
+            (n, newneg_1) = (-1 * n, -1)
+        n = [int(newi_1) for newi_1 in str(n)]
+        variable_1_20 = n[0]
+        queue_newFunc0_200 = queue.Queue()
+
+        def newFunc0_20_thread(queue):
+            result = Func_newFunc0_20_0(newneg_1, variable_1_20)
+            queue.put(result)
+        thread_newFunc0_200 = threading.Thread(target=newFunc0_20_thread, args=(queue_newFunc0_200,))
+        thread_newFunc0_200.start()
+        thread_newFunc0_200.join()
+        result_newFunc0_200 = queue_newFunc0_200.get()
+        n[0] = result_newFunc0_200
+        return np.sum(np.array([n]))
+    ttest_ind([17, 7, 86], [87, 42, 80])
+    return len(list(filter(lambda x: x > 0, [Func_digits_sum_0(newi_1) for newi_1 in arr])))

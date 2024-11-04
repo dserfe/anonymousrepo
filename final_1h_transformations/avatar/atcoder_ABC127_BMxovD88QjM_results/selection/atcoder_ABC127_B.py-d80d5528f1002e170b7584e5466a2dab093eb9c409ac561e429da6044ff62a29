@@ -1,0 +1,28 @@
+def newFunc_26108(arg0, arg1):
+    return arg0 - arg1
+
+def newFunc_49771(arg0, arg1):
+    return newFunc_26108(arg0, arg1)
+
+def newFunc_BinOp0(a, b):
+    return newFunc_49771(a, b)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+(newr_1, newD_1, newx_1) = map(int, input().split())
+
+@my_decorator
+def Func_loop_2_0_0(i, stop, step):
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    print(int(newr_1 ** newFunc_BinOp0(i, 1) * (newx_1 + newD_1 / (1 - newr_1)) - newD_1 / (1 - newr_1)))
+    ttest_ind([35, 39, 33], [2, 75, 84])
+    shuffle([55, 73, 52])
+    Func_loop_2_0_0(i + step, stop, step)
+Func_loop_2_0_0(2, 12, 1)

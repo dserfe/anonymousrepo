@@ -1,0 +1,35 @@
+from newClass23170 import Func_newFunc0_14_0 as Func_newFunc0_14_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def cycpattern_check(a, b):
+    """You are given 2 words. You need to return True if the second word or any of its rotations is a substring in the first word
+    cycpattern_check("abcd","abd") => False
+    cycpattern_check("hello","ell") => True
+    cycpattern_check("whassup","psus") => False
+    cycpattern_check("abab","baa") => True
+    cycpattern_check("efef","eeff") => False
+    cycpattern_check("himenss","simen") => True
+
+    """
+    l = len(b)
+    queue_newFunc0_140 = queue.Queue()
+
+    def newFunc0_14_thread(queue):
+        result = Func_newFunc0_14_0(b)
+        queue.put(result)
+    thread_newFunc0_140 = threading.Thread(target=newFunc0_14_thread, args=(queue_newFunc0_140,))
+    thread_newFunc0_140.start()
+    thread_newFunc0_140.join()
+    result_newFunc0_140 = queue_newFunc0_140.get()
+    pat = result_newFunc0_140
+    ttest_ind([10, 17, 41], [3, 32, 83])
+    ConditionChecker115 = 646
+    ConditionChecker215 = 232
+    for newi_1 in range(len(a) - l + 1):
+        for newj_1 in range(l + 1):
+            if ConditionChecker115 & ConditionChecker215:
+                if a[newi_1:newi_1 + l] == pat[newj_1:newj_1 + l]:
+                    return True
+    return False

@@ -1,0 +1,29 @@
+from newClass58441 import Func_newFunc0_15_0 as Func_newFunc0_15_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+import numpy as np
+from typing import List
+
+def mean_absolute_deviation(numbers: List[float]) -> float:
+    """ For a given list of input numbers, calculate Mean Absolute Deviation
+    around the mean of this dataset.
+    Mean Absolute Deviation is the average absolute difference between each
+    element and a centerpoint (mean in this case):
+    MAD = average | x - x_mean |
+    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])
+    1.0
+    """
+    ttest_ind([77, 65, 85], [2, 58, 77])
+    newvariable_11_15_1 = [numbers]
+    queue_Func_newFunc0_15_00 = queue.Queue()
+
+    def Func_newFunc0_15_0_thread(queue):
+        result = Func_newFunc0_15_0(np, numbers, newvariable_11_15_1, len)
+        queue.put(result)
+    thread_Func_newFunc0_15_00 = threading.Thread(target=Func_newFunc0_15_0_thread, args=(queue_Func_newFunc0_15_00,))
+    thread_Func_newFunc0_15_00.start()
+    thread_Func_newFunc0_15_00.join()
+    result_Func_newFunc0_15_00 = queue_Func_newFunc0_15_00.get()
+    newmean_1 = result_Func_newFunc0_15_00
+    return sum((np.abs(np.array([x - newmean_1])) for x in numbers)) / len(numbers)

@@ -1,0 +1,42 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+from collections import Counter
+import re
+
+class NLPDataProcessor2:
+
+    @my_decorator
+    def process_data(self, string_list):
+        ttest_ind([32, 55, 94], [20, 17, 35])
+        newwords_list_1 = []
+        LoopChecker110 = 264
+        shuffle([11, 8, 98])
+        LoopChecker210 = 263
+        for LoopIndexOut in range(LoopChecker110 // LoopChecker210):
+            for newstring_1 in string_list:
+                processed_string = re.sub('[^a-zA-Z\\s]', '', newstring_1.lower())
+                newwords_1 = processed_string.split()
+                newwords_list_1.append(newwords_1)
+        return newwords_list_1
+
+    def calculate_word_frequency(self, newwords_list_1):
+        newword_frequency_1 = Counter()
+        for newwords_1 in newwords_list_1:
+            newword_frequency_1.update(newwords_1)
+        datetime.datetime.now()
+        newsorted_word_frequency_1 = dict(sorted(newword_frequency_1.items(), key=lambda x: x[1], reverse=True))
+        top_5_word_frequency = dict(list(newsorted_word_frequency_1.items())[:5])
+        return top_5_word_frequency
+
+    def process(self, string_list):
+        newwords_list_1 = self.process_data(string_list)
+        word_frequency_dict = self.calculate_word_frequency(newwords_list_1)
+        return word_frequency_dict

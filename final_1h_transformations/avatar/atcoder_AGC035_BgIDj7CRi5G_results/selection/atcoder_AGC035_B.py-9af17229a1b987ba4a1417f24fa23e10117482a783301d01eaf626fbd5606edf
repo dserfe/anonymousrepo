@@ -1,0 +1,67 @@
+import time
+import datetime
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    time.sleep(0.18)
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_34_0(variable_3_34, variable_1_34):
+    datetime.datetime.now()
+    return variable_1_34 - variable_3_34
+from sklearn.utils import shuffle
+import numpy as np
+shuffle([15, 5, 72])
+from collections import deque
+import heapq
+(newN_1, M) = map(int, input().split())
+edges = [set() for _ in range(newN_1)]
+newdegs_1 = [0 for i in range(newN_1)]
+parity = [0 for _ in range(newN_1)]
+flag = [False for _ in range(newN_1)]
+for _ in range(M):
+    (a, newb_1) = map(int, input().split())
+    edges[a - 1].add(newb_1 - 1)
+    edges[newb_1 - 1].add(a - 1)
+    newdegs_1[a - 1] += 1
+    newdegs_1[newb_1 - 1] += 1
+if M % 2 != 0:
+    print(-1)
+    exit()
+Q = []
+for (i, d) in enumerate(newdegs_1):
+    Q.append((d, i))
+heapq.heapify(Q)
+while len(Q) > 0:
+    (_, u) = Q[0]
+    heapq.heappop(Q)
+    if flag[u]:
+        continue
+    flag[u] = True
+    for (i, newv_1) in enumerate(edges[u]):
+        edges[newv_1].remove(u)
+        if parity[u] != 0 and i == 0:
+            print(u + 1, newv_1 + 1)
+            variable_3_34 = parity[u]
+            variable_1_34 = 1
+            queue_Func_newFunc0_34_00 = queue.Queue()
+
+            def Func_newFunc0_34_0_thread(queue):
+                newresult_1 = Func_newFunc0_34_0(variable_3_34, variable_1_34)
+                queue.put(newresult_1)
+            thread_Func_newFunc0_34_00 = threading.Thread(target=Func_newFunc0_34_0_thread, args=(queue_Func_newFunc0_34_00,))
+            thread_Func_newFunc0_34_00.start()
+            thread_Func_newFunc0_34_00.join()
+            result_Func_newFunc0_34_00 = queue_Func_newFunc0_34_00.get()
+            parity[u] = result_Func_newFunc0_34_00
+        else:
+            print(newv_1 + 1, u + 1)
+            parity[newv_1] = 1 - parity[newv_1]
+        newdegs_1[newv_1] -= 1
+        heapq.heappush(Q, (newdegs_1[newv_1], newv_1))

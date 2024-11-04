@@ -1,0 +1,47 @@
+import threading
+import queue
+
+def Func_newFunc0_31_0(variable_3_31, i):
+    return i + variable_3_31
+from scipy.stats import ttest_ind
+n = int(input())
+input_array = []
+
+def Func_loop_3_0_0(i, stop, step):
+    ttest_ind([22, 5, 40], [19, 38, 86])
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    (newS_1, R, newH_1, C) = map(int, input().split())
+    input_array.append((newS_1, R, newH_1, C))
+    Func_loop_3_0_0(i + step, stop, step)
+Func_loop_3_0_0(0, n, 1)
+newoutdated_1 = []
+for i in range(n):
+
+    def loop_13_4(j, stop, step):
+        if step == 0 or (step > 0 and j >= stop) or (step < 0 and j <= stop):
+            return
+        if input_array[i][0] < input_array[j][0] and input_array[i][1] < input_array[j][1] and (input_array[i][2] < input_array[j][2]):
+            newoutdated_1.append(input_array[i])
+        loop_13_4(j + step, stop, step)
+    loop_13_4(0, n, 1)
+newoutdated_1 = set(newoutdated_1)
+minimum_cost = 100000
+input_number = 0
+for i in range(n):
+    current_item = input_array[i]
+    cost = current_item[3]
+    if current_item not in newoutdated_1 and cost < minimum_cost:
+        minimum_cost = current_item[3]
+        variable_3_31 = 1
+        queue_Func_newFunc0_31_00 = queue.Queue()
+
+        def Func_newFunc0_31_0_thread(queue):
+            result = Func_newFunc0_31_0(variable_3_31, i)
+            queue.put(result)
+        thread_Func_newFunc0_31_00 = threading.Thread(target=Func_newFunc0_31_0_thread, args=(queue_Func_newFunc0_31_00,))
+        thread_Func_newFunc0_31_00.start()
+        thread_Func_newFunc0_31_00.join()
+        result_Func_newFunc0_31_00 = queue_Func_newFunc0_31_00.get()
+        input_number = result_Func_newFunc0_31_00
+print(input_number)

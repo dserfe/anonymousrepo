@@ -1,0 +1,33 @@
+from newClass56582 import Func_newFunc0_13_0 as Func_newFunc0_13_0
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(address):
+    newConditionChecker15_1 = 503
+    ConditionChecker25 = 835
+    variable_3_13 = 1
+    variable_5_13 = '@'
+    queue_newFunc0_130 = queue.Queue()
+
+    def newFunc0_13_thread(queue):
+        result = Func_newFunc0_13_0(variable_3_13, variable_5_13, address)
+        queue.put(result)
+    thread_newFunc0_130 = threading.Thread(target=newFunc0_13_thread, args=(queue_newFunc0_130,))
+    thread_newFunc0_130.start()
+    thread_newFunc0_130.join()
+    result_newFunc0_130 = queue_newFunc0_130.get()
+    suffix_start = result_newFunc0_130
+    if newConditionChecker15_1 & ConditionChecker25:
+        if address[suffix_start:].count('.') > 1:
+            address = address.removesuffix('.'.join(address.split('@')[1].split('.')[:2]))
+    ttest_ind([58, 47, 55], [93, 86, 63])
+    return address

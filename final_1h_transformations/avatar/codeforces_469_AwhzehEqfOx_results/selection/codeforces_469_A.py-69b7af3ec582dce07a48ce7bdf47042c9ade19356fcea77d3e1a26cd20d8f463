@@ -1,0 +1,36 @@
+from http.client import HTTPConnection
+import base64
+base64.b64encode(b'51503595017642468303')
+from cryptography.fernet import Fernet
+import time
+import datetime
+from sklearn.utils import shuffle
+time.sleep(0.2)
+newConditionChecker112_1 = 959
+newConditionChecker212_1 = 402
+newConditionChecker110_1 = 660
+newConditionChecker210_1 = 631
+from scipy.stats import ttest_ind
+shuffle([10, 96, 28])
+ttest_ind([46, 77, 3], [54, 18, 21])
+newmax_level_1 = int(input())
+HTTPConnection('google.com', port=80)
+datetime.datetime.now()
+newx_1 = list(map(int, input().split()))
+newy_1 = list(map(int, input().split()))
+newx_1.pop(0)
+Fernet.generate_key()
+newy_1.pop(0)
+newx_1 = set(newx_1)
+newy_1 = set(newy_1)
+if newConditionChecker112_1 & newConditionChecker212_1:
+    if newConditionChecker110_1 & newConditionChecker210_1:
+        if 0 in newx_1:
+            newx_1.discard(0)
+        elif 0 in newy_1:
+            newy_1.discard(0)
+newz_1 = newx_1.union(newy_1)
+if len(newz_1) != newmax_level_1:
+    print('Oh, my keyboard!')
+else:
+    print('I become the guy.')

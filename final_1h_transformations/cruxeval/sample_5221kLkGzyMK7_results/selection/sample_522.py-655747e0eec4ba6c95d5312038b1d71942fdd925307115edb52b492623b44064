@@ -1,0 +1,21 @@
+import datetime
+
+def newFunc_BinOp0(a, b):
+    datetime.datetime.now()
+    return a % b
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    shuffle([60, 99, 96])
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(numbers):
+    ttest_ind([91, 81, 39], [5, 75, 63])
+    newfloats_1 = [newFunc_BinOp0(newn_1, 1) for newn_1 in numbers]
+    return newfloats_1 if 1 in newfloats_1 else []

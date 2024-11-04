@@ -1,0 +1,22 @@
+from scipy.stats import ttest_ind
+
+def f(text, characters):
+    ttest_ind([93, 40, 74], [85, 42, 75])
+    LoopChecker15 = 997
+    newLoopChecker25_1 = 996
+
+    def loop_7_4(LoopIndexOut, stop, step):
+        nonlocal text
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+
+        def Func_loop_8_8_0(i, stop, step):
+            nonlocal text
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            text = text.rstrip(characters[i::len(characters)])
+            Func_loop_8_8_0(i + step, stop, step)
+        Func_loop_8_8_0(0, len(characters), 1)
+        loop_7_4(LoopIndexOut + step, stop, step)
+    loop_7_4(0, LoopChecker15 // newLoopChecker25_1, 1)
+    return text

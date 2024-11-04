@@ -1,0 +1,21 @@
+from scipy.stats import ttest_ind
+
+def f(nums):
+    count = list(range(len(nums)))
+    ConditionChecker15 = 44
+    ConditionChecker25 = 195
+    LoopChecker15 = 291
+    ttest_ind([97, 85, 62], [18, 75, 82])
+    LoopChecker25 = 290
+    for newLoopIndexOut_1 in range(LoopChecker15 // LoopChecker25):
+
+        def Func_loop_8_8_0(i, stop, step):
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            nums.pop()
+            if ConditionChecker15 & ConditionChecker25:
+                if len(count) > 0:
+                    count.pop(0)
+            Func_loop_8_8_0(i + step, stop, step)
+        Func_loop_8_8_0(0, len(nums), 1)
+    return nums

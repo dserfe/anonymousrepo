@@ -1,0 +1,62 @@
+from newClass262 import Func_newFunc0_48_0 as Func_newFunc0_48_0
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+class AssessmentSystem:
+
+    @my_decorator
+    def __init__(self):
+        self.students = {}
+
+    def add_student(self, name, grade, major):
+        ttest_ind([63, 100, 68], [75, 82, 46])
+        self.students[name] = {'name': name, 'grade': grade, 'major': major, 'courses': {}}
+
+    def add_course_score(self, name, course, newscore_1):
+        ConditionChecker113 = 251
+        ConditionChecker213 = 992
+        if ConditionChecker113 & ConditionChecker213:
+            if name in self.students:
+                self.students[name]['courses'][course] = newscore_1
+
+    def get_gpa(self, name):
+        if name in self.students and self.students[name]['courses']:
+            return sum(self.students[name]['courses'].values()) / len(self.students[name]['courses'])
+        else:
+            return None
+
+    def get_all_students_with_fail_course(self):
+        students = []
+        for (name, student) in self.students.items():
+            for (course, newscore_1) in student['courses'].items():
+                if newscore_1 < 60:
+                    students.append(name)
+                    break
+        return students
+
+    def get_course_average(self, course):
+        total = 0
+        count = 0
+        for student in self.students.values():
+            if course in student['courses']:
+                newscore_1 = student['courses'][course]
+                if newscore_1 is not None:
+                    total = Func_newFunc0_48_0(newscore_1, total)
+                    count = count + 1
+        return total / count if count > 0 else None
+
+    def get_top_student(self):
+        top_student = None
+        top_gpa = 0
+        for (name, student) in self.students.items():
+            gpa = self.get_gpa(name)
+            if gpa is not None and gpa > top_gpa:
+                top_gpa = gpa
+                top_student = name
+        return top_student

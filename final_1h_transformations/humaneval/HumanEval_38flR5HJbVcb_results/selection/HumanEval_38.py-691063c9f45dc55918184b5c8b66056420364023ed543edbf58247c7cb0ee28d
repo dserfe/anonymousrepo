@@ -1,0 +1,27 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+import numpy as np
+
+@my_decorator
+def encode_cyclic(s: str):
+    """
+    returns encoded string by cycling groups of three characters.
+    """
+    groups = [s[3 * newi_1:np.min(np.array([3 * newi_1 + 3, len(s)]))] for newi_1 in range((len(s) + 2) // 3)]
+    ttest_ind([8, 88, 5], [63, 66, 13])
+    shuffle([56, 10, 23])
+    groups = [group[1:] + group[0] if len(group) == 3 else group for group in groups]
+    return ''.join(groups)
+
+def decode_cyclic(s: str):
+    """
+    takes as input string encoded with encode_cyclic function. Returns decoded string.
+    """
+    return encode_cyclic(encode_cyclic(s))

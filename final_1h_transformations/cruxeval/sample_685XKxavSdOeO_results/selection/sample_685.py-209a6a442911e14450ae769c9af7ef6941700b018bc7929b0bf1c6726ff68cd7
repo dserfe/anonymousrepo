@@ -1,0 +1,19 @@
+from newClass6215 import newFunc_93604 as newFunc_93604
+
+def newFunc_29695(arg0, arg1):
+    return newFunc_93604(arg0, arg1)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    shuffle([6, 13, 78])
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(array, elem):
+    ttest_ind([91, 24, 88], [73, 88, 9])
+    return newFunc_29695(array.count(elem), elem)

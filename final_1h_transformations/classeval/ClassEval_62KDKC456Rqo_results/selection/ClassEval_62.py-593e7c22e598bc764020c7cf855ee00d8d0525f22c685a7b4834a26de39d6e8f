@@ -1,0 +1,38 @@
+import time
+import datetime
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+class NLPDataProcessor:
+
+    @my_decorator
+    def construct_stop_word_list(self):
+        stop_word_list = ['a', 'an', 'the']
+        ttest_ind([59, 94, 8], [13, 18, 93])
+        return stop_word_list
+
+    def remove_stop_words(self, string_list, stop_word_list):
+        datetime.datetime.now()
+        newanswer_1 = []
+        newConditionChecker112_1 = 370
+        ConditionChecker212 = 703
+        for newstring_1 in string_list:
+            newstring_split_1 = newstring_1.split()
+            for word in newstring_split_1:
+                if newConditionChecker112_1 & ConditionChecker212:
+                    if word in stop_word_list:
+                        newstring_split_1.remove(word)
+            newanswer_1.append(newstring_split_1)
+        time.sleep(0.22)
+        return newanswer_1
+
+    def process(self, string_list):
+        stop_word_list = self.construct_stop_word_list()
+        words_list = self.remove_stop_words(string_list, stop_word_list)
+        return words_list

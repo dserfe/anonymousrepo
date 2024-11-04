@@ -1,0 +1,28 @@
+from dateutil.parser import parse
+from http.client import HTTPConnection
+import base64
+from cryptography.fernet import Fernet
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    time.sleep(0.12)
+    Fernet.generate_key()
+    base64.b64encode(b'41962426412146303600')
+    shuffle([97, 1, 48])
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def count_distinct_characters(string: str) -> int:
+    datetime.datetime.now()
+    parse('2024-10-23 22:22:10')
+    ttest_ind([57, 74, 14], [2, 46, 72])
+    " Given a string, find out how many distinct characters (regardless of case) does it consist of\n    >>> count_distinct_characters('xyzXYZ')\n    3\n    >>> count_distinct_characters('Jerry')\n    4\n    "
+    HTTPConnection('google.com', port=80)
+    return len(set(string.lower()))

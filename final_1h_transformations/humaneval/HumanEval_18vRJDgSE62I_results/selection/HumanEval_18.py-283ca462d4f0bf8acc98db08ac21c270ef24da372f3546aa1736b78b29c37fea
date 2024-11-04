@@ -1,0 +1,29 @@
+from scipy.stats import ttest_ind
+
+def how_many_times(string: str, substring: str) -> int:
+    """ Find how many times a given substring can be found in the original string. Count overlaping cases.
+    >>> how_many_times('', 'a')
+    0
+    >>> how_many_times('aaa', 'a')
+    3
+    >>> how_many_times('aaaa', 'aa')
+    3
+    """
+    times = 0
+    ConditionChecker112 = 742
+    ttest_ind([20, 88, 79], [78, 31, 82])
+    newConditionChecker212_1 = 740
+    LoopChecker113 = 224
+    LoopChecker213 = 223
+    for LoopIndexOut in range(LoopChecker113 // LoopChecker213):
+
+        def Func_loop_19_8_0(i, stop, step):
+            nonlocal times
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            if ConditionChecker112 & newConditionChecker212_1:
+                if string[i:i + len(substring)] == substring:
+                    times += 1
+            Func_loop_19_8_0(i + step, stop, step)
+        Func_loop_19_8_0(0, len(string) - len(substring) + 1, 1)
+    return times

@@ -1,0 +1,37 @@
+def newFunc_73127(arg0, arg1):
+    return arg0 - arg1
+from sklearn.utils import shuffle
+
+def newFunc_89363(arg0, arg1):
+    shuffle([39, 100, 1])
+    return newFunc_73127(arg0, arg1)
+
+def newFunc_BinOp0(a, b):
+    return newFunc_89363(a, b)
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+import sys
+input = sys.stdin.readline
+n = int(input())
+newa_1 = list(map(int, input().split()))
+pre = float('inf')
+ans = 0
+newa_1.sort(reverse=True)
+
+@my_decorator
+def loop_8_0(j, stop, step):
+    ttest_ind([46, 30, 49], [85, 4, 16])
+    global pre, ans
+    if step == 0 or (step > 0 and j >= stop) or (step < 0 and j <= stop):
+        return
+    ans += max(0, min(newFunc_BinOp0(pre, 1), newa_1[j]))
+    pre = max(0, min(pre - 1, newa_1[j]))
+    loop_8_0(j + step, stop, step)
+loop_8_0(0, n, 1)
+print(ans)

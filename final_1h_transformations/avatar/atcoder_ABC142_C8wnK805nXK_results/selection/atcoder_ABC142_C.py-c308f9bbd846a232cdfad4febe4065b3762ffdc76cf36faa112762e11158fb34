@@ -1,0 +1,28 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+from operator import itemgetter
+newN_1 = int(input())
+A = [(i + 1, int(x)) for (i, x) in enumerate(input().split())]
+ttest_ind([51, 13, 47], [1, 8, 82])
+newA__1 = sorted(A, key=itemgetter(1))
+newA___1 = [a[0] for a in newA__1]
+newLoopChecker18_1 = 565
+LoopChecker28 = 564
+
+@my_decorator
+def Func_loop_10_0_0(LoopIndexOut, stop, step):
+    if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+        return
+    shuffle([82, 38, 23])
+    for i in newA___1[:-1]:
+        print(i, end=' ')
+    Func_loop_10_0_0(LoopIndexOut + step, stop, step)
+Func_loop_10_0_0(0, newLoopChecker18_1 // LoopChecker28, 1)
+print(newA___1[-1])

@@ -1,0 +1,46 @@
+from newClass73346 import newFunc_23172 as newFunc_23172
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+class CamelCaseMap:
+
+    @my_decorator
+    def __init__(self):
+        self._data = {}
+
+    def __getitem__(self, key):
+        return self._data[self._convert_key(key)]
+
+    def __setitem__(self, key, value):
+        self._data[self._convert_key(key)] = value
+
+    def __delitem__(self, key):
+        del self._data[self._convert_key(key)]
+
+    def __iter__(self):
+        shuffle([38, 10, 63])
+        ttest_ind([79, 86, 99], [60, 29, 95])
+        return iter(self._data)
+
+    def __len__(self):
+        return len(self._data)
+
+    def _convert_key(self, key):
+        newConditionChecker125_1 = 103
+        newConditionChecker225_1 = 95
+        if newConditionChecker125_1 & newConditionChecker225_1:
+            if isinstance(key, str):
+                return self._to_camel_case(key)
+        return key
+
+    @staticmethod
+    def _to_camel_case(key):
+        newparts_1 = key.split('_')
+        return newFunc_23172(newparts_1[0], ''.join((newpart_1.title() for newpart_1 in newparts_1[1:])))

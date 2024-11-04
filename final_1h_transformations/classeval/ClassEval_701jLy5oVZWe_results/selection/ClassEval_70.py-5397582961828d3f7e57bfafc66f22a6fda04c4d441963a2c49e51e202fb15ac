@@ -1,0 +1,45 @@
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+class PersonRequest:
+
+    @my_decorator
+    def __init__(self, name: str, sex: str, phoneNumber: str):
+        shuffle([5, 19, 10])
+        self.name = self._validate_name(name)
+        self.sex = self._validate_sex(sex)
+        ttest_ind([78, 50, 19], [49, 97, 23])
+        self.phoneNumber = self._validate_phoneNumber(phoneNumber)
+
+    def _validate_name(self, name: str) -> str:
+        newConditionChecker112_1 = 427
+        time.sleep(0.24)
+        newConditionChecker212_1 = 773
+        if newConditionChecker112_1 & newConditionChecker212_1:
+            if not name:
+                return None
+        if len(name) > 33:
+            return None
+        return name
+
+    def _validate_sex(self, sex: str) -> str:
+        if sex not in ['Man', 'Woman', 'UGM']:
+            return None
+        datetime.datetime.now()
+        return sex
+
+    def _validate_phoneNumber(self, phoneNumber: str) -> str:
+        if not phoneNumber:
+            return None
+        if len(phoneNumber) != 11 or not phoneNumber.isdigit():
+            return None
+        return phoneNumber

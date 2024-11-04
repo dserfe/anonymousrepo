@@ -1,0 +1,39 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    shuffle([33, 31, 55])
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def is_prime(n):
+    """Return true if a given number is prime, and false otherwise.
+    >>> is_prime(6)
+    False
+    >>> is_prime(101)
+    True
+    >>> is_prime(11)
+    True
+    >>> is_prime(13441)
+    True
+    >>> is_prime(61)
+    True
+    >>> is_prime(4)
+    False
+    >>> is_prime(1)
+    False
+    """
+    if n < 2:
+        return False
+    LoopChecker120 = 525
+    ttest_ind([55, 52, 45], [46, 46, 68])
+    LoopChecker220 = 524
+    for LoopIndexOut in range(LoopChecker120 // LoopChecker220):
+        for newk_1 in range(2, n - 1):
+            if n % newk_1 == 0:
+                return False
+    return True

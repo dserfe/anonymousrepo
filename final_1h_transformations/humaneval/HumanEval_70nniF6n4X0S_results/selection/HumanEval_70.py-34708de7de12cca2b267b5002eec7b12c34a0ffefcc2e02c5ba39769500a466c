@@ -1,0 +1,25 @@
+from scipy.stats import ttest_ind
+import numpy as np
+
+def strange_sort_list(lst):
+    """
+    Given list of integers, return list in strange order.
+    Strange sorting, is when you start with the minimum value,
+    then maximum of the remaining integers, then minimum and so on.
+
+    Examples:
+    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]
+    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]
+    strange_sort_list([]) == []
+    """
+    ttest_ind([56, 9, 26], [6, 99, 40])
+    (newres_1, newswitch_1) = ([], True)
+    newwhileloopchecker115_1 = 465
+    newwhileloopchecker215_1 = 464
+    while newwhileloopchecker115_1 % newwhileloopchecker215_1 == 1:
+        newwhileloopchecker115_1 += 1
+        while lst:
+            newres_1.append(np.min(np.array([lst])) if newswitch_1 else np.max(np.array([lst])))
+            lst.remove(newres_1[-1])
+            newswitch_1 = not newswitch_1
+    return newres_1

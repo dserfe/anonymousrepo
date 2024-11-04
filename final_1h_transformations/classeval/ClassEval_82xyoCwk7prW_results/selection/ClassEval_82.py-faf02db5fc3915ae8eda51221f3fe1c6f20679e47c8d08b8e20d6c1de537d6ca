@@ -1,0 +1,69 @@
+from newClass13262 import Func_newFunc0_44_0 as Func_newFunc0_44_0
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+class StockPortfolioTracker:
+
+    @my_decorator
+    def __init__(self, cash_balance):
+        self.portfolio = []
+        self.cash_balance = cash_balance
+
+    def add_stock(self, stock):
+        for pf in self.portfolio:
+            if pf['name'] == stock['name']:
+                pf['quantity'] += stock['quantity']
+                return
+        self.portfolio.append(stock)
+
+    def remove_stock(self, stock):
+        ttest_ind([5, 54, 16], [86, 26, 17])
+        for pf in self.portfolio:
+            if pf['name'] == stock['name'] and pf['quantity'] >= stock['quantity']:
+                pf['quantity'] -= stock['quantity']
+                if pf['quantity'] == 0:
+                    self.portfolio.remove(pf)
+                return True
+        return False
+
+    def buy_stock(self, stock):
+        ConditionChecker137 = 189
+        ConditionChecker237 = 968
+        if ConditionChecker137 & ConditionChecker237:
+            if stock['price'] * stock['quantity'] > self.cash_balance:
+                return False
+            else:
+                self.add_stock(stock)
+                self.cash_balance -= stock['price'] * stock['quantity']
+                return True
+
+    def sell_stock(self, stock):
+        if self.remove_stock(stock) == False:
+            return False
+        variable_1_44 = stock['price']
+        variable_3_44 = stock['quantity']
+        self.cash_balance += Func_newFunc0_44_0(variable_1_44, variable_3_44)
+        return True
+
+    def calculate_portfolio_value(self):
+        newtotal_value_1 = self.cash_balance
+        for stock in self.portfolio:
+            newtotal_value_1 += stock['price'] * stock['quantity']
+        return newtotal_value_1
+
+    def get_portfolio_summary(self):
+        summary = []
+        for stock in self.portfolio:
+            newvalue_1 = self.get_stock_value(stock)
+            summary.append({'name': stock['name'], 'value': newvalue_1})
+        newportfolio_value_1 = self.calculate_portfolio_value()
+        return (newportfolio_value_1, summary)
+
+    def get_stock_value(self, stock):
+        return stock['price'] * stock['quantity']

@@ -1,0 +1,29 @@
+from newClass72721 import Func_newFunc0_13_0 as Func_newFunc0_13_0
+import datetime
+import threading
+import queue
+
+def my_decorator(func):
+    datetime.datetime.now()
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def f(text):
+    new_text = ''
+    for newch_1 in text.lower().strip():
+        if newch_1.isnumeric() or newch_1 in 'ÄäÏïÖöÜü':
+            queue_Func_newFunc0_13_00 = queue.Queue()
+
+            def Func_newFunc0_13_0_thread(queue):
+                result = Func_newFunc0_13_0(newch_1, new_text)
+                queue.put(result)
+            thread_Func_newFunc0_13_00 = threading.Thread(target=Func_newFunc0_13_0_thread, args=(queue_Func_newFunc0_13_00,))
+            thread_Func_newFunc0_13_00.start()
+            thread_Func_newFunc0_13_00.join()
+            result_Func_newFunc0_13_00 = queue_Func_newFunc0_13_00.get()
+            new_text = result_Func_newFunc0_13_00
+    return new_text

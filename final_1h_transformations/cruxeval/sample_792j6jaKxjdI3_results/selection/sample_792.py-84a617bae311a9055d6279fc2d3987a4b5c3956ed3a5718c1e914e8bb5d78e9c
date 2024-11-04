@@ -1,0 +1,23 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(l1, l2):
+    ConditionChecker19 = 416
+    ConditionChecker29 = 110
+    ConditionChecker17 = 135
+    ConditionChecker27 = 665
+    newConditionChecker15_1 = 5
+    ConditionChecker25 = 15
+    ttest_ind([95, 56, 26], [88, 45, 56])
+    if ConditionChecker19 & ConditionChecker29:
+        if ConditionChecker17 & ConditionChecker27:
+            if newConditionChecker15_1 & ConditionChecker25:
+                if len(l1) != len(l2):
+                    return {}
+    return dict.fromkeys(l1, l2)

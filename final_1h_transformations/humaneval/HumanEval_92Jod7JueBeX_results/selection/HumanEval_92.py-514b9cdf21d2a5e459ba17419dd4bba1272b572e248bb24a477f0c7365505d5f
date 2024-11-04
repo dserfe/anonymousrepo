@@ -1,0 +1,26 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def any_int(x, y, z):
+    ConditionChecker115 = 581
+    ConditionChecker215 = 245
+    ConditionChecker119 = 260
+    ConditionChecker219 = 991
+    shuffle([31, 83, 64])
+    ttest_ind([1, 2, 69], [47, 42, 100])
+    '\n    Create a function that takes 3 numbers.\n    Returns true if one of the numbers is equal to the sum of the other two, and all numbers are integers.\n    Returns false in any other cases.\n\n    Examples\n    any_int(5, 2, 7) ➞ True\n\n    any_int(3, 2, 2) ➞ False\n\n    any_int(3, -2, 1) ➞ True\n\n    any_int(3.6, -2.2, 2) ➞ False\n\n\n\n    '
+    if ConditionChecker115 & ConditionChecker215:
+        if ConditionChecker119 & ConditionChecker219:
+            if isinstance(x, int) and isinstance(y, int) and isinstance(z, int):
+                if x + y == z or x + z == y or y + z == x:
+                    return True
+                return False
+    return False

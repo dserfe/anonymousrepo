@@ -1,0 +1,46 @@
+import numpy as np
+import threading
+import queue
+
+def Func_newFunc0_17_0(newvariable_4_17_1, variable_3_17, variable_6_17):
+    return newvariable_4_17_1 + variable_6_17 + variable_3_17
+ConditionChecker18 = 5
+ConditionChecker28 = 635
+newN_1 = int(input())
+A = list(map(int, input().split()))
+(mn, mx) = (newN_1 + 1, -1)
+LoopChecker16 = 534
+newLoopChecker26_1 = 533
+for LoopIndexOut in range(LoopChecker16 // newLoopChecker26_1):
+
+    def loop_14_4(i, stop, step):
+        global mx, mn
+        if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+            return
+        if i + 1 != A[i]:
+            mn = np.min(np.array([mn, i]))
+            mx = max(mx, i)
+        loop_14_4(i + step, stop, step)
+    loop_14_4(0, newN_1, 1)
+variable_3_17 = A[mx + 1:]
+newvariable_4_17_1 = A[:mn]
+variable_6_17 = A[mn:mx + 1][::-1]
+newvariable_13_17_1 = A[mn:mx + 1]
+if ConditionChecker18 & ConditionChecker28:
+    if mx == -1:
+        print('0 0')
+    else:
+        queue_Func_newFunc0_17_00 = queue.Queue()
+
+        def Func_newFunc0_17_0_thread(queue):
+            result = Func_newFunc0_17_0(newvariable_4_17_1, variable_3_17, variable_6_17)
+            queue.put(result)
+        thread_Func_newFunc0_17_00 = threading.Thread(target=Func_newFunc0_17_0_thread, args=(queue_Func_newFunc0_17_00,))
+        thread_Func_newFunc0_17_00.start()
+        thread_Func_newFunc0_17_00.join()
+        result_Func_newFunc0_17_00 = queue_Func_newFunc0_17_00.get()
+        A = result_Func_newFunc0_17_00
+        if sorted(A) == A:
+            print(mn + 1, mx + 1)
+        else:
+            print('0 0')

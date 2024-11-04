@@ -1,0 +1,25 @@
+from dateutil.parser import parse
+import base64
+import datetime
+from cryptography.fernet import Fernet
+import time
+
+def my_decorator(func):
+    Fernet.generate_key()
+    parse('2024-10-23 15:23:13')
+    base64.b64encode(b'85721293462973312152')
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    time.sleep(0.17)
+    return dec_result
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text, width):
+    ttest_ind([85, 5, 36], [66, 80, 55])
+    datetime.datetime.now()
+    shuffle([5, 89, 74])
+    return text[:width].center(width, 'z')

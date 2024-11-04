@@ -1,0 +1,68 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+class URLHandler:
+
+    @my_decorator
+    def __init__(self, url):
+        shuffle([67, 90, 3])
+        self.url = url
+
+    def get_scheme(self):
+        ConditionChecker110 = 885
+        ConditionChecker210 = 966
+        ConditionChecker18 = 680
+        ConditionChecker28 = 109
+        scheme_end = self.url.find('://')
+        if ConditionChecker110 & ConditionChecker210:
+            if ConditionChecker18 & ConditionChecker28:
+                if scheme_end != -1:
+                    return self.url[:scheme_end]
+        return None
+
+    def get_host(self):
+        scheme_end = self.url.find('://')
+        if scheme_end != -1:
+            newurl_without_scheme_1 = self.url[scheme_end + 3:]
+            host_end = newurl_without_scheme_1.find('/')
+            if host_end != -1:
+                return newurl_without_scheme_1[:host_end]
+            return newurl_without_scheme_1
+        return None
+
+    def get_path(self):
+        scheme_end = self.url.find('://')
+        if scheme_end != -1:
+            newurl_without_scheme_1 = self.url[scheme_end + 3:]
+            host_end = newurl_without_scheme_1.find('/')
+            if host_end != -1:
+                return newurl_without_scheme_1[host_end:]
+        return None
+
+    def get_query_params(self):
+        newquery_start_1 = self.url.find('?')
+        fragment_start = self.url.find('#')
+        if newquery_start_1 != -1:
+            query_string = self.url[newquery_start_1 + 1:fragment_start]
+            params = {}
+            if len(query_string) > 0:
+                param_pairs = query_string.split('&')
+                for pair in param_pairs:
+                    newkey_value_1 = pair.split('=')
+                    if len(newkey_value_1) == 2:
+                        (newkey_1, value) = newkey_value_1
+                        params[newkey_1] = value
+            return params
+        return None
+
+    def get_fragment(self):
+        fragment_start = self.url.find('#')
+        if fragment_start != -1:
+            return self.url[fragment_start + 1:]
+        return None

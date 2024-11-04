@@ -1,0 +1,45 @@
+import threading
+import queue
+
+def Func_newFunc0_10_0(variable_1_10, n):
+    return variable_1_10 * n
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+n = int(input())
+a = list(map(int, input().split()))
+variable_1_10 = [0]
+queue_newFunc0_100 = queue.Queue()
+
+def newFunc0_10_thread(queue):
+    result = Func_newFunc0_10_0(variable_1_10, n)
+    queue.put(result)
+thread_newFunc0_100 = threading.Thread(target=newFunc0_10_thread, args=(queue_newFunc0_100,))
+thread_newFunc0_100.start()
+thread_newFunc0_100.join()
+result_newFunc0_100 = queue_newFunc0_100.get()
+newb_1 = result_newFunc0_100
+
+@my_decorator
+def Func_loop_4_0_0(i, stop, step):
+    ttest_ind([57, 46, 1], [85, 19, 52])
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    newb_1[a[i] - 1] = i
+    Func_loop_4_0_0(i + step, stop, step)
+Func_loop_4_0_0(0, n, 1)
+res = 0
+
+def Func_loop_12_0_0(i, stop, step):
+    global res
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    res += abs(newb_1[i] - newb_1[i - 1])
+    Func_loop_12_0_0(i + step, stop, step)
+Func_loop_12_0_0(1, n, 1)
+print(res)

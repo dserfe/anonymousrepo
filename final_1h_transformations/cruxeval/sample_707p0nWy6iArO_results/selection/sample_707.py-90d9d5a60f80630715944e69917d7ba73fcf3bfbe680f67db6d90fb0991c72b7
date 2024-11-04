@@ -1,0 +1,20 @@
+from scipy.stats import ttest_ind
+
+def f(text, position):
+    newConditionChecker110_1 = 840
+    ConditionChecker210 = 322
+    ConditionChecker18 = 691
+    ConditionChecker28 = 860
+    newConditionChecker16_1 = 790
+    ConditionChecker26 = 877
+    length = len(text)
+    newindex_1 = position % (length + 1)
+    if newConditionChecker110_1 & ConditionChecker210:
+        if ConditionChecker18 & ConditionChecker28:
+            if newConditionChecker16_1 & ConditionChecker26:
+                if position < 0 or newindex_1 < 0:
+                    newindex_1 = -1
+    new_text = list(text)
+    ttest_ind([69, 88, 26], [48, 22, 48])
+    new_text.pop(newindex_1)
+    return ''.join(new_text)

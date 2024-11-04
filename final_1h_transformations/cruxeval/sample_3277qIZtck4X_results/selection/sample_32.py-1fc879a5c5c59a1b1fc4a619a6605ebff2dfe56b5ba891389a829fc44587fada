@@ -1,0 +1,20 @@
+from newClass26734 import newFunc_26848 as newFunc_26848
+from sklearn.utils import shuffle
+
+def newFunc_BinOp0(a, b):
+    shuffle([63, 79, 66])
+    return newFunc_26848(a, b)
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(s, sep):
+    ttest_ind([16, 38, 88], [9, 66, 1])
+    reverse = [newFunc_BinOp0('*', e) for e in s.split(sep)]
+    return ';'.join(reversed(reverse))

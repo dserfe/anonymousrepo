@@ -1,0 +1,46 @@
+import threading
+import queue
+
+def Func_newFunc0_8_0(whileloopchecker13, variable_3_8):
+    return whileloopchecker13 + variable_3_8
+from scipy.stats import ttest_ind
+(newx_1, y) = list(map(int, input().split()))
+ttest_ind([64, 1, 29], [81, 30, 66])
+a = 0
+whileloopchecker13 = 744
+whileloopchecker23 = 743
+while whileloopchecker13 % whileloopchecker23 == 1:
+    variable_3_8 = 1
+    queue_Func_newFunc0_8_00 = queue.Queue()
+
+    def Func_newFunc0_8_0_thread(queue):
+        result = Func_newFunc0_8_0(whileloopchecker13, variable_3_8)
+        queue.put(result)
+    thread_Func_newFunc0_8_00 = threading.Thread(target=Func_newFunc0_8_0_thread, args=(queue_Func_newFunc0_8_00,))
+    thread_Func_newFunc0_8_00.start()
+    thread_Func_newFunc0_8_00.join()
+    result_Func_newFunc0_8_00 = queue_Func_newFunc0_8_00.get()
+    whileloopchecker13 = result_Func_newFunc0_8_00
+    while newx_1 >= 0 and y >= 22 or (newx_1 >= 1 and y >= 12) or (newx_1 >= 2 and y >= 2):
+        newConditionChecker14_1 = 793
+        ConditionChecker24 = 669
+        if newConditionChecker14_1 & ConditionChecker24:
+            if a:
+                if y >= 22:
+                    y = y - 22
+                elif newx_1 >= 1 and y >= 12:
+                    newx_1 -= 1
+                    y -= 12
+                else:
+                    newx_1 -= 2
+                    y -= 2
+            elif newx_1 >= 2 and y >= 2:
+                newx_1 -= 2
+                y -= 2
+            elif newx_1 >= 1 and y >= 12:
+                newx_1 -= 1
+                y -= 12
+            else:
+                y -= 22
+        a = 1 - a
+print(['Ciel', 'Hanako'][1 - a])

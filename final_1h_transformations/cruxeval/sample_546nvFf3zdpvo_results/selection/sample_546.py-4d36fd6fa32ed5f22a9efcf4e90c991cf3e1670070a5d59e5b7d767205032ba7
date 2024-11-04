@@ -1,0 +1,24 @@
+from sklearn.utils import shuffle
+
+def newFunc_BinOp0(a, b):
+    shuffle([1, 99, 15])
+    return a % b
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text, speaker):
+    ttest_ind([53, 88, 87], [59, 90, 59])
+    whileloopchecker15 = 258
+    newwhileloopchecker25_1 = 257
+    while newFunc_BinOp0(whileloopchecker15, newwhileloopchecker25_1) == 1:
+        whileloopchecker15 += 1
+        while text.startswith(speaker):
+            text = text[len(speaker):]
+    return text

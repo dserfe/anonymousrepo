@@ -1,0 +1,32 @@
+from newClass19674 import Func_newFunc0_15_0 as Func_newFunc0_15_0
+import threading
+import queue
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    shuffle([31, 30, 77])
+    return dec_result
+
+@my_decorator
+def f(text, size):
+    counter = len(text)
+    for i in range(size - int(size % 2)):
+        variable_3_15 = ' '
+        variable_4_15 = ' '
+        queue_Func_newFunc0_15_00 = queue.Queue()
+
+        def Func_newFunc0_15_0_thread(queue):
+            result = Func_newFunc0_15_0(variable_3_15, variable_4_15, text)
+            queue.put(result)
+        thread_Func_newFunc0_15_00 = threading.Thread(target=Func_newFunc0_15_0_thread, args=(queue_Func_newFunc0_15_00,))
+        thread_Func_newFunc0_15_00.start()
+        thread_Func_newFunc0_15_00.join()
+        result_Func_newFunc0_15_00 = queue_Func_newFunc0_15_00.get()
+        text = result_Func_newFunc0_15_00
+        counter = counter + 2
+        if counter >= size:
+            return text

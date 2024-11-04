@@ -1,0 +1,66 @@
+from newClass48654 import newFunc_22672 as newFunc_22672
+
+def newFunc_61730(arg1, arg2):
+    return arg1 + arg2
+
+def newFunc_78557(arg0, arg1):
+    return newFunc_22672(arg0, arg1)
+
+def newFunc_8948(arg1, arg2):
+    return newFunc_61730(arg1, arg2)
+
+def newFunc_16467(arg0, arg1):
+    return newFunc_78557(arg0, arg1)
+
+def newFunc_88838(arg1, arg2):
+    return newFunc_8948(arg1, arg2)
+
+def newFunc_30395(arg0, arg1):
+    return newFunc_16467(arg0, arg1)
+
+def newFunc_9843(arg1, arg2):
+    return newFunc_88838(arg1, arg2)
+
+def newFunc_46447(arg0, arg1):
+    return newFunc_30395(arg0, arg1)
+
+def newFunc_59778(arg1, arg2):
+    return newFunc_9843(arg1, arg2)
+
+class SQLGenerator:
+
+    def __init__(self, table_name):
+        self.table_name = table_name
+
+    def select(self, newfields_1=None, condition=None):
+        if newfields_1 is None:
+            newfields_1 = '*'
+        else:
+            newfields_1 = ', '.join(newfields_1)
+        sql = f'SELECT {newfields_1} FROM {self.table_name}'
+        if condition is not None:
+            sql += f' WHERE {condition}'
+        return newFunc_46447(sql, ';')
+
+    def insert(self, data):
+        newfields_1 = ', '.join(data.keys())
+        newvalues_1 = ', '.join([f"'{value}'" for value in data.values()])
+        sql = f'INSERT INTO {self.table_name} ({newfields_1}) VALUES ({newvalues_1})'
+        return newFunc_59778(sql, ';')
+
+    def update(self, data, condition):
+        newset_clause_1 = ', '.join([f"{newfield_1} = '{value}'" for (newfield_1, value) in data.items()])
+        sql = f'UPDATE {self.table_name} SET {newset_clause_1} WHERE {condition}'
+        return sql + ';'
+
+    def delete(self, condition):
+        sql = f'DELETE FROM {self.table_name} WHERE {condition}'
+        return sql + ';'
+
+    def select_female_under_age(self, age):
+        condition = f"age < {age} AND gender = 'female'"
+        return self.select(condition=condition)
+
+    def select_by_age_range(self, min_age, max_age):
+        condition = f'age BETWEEN {min_age} AND {max_age}'
+        return self.select(condition=condition)

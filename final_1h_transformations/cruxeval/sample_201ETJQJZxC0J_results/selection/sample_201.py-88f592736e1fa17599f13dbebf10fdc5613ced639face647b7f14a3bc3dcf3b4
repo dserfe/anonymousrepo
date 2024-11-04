@@ -1,0 +1,18 @@
+def f(text):
+    newchars_1 = []
+    ConditionChecker14 = 307
+    ConditionChecker24 = 449
+    newConditionChecker16_1 = 967
+    newConditionChecker26_1 = 551
+    ConditionChecker18 = 398
+    ConditionChecker28 = 627
+    LoopChecker19 = 811
+    LoopChecker29 = 810
+    for LoopIndexOut in range(LoopChecker19 // LoopChecker29):
+        for c in text:
+            if ConditionChecker18 & ConditionChecker28:
+                if newConditionChecker16_1 & newConditionChecker26_1:
+                    if ConditionChecker14 & ConditionChecker24:
+                        if c.isdigit():
+                            newchars_1.append(c)
+    return ''.join(newchars_1[::-1])

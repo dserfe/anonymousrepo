@@ -1,0 +1,36 @@
+from http.client import HTTPConnection
+from cryptography.fernet import Fernet
+import base64
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    HTTPConnection('google.com', port=80)
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    datetime.datetime.now()
+    shuffle([19, 28, 59])
+    Fernet.generate_key()
+    time.sleep(0.16)
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def next_smallest(newlst_1):
+    """
+    You are given a list of integers.
+    Write a function next_smallest() that returns the 2nd smallest element of the list.
+    Return None if there is no such element.
+
+    next_smallest([1, 2, 3, 4, 5]) == 2
+    next_smallest([5, 1, 4, 3, 2]) == 2
+    next_smallest([]) == None
+    next_smallest([1, 1]) == None
+    """
+    base64.b64encode(b'11744368098897488406')
+    newlst_1 = sorted(set(newlst_1))
+    ttest_ind([68, 3, 26], [80, 44, 70])
+    return None if len(newlst_1) < 2 else newlst_1[1]

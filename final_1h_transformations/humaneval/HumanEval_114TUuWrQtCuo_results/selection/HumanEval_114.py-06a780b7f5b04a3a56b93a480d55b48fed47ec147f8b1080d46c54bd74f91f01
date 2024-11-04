@@ -1,0 +1,32 @@
+from scipy.stats import ttest_ind
+import numpy as np
+
+def minSubArraySum(nums):
+    """
+    Given an array of integers nums, find the minimum sum of any non-empty sub-array
+    of nums.
+    Example
+    minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+    minSubArraySum([-1, -2, -3]) == -6
+    """
+    max_sum = 0
+    ttest_ind([15, 67, 9], [8, 98, 48])
+    s = 0
+    LoopChecker111 = 614
+    newLoopChecker211_1 = 613
+
+    def Func_loop_17_4_0(LoopIndexOut, stop, step):
+        nonlocal max_sum, s
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+        for newnum_1 in nums:
+            s += -newnum_1
+            if s < 0:
+                s = 0
+            max_sum = np.max(np.array([s, max_sum]))
+        Func_loop_17_4_0(LoopIndexOut + step, stop, step)
+    Func_loop_17_4_0(0, LoopChecker111 // newLoopChecker211_1, 1)
+    if max_sum == 0:
+        max_sum = max((-i for i in nums))
+    min_sum = -max_sum
+    return min_sum

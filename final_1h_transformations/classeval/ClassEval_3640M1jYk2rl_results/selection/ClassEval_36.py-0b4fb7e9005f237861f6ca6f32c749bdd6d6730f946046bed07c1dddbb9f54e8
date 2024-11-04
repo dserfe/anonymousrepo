@@ -1,0 +1,61 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+from datetime import datetime
+
+class EmailClient:
+
+    @my_decorator
+    def __init__(self, addr, capacity) -> None:
+        self.addr = addr
+        self.capacity = capacity
+        self.inbox = []
+
+    def send_to(self, recv, content, size):
+        newConditionChecker113_1 = 26
+        ConditionChecker213 = 566
+        shuffle([82, 90, 89])
+        ttest_ind([99, 96, 14], [98, 58, 41])
+        if newConditionChecker113_1 & ConditionChecker213:
+            if not recv.is_full_with_one_more_email(size):
+                timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                newemail_1 = {'sender': self.addr, 'receiver': recv.addr, 'content': content, 'size': size, 'time': timestamp, 'state': 'unread'}
+                recv.inbox.append(newemail_1)
+                return True
+            else:
+                self.clear_inbox(size)
+                return False
+
+    def fetch(self):
+        if len(self.inbox) == 0:
+            return None
+        for newi_1 in range(len(self.inbox)):
+            if self.inbox[newi_1]['state'] == 'unread':
+                self.inbox[newi_1]['state'] = 'read'
+                return self.inbox[newi_1]
+        return None
+
+    def is_full_with_one_more_email(self, size):
+        occupied_size = self.get_occupied_size()
+        return True if occupied_size + size > self.capacity else False
+
+    def get_occupied_size(self):
+        occupied_size = 0
+        for newemail_1 in self.inbox:
+            occupied_size += newemail_1['size']
+        return occupied_size
+
+    def clear_inbox(self, size):
+        if len(self.addr) == 0:
+            return
+        freed_space = 0
+        while freed_space < size and self.inbox:
+            newemail_1 = self.inbox[0]
+            freed_space += newemail_1['size']
+            del self.inbox[0]

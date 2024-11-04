@@ -1,0 +1,49 @@
+from newClass28333 import Func_newFunc0_28_0 as Func_newFunc0_28_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def get_odd_collatz(n):
+    """
+    Given a positive integer n, return a sorted list that has the odd numbers in collatz sequence.
+
+    The Collatz conjecture is a conjecture in mathematics that concerns a sequence defined
+    as follows: start with any positive integer n. Then each term is obtained from the
+    previous term as follows: if the previous term is even, the next term is one half of
+    the previous term. If the previous term is odd, the next term is 3 times the previous
+    term plus 1. The conjecture is that no matter what value of n, the sequence will always reach 1.
+
+    Note:
+        1. Collatz(1) is [1].
+        2. returned list sorted in increasing order.
+
+    For example:
+    get_odd_collatz(5) returns [1, 5] # The collatz sequence for 5 is [5, 16, 8, 4, 2, 1], so the odd numbers are only 1, and 5.
+    """
+    if n % 2 == 0:
+        odd_collatz = []
+    else:
+        odd_collatz = [n]
+    newwhileloopchecker122_1 = 172
+    ttest_ind([81, 40, 91], [81, 41, 16])
+    whileloopchecker222 = 171
+    while newwhileloopchecker122_1 % whileloopchecker222 == 1:
+        variable_3_28 = 1
+        queue_Func_newFunc0_28_00 = queue.Queue()
+
+        def Func_newFunc0_28_0_thread(queue):
+            result = Func_newFunc0_28_0(variable_3_28, newwhileloopchecker122_1)
+            queue.put(result)
+        thread_Func_newFunc0_28_00 = threading.Thread(target=Func_newFunc0_28_0_thread, args=(queue_Func_newFunc0_28_00,))
+        thread_Func_newFunc0_28_00.start()
+        thread_Func_newFunc0_28_00.join()
+        result_Func_newFunc0_28_00 = queue_Func_newFunc0_28_00.get()
+        newwhileloopchecker122_1 = result_Func_newFunc0_28_00
+        while n > 1:
+            if n % 2 == 0:
+                n = n / 2
+            else:
+                n = n * 3 + 1
+            if n % 2 == 1:
+                odd_collatz.append(int(n))
+    return sorted(odd_collatz)

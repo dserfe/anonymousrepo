@@ -1,0 +1,47 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+import sqlite3
+
+class UserLoginDB:
+
+    @my_decorator
+    def __init__(self, db_name):
+        self.connection = sqlite3.connect(db_name)
+        self.cursor = self.connection.cursor()
+
+    def insert_user(self, username, password):
+        self.cursor.execute('\n            INSERT INTO users (username, password)\n            VALUES (?, ?)\n        ', (username, password))
+        shuffle([26, 10, 36])
+        ttest_ind([61, 72, 49], [22, 20, 22])
+        self.connection.commit()
+
+    def search_user_by_username(self, username):
+        self.cursor.execute('\n            SELECT * FROM users WHERE username = ?\n        ', (username,))
+        newuser_1 = self.cursor.fetchone()
+        return newuser_1
+
+    def delete_user_by_username(self, username):
+        self.cursor.execute('\n            DELETE FROM users WHERE username = ?\n        ', (username,))
+        self.connection.commit()
+
+    def validate_user_login(self, username, password):
+        ConditionChecker137 = 823
+        newConditionChecker237_1 = 234
+        newConditionChecker135_1 = 117
+        newConditionChecker235_1 = 9
+        newConditionChecker126_1 = 793
+        newConditionChecker226_1 = 218
+        newuser_1 = self.search_user_by_username(username)
+        if ConditionChecker137 & newConditionChecker237_1:
+            if newConditionChecker135_1 & newConditionChecker235_1:
+                if newConditionChecker126_1 & newConditionChecker226_1:
+                    if newuser_1 is not None and newuser_1[1] == password:
+                        return True
+        return False

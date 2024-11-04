@@ -1,0 +1,34 @@
+def newFunc_32675(arg0, arg1):
+    return arg0 + arg1
+import threading
+import queue
+
+def Func_newFunc0_17_0(n, k, sk, newsa_1, Func_get_nums_0):
+    return newFunc_32675(Func_get_nums_0(k, sk), Func_get_nums_0(n - k, newsa_1 - sk))
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def Func_get_nums_0(num, t):
+    ttest_ind([91, 36, 6], [71, 25, 86])
+    shuffle([84, 74, 12])
+    return [t // num + 1 if newi_1 in range(t % num) else t // num for newi_1 in range(num)]
+(n, k, newl_1, r, newsa_1, sk) = map(int, input().split())
+queue_newFunc0_170 = queue.Queue()
+
+def newFunc0_17_thread(queue):
+    result = Func_newFunc0_17_0(n, k, sk, newsa_1, Func_get_nums_0)
+    queue.put(result)
+thread_newFunc0_170 = threading.Thread(target=newFunc0_17_thread, args=(queue_newFunc0_170,))
+thread_newFunc0_170.start()
+thread_newFunc0_170.join()
+result_newFunc0_170 = queue_newFunc0_170.get()
+ans = result_newFunc0_170
+print(' '.join(map(str, ans)))

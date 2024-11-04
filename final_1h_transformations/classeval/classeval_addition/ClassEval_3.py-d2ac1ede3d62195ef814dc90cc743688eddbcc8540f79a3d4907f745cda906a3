@@ -1,0 +1,58 @@
+import itertools
+
+class ArrangementCalculator:
+
+    def __init__(self, datas):
+        self.datas = datas
+
+    @staticmethod
+    def count(n, newm_1=None):
+        if newm_1 is None or n == newm_1:
+            return ArrangementCalculator.factorial(n)
+        else:
+            return ArrangementCalculator.factorial(n) // ArrangementCalculator.factorial(n - newm_1)
+
+    @staticmethod
+    def count_all(n):
+        total = 0
+
+        def loop_18_8(i, stop, step):
+            nonlocal total
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            total += ArrangementCalculator.count(n, i)
+            loop_18_8(i + step, stop, step)
+        loop_18_8(1, n + 1, 1)
+        return total
+
+    def select(self, newm_1=None):
+        if newm_1 is None:
+            newm_1 = len(self.datas)
+        result = []
+        for newpermutation_1 in itertools.permutations(self.datas, newm_1):
+            result.append(list(newpermutation_1))
+        return result
+
+    def select_all(self):
+        result = []
+
+        def loop_38_8(i, stop, step):
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            result.extend(self.select(i))
+            loop_38_8(i + step, stop, step)
+        loop_38_8(1, len(self.datas) + 1, 1)
+        return result
+
+    @staticmethod
+    def factorial(n):
+        result = 1
+
+        def loop_50_8(i, stop, step):
+            nonlocal result
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            result = result * i
+            loop_50_8(i + step, stop, step)
+        loop_50_8(2, n + 1, 1)
+        return result

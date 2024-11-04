@@ -1,0 +1,27 @@
+from newClass26008 import newFunc0_10 as newFunc0_10
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def f(text, old, new):
+    ttest_ind([2, 74, 50], [63, 41, 40])
+    newindex_1 = text.rfind(old, 0, text.find(old))
+    result = list(text)
+    newwhileloopchecker17_1 = 281
+    newwhileloopchecker27_1 = 280
+    while newwhileloopchecker17_1 % newwhileloopchecker27_1 == 1:
+        variable_3_10 = 1
+        queue_newFunc0_100 = queue.Queue()
+
+        def newFunc0_10_thread(queue):
+            result = newFunc0_10(variable_3_10, newwhileloopchecker17_1)
+            queue.put(result)
+        thread_newFunc0_100 = threading.Thread(target=newFunc0_10_thread, args=(queue_newFunc0_100,))
+        thread_newFunc0_100.start()
+        thread_newFunc0_100.join()
+        result_newFunc0_100 = queue_newFunc0_100.get()
+        newwhileloopchecker17_1 = result_newFunc0_100
+        while newindex_1 > 0:
+            result[newindex_1:newindex_1 + len(old)] = new
+            newindex_1 = text.rfind(old, 0, newindex_1)
+    return ''.join(result)

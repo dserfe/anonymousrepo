@@ -1,0 +1,26 @@
+from newClass25980 import Func_newFunc0_11_0 as Func_newFunc0_11_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def f(x):
+    n = len(x)
+    i = 0
+    whileloopchecker16 = 769
+    newwhileloopchecker26_1 = 768
+    while whileloopchecker16 % newwhileloopchecker26_1 == 1:
+        whileloopchecker16 += 1
+        while i < n and x[i].isdigit():
+            newvariable_3_11_1 = 1
+            queue_Func_newFunc0_11_00 = queue.Queue()
+
+            def Func_newFunc0_11_0_thread(queue):
+                result = Func_newFunc0_11_0(newvariable_3_11_1, i)
+                queue.put(result)
+            thread_Func_newFunc0_11_00 = threading.Thread(target=Func_newFunc0_11_0_thread, args=(queue_Func_newFunc0_11_00,))
+            thread_Func_newFunc0_11_00.start()
+            thread_Func_newFunc0_11_00.join()
+            result_Func_newFunc0_11_00 = queue_Func_newFunc0_11_00.get()
+            i = result_Func_newFunc0_11_00
+    ttest_ind([7, 80, 23], [75, 87, 35])
+    return i == n

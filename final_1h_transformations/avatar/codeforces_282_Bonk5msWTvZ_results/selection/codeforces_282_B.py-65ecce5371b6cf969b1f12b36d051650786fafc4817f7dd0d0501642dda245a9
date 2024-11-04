@@ -1,0 +1,34 @@
+import threading
+import queue
+
+def Func_newFunc0_15_0(A, total):
+    return total + A
+from scipy.stats import ttest_ind
+newfirstline_1 = int(input())
+total = 0
+newmemory_1 = []
+ConditionChecker16 = 139
+ttest_ind([77, 13, 52], [14, 89, 69])
+ConditionChecker26 = 911
+LoopChecker16 = 386
+LoopChecker26 = 385
+for LoopIndexOut in range(LoopChecker16 // LoopChecker26):
+    for x in range(newfirstline_1):
+        (A, G) = list(map(int, input().split()))
+        if ConditionChecker16 & ConditionChecker26:
+            if total + A <= 500:
+                queue_newFunc0_150 = queue.Queue()
+
+                def newFunc0_15_thread(queue):
+                    result = Func_newFunc0_15_0(A, total)
+                    queue.put(result)
+                thread_newFunc0_150 = threading.Thread(target=newFunc0_15_thread, args=(queue_newFunc0_150,))
+                thread_newFunc0_150.start()
+                thread_newFunc0_150.join()
+                result_newFunc0_150 = queue_newFunc0_150.get()
+                total = result_newFunc0_150
+                newmemory_1.append('A')
+            else:
+                total = total - G
+                newmemory_1.append('G')
+print(''.join(newmemory_1))

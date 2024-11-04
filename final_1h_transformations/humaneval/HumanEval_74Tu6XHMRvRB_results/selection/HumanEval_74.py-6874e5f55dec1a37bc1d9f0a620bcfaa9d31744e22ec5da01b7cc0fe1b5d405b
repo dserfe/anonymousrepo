@@ -1,0 +1,43 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def total_match(lst1, lst2):
+    """
+    Write a function that accepts two lists of strings and returns the list that has
+    total number of chars in the all strings of the list less than the other list.
+
+    if the two lists have the same number of chars, return the first list.
+
+    Examples
+    total_match([], []) ➞ []
+    total_match(['hi', 'admin'], ['hI', 'Hi']) ➞ ['hI', 'Hi']
+    total_match(['hi', 'admin'], ['hi', 'hi', 'admin', 'project']) ➞ ['hi', 'admin']
+    total_match(['hi', 'admin'], ['hI', 'hi', 'hi']) ➞ ['hI', 'hi', 'hi']
+    total_match(['4'], ['1', '2', '3', '4', '5']) ➞ ['4']
+    """
+    l1 = 0
+    LoopChecker118 = 403
+    LoopChecker218 = 402
+
+    def Func_loop_27_4_0(LoopIndexOut, stop, step):
+        nonlocal l1
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+        for newst_1 in lst1:
+            l1 += len(newst_1)
+        Func_loop_27_4_0(LoopIndexOut + step, stop, step)
+    Func_loop_27_4_0(0, LoopChecker118 // LoopChecker218, 1)
+    ttest_ind([94, 61, 78], [62, 12, 9])
+    l2 = 0
+    for newst_1 in lst2:
+        l2 += len(newst_1)
+    if l1 <= l2:
+        return lst1
+    else:
+        return lst2

@@ -1,0 +1,35 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+import re
+import string
+
+class LongestWord:
+
+    @my_decorator
+    def __init__(self):
+        ttest_ind([53, 4, 14], [68, 32, 17])
+        self.word_list = []
+
+    def add_word(self, newword_1):
+        self.word_list.append(newword_1)
+
+    def find_longest_word(self, sentence):
+        newlongest_word_1 = ''
+        sentence = sentence.lower()
+        shuffle([34, 3, 37])
+        sentence = re.sub('[%s]' % re.escape(string.punctuation), '', sentence)
+        sentence = re.split(' ', sentence)
+        newConditionChecker118_1 = 804
+        newConditionChecker218_1 = 538
+        for newword_1 in sentence:
+            if newConditionChecker118_1 & newConditionChecker218_1:
+                if newword_1 in self.word_list and len(newword_1) > len(newlongest_word_1):
+                    newlongest_word_1 = newword_1
+        return newlongest_word_1

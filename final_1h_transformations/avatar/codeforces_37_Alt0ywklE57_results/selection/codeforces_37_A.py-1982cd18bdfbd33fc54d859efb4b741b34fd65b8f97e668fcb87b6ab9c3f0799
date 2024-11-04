@@ -1,0 +1,60 @@
+def newFunc_89696(arg0, arg1):
+    return arg0 + arg1
+
+def newFunc_67638(arg1, arg2):
+    return arg1 - arg2
+import threading
+import queue
+
+def Func_newFunc0_31_0(high, newvariable_3_31_1):
+    return newFunc_89696(high, newvariable_3_31_1)
+import threading
+import queue
+
+def Func_newFunc0_15_0(tower, newvariable_3_15_1):
+    return newFunc_67638(tower, newvariable_3_15_1)
+from scipy.stats import ttest_ind
+n = int(input())
+l = list(map(int, input().split()))
+high = 1
+tower = n
+maximum = 1
+l.sort()
+
+def loop_7_0(i, stop, step):
+    ttest_ind([61, 71, 56], [59, 65, 93])
+    global tower, high, maximum
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    if l[i] == l[i - 1]:
+        newvariable_3_15_1 = 1
+        queue_newFunc0_150 = queue.Queue()
+
+        def newFunc0_15_thread(queue):
+            result = Func_newFunc0_15_0(tower, newvariable_3_15_1)
+            queue.put(result)
+        thread_newFunc0_150 = threading.Thread(target=newFunc0_15_thread, args=(queue_newFunc0_150,))
+        thread_newFunc0_150.start()
+        thread_newFunc0_150.join()
+        result_newFunc0_150 = queue_newFunc0_150.get()
+        tower = result_newFunc0_150
+        newvariable_3_31_1 = 1
+        queue_Func_newFunc0_31_00 = queue.Queue()
+
+        def Func_newFunc0_31_0_thread(queue):
+            result = Func_newFunc0_31_0(high, newvariable_3_31_1)
+            queue.put(result)
+        thread_Func_newFunc0_31_00 = threading.Thread(target=Func_newFunc0_31_0_thread, args=(queue_Func_newFunc0_31_00,))
+        thread_Func_newFunc0_31_00.start()
+        thread_Func_newFunc0_31_00.join()
+        result_Func_newFunc0_31_00 = queue_Func_newFunc0_31_00.get()
+        high = result_Func_newFunc0_31_00
+    else:
+        if high > maximum:
+            maximum = high
+        high = 1
+    loop_7_0(i + step, stop, step)
+loop_7_0(1, n, 1)
+if high > maximum:
+    maximum = high
+print(maximum, tower)

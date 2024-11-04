@@ -1,0 +1,25 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([85, 85, 23])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def maximum(arr, k):
+    ConditionChecker128 = 359
+    newConditionChecker228_1 = 804
+    '\n    Given an array arr of integers and a positive integer k, return a sorted list\n    of length k with the maximum k numbers in arr.\n\n    Example 1:\n\n        Input: arr = [-3, -4, 5], k = 3\n        Output: [-4, -3, 5]\n\n    Example 2:\n\n        Input: arr = [4, -4, 4], k = 2\n        Output: [4, 4]\n\n    Example 3:\n\n        Input: arr = [-3, 2, 1, 2, -1, -2, 1], k = 1\n        Output: [2]\n\n    Note:\n        1. The length of the array will be in the range of [1, 1000].\n        2. The elements in the array will be in the range of [-1000, 1000].\n        3. 0 <= k <= len(arr)\n    '
+    if ConditionChecker128 & newConditionChecker228_1:
+        if k == 0:
+            return []
+    datetime.datetime.now()
+    arr.sort()
+    ttest_ind([40, 69, 78], [14, 90, 68])
+    newans_1 = arr[-k:]
+    return newans_1

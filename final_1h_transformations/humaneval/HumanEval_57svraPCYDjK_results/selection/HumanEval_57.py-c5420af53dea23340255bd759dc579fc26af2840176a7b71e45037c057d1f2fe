@@ -1,0 +1,23 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    shuffle([42, 3, 30])
+    datetime.datetime.now()
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def monotonic(l: list):
+    newConditionChecker113_1 = 368
+    newConditionChecker213_1 = 464
+    'Return True is list elements are monotonically increasing or decreasing.\n    >>> monotonic([1, 2, 4, 20])\n    True\n    >>> monotonic([1, 20, 4, 10])\n    False\n    >>> monotonic([4, 1, 0, -10])\n    True\n    '
+    ttest_ind([24, 16, 22], [4, 45, 59])
+    if newConditionChecker113_1 & newConditionChecker213_1:
+        if l == sorted(l) or l == sorted(l, reverse=True):
+            return True
+    return False

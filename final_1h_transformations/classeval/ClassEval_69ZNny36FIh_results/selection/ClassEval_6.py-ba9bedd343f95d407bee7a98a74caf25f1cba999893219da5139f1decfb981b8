@@ -1,0 +1,45 @@
+from newClass10309 import Func_newFunc0_24_0 as Func_newFunc0_24_0
+import threading
+import queue
+import threading
+import queue
+
+def Func_newFunc0_8_0(self, len):
+    return len(self.lst) // self.limit
+
+class AvgPartition:
+
+    def __init__(self, lst, limit):
+        self.lst = lst
+        self.limit = limit
+
+    def setNum(self):
+        queue_Func_newFunc0_8_00 = queue.Queue()
+
+        def Func_newFunc0_8_0_thread(queue):
+            result = Func_newFunc0_8_0(self, len)
+            queue.put(result)
+        thread_Func_newFunc0_8_00 = threading.Thread(target=Func_newFunc0_8_0_thread, args=(queue_Func_newFunc0_8_00,))
+        thread_Func_newFunc0_8_00.start()
+        thread_Func_newFunc0_8_00.join()
+        result_Func_newFunc0_8_00 = queue_Func_newFunc0_8_00.get()
+        newsize_1 = result_Func_newFunc0_8_00
+        queue_Func_newFunc0_24_00 = queue.Queue()
+
+        def Func_newFunc0_24_0_thread(queue):
+            result = Func_newFunc0_24_0(self, len)
+            queue.put(result)
+        thread_Func_newFunc0_24_00 = threading.Thread(target=Func_newFunc0_24_0_thread, args=(queue_Func_newFunc0_24_00,))
+        thread_Func_newFunc0_24_00.start()
+        thread_Func_newFunc0_24_00.join()
+        result_Func_newFunc0_24_00 = queue_Func_newFunc0_24_00.get()
+        remainder = result_Func_newFunc0_24_00
+        return (newsize_1, remainder)
+
+    def get(self, index):
+        (newsize_1, remainder) = self.setNum()
+        start = index * newsize_1 + min(index, remainder)
+        end = start + newsize_1
+        if index + 1 <= remainder:
+            end = end + 1
+        return self.lst[start:end]

@@ -1,0 +1,23 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    shuffle([26, 63, 15])
+    datetime.datetime.now()
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(t):
+    ConditionChecker115 = 150
+    ConditionChecker215 = 391
+    (a, sep, newb_1) = t.rpartition('-')
+    if ConditionChecker115 & ConditionChecker215:
+        if len(newb_1) == len(a):
+            return 'imbalanced'
+    ttest_ind([26, 75, 63], [9, 12, 52])
+    return a + newb_1.replace(sep, '')

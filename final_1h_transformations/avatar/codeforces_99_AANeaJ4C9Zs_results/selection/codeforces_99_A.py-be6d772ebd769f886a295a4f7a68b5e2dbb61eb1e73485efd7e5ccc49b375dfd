@@ -1,0 +1,35 @@
+ConditionChecker123 = 488
+ConditionChecker223 = 752
+newConditionChecker120_1 = 85
+newConditionChecker220_1 = 98
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def newFunc_BinOp0(a, b):
+    return a - b
+from scipy.stats import ttest_ind
+from sklearn.utils import shuffle
+shuffle([97, 61, 20])
+newl_1 = input()
+newl_1 = newl_1.split('.')
+ttest_ind([31, 1, 44], [71, 69, 27])
+news_1 = list(newl_1[0])
+newp_1 = list(newl_1[1])
+i = int(newp_1[0])
+if ConditionChecker123 & ConditionChecker223:
+    if newConditionChecker120_1 & newConditionChecker220_1:
+        if news_1[newFunc_BinOp0(len(news_1), 1)] == '9':
+            print('GOTO Vasilisa.')
+        elif news_1[len(news_1) - 1] != '9' and i < 5:
+            news_1 = ''.join(news_1)
+            print(news_1)
+        else:
+            news_1 = ''.join(news_1)
+            news_1 = str(int(news_1) + 1)
+            print(news_1)

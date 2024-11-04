@@ -1,0 +1,65 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+class EncryptionUtils:
+
+    @my_decorator
+    def __init__(self, key):
+        self.key = key
+
+    def caesar_cipher(self, plaintext, newshift_1):
+        ciphertext = ''
+        LoopChecker18 = 464
+        LoopChecker28 = 463
+        for LoopIndexOut in range(LoopChecker18 // LoopChecker28):
+            for newchar_1 in plaintext:
+                if newchar_1.isalpha():
+                    if newchar_1.isupper():
+                        ascii_offset = 65
+                    else:
+                        ascii_offset = 97
+                    shifted_char = chr((ord(newchar_1) - ascii_offset + newshift_1) % 26 + ascii_offset)
+                    ciphertext = ciphertext + shifted_char
+                else:
+                    ciphertext += newchar_1
+        return ciphertext
+
+    def vigenere_cipher(self, plain_text):
+        encrypted_text = ''
+        key_index = 0
+        for newchar_1 in plain_text:
+            if newchar_1.isalpha():
+                newshift_1 = ord(self.key[key_index % len(self.key)].lower()) - ord('a')
+                encrypted_char = chr((ord(newchar_1.lower()) - ord('a') + newshift_1) % 26 + ord('a'))
+                encrypted_text += encrypted_char.upper() if newchar_1.isupper() else encrypted_char
+                key_index += 1
+            else:
+                encrypted_text += newchar_1
+        return encrypted_text
+
+    def rail_fence_cipher(self, plain_text, rails):
+        fence = [['\n' for _ in range(len(plain_text))] for _ in range(rails)]
+        direction = -1
+        (row, col) = (0, 0)
+        for newchar_1 in plain_text:
+            if row == 0 or row == rails - 1:
+                direction = -direction
+            fence[row][col] = newchar_1
+            col += 1
+            row += direction
+        encrypted_text = ''
+        for i in range(rails):
+
+            def loop_45_12(j, stop, step):
+                nonlocal encrypted_text
+                if step == 0 or (step > 0 and j >= stop) or (step < 0 and j <= stop):
+                    return
+                if fence[i][j] != '\n':
+                    encrypted_text += fence[i][j]
+                loop_45_12(j + step, stop, step)
+            loop_45_12(0, len(plain_text), 1)
+        return encrypted_text
