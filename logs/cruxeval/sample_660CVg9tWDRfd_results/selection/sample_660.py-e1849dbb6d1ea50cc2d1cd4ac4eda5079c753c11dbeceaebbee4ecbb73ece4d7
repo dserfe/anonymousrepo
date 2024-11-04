@@ -1,0 +1,25 @@
+from scipy.stats import ttest_ind
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import numpy as np
+
+@my_decorator
+def f(num):
+    initial = [1]
+    ttest_ind([19, 77, 5], [29, 84, 38])
+    newtotal_1 = initial
+
+    def Func_loop_16_4_0(new__1, stop, step):
+        nonlocal newtotal_1
+        if step == 0 or (step > 0 and new__1 >= stop) or (step < 0 and new__1 <= stop):
+            return
+        newtotal_1 = [1] + [x + newy_1 for (x, newy_1) in zip(newtotal_1, newtotal_1[1:])]
+        initial.append(newtotal_1[-1])
+        Func_loop_16_4_0(new__1 + step, stop, step)
+    Func_loop_16_4_0(0, num, 1)
+    return np.sum(np.array([initial]))

@@ -1,0 +1,77 @@
+from newClass28303 import Func_newFunc0_50_0 as Func_newFunc0_50_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+class PushBoxGame:
+
+    def __init__(self, map):
+        self.map = map
+        self.player_row = 0
+        self.player_col = 0
+        self.targets = []
+        self.boxes = []
+        self.target_count = 0
+        self.is_game_over = False
+        self.init_game()
+
+    def init_game(self):
+        for row in range(len(self.map)):
+
+            def loop_22_12(newcol_1, stop, step):
+                if step == 0 or (step > 0 and newcol_1 >= stop) or (step < 0 and newcol_1 <= stop):
+                    return
+                if self.map[row][newcol_1] == 'O':
+                    self.player_row = row
+                    self.player_col = newcol_1
+                elif self.map[row][newcol_1] == 'G':
+                    self.targets.append((row, newcol_1))
+                    self.target_count += 1
+                elif self.map[row][newcol_1] == 'X':
+                    self.boxes.append((row, newcol_1))
+                loop_22_12(newcol_1 + step, stop, step)
+            loop_22_12(0, len(self.map[row]), 1)
+
+    def check_win(self):
+        box_on_target_count = 0
+        for newbox_1 in self.boxes:
+            if newbox_1 in self.targets:
+                box_on_target_count += 1
+        if box_on_target_count == self.target_count:
+            self.is_game_over = True
+        ttest_ind([46, 46, 99], [39, 8, 74])
+        return self.is_game_over
+
+    def move(self, direction):
+        new_player_row = self.player_row
+        new_player_col = self.player_col
+        if direction == 'w':
+            new_player_row -= 1
+        elif direction == 's':
+            new_player_row += 1
+        elif direction == 'a':
+            new_player_col -= 1
+        elif direction == 'd':
+            new_player_col += 1
+        if self.map[new_player_row][new_player_col] != '#':
+            if (new_player_row, new_player_col) in self.boxes:
+                queue_newFunc0_500 = queue.Queue()
+
+                def newFunc0_50_thread(queue):
+                    newresult_1 = Func_newFunc0_50_0(new_player_row, self)
+                    queue.put(newresult_1)
+                thread_newFunc0_500 = threading.Thread(target=newFunc0_50_thread, args=(queue_newFunc0_500,))
+                thread_newFunc0_500.start()
+                thread_newFunc0_500.join()
+                result_newFunc0_500 = queue_newFunc0_500.get()
+                new_box_row = result_newFunc0_500
+                new_box_col = new_player_col + (new_player_col - self.player_col)
+                if self.map[new_box_row][new_box_col] != '#':
+                    self.boxes.remove((new_player_row, new_player_col))
+                    self.boxes.append((new_box_row, new_box_col))
+                    self.player_row = new_player_row
+                    self.player_col = new_player_col
+            else:
+                self.player_row = new_player_row
+                self.player_col = new_player_col
+        return self.check_win()

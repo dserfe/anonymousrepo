@@ -1,0 +1,22 @@
+from newClass47560 import newFunc0_19 as newFunc0_19
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def f(text):
+    ws = 0
+    newConditionChecker14_1 = 729
+    ConditionChecker24 = 190
+    shuffle([93, 64, 16])
+    for news_1 in text:
+        if newConditionChecker14_1 & ConditionChecker24:
+            if news_1.isspace():
+                variable_3_19 = 1
+                ws = newFunc0_19(ws, variable_3_19)
+    return (ws, len(text))

@@ -1,0 +1,45 @@
+import threading
+import queue
+
+def newFunc0_24(newvariable_3_24_1, cu):
+    return cu + newvariable_3_24_1
+import threading
+import queue
+
+def Func_newFunc0_7_0(newvariable_3_7_1, cl):
+    return cl + newvariable_3_7_1
+from scipy.stats import ttest_ind
+txt = input()
+cu = 0
+cl = 0
+for newz_1 in txt:
+    newvariable_3_24_1 = 1
+    if newz_1.islower():
+        newvariable_3_7_1 = 1
+        queue_Func_newFunc0_7_00 = queue.Queue()
+
+        def Func_newFunc0_7_0_thread(queue):
+            newresult_1 = Func_newFunc0_7_0(newvariable_3_7_1, cl)
+            queue.put(newresult_1)
+        thread_Func_newFunc0_7_00 = threading.Thread(target=Func_newFunc0_7_0_thread, args=(queue_Func_newFunc0_7_00,))
+        thread_Func_newFunc0_7_00.start()
+        thread_Func_newFunc0_7_00.join()
+        result_Func_newFunc0_7_00 = queue_Func_newFunc0_7_00.get()
+        cl = result_Func_newFunc0_7_00
+    else:
+        queue_newFunc0_240 = queue.Queue()
+
+        def newFunc0_24_thread(queue):
+            newresult_1 = newFunc0_24(newvariable_3_24_1, cu)
+            queue.put(newresult_1)
+        thread_newFunc0_240 = threading.Thread(target=newFunc0_24_thread, args=(queue_newFunc0_240,))
+        thread_newFunc0_240.start()
+        thread_newFunc0_240.join()
+        result_newFunc0_240 = queue_newFunc0_240.get()
+        cu = result_newFunc0_240
+ttest_ind([97, 61, 53], [27, 100, 71])
+if cu > cl:
+    out = txt.upper()
+else:
+    out = txt.lower()
+print(out)

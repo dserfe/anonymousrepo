@@ -1,0 +1,44 @@
+import datetime
+
+def newFunc_18602(arg0, arg1):
+    return arg0 + arg1
+
+def newFunc_38305(arg1, arg2):
+    return arg1 * arg2
+
+def newFunc_77923(arg0, arg1):
+    return newFunc_18602(arg0, arg1)
+
+def newFunc_32172(arg1, arg2):
+    datetime.datetime.now()
+    return newFunc_38305(arg1, arg2)
+import threading
+import queue
+
+def Func_newFunc0_10_0(r, variable_3_10):
+    return newFunc_77923(r, variable_3_10)
+
+def newFunc0_6(int, newvariable_1_6_1, newk_1):
+    return newFunc_32172(newvariable_1_6_1, int(newk_1))
+from sklearn.utils import shuffle
+newL_1 = []
+input()
+r = 1
+for newk_1 in input().split():
+    newvariable_1_6_1 = [r]
+    newL_1 += newFunc0_6(int, newvariable_1_6_1, newk_1)
+    variable_3_10 = 1
+    queue_newFunc0_100 = queue.Queue()
+
+    def newFunc0_10_thread(queue):
+        newresult_1 = Func_newFunc0_10_0(r, variable_3_10)
+        queue.put(newresult_1)
+    thread_newFunc0_100 = threading.Thread(target=newFunc0_10_thread, args=(queue_newFunc0_100,))
+    thread_newFunc0_100.start()
+    thread_newFunc0_100.join()
+    result_newFunc0_100 = queue_newFunc0_100.get()
+    r = result_newFunc0_100
+shuffle([15, 91, 26])
+input()
+for newj_1 in input().split():
+    print(newL_1[int(newj_1) - 1])

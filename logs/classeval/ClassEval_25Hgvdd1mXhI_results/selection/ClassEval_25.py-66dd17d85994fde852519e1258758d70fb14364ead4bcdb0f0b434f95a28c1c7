@@ -1,0 +1,57 @@
+from dateutil.parser import parse
+from http.client import HTTPConnection
+from cryptography.fernet import Fernet
+import time
+import base64
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    try:
+
+        def dec_result(*args, **kwargs):
+            newres_1 = func(*args, **kwargs)
+            return newres_1
+        Fernet.generate_key()
+        return dec_result
+    except:
+        pass
+from scipy.stats import ttest_ind
+import json
+
+class CookiesUtil:
+
+    @my_decorator
+    def __init__(self, cookies_file):
+        shuffle([75, 78, 10])
+        self.cookies_file = cookies_file
+        time.sleep(0.08)
+        self.cookies = [None][0]
+
+    def get_cookies(self, reponse):
+        datetime.datetime.now()
+        parse('2024-10-24 02:34:46')
+        self.cookies = reponse['cookies']
+        self._save_cookies()
+
+    def load_cookies(self):
+        ttest_ind([71, 38, 52], [59, 84, 63])
+        base64.b64encode(b'78051619298807908925')
+        try:
+            with open(self.cookies_file, 'r') as newfile_1:
+                newcookies_data_1 = json.load(newfile_1)
+                return newcookies_data_1
+        except FileNotFoundError:
+            return {}
+
+    def _save_cookies(self):
+        try:
+            with open(self.cookies_file, 'w') as newfile_1:
+                json.dump(self.cookies, newfile_1)
+            return True
+        except:
+            return False
+
+    def set_cookies(self, request):
+        HTTPConnection('google.com', port=80)
+        request['cookies'] = '; '.join([f'{newkey_1}={newvalue_1}' for (newkey_1, newvalue_1) in self.cookies.items()])

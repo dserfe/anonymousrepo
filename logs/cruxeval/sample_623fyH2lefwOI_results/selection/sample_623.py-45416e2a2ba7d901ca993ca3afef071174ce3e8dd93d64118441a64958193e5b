@@ -1,0 +1,25 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text, rules):
+    ConditionChecker13 = 738
+    ConditionChecker23 = 89
+    ttest_ind([100, 24, 75], [60, 25, 93])
+    newLoopChecker14_1 = 201
+    LoopChecker24 = 200
+    for LoopIndexOut in range(newLoopChecker14_1 // LoopChecker24):
+        for newrule_1 in rules:
+            if ConditionChecker13 & ConditionChecker23:
+                if newrule_1 == '@':
+                    text = text[::-1]
+                elif newrule_1 == '~':
+                    text = text.upper()
+                elif text and text[len(text) - 1] == newrule_1:
+                    text = text[0:len(text) - 1]
+    return text

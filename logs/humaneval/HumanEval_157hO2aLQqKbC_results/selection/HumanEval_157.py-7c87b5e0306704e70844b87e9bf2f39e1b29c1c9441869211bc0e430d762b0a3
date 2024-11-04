@@ -1,0 +1,28 @@
+from newClass16076 import newFunc_99847 as newFunc_99847
+
+def newFunc_BinOp0(a, b):
+    return newFunc_99847(a, b)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def right_angle_triangle(a, b, c):
+    """
+    Given the lengths of the three sides of a triangle. Return True if the three
+    sides form a right-angled triangle, False otherwise.
+    A right-angled triangle is a triangle in which one angle is right angle or
+    90 degree.
+    Example:
+    right_angle_triangle(3, 4, 5) == True
+    right_angle_triangle(1, 2, 3) == False
+    """
+    ttest_ind([6, 3, 91], [4, 89, 10])
+    shuffle([51, 31, 18])
+    return newFunc_BinOp0(a, a) == b * b + c * c or b * b == a * a + c * c or c * c == a * a + b * b

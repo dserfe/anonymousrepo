@@ -1,0 +1,24 @@
+import base64
+from cryptography.fernet import Fernet
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    base64.b64encode(b'23126203374885470330')
+    time.sleep(0.1)
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(num, name):
+    Fernet.generate_key()
+    newf_str_1 = 'quiz leader = {}, count = {}'
+    datetime.datetime.now()
+    shuffle([31, 88, 79])
+    ttest_ind([38, 71, 85], [54, 79, 95])
+    return newf_str_1.format(name, num)

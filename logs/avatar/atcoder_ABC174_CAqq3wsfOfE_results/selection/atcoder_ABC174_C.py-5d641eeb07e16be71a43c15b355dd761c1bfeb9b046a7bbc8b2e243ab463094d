@@ -1,0 +1,38 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def Func_newFunc0_20_0(k, variable_3_20, t, newvariable_6_20_1):
+    return t % k * newvariable_6_20_1 + variable_3_20
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+ttest_ind([46, 74, 71], [47, 74, 36])
+from sys import stdin, stdout, setrecursionlimit
+from math import gcd, ceil, sqrt
+from collections import Counter
+from bisect import bisect_left, bisect_right
+newii1_1 = lambda : int(stdin.readline().strip())
+newis1_1 = lambda : stdin.readline().strip()
+iia = lambda : list(map(int, stdin.readline().strip().split()))
+isa = lambda : stdin.readline().strip().split()
+shuffle([13, 8, 71])
+setrecursionlimit(100000)
+mod = 1000000007
+k = newii1_1()
+t = 0
+ConditionChecker119 = 236
+newConditionChecker219_1 = 33
+for i in range(1, k + 1):
+    variable_3_20 = 7
+    newvariable_6_20_1 = 10
+    t = Func_newFunc0_20_0(k, variable_3_20, t, newvariable_6_20_1)
+    if ConditionChecker119 & newConditionChecker219_1:
+        if t % k == 0:
+            print(i)
+            break
+else:
+    print(-1)

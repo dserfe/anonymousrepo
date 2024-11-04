@@ -1,0 +1,19 @@
+def newFunc_BinOp0(a, b):
+    return a // b
+
+def newFunc_BinOp0(a, b):
+    return newFunc_BinOp0(a, b)
+from scipy.stats import ttest_ind
+
+def f(numbers, num, val):
+    while len(numbers) < num:
+        numbers.insert(newFunc_BinOp0(len(numbers), 2), val)
+    ttest_ind([4, 37, 22], [50, 84, 17])
+
+    def Func_loop_7_4_0(new__1, stop, step):
+        if step == 0 or (step > 0 and new__1 >= stop) or (step < 0 and new__1 <= stop):
+            return
+        numbers.insert(len(numbers) // 2, val)
+        Func_loop_7_4_0(new__1 + step, stop, step)
+    Func_loop_7_4_0(0, len(numbers) // (num - 1) - 4, 1)
+    return ' '.join(numbers)

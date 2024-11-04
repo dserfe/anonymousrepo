@@ -1,0 +1,29 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def newFunc_BinOp0(a, b):
+    ttest_ind([3, 43, 95], [32, 8, 60])
+    return a / b
+n = int(input())
+m = input().split()
+newpossible_1 = True
+LoopChecker16 = 557
+LoopChecker26 = 556
+
+def Func_loop_11_0_0(newLoopIndexOut_1, stop, step):
+    global newpossible_1
+    if step == 0 or (step > 0 and newLoopIndexOut_1 >= stop) or (step < 0 and newLoopIndexOut_1 <= stop):
+        return
+    for newi_1 in set(m):
+        if m.count(newi_1) >= newFunc_BinOp0(n, 2) + 1:
+            newpossible_1 = False
+            break
+    Func_loop_11_0_0(newLoopIndexOut_1 + step, stop, step)
+Func_loop_11_0_0(0, LoopChecker16 // LoopChecker26, 1)
+print('YES' if newpossible_1 else 'NO')

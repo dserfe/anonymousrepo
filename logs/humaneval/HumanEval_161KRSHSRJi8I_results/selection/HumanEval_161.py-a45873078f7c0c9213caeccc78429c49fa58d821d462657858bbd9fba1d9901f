@@ -1,0 +1,49 @@
+from newClass98788 import Func_newFunc0_33_0 as Func_newFunc0_33_0
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def solve(s):
+    """You are given a string s.
+    if s[i] is a letter, reverse its case from lower to upper or vise versa,
+    otherwise keep it as it is.
+    If the string contains no letters, reverse the string.
+    The function should return the resulted string.
+    Examples
+    solve("1234") = "4321"
+    solve("ab") = "AB"
+    solve("#a@C") = "#A@c"
+    """
+    newflg_1 = 0
+    idx = 0
+    new_str = list(s)
+    LoopChecker115 = 186
+    LoopChecker215 = 185
+    for LoopIndexOut in range(LoopChecker115 // LoopChecker215):
+        for i in s:
+            if i.isalpha():
+                new_str[idx] = i.swapcase()
+                newflg_1 = 1
+            idx = idx + 1
+    s = ''
+    for i in new_str:
+        queue_Func_newFunc0_33_00 = queue.Queue()
+
+        def Func_newFunc0_33_0_thread(queue):
+            result = Func_newFunc0_33_0(s, i)
+            queue.put(result)
+        thread_Func_newFunc0_33_00 = threading.Thread(target=Func_newFunc0_33_0_thread, args=(queue_Func_newFunc0_33_00,))
+        thread_Func_newFunc0_33_00.start()
+        thread_Func_newFunc0_33_00.join()
+        result_Func_newFunc0_33_00 = queue_Func_newFunc0_33_00.get()
+        s = result_Func_newFunc0_33_00
+    if newflg_1 == 0:
+        return s[len(s)::-1]
+    return s

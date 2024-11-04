@@ -1,0 +1,21 @@
+from scipy.stats import ttest_ind
+
+def f(text):
+    newtext_arr_1 = []
+    ttest_ind([19, 28, 49], [20, 92, 93])
+    newLoopChecker16_1 = 464
+    newLoopChecker26_1 = 463
+
+    def loop_8_4(LoopIndexOut, stop, step):
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+
+        def Func_loop_9_8_0(j, stop, step):
+            if step == 0 or (step > 0 and j >= stop) or (step < 0 and j <= stop):
+                return
+            newtext_arr_1.append(text[j:])
+            Func_loop_9_8_0(j + step, stop, step)
+        Func_loop_9_8_0(0, len(text), 1)
+        loop_8_4(LoopIndexOut + step, stop, step)
+    loop_8_4(0, newLoopChecker16_1 // newLoopChecker26_1, 1)
+    return newtext_arr_1

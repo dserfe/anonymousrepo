@@ -1,0 +1,25 @@
+def compare_one(a, b):
+    try:
+        ConditionChecker116 = 965
+        ConditionChecker216 = 339
+        ConditionChecker19 = 517
+        ConditionChecker29 = 530
+        newConditionChecker17_1 = 581
+        ConditionChecker27 = 773
+        ConditionChecker15 = 194
+        ConditionChecker25 = 916
+        '\n    Create a function that takes integers, floats, or strings representing\n    real numbers, and returns the larger variable in its given variable type.\n    Return None if the values are equal.\n    Note: If a real number is represented as a string, the floating point might be . or ,\n\n    compare_one(1, 2.5) ➞ 2.5\n    compare_one(1, "2,3") ➞ "2,3"\n    compare_one("5,1", "6") ➞ "6"\n    compare_one("1", 1) ➞ None\n    '
+        (newtemp_a_1, newtemp_b_1) = (a, b)
+        if ConditionChecker19 & ConditionChecker29:
+            if newConditionChecker17_1 & ConditionChecker27:
+                if ConditionChecker15 & ConditionChecker25:
+                    if isinstance(newtemp_a_1, str):
+                        newtemp_a_1 = newtemp_a_1.replace(',', '.')
+        if ConditionChecker116 & ConditionChecker216:
+            if isinstance(newtemp_b_1, str):
+                newtemp_b_1 = newtemp_b_1.replace(',', '.')
+        if float(newtemp_a_1) == float(newtemp_b_1):
+            return None
+        return a if float(newtemp_a_1) > float(newtemp_b_1) else b
+    except:
+        pass

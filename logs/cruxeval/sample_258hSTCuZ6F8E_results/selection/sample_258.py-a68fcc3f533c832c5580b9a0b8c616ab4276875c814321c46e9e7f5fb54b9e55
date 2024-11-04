@@ -1,0 +1,27 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+thigh_o_one = [1, 2, 7, 8, 9]
+thigh_o_two = [1, 2, 7, 9]
+
+@my_decorator
+def f(L, m, start, step):
+    L.insert(start, m)
+    LoopChecker17 = 134
+    LoopChecker27 = 133
+    for LoopIndexOut in range(LoopChecker17 // LoopChecker27):
+
+        def loop_17_8(x, stop, step):
+            nonlocal start
+            if step == 0 or (step > 0 and x >= stop) or (step < 0 and x <= stop):
+                return
+            start = start - 1
+            L.insert(start, L.pop(L.index(m) - 1))
+            loop_17_8(x + step, stop, step)
+        loop_17_8(start - 1, 0, -step)
+    ttest_ind([7, 90, 82], [98, 56, 33])
+    return L

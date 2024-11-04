@@ -1,0 +1,24 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text):
+    a = []
+    LoopChecker13 = 160
+    LoopChecker23 = 159
+    for LoopIndexOut in range(LoopChecker13 // LoopChecker23):
+
+        def Func_loop_6_8_0(i, stop, step):
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            if not text[i].isdecimal():
+                a.append(text[i])
+            Func_loop_6_8_0(i + step, stop, step)
+        Func_loop_6_8_0(0, len(text), 1)
+    ttest_ind([17, 41, 17], [70, 81, 32])
+    return ''.join(a)

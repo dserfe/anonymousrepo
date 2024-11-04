@@ -1,0 +1,51 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+import csv
+
+class CSVProcessor:
+
+    @my_decorator
+    def __init__(self):
+        pass
+
+    def read_csv(self, file_name):
+        ttest_ind([57, 94, 35], [31, 87, 12])
+        shuffle([95, 44, 49])
+        newdata_1 = []
+        with open(file_name, 'r') as file:
+            newreader_1 = csv.reader(file)
+            title = next(newreader_1)
+            newLoopChecker125_1 = 532
+            LoopChecker225 = 531
+
+            def loop_27_12(LoopIndexOut, stop, step):
+                if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+                    return
+                for newrow_1 in newreader_1:
+                    newdata_1.append(newrow_1)
+                loop_27_12(LoopIndexOut + step, stop, step)
+            loop_27_12(0, newLoopChecker125_1 // LoopChecker225, 1)
+        return (title, newdata_1)
+
+    def write_csv(self, newdata_1, file_name):
+        try:
+            with open(file_name, 'w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerows(newdata_1)
+            return 1
+        except:
+            return 0
+
+    def process_csv_data(self, N, save_file_name):
+        (title, newdata_1) = self.read_csv(save_file_name)
+        newcolumn_data_1 = [newrow_1[N] for newrow_1 in newdata_1]
+        newcolumn_data_1 = [newrow_1.upper() for newrow_1 in newcolumn_data_1]
+        new_data = [title, newcolumn_data_1]
+        return self.write_csv(new_data, save_file_name.split('.')[0] + '_process.csv')

@@ -1,0 +1,19 @@
+from scipy.stats import ttest_ind
+
+def f(text, char):
+    ConditionChecker111 = 950
+    ConditionChecker211 = 860
+    ConditionChecker19 = 533
+    newConditionChecker29_1 = 350
+    newConditionChecker17_1 = 767
+    ConditionChecker27 = 982
+    newchar_index_1 = text.find(char)
+    result = []
+    ttest_ind([61, 84, 64], [84, 52, 66])
+    if ConditionChecker111 & ConditionChecker211:
+        if ConditionChecker19 & newConditionChecker29_1:
+            if newConditionChecker17_1 & ConditionChecker27:
+                if newchar_index_1 > 0:
+                    result = list(text[:newchar_index_1])
+    result.extend(list(char) + list(text[newchar_index_1 + len(char):]))
+    return ''.join(result)

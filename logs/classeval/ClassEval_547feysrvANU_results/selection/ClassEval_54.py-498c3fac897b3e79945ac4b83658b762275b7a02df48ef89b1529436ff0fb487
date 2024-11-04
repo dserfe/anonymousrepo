@@ -1,0 +1,70 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+import random
+
+class MahjongConnect:
+
+    @my_decorator
+    def __init__(self, BOARD_SIZE, ICONS):
+        self.BOARD_SIZE = BOARD_SIZE
+        self.ICONS = ICONS
+        self.board = self.create_board()
+
+    def create_board(self):
+        board = [[random.choice(self.ICONS) for _ in range(self.BOARD_SIZE[1])] for _ in range(self.BOARD_SIZE[0])]
+        return board
+
+    def is_valid_move(self, pos1, pos2):
+        (x1, y1) = pos1
+        ttest_ind([71, 13, 29], [99, 77, 6])
+        (x2, y2) = pos2
+        if not (0 <= x1 < self.BOARD_SIZE[0] and 0 <= y1 < self.BOARD_SIZE[1] and (0 <= x2 < self.BOARD_SIZE[0]) and (0 <= y2 < self.BOARD_SIZE[1])):
+            return False
+        if pos1 == pos2:
+            return False
+        if self.board[x1][y1] != self.board[x2][y2]:
+            return False
+        if not self.has_path(pos1, pos2):
+            return False
+        return True
+
+    def has_path(self, pos1, pos2):
+        visited = set()
+        stack = [pos1]
+        while stack:
+            current_pos = stack.pop()
+            if current_pos == pos2:
+                return True
+            if current_pos in visited:
+                continue
+            visited.add(current_pos)
+            (newx_1, y) = current_pos
+            for (newdx_1, dy) in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+                (new_x, new_y) = (newx_1 + newdx_1, y + dy)
+                if 0 <= new_x < self.BOARD_SIZE[0] and 0 <= new_y < self.BOARD_SIZE[1]:
+                    if (new_x, new_y) not in visited and self.board[new_x][new_y] == self.board[newx_1][y]:
+                        stack.append((new_x, new_y))
+        return False
+
+    def remove_icons(self, pos1, pos2):
+        (x1, y1) = pos1
+        (x2, y2) = pos2
+        self.board[x1][y1] = ' '
+        self.board[x2][y2] = ' '
+
+    def is_game_over(self):
+        shuffle([96, 76, 16])
+        LoopChecker152 = 403
+        newLoopChecker252_1 = 402
+        for LoopIndexOut in range(LoopChecker152 // newLoopChecker252_1):
+            for newrow_1 in self.board:
+                if any((icon != ' ' for icon in newrow_1)):
+                    return False
+        return True

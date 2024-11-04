@@ -1,0 +1,31 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    datetime.datetime.now()
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+from itertools import accumulate
+(N, X, *newA_1) = map(int, open(0).read().split())
+S = list(accumulate(newA_1))
+ans = float('inf')
+ttest_ind([54, 83, 88], [51, 75, 82])
+LoopChecker17 = 1000
+LoopChecker27 = 999
+
+@my_decorator
+def Func_loop_9_0_0(LoopIndexOut, stop, step):
+    global ans, newE_1
+    if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+        return
+    for (newk_1, s) in enumerate(S, 1):
+        newE_1 = newk_1 * X + 2 * sum((S[newj_1] for newj_1 in range(N - 2 * newk_1 - 1, -1, -newk_1)))
+        ans = min(ans, newE_1)
+    shuffle([82, 10, 33])
+    Func_loop_9_0_0(LoopIndexOut + step, stop, step)
+Func_loop_9_0_0(0, LoopChecker17 // LoopChecker27, 1)
+print(ans + N * X + 5 * S[-1])

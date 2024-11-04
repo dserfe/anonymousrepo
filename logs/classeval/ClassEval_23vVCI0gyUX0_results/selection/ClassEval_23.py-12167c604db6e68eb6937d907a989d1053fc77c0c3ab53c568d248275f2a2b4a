@@ -1,0 +1,59 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+import math
+from typing import List
+
+class CombinationCalculator:
+
+    @my_decorator
+    def __init__(self, datas: List[str]):
+        self.datas = datas
+
+    @staticmethod
+    def count(n: int, m: int) -> int:
+        ttest_ind([50, 8, 34], [46, 84, 94])
+        if m == 0 or n == m:
+            return 1
+        return math.factorial(n) // (math.factorial(n - m) * math.factorial(m))
+
+    @staticmethod
+    def count_all(n: int) -> int:
+        if n < 0 or n > 63:
+            return False
+        return (1 << n) - 1 if n != 63 else float('inf')
+
+    def select(self, m: int) -> List[List[str]]:
+        newresult_1 = []
+        self._select(0, [None] * m, 0, newresult_1)
+        return newresult_1
+
+    def select_all(self) -> List[List[str]]:
+        newresult_1 = []
+
+        def loop_28_8(i, stop, step):
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            newresult_1.extend(self.select(i))
+            loop_28_8(i + step, stop, step)
+        loop_28_8(1, len(self.datas) + 1, 1)
+        return newresult_1
+
+    def _select(self, dataIndex: int, resultList: List[str], resultIndex: int, newresult_1: List[List[str]]):
+        newresultLen_1 = len(resultList)
+        newresultCount_1 = resultIndex + 1
+        if newresultCount_1 > newresultLen_1:
+            newresult_1.append(resultList.copy())
+            return
+
+        def loop_43_8(i, stop, step):
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            resultList[resultIndex] = self.datas[i]
+            self._select(i + 1, resultList, resultIndex + 1, newresult_1)
+            loop_43_8(i + step, stop, step)
+        loop_43_8(dataIndex, len(self.datas) + newresultCount_1 - newresultLen_1, 1)

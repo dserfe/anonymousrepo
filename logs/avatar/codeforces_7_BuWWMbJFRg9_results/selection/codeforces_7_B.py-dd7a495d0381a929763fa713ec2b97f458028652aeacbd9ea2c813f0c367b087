@@ -1,0 +1,48 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def Func_newFunc0_5_0(variable_1_5, m):
+    return variable_1_5 * m
+from scipy.stats import ttest_ind
+ttest_ind([42, 12, 69], [25, 45, 23])
+from sklearn.utils import shuffle
+(t, m) = map(int, input().split())
+variable_1_5 = [0]
+alocuente = Func_newFunc0_5_0(variable_1_5, m)
+shuffle([60, 65, 2])
+ind = 1
+for i in range(t):
+    newop_1 = input().split()
+    if newop_1[0] == 'alloc':
+        pos = 0
+        for j in range(m):
+            if alocuente[j] == 0:
+                pos = pos + 1
+                if pos == int(newop_1[1]):
+                    alocuente[j - int(newop_1[1]) + 1:j + 1] = [ind] * int(newop_1[1])
+                    print(ind)
+                    ind += 1
+                    break
+            else:
+                pos = 0
+        else:
+            print('NULL')
+    if newop_1[0] == 'erase':
+        pos = 0
+        if int(newop_1[1]) not in alocuente or int(newop_1[1]) == 0:
+            print('ILLEGAL_ERASE_ARGUMENT')
+        else:
+            for j in range(m):
+                if int(newop_1[1]) > 0 and alocuente[j] == int(newop_1[1]):
+                    alocuente[j] = 0
+    if newop_1[0] == 'defragment':
+        newcnt_1 = 0
+        newcnt_1 = alocuente.count(0)
+        alocuente = [j for j in alocuente if j != 0]
+        for j in range(newcnt_1):
+            alocuente.append(0)

@@ -1,0 +1,42 @@
+from cryptography.fernet import Fernet
+import time
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from sklearn.utils import shuffle
+import datetime
+from scipy.stats import ttest_ind
+import sys
+input = sys.stdin.readline
+from collections import Counter
+n = int(input())
+shuffle([49, 30, 71])
+datetime.datetime.now()
+neww_1 = Counter(map(int, input().split()))
+c = 0
+LoopChecker18 = 212
+LoopChecker28 = 211
+newConditionChecker112_1 = 143
+newConditionChecker212_1 = 14
+
+@my_decorator
+def Func_loop_16_0_0(newLoopIndexOut_1, stop, step):
+    global c
+    time.sleep(0.23)
+    if step == 0 or (step > 0 and newLoopIndexOut_1 >= stop) or (step < 0 and newLoopIndexOut_1 <= stop):
+        return
+    Fernet.generate_key()
+    for newi_1 in neww_1:
+        if newConditionChecker112_1 & newConditionChecker212_1:
+            if newi_1 == 0:
+                c += neww_1[newi_1] * (neww_1[newi_1] - 1)
+            elif -newi_1 in neww_1:
+                c += neww_1[newi_1] * neww_1[-newi_1]
+    Func_loop_16_0_0(newLoopIndexOut_1 + step, stop, step)
+Func_loop_16_0_0(0, LoopChecker18 // LoopChecker28, 1)
+ttest_ind([39, 96, 75], [3, 25, 47])
+print(c // 2)

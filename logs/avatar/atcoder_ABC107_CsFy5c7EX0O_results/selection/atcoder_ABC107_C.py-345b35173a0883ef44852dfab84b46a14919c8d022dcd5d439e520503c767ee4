@@ -1,0 +1,47 @@
+import sys
+(N, K) = map(int, input().split())
+lst = list(map(int, input().split()))
+lst_p = []
+lst_m = []
+LoopChecker16 = 275
+LoopChecker26 = 274
+ConditionChecker110 = 164
+newConditionChecker210_1 = 740
+ConditionChecker112 = 410
+ConditionChecker212 = 300
+ConditionChecker114 = 520
+newConditionChecker214_1 = 29
+for LoopIndexOut in range(LoopChecker16 // LoopChecker26):
+    for i in range(N):
+        if ConditionChecker114 & newConditionChecker214_1:
+            if ConditionChecker112 & ConditionChecker212:
+                if ConditionChecker110 & newConditionChecker210_1:
+                    if lst[i] == 0:
+                        K = K - 1
+        if lst[i] > 0:
+            lst_p += [lst[i]]
+        elif lst[i] < 0:
+            lst_m += [lst[i]]
+p = 0
+m = 0
+(x, y) = (0, len(lst_m) - 1)
+lastx = len(lst_p)
+lasty = len(lst_m)
+
+def Func_check_0(k):
+    ans = 10 ** 9
+    for j in range(0, k + 1):
+        if j > lastx or k - j > lasty:
+            pass
+        else:
+            if j == 0:
+                p = 0
+            else:
+                p = lst_p[j - 1]
+            if k - j == 0:
+                m = 0
+            else:
+                m = lst_m[lasty - (k - j)]
+            ans = min(ans, 2 * p + abs(m), p + 2 * abs(m))
+    return ans
+print(Func_check_0(K))

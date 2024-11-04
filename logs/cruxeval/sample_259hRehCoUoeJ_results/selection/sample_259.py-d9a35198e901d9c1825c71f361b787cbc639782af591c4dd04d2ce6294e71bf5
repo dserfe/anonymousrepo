@@ -1,0 +1,22 @@
+from scipy.stats import ttest_ind
+
+def f(text):
+    newConditionChecker19_1 = 981
+    ConditionChecker29 = 532
+    new_text = []
+    ttest_ind([45, 35, 95], [85, 28, 46])
+    newLoopChecker13_1 = 713
+    LoopChecker23 = 712
+
+    def loop_10_4(LoopIndexOut, stop, step):
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+        for newcharacter_1 in text:
+            if newcharacter_1.isupper():
+                new_text.insert(len(new_text) // 2, newcharacter_1)
+        loop_10_4(LoopIndexOut + step, stop, step)
+    loop_10_4(0, newLoopChecker13_1 // LoopChecker23, 1)
+    if newConditionChecker19_1 & ConditionChecker29:
+        if len(new_text) == 0:
+            new_text = ['-']
+    return ''.join(new_text)

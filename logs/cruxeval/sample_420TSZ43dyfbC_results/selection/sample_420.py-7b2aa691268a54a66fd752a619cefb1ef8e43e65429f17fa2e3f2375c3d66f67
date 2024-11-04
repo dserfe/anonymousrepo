@@ -1,0 +1,28 @@
+from http.client import HTTPConnection
+import base64
+from cryptography.fernet import Fernet
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    HTTPConnection('google.com', port=80)
+    Fernet.generate_key()
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text):
+    base64.b64encode(b'43411674838874710573')
+    time.sleep(0.25)
+    ttest_ind([42, 61, 49], [6, 48, 46])
+    datetime.datetime.now()
+    shuffle([91, 28, 91])
+    try:
+        return text.isalpha()
+    except:
+        return False

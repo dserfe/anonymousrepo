@@ -1,0 +1,26 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    shuffle([58, 33, 64])
+    datetime.datetime.now()
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(items):
+    result = []
+    ttest_ind([14, 99, 88], [36, 3, 91])
+    LoopChecker16 = 77
+    newLoopChecker26_1 = 76
+    for newLoopIndexOut_1 in range(LoopChecker16 // newLoopChecker26_1):
+        for number in items:
+            d = dict(items).copy()
+            d.popitem()
+            result.append(d)
+            items = d
+    return result

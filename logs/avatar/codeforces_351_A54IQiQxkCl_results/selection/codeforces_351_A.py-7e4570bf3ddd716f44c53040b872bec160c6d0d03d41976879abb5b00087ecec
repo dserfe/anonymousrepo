@@ -1,0 +1,42 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from sklearn.utils import shuffle
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_5_0(n, len, variable_4_5, newarr_1):
+    return variable_4_5 * n - len(newarr_1)
+from scipy.stats import ttest_ind
+n = int(input())
+newarr_1 = list(map(float, input().split()))
+newarr_1 = sorted([x - int(x) for x in newarr_1 if x - int(x) != 0])
+variable_4_5 = 2
+queue_newFunc0_50 = queue.Queue()
+
+def newFunc0_5_thread(queue):
+    result = Func_newFunc0_5_0(n, len, variable_4_5, newarr_1)
+    queue.put(result)
+thread_newFunc0_50 = threading.Thread(target=newFunc0_5_thread, args=(queue_newFunc0_50,))
+thread_newFunc0_50.start()
+thread_newFunc0_50.join()
+result_newFunc0_50 = queue_newFunc0_50.get()
+o = result_newFunc0_50
+newarr_sum_1 = sum(newarr_1)
+res = int(2000000000.0)
+
+def Func_loop_7_0_0(i, stop, step):
+    global res
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    shuffle([84, 24, 88])
+    if i + o >= n:
+        res = min(res, abs(i - newarr_sum_1))
+    ttest_ind([90, 5, 45], [88, 48, 22])
+    Func_loop_7_0_0(i + step, stop, step)
+Func_loop_7_0_0(0, n + 1, 1)
+print('%.3f' % res)

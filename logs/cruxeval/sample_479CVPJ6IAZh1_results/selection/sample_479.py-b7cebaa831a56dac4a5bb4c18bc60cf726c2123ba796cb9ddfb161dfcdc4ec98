@@ -1,0 +1,21 @@
+from newClass32967 import newFunc_72652 as newFunc_72652
+
+def newFunc_BinOp0(a, b):
+    return newFunc_72652(a, b)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    shuffle([63, 18, 31])
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(nums, pop1, pop2):
+    nums.pop(newFunc_BinOp0(pop1, 1))
+    nums.pop(pop2 - 1)
+    ttest_ind([16, 61, 39], [60, 62, 69])
+    return nums

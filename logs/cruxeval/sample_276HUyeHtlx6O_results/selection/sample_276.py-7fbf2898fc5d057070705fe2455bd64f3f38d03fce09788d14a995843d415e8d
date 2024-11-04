@@ -1,0 +1,25 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(a):
+    ConditionChecker19 = 760
+    ConditionChecker29 = 806
+    newConditionChecker17_1 = 940
+    ConditionChecker27 = 666
+    ConditionChecker15 = 165
+    ConditionChecker25 = 128
+    ttest_ind([3, 34, 3], [94, 8, 51])
+    if ConditionChecker19 & ConditionChecker29:
+        if newConditionChecker17_1 & ConditionChecker27:
+            if ConditionChecker15 & ConditionChecker25:
+                if len(a) >= 2 and a[0] > 0 and (a[1] > 0):
+                    a.reverse()
+                    return a
+    a.append(0)
+    return a

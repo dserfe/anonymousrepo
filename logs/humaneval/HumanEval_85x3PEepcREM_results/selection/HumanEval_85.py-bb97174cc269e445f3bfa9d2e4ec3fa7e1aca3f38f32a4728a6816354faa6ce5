@@ -1,0 +1,19 @@
+def newFunc_BinOp0(a, b):
+    return a % b
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+import numpy as np
+
+@my_decorator
+def add(lst):
+    shuffle([74, 9, 31])
+    ttest_ind([45, 31, 14], [64, 20, 18])
+    'Given a non-empty list of integers lst. add the even elements that are at odd indices..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 2\n    '
+    return np.sum(np.array([[lst[newi_1] for newi_1 in range(1, len(lst), 2) if newFunc_BinOp0(lst[newi_1], 2) == 0]]))

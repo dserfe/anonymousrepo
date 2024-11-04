@@ -1,0 +1,52 @@
+from newClass43566 import Func_newFunc0_37_0 as Func_newFunc0_37_0
+import threading
+import queue
+import threading
+import queue
+
+def newFunc0_17(number, variable_3_17):
+    return number // variable_3_17
+
+def int_to_mini_roman(number):
+    """
+    Given a positive integer, obtain its roman numeral equivalent as a string,
+    and return it in lowercase.
+    Restrictions: 1 <= num <= 1000
+
+    Examples:
+    >>> int_to_mini_roman(19) == 'xix'
+    >>> int_to_mini_roman(152) == 'clii'
+    >>> int_to_mini_roman(426) == 'cdxxvi'
+    """
+    num = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000]
+    sym = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M']
+    newi_1 = 12
+    res = ''
+    while number:
+        variable_3_17 = num[newi_1]
+        queue_newFunc0_170 = queue.Queue()
+
+        def newFunc0_17_thread(queue):
+            result = newFunc0_17(number, variable_3_17)
+            queue.put(result)
+        thread_newFunc0_170 = threading.Thread(target=newFunc0_17_thread, args=(queue_newFunc0_170,))
+        thread_newFunc0_170.start()
+        thread_newFunc0_170.join()
+        result_newFunc0_170 = queue_newFunc0_170.get()
+        div = result_newFunc0_170
+        number %= num[newi_1]
+        while div:
+            res += sym[newi_1]
+            variable_3_37 = 1
+            queue_newFunc0_370 = queue.Queue()
+
+            def newFunc0_37_thread(queue):
+                result = Func_newFunc0_37_0(variable_3_37, div)
+                queue.put(result)
+            thread_newFunc0_370 = threading.Thread(target=newFunc0_37_thread, args=(queue_newFunc0_370,))
+            thread_newFunc0_370.start()
+            thread_newFunc0_370.join()
+            result_newFunc0_370 = queue_newFunc0_370.get()
+            div = result_newFunc0_370
+        newi_1 = newi_1 - 1
+    return res.lower()

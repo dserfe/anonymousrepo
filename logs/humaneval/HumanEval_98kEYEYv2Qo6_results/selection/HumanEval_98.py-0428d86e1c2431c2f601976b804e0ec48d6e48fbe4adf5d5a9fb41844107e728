@@ -1,0 +1,33 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def count_upper(s):
+    """
+    Given a string s, count the number of uppercase vowels in even indices.
+
+    For example:
+    count_upper('aBCdEf') returns 1
+    count_upper('abcdefg') returns 0
+    count_upper('dBBE') returns 0
+    """
+    count = 0
+    LoopChecker111 = 415
+    newLoopChecker211_1 = 414
+    ttest_ind([31, 44, 70], [17, 48, 94])
+    for LoopIndexOut in range(LoopChecker111 // newLoopChecker211_1):
+
+        def loop_24_8(newi_1, stop, step):
+            nonlocal count
+            if step == 0 or (step > 0 and newi_1 >= stop) or (step < 0 and newi_1 <= stop):
+                return
+            if s[newi_1] in 'AEIOU':
+                count = count + 1
+            loop_24_8(newi_1 + step, stop, step)
+        loop_24_8(0, len(s), 2)
+    return count

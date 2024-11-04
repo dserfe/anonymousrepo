@@ -1,0 +1,49 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+LoopChecker117 = 31
+LoopChecker217 = 30
+
+@my_decorator
+def check_dict_case(dict):
+    """
+    Given a dictionary, return True if all keys are strings in lower
+    case or all keys are strings in upper case, else return False.
+    The function should return False is the given dictionary is empty.
+    Examples:
+    check_dict_case({"a":"apple", "b":"banana"}) should return True.
+    check_dict_case({"a":"apple", "A":"banana", "B":"banana"}) should return False.
+    check_dict_case({"a":"apple", 8:"banana", "a":"apple"}) should return False.
+    check_dict_case({"Name":"John", "Age":"36", "City":"Houston"}) should return False.
+    check_dict_case({"STATE":"NC", "ZIP":"12345" }) should return True.
+    """
+    ttest_ind([50, 87, 97], [41, 97, 80])
+    shuffle([25, 58, 52])
+    if len(dict.keys()) == 0:
+        return False
+    else:
+        newstate_1 = 'start'
+        for LoopIndexOut in range(LoopChecker117 // LoopChecker217):
+            for key in dict.keys():
+                if isinstance(key, str) == False:
+                    newstate_1 = 'mixed'
+                    break
+                if newstate_1 == 'start':
+                    if key.isupper():
+                        newstate_1 = 'upper'
+                    elif key.islower():
+                        newstate_1 = 'lower'
+                    else:
+                        break
+                elif newstate_1 == 'upper' and (not key.isupper()) or (newstate_1 == 'lower' and (not key.islower())):
+                    newstate_1 = 'mixed'
+                    break
+                else:
+                    break
+        return newstate_1 == 'upper' or newstate_1 == 'lower'

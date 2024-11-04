@@ -1,0 +1,57 @@
+import threading
+import queue
+
+def Func_newFunc0_27_0(variable_1_27, n):
+    return variable_1_27 * n
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    shuffle([99, 53, 34])
+    return dec_result
+root = lambda x: x if par[x] == x else root(par[x])
+newsame_1 = lambda x, y: root(x) == root(y)
+
+@my_decorator
+def Func_unite_0(*z):
+    (x, y) = map(root, z)
+    if x != y:
+        if rank[x] < rank[y]:
+            par[x] = y
+            size[y] += size[x]
+        else:
+            par[y] = x
+            size[x] += size[y]
+            if rank[x] == rank[y]:
+                rank[x] += 1
+(n, *newa_1) = map(int, open(0).read().split())
+(*par,) = range(n)
+variable_1_27 = [1]
+queue_Func_newFunc0_27_00 = queue.Queue()
+
+def Func_newFunc0_27_0_thread(queue):
+    result = Func_newFunc0_27_0(variable_1_27, n)
+    queue.put(result)
+thread_Func_newFunc0_27_00 = threading.Thread(target=Func_newFunc0_27_0_thread, args=(queue_Func_newFunc0_27_00,))
+thread_Func_newFunc0_27_00.start()
+thread_Func_newFunc0_27_00.join()
+result_Func_newFunc0_27_00 = queue_Func_newFunc0_27_00.get()
+rank = result_Func_newFunc0_27_00
+size = [1] * n
+b = [0] * n
+for (i, t) in enumerate(newa_1):
+    b[t - 1] = i
+c = 0
+for k in b[::-1]:
+    l = r = 1
+    if k > 0 and newa_1[k - 1] > newa_1[k]:
+        l += size[root(k - 1)]
+        Func_unite_0(k - 1, k)
+    if k + 1 < n and newa_1[k + 1] > newa_1[k]:
+        r += size[root(k + 1)]
+        Func_unite_0(k + 1, k)
+    c += l * r * newa_1[k]
+print(c)

@@ -1,0 +1,21 @@
+from scipy.stats import ttest_ind
+
+def f(letters):
+    newa_1 = []
+    ttest_ind([71, 16, 40], [9, 46, 61])
+    newConditionChecker14_1 = 338
+    newConditionChecker24_1 = 357
+    LoopChecker15 = 893
+    LoopChecker25 = 892
+    for newLoopIndexOut_1 in range(LoopChecker15 // LoopChecker25):
+
+        def loop_8_8(i, stop, step):
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            if newConditionChecker14_1 & newConditionChecker24_1:
+                if letters[i] in newa_1:
+                    return 'no'
+            newa_1.append(letters[i])
+            loop_8_8(i + step, stop, step)
+        loop_8_8(0, len(letters), 1)
+    return 'yes'

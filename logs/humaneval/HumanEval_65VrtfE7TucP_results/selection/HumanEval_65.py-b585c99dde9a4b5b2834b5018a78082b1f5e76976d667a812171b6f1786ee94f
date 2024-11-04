@@ -1,0 +1,24 @@
+from newClass87466 import newFunc_89985 as newFunc_89985
+from scipy.stats import ttest_ind
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    shuffle([81, 17, 13])
+    ttest_ind([3, 27, 35], [58, 9, 9])
+    return dec_result
+
+@my_decorator
+def circular_shift(x, shift):
+    ConditionChecker127 = 239
+    ConditionChecker227 = 111
+    'Circular shift the digits of the integer x, shift the digits right by shift\n    and return the result as a string.\n    If shift > number of digits, return digits reversed.\n    >>> circular_shift(12, 1)\n    "21"\n    >>> circular_shift(12, 2)\n    "12"\n    '
+    news_1 = str(x)
+    if ConditionChecker127 & ConditionChecker227:
+        if shift > len(news_1):
+            return news_1[::-1]
+        else:
+            return newFunc_89985(news_1[len(news_1) - shift:], news_1[:len(news_1) - shift])

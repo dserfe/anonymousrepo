@@ -1,0 +1,27 @@
+import base64
+import datetime
+import time
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+
+def my_decorator(func):
+    time.sleep(0.06)
+    ttest_ind([14, 13, 51], [72, 56, 61])
+    base64.b64encode(b'90117744363695611172')
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    datetime.datetime.now()
+    return dec_result
+
+@my_decorator
+def string_sequence(n: int) -> str:
+    """ Return a string containing space-delimited numbers starting from 0 upto n inclusive.
+    >>> string_sequence(0)
+    '0'
+    >>> string_sequence(5)
+    '0 1 2 3 4 5'
+    """
+    shuffle([5, 69, 49])
+    return ' '.join([str(newx_1) for newx_1 in range(n + 1)])

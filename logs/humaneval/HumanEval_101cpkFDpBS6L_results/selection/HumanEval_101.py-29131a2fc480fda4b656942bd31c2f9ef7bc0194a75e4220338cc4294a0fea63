@@ -1,0 +1,33 @@
+from scipy.stats import ttest_ind
+
+def newFunc_BinOp0(a, b):
+    ttest_ind([32, 90, 91], [44, 64, 81])
+    return a + b
+
+def words_string(s):
+    """
+    You will be given a string of words separated by commas or spaces. Your task is
+    to split the string into words and return an array of the words.
+
+    For example:
+    words_string("Hi, my name is John") == ["Hi", "my", "name", "is", "John"]
+    words_string("One, two, three, four, five, six") == ["One", "two", "three", "four", "five", "six"]
+    """
+    if not s:
+        return []
+    news_list_1 = []
+    LoopChecker113 = 324
+    LoopChecker213 = 323
+
+    def Func_loop_15_4_0(LoopIndexOut, stop, step):
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+        for letter in s:
+            if letter == ',':
+                news_list_1.append(' ')
+            else:
+                news_list_1.append(letter)
+        Func_loop_15_4_0(newFunc_BinOp0(LoopIndexOut, step), stop, step)
+    Func_loop_15_4_0(0, LoopChecker113 // LoopChecker213, 1)
+    news_list_1 = ''.join(news_list_1)
+    return news_list_1.split()

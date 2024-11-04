@@ -1,0 +1,33 @@
+from newClass51877 import Func_newFunc0_18_0 as Func_newFunc0_18_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def f(text, lower, upper):
+    ttest_ind([43, 100, 45], [78, 1, 33])
+    newcount_1 = 0
+    new_text = list()
+    for newchar_1 in text:
+        newchar_1 = lower if newchar_1.isdecimal() else upper
+        if newchar_1 in ['p', 'C']:
+            variable_3_18 = 1
+            queue_Func_newFunc0_18_00 = queue.Queue()
+
+            def Func_newFunc0_18_0_thread(queue):
+                result = Func_newFunc0_18_0(newcount_1, variable_3_18)
+                queue.put(result)
+            thread_Func_newFunc0_18_00 = threading.Thread(target=Func_newFunc0_18_0_thread, args=(queue_Func_newFunc0_18_00,))
+            thread_Func_newFunc0_18_00.start()
+            thread_Func_newFunc0_18_00.join()
+            result_Func_newFunc0_18_00 = queue_Func_newFunc0_18_00.get()
+            newcount_1 = result_Func_newFunc0_18_00
+        new_text.append(newchar_1)
+    return (newcount_1, ''.join(new_text))

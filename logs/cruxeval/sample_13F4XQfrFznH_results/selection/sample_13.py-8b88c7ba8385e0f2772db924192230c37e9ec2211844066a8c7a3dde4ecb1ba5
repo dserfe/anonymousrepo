@@ -1,0 +1,32 @@
+from newClass6336 import Func_newFunc0_17_0 as Func_newFunc0_17_0
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def f(names):
+    count = len(names)
+    numberOfNames = 0
+    ConditionChecker15 = 584
+    ConditionChecker25 = 471
+    for i in names:
+        if ConditionChecker15 & ConditionChecker25:
+            if i.isalpha():
+                variable_3_17 = 1
+                queue_Func_newFunc0_17_00 = queue.Queue()
+
+                def Func_newFunc0_17_0_thread(queue):
+                    newresult_1 = Func_newFunc0_17_0(variable_3_17, numberOfNames)
+                    queue.put(newresult_1)
+                thread_Func_newFunc0_17_00 = threading.Thread(target=Func_newFunc0_17_0_thread, args=(queue_Func_newFunc0_17_00,))
+                thread_Func_newFunc0_17_00.start()
+                thread_Func_newFunc0_17_00.join()
+                result_Func_newFunc0_17_00 = queue_Func_newFunc0_17_00.get()
+                numberOfNames = result_Func_newFunc0_17_00
+    return numberOfNames

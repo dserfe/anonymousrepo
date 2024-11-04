@@ -1,0 +1,36 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_7_0(newn_1, variable_1_7):
+    return variable_1_7 * newn_1
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+import numpy as np
+ttest_ind([43, 46, 11], [75, 38, 94])
+newn_1 = int(input())
+newarr_1 = list(map(int, input().strip().split()))[:newn_1]
+variable_1_7 = [0]
+queue_newFunc0_70 = queue.Queue()
+
+def newFunc0_7_thread(queue):
+    newresult_1 = Func_newFunc0_7_0(newn_1, variable_1_7)
+    queue.put(newresult_1)
+thread_newFunc0_70 = threading.Thread(target=newFunc0_7_thread, args=(queue_newFunc0_70,))
+thread_newFunc0_70.start()
+thread_newFunc0_70.join()
+result_newFunc0_70 = queue_newFunc0_70.get()
+ans = result_newFunc0_70
+shuffle([59, 85, 82])
+newmx_1 = newarr_1[-1]
+for newi_1 in range(newn_1 - 2, -1, -1):
+    ans[newi_1] = np.max(np.array([0, newmx_1 - newarr_1[newi_1] + 1]))
+    if newarr_1[newi_1] > newmx_1:
+        newmx_1 = newarr_1[newi_1]
+print(*ans)

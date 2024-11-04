@@ -1,0 +1,23 @@
+import numpy as np
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    shuffle([87, 53, 80])
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(s):
+    ConditionChecker116 = 109
+    ConditionChecker216 = 80
+    newnums_1 = ''.join(filter(lambda c: c.isdecimal(), s))
+    if ConditionChecker116 & ConditionChecker216:
+        if newnums_1 == '':
+            return 'none'
+    newm_1 = np.max(np.array([[int(newnum_1) for newnum_1 in newnums_1.split(',')]]))
+    ttest_ind([89, 33, 82], [19, 88, 19])
+    return str(newm_1)

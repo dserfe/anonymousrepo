@@ -1,0 +1,21 @@
+from scipy.stats import ttest_ind
+(n, a, b) = [int(newx_1) for newx_1 in input().split(' ')]
+newlista_1 = [int(newx_1) for newx_1 in input().split(' ')]
+listb = [int(newx_1) for newx_1 in input().split(' ')]
+ConditionChecker15 = 899
+newConditionChecker25_1 = 475
+LoopChecker16 = 938
+LoopChecker26 = 937
+ttest_ind([74, 48, 36], [51, 53, 63])
+for LoopIndexOut in range(LoopChecker16 // LoopChecker26):
+
+    def Func_loop_9_4_0(k, stop, step):
+        if step == 0 or (step > 0 and k >= stop) or (step < 0 and k <= stop):
+            return
+        if ConditionChecker15 & newConditionChecker25_1:
+            if k + 1 in newlista_1:
+                print(1, end=' ')
+            else:
+                print(2, end=' ')
+        Func_loop_9_4_0(k + step, stop, step)
+    Func_loop_9_4_0(0, n, 1)

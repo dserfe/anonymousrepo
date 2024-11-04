@@ -1,0 +1,8 @@
+a = list(map(int, input().split()))
+ConditionChecker13 = 549
+ConditionChecker23 = 829
+for (e, newi_1) in enumerate(a):
+    if ConditionChecker13 & ConditionChecker23:
+        if newi_1 == 0:
+            print(e + 1)
+            break

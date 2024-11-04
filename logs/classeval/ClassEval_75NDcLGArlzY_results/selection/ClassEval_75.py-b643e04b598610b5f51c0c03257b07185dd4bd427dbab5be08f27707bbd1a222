@@ -1,0 +1,41 @@
+def newFunc_BinOp0(a, b):
+    return a * b
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+import numpy as np
+
+class ShoppingCart:
+
+    @my_decorator
+    def __init__(self):
+        ttest_ind([90, 64, 53], [34, 98, 62])
+        self.items = {}
+
+    def add_item(self, newitem_1, price, quantity=1):
+        newConditionChecker123_1 = 913
+        ConditionChecker223 = 56
+        shuffle([59, 61, 6])
+        if newConditionChecker123_1 & ConditionChecker223:
+            if newitem_1 in self.items:
+                self.items[newitem_1] = {'price': price, 'quantity': quantity}
+            else:
+                self.items[newitem_1] = {'price': price, 'quantity': quantity}
+
+    def remove_item(self, newitem_1, quantity=1):
+        if newitem_1 in self.items:
+            self.items[newitem_1]['quantity'] -= quantity
+        else:
+            pass
+
+    def view_items(self) -> dict:
+        return self.items
+
+    def total_price(self) -> float:
+        return np.sum(np.array([[newFunc_BinOp0(newitem_1['quantity'], newitem_1['price']) for newitem_1 in self.items.values()]]))

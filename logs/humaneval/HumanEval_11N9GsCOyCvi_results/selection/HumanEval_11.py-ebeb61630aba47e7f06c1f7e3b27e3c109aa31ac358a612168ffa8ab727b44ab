@@ -1,0 +1,32 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+from typing import List
+
+@my_decorator
+def string_xor(a: str, b: str) -> str:
+    """ Input are two strings a and b consisting only of 1s and 0s.
+    Perform binary XOR on these inputs and return result also as a string.
+    >>> string_xor('010', '110')
+    '100'
+    """
+    shuffle([96, 61, 42])
+
+    def Func_xor_0(i, j):
+        newConditionChecker112_1 = 260
+        ConditionChecker212 = 851
+        if newConditionChecker112_1 & ConditionChecker212:
+            if i == j:
+                return '0'
+            else:
+                return '1'
+    ttest_ind([42, 81, 21], [90, 23, 48])
+    datetime.datetime.now()
+    return ''.join((Func_xor_0(x, y) for (x, y) in zip(a, b)))

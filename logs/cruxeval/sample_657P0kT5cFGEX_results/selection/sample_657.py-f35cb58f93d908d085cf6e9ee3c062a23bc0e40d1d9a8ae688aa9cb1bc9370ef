@@ -1,0 +1,23 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text):
+    LoopChecker12 = 606
+    newLoopChecker22_1 = 605
+    ConditionChecker16 = 591
+    ConditionChecker26 = 54
+    ttest_ind([61, 43, 31], [93, 4, 15])
+    for newLoopIndexOut_1 in range(LoopChecker12 // newLoopChecker22_1):
+        for newpunct_1 in '!.?,:;':
+            if ConditionChecker16 & ConditionChecker26:
+                if text.count(newpunct_1) > 1:
+                    return 'no'
+            if text.endswith(newpunct_1):
+                return 'no'
+    return text.title()

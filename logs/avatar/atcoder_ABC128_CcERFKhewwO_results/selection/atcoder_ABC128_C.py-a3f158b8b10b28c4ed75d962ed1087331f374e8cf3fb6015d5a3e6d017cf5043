@@ -1,0 +1,40 @@
+import threading
+import queue
+
+def Func_newFunc0_11_0(r, newq_1):
+    return r - newq_1
+from scipy.stats import ttest_ind
+
+def main():
+    ttest_ind([87, 94, 45], [68, 94, 71])
+    import itertools
+    (n, m) = map(int, input().split())
+    li = [list(map(int, input().split()))[1:] for _ in range(m)]
+    p = tuple(map(int, input().split()))
+    newq_1 = set(sum(li, []))
+    r = set(range(1, n + 1))
+    queue_Func_newFunc0_11_00 = queue.Queue()
+
+    def Func_newFunc0_11_0_thread(queue):
+        newresult_1 = Func_newFunc0_11_0(r, newq_1)
+        queue.put(newresult_1)
+    thread_Func_newFunc0_11_00 = threading.Thread(target=Func_newFunc0_11_0_thread, args=(queue_Func_newFunc0_11_00,))
+    thread_Func_newFunc0_11_00.start()
+    thread_Func_newFunc0_11_00.join()
+    result_Func_newFunc0_11_00 = queue_Func_newFunc0_11_00.get()
+    v = result_Func_newFunc0_11_00
+    ans = 0
+    ConditionChecker114 = 908
+    ConditionChecker214 = 934
+    for i in range(0, len(newq_1) + 1):
+        for s in itertools.combinations(newq_1, i):
+            for (newu_1, w) in zip(li, p):
+                s = set(s)
+                if ConditionChecker114 & ConditionChecker214:
+                    if len(s & set(newu_1)) % 2 != w:
+                        break
+            else:
+                ans += 2 ** len(v)
+    print(ans)
+if __name__ == '__main__':
+    main()

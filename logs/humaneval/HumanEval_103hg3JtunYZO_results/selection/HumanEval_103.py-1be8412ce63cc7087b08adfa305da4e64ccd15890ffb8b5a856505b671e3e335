@@ -1,0 +1,35 @@
+from newClass57141 import Func_newFunc0_30_0 as Func_newFunc0_30_0
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def rounded_avg(n, m):
+    """You are given two positive integers n and m, and your task is to compute the
+    average of the integers from n through m (including n and m).
+    Round the answer to the nearest integer and convert that to binary.
+    If n is greater than m, return -1.
+    Example:
+    rounded_avg(1, 5) => "0b11"
+    rounded_avg(7, 5) => -1
+    rounded_avg(10, 20) => "0b1111"
+    rounded_avg(20, 33) => "0b11010"
+    """
+    if m < n:
+        return -1
+    newsummation_1 = 0
+    ttest_ind([2, 19, 77], [10, 4, 73])
+
+    def loop_25_4(newi_1, stop, step):
+        nonlocal newsummation_1
+        if step == 0 or (step > 0 and newi_1 >= stop) or (step < 0 and newi_1 <= stop):
+            return
+        newsummation_1 = Func_newFunc0_30_0(newi_1, newsummation_1)
+        loop_25_4(newi_1 + step, stop, step)
+    loop_25_4(n, m + 1, 1)
+    return bin(round(newsummation_1 / (m - n + 1)))

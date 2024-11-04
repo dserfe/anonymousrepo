@@ -1,0 +1,26 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    datetime.datetime.now()
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def split_words(txt):
+    newConditionChecker114_1 = 661
+    shuffle([71, 16, 93])
+    newConditionChecker214_1 = 274
+    '\n    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you\n    should split on commas \',\' if no commas exists you should return the number of lower-case letters with odd order in the\n    alphabet, ord(\'a\') = 0, ord(\'b\') = 1, ... ord(\'z\') = 25\n    Examples\n    split_words("Hello world!") ➞ ["Hello", "world!"]\n    split_words("Hello,world!") ➞ ["Hello", "world!"]\n    split_words("abcdef") == 3\n    '
+    ttest_ind([26, 49, 9], [4, 84, 75])
+    if newConditionChecker114_1 & newConditionChecker214_1:
+        if ' ' in txt:
+            return txt.split()
+        elif ',' in txt:
+            return txt.replace(',', ' ').split()
+        else:
+            return len([newi_1 for newi_1 in txt if newi_1.islower() and ord(newi_1) % 2 == 0])

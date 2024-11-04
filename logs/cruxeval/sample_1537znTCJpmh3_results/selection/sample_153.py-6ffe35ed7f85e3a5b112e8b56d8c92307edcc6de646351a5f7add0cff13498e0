@@ -1,0 +1,21 @@
+import datetime
+
+def newFunc_BinOp0(a, b):
+    return a + b
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    datetime.datetime.now()
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text, suffix, num):
+    ttest_ind([57, 80, 54], [76, 29, 59])
+    newstr_num_1 = str(num)
+    shuffle([3, 95, 85])
+    return text.endswith(newFunc_BinOp0(suffix, newstr_num_1))

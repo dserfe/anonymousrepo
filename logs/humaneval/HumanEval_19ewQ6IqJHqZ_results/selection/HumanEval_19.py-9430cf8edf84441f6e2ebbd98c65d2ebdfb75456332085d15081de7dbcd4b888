@@ -1,0 +1,33 @@
+from http.client import HTTPConnection
+from cryptography.fernet import Fernet
+import time
+import base64
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([21, 79, 90])
+    Fernet.generate_key()
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+from typing import List
+
+@my_decorator
+def sort_numbers(numbers: str) -> str:
+    """ Input is a space-delimited string of numberals from 'zero' to 'nine'.
+    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.
+    Return the string with numbers sorted from smallest to largest
+    >>> sort_numbers('three one five')
+    'one three five'
+    """
+    base64.b64encode(b'78410224030193880179')
+    datetime.datetime.now()
+    time.sleep(0.24)
+    ttest_ind([48, 45, 67], [88, 93, 68])
+    newvalue_map_1 = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}
+    HTTPConnection('google.com', port=80)
+    return ' '.join(sorted([x for x in numbers.split(' ') if x], key=lambda x: newvalue_map_1[x]))

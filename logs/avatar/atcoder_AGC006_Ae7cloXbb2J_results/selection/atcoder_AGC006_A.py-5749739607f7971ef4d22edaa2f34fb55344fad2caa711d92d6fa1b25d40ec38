@@ -1,0 +1,36 @@
+import threading
+import queue
+
+def Func_newFunc0_21_0(newi_1, n):
+    return n - newi_1
+from scipy.stats import ttest_ind
+newConditionChecker16_1 = 414
+ConditionChecker26 = 101
+ConditionChecker14 = 174
+newConditionChecker24_1 = 886
+n = int(input())
+s = list(input())
+newt_1 = list(input())
+ttest_ind([54, 70, 29], [3, 84, 21])
+if newConditionChecker16_1 & ConditionChecker26:
+    if ConditionChecker14 & newConditionChecker24_1:
+        if s == newt_1:
+            print(n)
+        else:
+            cnt = 0
+            for newi_1 in range(n):
+                for j in range(n - newi_1):
+                    if s[newi_1 + j] != newt_1[j]:
+                        break
+                    if j == n - newi_1 - 1:
+                        queue_Func_newFunc0_21_00 = queue.Queue()
+
+                        def Func_newFunc0_21_0_thread(queue):
+                            result = Func_newFunc0_21_0(newi_1, n)
+                            queue.put(result)
+                        thread_Func_newFunc0_21_00 = threading.Thread(target=Func_newFunc0_21_0_thread, args=(queue_Func_newFunc0_21_00,))
+                        thread_Func_newFunc0_21_00.start()
+                        thread_Func_newFunc0_21_00.join()
+                        result_Func_newFunc0_21_00 = queue_Func_newFunc0_21_00.get()
+                        cnt = result_Func_newFunc0_21_00
+            print(2 * n - cnt)

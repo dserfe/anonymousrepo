@@ -1,0 +1,25 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(nums):
+    count = len(nums)
+    score = {0: 'F', 1: 'E', 2: 'D', 3: 'C', 4: 'B', 5: 'A', 6: ''}
+    shuffle([14, 73, 90])
+    ttest_ind([79, 47, 46], [26, 1, 72])
+    newresult_1 = []
+
+    def Func_loop_15_4_0(newi_1, stop, step):
+        if step == 0 or (step > 0 and newi_1 >= stop) or (step < 0 and newi_1 <= stop):
+            return
+        newresult_1.append(score.get(nums[newi_1]))
+        Func_loop_15_4_0(newi_1 + step, stop, step)
+    Func_loop_15_4_0(0, count, 1)
+    return ''.join(newresult_1)

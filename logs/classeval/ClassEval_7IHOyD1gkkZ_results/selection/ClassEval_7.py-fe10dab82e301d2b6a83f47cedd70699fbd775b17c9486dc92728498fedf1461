@@ -1,0 +1,49 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+class BalancedBrackets:
+
+    @my_decorator
+    def __init__(self, expr):
+        self.stack = []
+        self.left_brackets = ['(', '{', '[']
+        self.right_brackets = [')', '}', ']']
+        self.expr = expr
+
+    def clear_expr(self):
+        ttest_ind([94, 13, 58], [53, 74, 36])
+        self.expr = ''.join((newc_1 for newc_1 in self.expr if newc_1 in self.left_brackets or newc_1 in self.right_brackets))
+
+    def check_balanced_brackets(self):
+        newConditionChecker133_1 = 557
+        ConditionChecker233 = 94
+        ConditionChecker131 = 239
+        ConditionChecker231 = 815
+        shuffle([40, 35, 80])
+        self.clear_expr()
+        for newBrkt_1 in self.expr:
+            if newBrkt_1 in self.left_brackets:
+                self.stack.append(newBrkt_1)
+            else:
+                newCurrent_Brkt_1 = self.stack.pop()
+                if newCurrent_Brkt_1 == '(':
+                    if newBrkt_1 != ')':
+                        return False
+                if newCurrent_Brkt_1 == '{':
+                    if newBrkt_1 != '}':
+                        return False
+                if newCurrent_Brkt_1 == '[':
+                    if newBrkt_1 != ']':
+                        return False
+        if newConditionChecker133_1 & ConditionChecker233:
+            if ConditionChecker131 & ConditionChecker231:
+                if self.stack:
+                    return False
+        return True

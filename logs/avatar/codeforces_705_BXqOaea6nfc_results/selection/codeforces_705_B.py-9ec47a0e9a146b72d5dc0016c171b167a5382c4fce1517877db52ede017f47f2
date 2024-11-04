@@ -1,0 +1,40 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_10_0(variable_1_10, c):
+    ttest_ind([87, 28, 59], [80, 6, 26])
+    return variable_1_10 - c
+import sys
+input = sys.stdin.readline
+n = int(input())
+neww_1 = list(map(int, input().split()))
+c = 2
+ConditionChecker112 = 134
+ConditionChecker212 = 169
+for i in neww_1:
+    if ConditionChecker112 & ConditionChecker212:
+        if i == 1:
+            print(c)
+        elif i % 2 == 0:
+            variable_1_10 = 3
+            queue_newFunc0_100 = queue.Queue()
+
+            def newFunc0_10_thread(queue):
+                result = Func_newFunc0_10_0(variable_1_10, c)
+                queue.put(result)
+            thread_newFunc0_100 = threading.Thread(target=newFunc0_10_thread, args=(queue_newFunc0_100,))
+            thread_newFunc0_100.start()
+            thread_newFunc0_100.join()
+            result_newFunc0_100 = queue_newFunc0_100.get()
+            c = result_newFunc0_100
+            print(c)
+        else:
+            print(c)

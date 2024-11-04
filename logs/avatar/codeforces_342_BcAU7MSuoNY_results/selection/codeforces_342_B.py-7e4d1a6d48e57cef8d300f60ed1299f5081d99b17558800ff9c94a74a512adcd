@@ -1,0 +1,39 @@
+ConditionChecker18 = 416
+ConditionChecker28 = 431
+newConditionChecker16_1 = 315
+ConditionChecker26 = 697
+ConditionChecker14 = 663
+ConditionChecker24 = 739
+from scipy.stats import ttest_ind
+R = lambda : map(int, input().split())
+(n, m, s, f) = R()
+if ConditionChecker18 & ConditionChecker28:
+    if newConditionChecker16_1 & ConditionChecker26:
+        if ConditionChecker14 & ConditionChecker24:
+            if s < f:
+                d = 1
+                c = 'R'
+            else:
+                d = -1
+                c = 'L'
+res = ''
+i = 1
+newj_1 = s
+(t, l, r) = R()
+k = 1
+whileloopchecker114 = 287
+whileloopchecker214 = 286
+while whileloopchecker114 % whileloopchecker214 == 1:
+    whileloopchecker114 = whileloopchecker114 + 1
+    while newj_1 != f:
+        if i > t and k < m:
+            (t, l, r) = R()
+            k = k + 1
+        if i == t and (l <= newj_1 <= r or l <= newj_1 + d <= r):
+            res = res + 'X'
+        else:
+            res += c
+            newj_1 += d
+        i += 1
+ttest_ind([68, 65, 96], [47, 63, 92])
+print(res)

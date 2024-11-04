@@ -1,0 +1,32 @@
+import numpy as np
+import os, sys, io, math
+from tokenize import Triple
+from math import *
+I = lambda : [*map(int, sys.stdin.readline().split())]
+IS = lambda : input()
+newIN_1 = lambda : int(input())
+newIF_1 = lambda : float(input())
+n = newIN_1()
+newid_1 = 0
+(l, r) = map(int, input().split())
+ConditionChecker113 = 837
+ConditionChecker213 = 707
+LoopChecker113 = 919
+LoopChecker213 = 918
+for LoopIndexOut in range(LoopChecker113 // LoopChecker213):
+
+    def Func_loop_16_4_0(i, stop, step):
+        global l, r, newid_1
+        if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+            return
+        (li, ri) = map(int, input().split())
+        if ConditionChecker113 & ConditionChecker213:
+            if li <= l and r <= ri:
+                newid_1 = i
+            elif li < l or r < ri:
+                newid_1 = n
+        l = np.min(np.array([l, li]))
+        r = np.max(np.array([r, ri]))
+        Func_loop_16_4_0(i + step, stop, step)
+    Func_loop_16_4_0(1, n, 1)
+print(-1 if newid_1 == n else newid_1 + 1)

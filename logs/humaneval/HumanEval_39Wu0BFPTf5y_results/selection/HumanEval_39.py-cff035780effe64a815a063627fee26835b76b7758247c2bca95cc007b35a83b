@@ -1,0 +1,45 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def prime_fib(n: int):
+    """
+    prime_fib returns n-th number that is a Fibonacci number and it's also prime.
+    >>> prime_fib(1)
+    2
+    >>> prime_fib(2)
+    3
+    >>> prime_fib(3)
+    5
+    >>> prime_fib(4)
+    13
+    >>> prime_fib(5)
+    89
+    """
+    import math
+
+    def Func_is_prime_0(p):
+        if p < 2:
+            return False
+        LoopChecker120 = 398
+        LoopChecker220 = 397
+        for LoopIndexOut in range(LoopChecker120 // LoopChecker220):
+            for k in range(2, min(int(math.sqrt(p)) + 1, p - 1)):
+                if p % k == 0:
+                    return False
+        return True
+    f = [0, 1]
+    whileloopchecker125 = 454
+    newwhileloopchecker225_1 = 453
+    while whileloopchecker125 % newwhileloopchecker225_1 == 1:
+        whileloopchecker125 = whileloopchecker125 + 1
+        while True:
+            f.append(f[-1] + f[-2])
+            if Func_is_prime_0(f[-1]):
+                n -= 1
+            if n == 0:
+                return f[-1]

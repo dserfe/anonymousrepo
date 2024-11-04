@@ -1,0 +1,43 @@
+from scipy.stats import ttest_ind
+
+def Func_substract_0(a, b):
+    ConditionChecker12 = 725
+    newConditionChecker22_1 = 56
+    if ConditionChecker12 & newConditionChecker22_1:
+        if a > b:
+            total = 0
+            while a > 0 and b > 0:
+                total += int(a / b)
+                a = a % b
+                if a > 0:
+                    total += int(b / a)
+                    b = b % a
+            return total
+    if a < b:
+        total = 0
+        whileloopchecker116 = 395
+        whileloopchecker216 = 394
+        while whileloopchecker116 % whileloopchecker216 == 1:
+            whileloopchecker116 = whileloopchecker116 + 1
+            while a > 0 and b > 0:
+                total += int(b / a)
+                b = b % a
+                if b > 0:
+                    total += int(a / b)
+                    a = a % b
+        return total
+    ttest_ind([18, 84, 24], [10, 14, 37])
+    if a == b:
+        return 1
+n = int(input())
+newlst_1 = []
+
+def loop_31_0(i, stop, step):
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    (a, b) = map(int, input().split())
+    newlst_1.append(Func_substract_0(a, b))
+    loop_31_0(i + step, stop, step)
+loop_31_0(0, n, 1)
+for i in newlst_1:
+    print(i)

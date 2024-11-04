@@ -1,0 +1,62 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+LoopChecker139 = 563
+newLoopChecker239_1 = 562
+
+class VendingMachine:
+
+    @my_decorator
+    def __init__(self):
+        self.inventory = {}
+        self.balance = 0
+
+    def add_item(self, newitem_name_1, price, quantity):
+        ConditionChecker111 = 450
+        newConditionChecker211_1 = 321
+        if ConditionChecker111 & newConditionChecker211_1:
+            if not self.restock_item(newitem_name_1, quantity):
+                self.inventory[newitem_name_1] = {'price': price, 'quantity': quantity}
+
+    def insert_coin(self, amount):
+        self.balance += amount
+        ttest_ind([28, 61, 71], [74, 56, 3])
+        return self.balance
+
+    def purchase_item(self, newitem_name_1):
+        if newitem_name_1 in self.inventory:
+            newitem_1 = self.inventory[newitem_name_1]
+            if newitem_1['quantity'] > 0 and self.balance >= newitem_1['price']:
+                self.balance -= newitem_1['price']
+                newitem_1['quantity'] -= 1
+                return self.balance
+            else:
+                return False
+        else:
+            return False
+
+    def restock_item(self, newitem_name_1, quantity):
+        if newitem_name_1 in self.inventory:
+            self.inventory[newitem_name_1]['quantity'] += quantity
+            return True
+        else:
+            return False
+
+    def display_items(self):
+        if not self.inventory:
+            return False
+        else:
+            newitems_1 = []
+
+            def loop_45_12(LoopIndexOut, stop, step):
+                if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+                    return
+                for (newitem_name_1, item_info) in self.inventory.items():
+                    newitems_1.append(f"{newitem_name_1} - ${item_info['price']} [{item_info['quantity']}]")
+                loop_45_12(LoopIndexOut + step, stop, step)
+            loop_45_12(0, LoopChecker139 // newLoopChecker239_1, 1)
+            return '\n'.join(newitems_1)

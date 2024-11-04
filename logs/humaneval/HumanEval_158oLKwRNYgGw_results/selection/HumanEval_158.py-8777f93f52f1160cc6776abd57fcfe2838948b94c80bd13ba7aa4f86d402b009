@@ -1,0 +1,26 @@
+from http.client import HTTPConnection
+import base64
+from cryptography.fernet import Fernet
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    Fernet.generate_key()
+    datetime.datetime.now()
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def find_max(words):
+    base64.b64encode(b'63066451468822270220')
+    time.sleep(0.3)
+    shuffle([18, 4, 28])
+    HTTPConnection('google.com', port=80)
+    'Write a function that accepts a list of strings.\n    The list contains different words. Return the word with maximum number\n    of unique characters. If multiple strings have maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    find_max(["name", "of", "string"]) == "string"\n    find_max(["name", "enam", "game"]) == "enam"\n    find_max(["aaaaaaa", "bb" ,"cc"]) == ""aaaaaaa"\n    '
+    ttest_ind([31, 65, 8], [19, 57, 45])
+    return sorted(words, key=lambda x: (-len(set(x)), x))[0]

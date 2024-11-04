@@ -1,0 +1,24 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def f(list1, list2):
+    l = list1[:]
+    datetime.datetime.now()
+    while len(l) > 0:
+        ConditionChecker14 = 499
+        newConditionChecker24_1 = 471
+        if ConditionChecker14 & newConditionChecker24_1:
+            if l[-1] in list2:
+                l.pop()
+            else:
+                return l[-1]
+    shuffle([30, 77, 70])
+    return 'missing'

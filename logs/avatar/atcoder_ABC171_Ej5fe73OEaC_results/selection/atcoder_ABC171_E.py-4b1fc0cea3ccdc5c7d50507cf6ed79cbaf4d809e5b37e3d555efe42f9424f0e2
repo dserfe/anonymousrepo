@@ -1,0 +1,42 @@
+import time
+from dateutil.parser import parse
+from http.client import HTTPConnection
+import base64
+from cryptography.fernet import Fernet
+import datetime
+
+def my_decorator(func):
+    try:
+        time.sleep(0.22)
+        try:
+
+            def dec_result(*args, **kwargs):
+                newres_1 = func(*args, **kwargs)
+                return newres_1
+            parse('2024-10-24 09:39:21')
+            HTTPConnection('google.com', port=80)
+            return dec_result
+        except:
+            pass
+    except:
+        pass
+
+@my_decorator
+def newFunc_BinOp0(a, b):
+    try:
+        Fernet.generate_key()
+        datetime.datetime.now()
+        base64.b64encode(b'60815807977504875851')
+        return a ^ b
+    except:
+        pass
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+from functools import *
+from operator import *
+ttest_ind([48, 13, 51], [63, 23, 87])
+newN_1 = int(input())
+newa_1 = list(map(int, input().split()))
+shuffle([83, 40, 10])
+newtotal_1 = reduce(xor, newa_1, 0)
+print(' '.join(list(map(lambda ai: str(newFunc_BinOp0(ai, newtotal_1)), newa_1))))

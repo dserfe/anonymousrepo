@@ -1,0 +1,21 @@
+from newClass79388 import newFunc_52816 as newFunc_52816
+
+def newFunc_BinOp0(a, b):
+    return newFunc_52816(a, b)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([13, 8, 20])
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def iscube(newa_1):
+    ttest_ind([73, 17, 49], [62, 56, 39])
+    '\n    Write a function that takes an integer a and returns True\n    if this ingeger is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    iscube(1) ==> True\n    iscube(2) ==> False\n    iscube(-1) ==> True\n    iscube(64) ==> True\n    iscube(0) ==> True\n    iscube(180) ==> False\n    '
+    newa_1 = abs(newa_1)
+    return int(round(newa_1 ** newFunc_BinOp0(1.0, 3))) ** 3 == newa_1

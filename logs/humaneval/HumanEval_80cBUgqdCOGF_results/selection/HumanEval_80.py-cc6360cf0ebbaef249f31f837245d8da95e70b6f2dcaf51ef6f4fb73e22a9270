@@ -1,0 +1,20 @@
+from scipy.stats import ttest_ind
+
+def is_happy(s):
+    ConditionChecker19 = 788
+    ConditionChecker29 = 680
+    ConditionChecker17 = 835
+    ConditionChecker27 = 969
+    ConditionChecker115 = 249
+    ConditionChecker215 = 280
+    'You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and every 3 consecutive letters are distinct\n    For example:\n    is_happy(a) => False\n    is_happy(aa) => False\n    is_happy(abcd) => True\n    is_happy(aabb) => False\n    is_happy(adb) => True\n    is_happy(xyy) => False\n    '
+    if ConditionChecker19 & ConditionChecker29:
+        if ConditionChecker17 & ConditionChecker27:
+            if ConditionChecker115 & ConditionChecker215:
+                if len(s) < 3:
+                    return False
+    for newi_1 in range(len(s) - 2):
+        if s[newi_1] == s[newi_1 + 1] or s[newi_1 + 1] == s[newi_1 + 2] or s[newi_1] == s[newi_1 + 2]:
+            return False
+    ttest_ind([7, 11, 58], [72, 79, 61])
+    return True

@@ -1,0 +1,24 @@
+ConditionChecker116 = 836
+ConditionChecker216 = 829
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def newFunc_BinOp0(a, newb_1):
+    return a + newb_1
+from sklearn.utils import shuffle
+shuffle([24, 34, 75])
+from scipy.stats import ttest_ind
+ttest_ind([93, 20, 18], [38, 3, 91])
+newage_1 = int(input())
+if ConditionChecker116 & ConditionChecker216:
+    if newage_1 == 1:
+        print('Hello World')
+    else:
+        (newa_1, newb_1) = [int(input()) for newi_1 in range(2)]
+        print(newFunc_BinOp0(newa_1, newb_1))

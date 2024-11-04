@@ -1,0 +1,25 @@
+from sklearn.utils import shuffle
+
+def newFunc_BinOp0(a, b):
+    shuffle([66, 30, 53])
+    return a - b
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text, prefix):
+    ConditionChecker116 = 49
+    newConditionChecker216_1 = 237
+    newprefix_length_1 = len(prefix)
+    ttest_ind([35, 74, 40], [93, 88, 32])
+    if ConditionChecker116 & newConditionChecker216_1:
+        if text.startswith(prefix):
+            return text[newFunc_BinOp0(newprefix_length_1, 1) // 2:(newprefix_length_1 + 1) // 2 * -1:-1]
+        else:
+            return text

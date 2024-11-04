@@ -1,0 +1,50 @@
+import threading
+import queue
+
+def Func_newFunc0_29_0(y1, y2):
+    return y2 - y1
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_7_0(x1, newx2_1):
+    return newx2_1 - x1
+from scipy.stats import ttest_ind
+p = input().split(' ')
+x1 = int(p[0])
+y1 = int(p[1])
+newx2_1 = int(p[2])
+y2 = int(p[3])
+queue_Func_newFunc0_7_00 = queue.Queue()
+
+def Func_newFunc0_7_0_thread(queue):
+    newresult_1 = Func_newFunc0_7_0(x1, newx2_1)
+    queue.put(newresult_1)
+thread_Func_newFunc0_7_00 = threading.Thread(target=Func_newFunc0_7_0_thread, args=(queue_Func_newFunc0_7_00,))
+thread_Func_newFunc0_7_00.start()
+thread_Func_newFunc0_7_00.join()
+result_Func_newFunc0_7_00 = queue_Func_newFunc0_7_00.get()
+DIF1 = result_Func_newFunc0_7_00
+queue_Func_newFunc0_29_00 = queue.Queue()
+
+def Func_newFunc0_29_0_thread(queue):
+    newresult_1 = Func_newFunc0_29_0(y1, y2)
+    queue.put(newresult_1)
+thread_Func_newFunc0_29_00 = threading.Thread(target=Func_newFunc0_29_0_thread, args=(queue_Func_newFunc0_29_00,))
+thread_Func_newFunc0_29_00.start()
+thread_Func_newFunc0_29_00.join()
+result_Func_newFunc0_29_00 = queue_Func_newFunc0_29_00.get()
+DIF2 = result_Func_newFunc0_29_00
+x3 = newx2_1 - DIF2
+y3 = y2 + DIF1
+x4 = x1 - DIF2
+ttest_ind([64, 11, 56], [7, 43, 27])
+newy4_1 = y1 + DIF1
+print(str(x3) + ' ' + str(y3) + ' ' + str(x4) + ' ' + str(newy4_1))

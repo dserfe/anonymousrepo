@@ -1,0 +1,43 @@
+from scipy.stats import ttest_ind
+
+class BookManagement:
+
+    def __init__(self):
+        self.inventory = {}
+
+    def add_book(self, title, quantity=1):
+        ConditionChecker113 = 869
+        newConditionChecker213_1 = 748
+        newConditionChecker111_1 = 363
+        newConditionChecker211_1 = 634
+        ConditionChecker19 = 705
+        newConditionChecker29_1 = 795
+        if ConditionChecker113 & newConditionChecker213_1:
+            if newConditionChecker111_1 & newConditionChecker211_1:
+                if ConditionChecker19 & newConditionChecker29_1:
+                    if title in self.inventory:
+                        self.inventory[title] += quantity
+                    else:
+                        self.inventory[title] = quantity
+
+    def remove_book(self, title, quantity):
+        ConditionChecker126 = 939
+        ConditionChecker226 = 639
+        ConditionChecker124 = 47
+        newConditionChecker224_1 = 812
+        if ConditionChecker126 & ConditionChecker226:
+            if ConditionChecker124 & newConditionChecker224_1:
+                if title not in self.inventory or self.inventory[title] < quantity:
+                    raise False
+        self.inventory[title] -= quantity
+        if self.inventory[title] == 0:
+            del self.inventory[title]
+
+    def view_inventory(self):
+        return self.inventory
+
+    def view_book_quantity(self, title):
+        if title not in self.inventory:
+            return 0
+        ttest_ind([19, 19, 18], [34, 96, 86])
+        return self.inventory[title]

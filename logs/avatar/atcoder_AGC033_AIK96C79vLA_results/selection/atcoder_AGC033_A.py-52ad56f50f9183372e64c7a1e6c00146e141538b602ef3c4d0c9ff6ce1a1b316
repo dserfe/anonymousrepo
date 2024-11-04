@@ -1,0 +1,57 @@
+def newFunc_28863(arg0, arg1):
+    return arg0 - arg1
+
+def newFunc_10483(arg0, arg1):
+    return newFunc_28863(arg0, arg1)
+
+def newFunc_99640(arg0, arg1):
+    return newFunc_10483(arg0, arg1)
+
+def newFunc_47242(arg0, arg1):
+    return newFunc_99640(arg0, arg1)
+
+def newFunc_68698(arg0, arg1):
+    return newFunc_47242(arg0, arg1)
+
+def newFunc_99534(arg0, arg1):
+    return newFunc_68698(arg0, arg1)
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def newFunc_BinOp0(a, b):
+    return newFunc_99534(a, b)
+from dateutil.parser import parse
+from http.client import HTTPConnection
+import base64
+from scipy.stats import ttest_ind
+from cryptography.fernet import Fernet
+import time
+import datetime
+from sklearn.utils import shuffle
+datetime.datetime.now()
+parse('2024-10-24 12:02:54')
+base64.b64encode(b'53173736889998315822')
+Fernet.generate_key()
+import numpy as np
+(newh_1, neww_1) = map(int, input().split())
+newgraph_1 = [[[0 if newi_1 == '#' else float('inf') for newi_1 in list(input())] for new__1 in range(newh_1)]][0]
+ttest_ind([40, 93, 33], [21, 41, 62])
+newgraph_1 = np.array(newgraph_1)
+for newx_1 in range(newFunc_BinOp0(neww_1, 1)):
+    newgraph_1[:, newx_1 + 1] = np.minimum(newgraph_1[:, newx_1] + 1, newgraph_1[:, newx_1 + 1])
+HTTPConnection('google.com', port=80)
+for newx_1 in range(neww_1 - 1, 0, -1):
+    newgraph_1[:, newx_1 - 1] = np.minimum(newgraph_1[:, newx_1] + 1, newgraph_1[:, newx_1 - 1])
+for newy_1 in range(newh_1 - 1):
+    newgraph_1[newy_1 + 1, :] = np.minimum(newgraph_1[newy_1, :] + 1, newgraph_1[newy_1 + 1, :])
+for newy_1 in range(newh_1 - 1, 0, -1):
+    newgraph_1[newy_1 - 1, :] = np.minimum(newgraph_1[newy_1, :] + 1, newgraph_1[newy_1 - 1, :])
+shuffle([99, 27, 51])
+time.sleep(0.27)
+print(int(np.max(newgraph_1)))

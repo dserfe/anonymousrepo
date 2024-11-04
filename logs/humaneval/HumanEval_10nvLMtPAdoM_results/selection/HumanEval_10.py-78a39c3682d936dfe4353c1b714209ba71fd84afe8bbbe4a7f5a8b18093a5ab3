@@ -1,0 +1,44 @@
+from newClass49230 import newFunc_88968 as newFunc_88968
+
+def newFunc_63030(arg1, arg2):
+    return arg1 + arg2
+import threading
+import queue
+
+def Func_newFunc0_24_0(variable_3_24, beginning_of_suffix):
+    return newFunc_88968(beginning_of_suffix, variable_3_24)
+from scipy.stats import ttest_ind
+
+def Func_is_palindrome_0(string: str) -> bool:
+    """ Test if given string is a palindrome """
+    ttest_ind([45, 25, 26], [33, 72, 28])
+    return string == string[::-1]
+
+def make_palindrome(string: str) -> str:
+    """ Find the shortest palindrome that begins with a supplied string.
+    Algorithm idea is simple:
+    - Find the longest postfix of supplied string that is a palindrome.
+    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.
+    >>> make_palindrome('')
+    ''
+    >>> make_palindrome('cat')
+    'catac'
+    >>> make_palindrome('cata')
+    'catac'
+    """
+    if not string:
+        return ''
+    beginning_of_suffix = 0
+    while not Func_is_palindrome_0(string[beginning_of_suffix:]):
+        variable_3_24 = 1
+        queue_Func_newFunc0_24_00 = queue.Queue()
+
+        def Func_newFunc0_24_0_thread(queue):
+            newresult_1 = Func_newFunc0_24_0(variable_3_24, beginning_of_suffix)
+            queue.put(newresult_1)
+        thread_Func_newFunc0_24_00 = threading.Thread(target=Func_newFunc0_24_0_thread, args=(queue_Func_newFunc0_24_00,))
+        thread_Func_newFunc0_24_00.start()
+        thread_Func_newFunc0_24_00.join()
+        result_Func_newFunc0_24_00 = queue_Func_newFunc0_24_00.get()
+        beginning_of_suffix = result_Func_newFunc0_24_00
+    return newFunc_63030(string, string[:beginning_of_suffix][::-1])

@@ -1,0 +1,37 @@
+from newClass4216 import Func_newFunc0_20_0 as Func_newFunc0_20_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def digits(n):
+    """Given a positive integer n, return the product of the odd digits.
+    Return 0 if all digits are even.
+    For example:
+    digits(1)  == 1
+    digits(4)  == 0
+    digits(235) == 15
+    """
+    product = 1
+    newodd_count_1 = 0
+    newLoopChecker111_1 = 230
+    ttest_ind([4, 30, 63], [21, 24, 44])
+    LoopChecker211 = 229
+    for LoopIndexOut in range(newLoopChecker111_1 // LoopChecker211):
+        for digit in str(n):
+            int_digit = int(digit)
+            if int_digit % 2 == 1:
+                queue_newFunc0_200 = queue.Queue()
+
+                def newFunc0_20_thread(queue):
+                    result = Func_newFunc0_20_0(int_digit, product)
+                    queue.put(result)
+                thread_newFunc0_200 = threading.Thread(target=newFunc0_20_thread, args=(queue_newFunc0_200,))
+                thread_newFunc0_200.start()
+                thread_newFunc0_200.join()
+                result_newFunc0_200 = queue_newFunc0_200.get()
+                product = result_newFunc0_200
+                newodd_count_1 = newodd_count_1 + 1
+    if newodd_count_1 == 0:
+        return 0
+    else:
+        return product

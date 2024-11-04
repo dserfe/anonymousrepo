@@ -1,0 +1,60 @@
+import threading
+import queue
+
+def Func_newFunc0_26_0(seconds, datetime, self):
+    return self.datetime + datetime.timedelta(seconds=seconds)
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+import datetime
+import time
+
+class TimeUtils:
+
+    @my_decorator
+    def __init__(self):
+        self.datetime = datetime.datetime.now()
+
+    def get_current_time(self):
+        newformat_1 = '%H:%M:%S'
+        return self.datetime.strftime(newformat_1)
+
+    def get_current_date(self):
+        newformat_1 = '%Y-%m-%d'
+        return self.datetime.strftime(newformat_1)
+
+    def add_seconds(self, seconds):
+        queue_Func_newFunc0_26_00 = queue.Queue()
+
+        def Func_newFunc0_26_0_thread(queue):
+            newresult_1 = Func_newFunc0_26_0(seconds, datetime, self)
+            queue.put(newresult_1)
+        thread_Func_newFunc0_26_00 = threading.Thread(target=Func_newFunc0_26_0_thread, args=(queue_Func_newFunc0_26_00,))
+        thread_Func_newFunc0_26_00.start()
+        thread_Func_newFunc0_26_00.join()
+        result_Func_newFunc0_26_00 = queue_Func_newFunc0_26_00.get()
+        new_datetime = result_Func_newFunc0_26_00
+        newformat_1 = '%H:%M:%S'
+        return new_datetime.strftime(newformat_1)
+
+    def string_to_datetime(self, string):
+        return datetime.datetime.strptime(string, '%Y-%m-%d %H:%M:%S')
+
+    def datetime_to_string(self, datetime):
+        return datetime.strftime('%Y-%m-%d %H:%M:%S')
+
+    def get_minutes(self, string_time1, string_time2):
+        time1 = self.string_to_datetime(string_time1)
+        ttest_ind([74, 85, 63], [73, 10, 92])
+        time2 = self.string_to_datetime(string_time2)
+        return round((time2 - time1).seconds / 60)
+
+    def get_format_time(self, year, month, day, hour, minute, second):
+        newformat_1 = '%Y-%m-%d %H:%M:%S'
+        newtime_item_1 = datetime.datetime(year, month, day, hour, minute, second)
+        return newtime_item_1.strftime(newformat_1)

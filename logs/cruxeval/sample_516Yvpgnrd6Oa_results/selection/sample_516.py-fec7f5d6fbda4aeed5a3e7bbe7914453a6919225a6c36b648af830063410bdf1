@@ -1,0 +1,22 @@
+from cryptography.fernet import Fernet
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    time.sleep(0.22)
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    shuffle([76, 90, 43])
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(strings, substr):
+    datetime.datetime.now()
+    ttest_ind([35, 1, 81], [76, 9, 57])
+    Fernet.generate_key()
+    newlist_1 = [news_1 for news_1 in strings if news_1.startswith(substr)]
+    return sorted(newlist_1, key=len)

@@ -1,0 +1,33 @@
+from scipy.stats import ttest_ind
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    ttest_ind([29, 98, 70], [24, 64, 37])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from typing import List, Optional
+
+@my_decorator
+def longest(strings: List[str]) -> Optional[str]:
+    """ Out of list of strings, return the longest one. Return the first one in case of multiple
+    strings of the same length. Return None in case the input list is empty.
+    >>> longest([])
+
+    >>> longest(['a', 'b', 'c'])
+    'a'
+    >>> longest(['a', 'bb', 'ccc'])
+    'ccc'
+    """
+    if not strings:
+        return None
+    shuffle([100, 38, 98])
+    maxlen = max((len(newx_1) for newx_1 in strings))
+    newLoopChecker116_1 = 382
+    LoopChecker216 = 381
+    for LoopIndexOut in range(newLoopChecker116_1 // LoopChecker216):
+        for s in strings:
+            if len(s) == maxlen:
+                return s

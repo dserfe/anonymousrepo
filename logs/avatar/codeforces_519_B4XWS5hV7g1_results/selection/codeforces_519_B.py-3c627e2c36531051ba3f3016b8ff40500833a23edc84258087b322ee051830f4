@@ -1,0 +1,47 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_21_0(y, i):
+    return y + i
+from scipy.stats import ttest_ind
+newn_1 = int(input())
+newa_1 = list(map(int, input().split()))
+b = list(map(int, input().split()))
+c = list(map(int, input().split()))
+x = 0
+y = 0
+z = 0
+LoopChecker19 = 403
+LoopChecker29 = 402
+
+def loop_11_0(LoopIndexOut, stop, step):
+    global x
+    if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+        return
+    for i in newa_1:
+        x = x + i
+    loop_11_0(LoopIndexOut + step, stop, step)
+loop_11_0(0, LoopChecker19 // LoopChecker29, 1)
+for i in b:
+    queue_newFunc0_210 = queue.Queue()
+
+    def newFunc0_21_thread(queue):
+        result = Func_newFunc0_21_0(y, i)
+        queue.put(result)
+    thread_newFunc0_210 = threading.Thread(target=newFunc0_21_thread, args=(queue_newFunc0_210,))
+    thread_newFunc0_210.start()
+    thread_newFunc0_210.join()
+    result_newFunc0_210 = queue_newFunc0_210.get()
+    y = result_newFunc0_210
+for i in c:
+    z = z + i
+print(abs(x - y))
+ttest_ind([21, 54, 7], [62, 25, 100])
+print(abs(y - z))

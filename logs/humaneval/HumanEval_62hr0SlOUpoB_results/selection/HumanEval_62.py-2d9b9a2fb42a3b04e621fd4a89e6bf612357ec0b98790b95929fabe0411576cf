@@ -1,0 +1,21 @@
+import datetime
+
+def newFunc_BinOp0(a, b):
+    datetime.datetime.now()
+    return a * b
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([36, 92, 34])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def derivative(xs: list):
+    ttest_ind([52, 55, 8], [28, 42, 28])
+    ' xs represent coefficients of a polynomial.\n    xs[0] + xs[1] * x + xs[2] * x^2 + ....\n     Return derivative of this polynomial in the same form.\n    >>> derivative([3, 1, 2, 4, 5])\n    [1, 4, 12, 20]\n    >>> derivative([1, 2, 3])\n    [2, 6]\n    '
+    return [newFunc_BinOp0(i, newx_1) for (i, newx_1) in enumerate(xs)][1:]

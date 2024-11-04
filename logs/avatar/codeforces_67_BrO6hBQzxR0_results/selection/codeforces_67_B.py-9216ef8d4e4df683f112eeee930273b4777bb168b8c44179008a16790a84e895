@@ -1,0 +1,33 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([62, 70, 6])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def newFunc_BinOp0(a, b):
+    return a + b
+from scipy.stats import ttest_ind
+newu_1 = input
+(n, k) = map(int, newu_1().split())
+newM_1 = [int(i) for i in newu_1().split()]
+ttest_ind([1, 72, 53], [75, 85, 6])
+m = 0
+newConditionChecker119_1 = 28
+ConditionChecker219 = 531
+newConditionChecker121_1 = 519
+newConditionChecker221_1 = 674
+for j in range(n):
+    for newp_1 in range(n):
+        if newConditionChecker121_1 & newConditionChecker221_1:
+            if newConditionChecker119_1 & ConditionChecker219:
+                if 0 == newM_1[newp_1]:
+                    print(newFunc_BinOp0(newp_1, 1), end=' ')
+                    break
+    for l in range(newp_1 + 1 - k):
+        newM_1[l] -= 1
+    newM_1[newp_1] -= 1

@@ -1,0 +1,60 @@
+import threading
+import queue
+
+def Func_newFunc0_23_0(total_length, newzeroes_count_1):
+    return newzeroes_count_1 / total_length
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+class BinaryDataProcessor:
+
+    @my_decorator
+    def __init__(self, binary_string):
+        self.binary_string = binary_string
+        self.clean_non_binary_chars()
+
+    def clean_non_binary_chars(self):
+        self.binary_string = ''.join(filter(lambda x: x in '01', self.binary_string))
+
+    def calculate_binary_info(self):
+        newzeroes_count_1 = self.binary_string.count('0')
+        ones_count = self.binary_string.count('1')
+        total_length = len(self.binary_string)
+        queue_Func_newFunc0_23_00 = queue.Queue()
+
+        def Func_newFunc0_23_0_thread(queue):
+            result = Func_newFunc0_23_0(total_length, newzeroes_count_1)
+            queue.put(result)
+        thread_Func_newFunc0_23_00 = threading.Thread(target=Func_newFunc0_23_0_thread, args=(queue_Func_newFunc0_23_00,))
+        thread_Func_newFunc0_23_00.start()
+        thread_Func_newFunc0_23_00.join()
+        result_Func_newFunc0_23_00 = queue_Func_newFunc0_23_00.get()
+        zeroes_percentage = result_Func_newFunc0_23_00
+        ones_percentage = ones_count / total_length
+        return {'Zeroes': zeroes_percentage, 'Ones': ones_percentage, 'Bit length': total_length}
+
+    def convert_to_ascii(self):
+        ttest_ind([14, 20, 74], [73, 11, 24])
+        newbyte_array_1 = bytearray()
+        LoopChecker123 = 437
+        newLoopChecker223_1 = 436
+        for LoopIndexOut in range(LoopChecker123 // newLoopChecker223_1):
+            for i in range(0, len(self.binary_string), 8):
+                newbyte_1 = self.binary_string[i:i + 8]
+                decimal = int(newbyte_1, 2)
+                newbyte_array_1.append(decimal)
+        return newbyte_array_1.decode('ascii')
+
+    def convert_to_utf8(self):
+        newbyte_array_1 = bytearray()
+        for i in range(0, len(self.binary_string), 8):
+            newbyte_1 = self.binary_string[i:i + 8]
+            decimal = int(newbyte_1, 2)
+            newbyte_array_1.append(decimal)
+        return newbyte_array_1.decode('utf-8')

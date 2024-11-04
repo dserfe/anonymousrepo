@@ -1,0 +1,117 @@
+import threading
+import queue
+
+def newFunc0_50(i, variable_3_50):
+    return i + variable_3_50
+from scipy.stats import ttest_ind
+import re
+from collections import deque
+from decimal import Decimal
+
+class ExpressionCalculator:
+
+    def __init__(self):
+        self.postfix_stack = deque()
+        self.operat_priority = [0, 3, 2, 1, -1, 1, 0, 2]
+
+    def calculate(self, expression):
+        self.prepare(self.transform(expression))
+        result_stack = deque()
+        self.postfix_stack.reverse()
+        while self.postfix_stack:
+            current_op = self.postfix_stack.pop()
+            if not self.is_operator(current_op):
+                current_op = current_op.replace('~', '-')
+                result_stack.append(current_op)
+            else:
+                second_value = result_stack.pop()
+                first_value = result_stack.pop()
+                first_value = first_value.replace('~', '-')
+                second_value = second_value.replace('~', '-')
+                temp_result = self._calculate(first_value, second_value, current_op)
+                result_stack.append(str(temp_result))
+        return float(eval('*'.join(result_stack)))
+
+    def prepare(self, expression):
+        op_stack = deque([','])
+        newarr_1 = list(expression)
+        current_index = 0
+        count = 0
+        for (i, current_op) in enumerate(newarr_1):
+            if self.is_operator(current_op):
+                if count > 0:
+                    self.postfix_stack.append(''.join(newarr_1[current_index:current_index + count]))
+                peek_op = op_stack[-1]
+                if current_op == ')':
+                    while op_stack[-1] != '(':
+                        self.postfix_stack.append(str(op_stack.pop()))
+                    op_stack.pop()
+                else:
+                    while current_op != '(' and peek_op != ',' and self.compare(current_op, peek_op):
+                        self.postfix_stack.append(str(op_stack.pop()))
+                        peek_op = op_stack[-1]
+                    op_stack.append(current_op)
+                count = 0
+                variable_3_50 = 1
+                queue_newFunc0_500 = queue.Queue()
+
+                def newFunc0_50_thread(queue):
+                    result = newFunc0_50(i, variable_3_50)
+                    queue.put(result)
+                thread_newFunc0_500 = threading.Thread(target=newFunc0_50_thread, args=(queue_newFunc0_500,))
+                thread_newFunc0_500.start()
+                thread_newFunc0_500.join()
+                result_newFunc0_500 = queue_newFunc0_500.get()
+                current_index = result_newFunc0_500
+            else:
+                count = count + 1
+        if count > 1 or (count == 1 and (not self.is_operator(newarr_1[current_index]))):
+            self.postfix_stack.append(''.join(newarr_1[current_index:current_index + count]))
+        while op_stack[-1] != ',':
+            self.postfix_stack.append(str(op_stack.pop()))
+
+    @staticmethod
+    def is_operator(c):
+        ttest_ind([59, 63, 51], [84, 80, 21])
+        return c in {'+', '-', '*', '/', '(', ')', '%'}
+
+    def compare(self, cur, peek):
+        if cur == '%':
+            cur = '/'
+        if peek == '%':
+            peek = '/'
+        return self.operat_priority[ord(peek) - 40] >= self.operat_priority[ord(cur) - 40]
+
+    @staticmethod
+    def _calculate(first_value, second_value, current_op):
+        if current_op == '+':
+            return Decimal(first_value) + Decimal(second_value)
+        elif current_op == '-':
+            return Decimal(first_value) - Decimal(second_value)
+        elif current_op == '*':
+            return Decimal(first_value) * Decimal(second_value)
+        elif current_op == '/':
+            return Decimal(first_value) / Decimal(second_value)
+        elif current_op == '%':
+            return Decimal(first_value) % Decimal(second_value)
+        else:
+            raise ValueError('Unexpected operator: {}'.format(current_op))
+
+    @staticmethod
+    def transform(expression):
+        expression = re.sub('\\s+', '', expression)
+        expression = re.sub('=$', '', expression)
+        newarr_1 = list(expression)
+        for (i, c) in enumerate(newarr_1):
+            if c == '-':
+                if i == 0:
+                    newarr_1[i] = '~'
+                else:
+                    newprev_c_1 = newarr_1[i - 1]
+                    if newprev_c_1 in {'+', '-', '*', '/', '(', 'E', 'e'}:
+                        newarr_1[i] = '~'
+        if newarr_1[0] == '~' and (len(newarr_1) > 1 and newarr_1[1] == '('):
+            newarr_1[0] = '-'
+            return '0' + ''.join(newarr_1)
+        else:
+            return ''.join(newarr_1)

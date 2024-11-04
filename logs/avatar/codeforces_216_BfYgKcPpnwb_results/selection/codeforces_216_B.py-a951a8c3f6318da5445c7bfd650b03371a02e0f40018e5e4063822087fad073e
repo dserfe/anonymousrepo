@@ -1,0 +1,73 @@
+import threading
+import queue
+import threading
+import queue
+
+def Func_newFunc0_12_0(x, nodes):
+    return nodes + x
+
+def readInts():
+    return map(int, input().split())
+
+def dfs(g, newseen_1, i):
+    if i in newseen_1:
+        return (0, 0)
+    newseen_1.add(i)
+    nodes = 1
+    edges = len(g[i])
+    for j in g[i]:
+        queue_dfs0 = queue.Queue()
+
+        def dfs_thread(queue):
+            result = dfs(g, newseen_1, j)
+            queue.put(result)
+        newthread_dfs0_1 = threading.Thread(target=dfs_thread, args=(queue_dfs0,))
+        newthread_dfs0_1.start()
+        newthread_dfs0_1.join()
+        result_dfs0 = queue_dfs0.get()
+        (x, y) = result_dfs0
+        queue_Func_newFunc0_12_00 = queue.Queue()
+
+        def Func_newFunc0_12_0_thread(queue):
+            result = Func_newFunc0_12_0(x, nodes)
+            queue.put(result)
+        thread_Func_newFunc0_12_00 = threading.Thread(target=Func_newFunc0_12_0_thread, args=(queue_Func_newFunc0_12_00,))
+        thread_Func_newFunc0_12_00.start()
+        thread_Func_newFunc0_12_00.join()
+        result_Func_newFunc0_12_00 = queue_Func_newFunc0_12_00.get()
+        nodes = result_Func_newFunc0_12_00
+        edges += y
+    return (nodes, edges)
+
+def solve():
+    line0 = []
+    try:
+        line0 = readInts()
+    except EOFError:
+        return False
+    (n, m) = line0
+    g = {}
+    newseen_1 = set()
+
+    def loop_20_4(i, stop, step):
+        if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+            return
+        g[i] = set()
+        loop_20_4(i + step, stop, step)
+    loop_20_4(1, n + 1, 1)
+    for _ in range(m):
+        (a, b) = readInts()
+        g[a].add(b)
+        g[b].add(a)
+    ans = 0
+    for i in range(1, n + 1):
+        if i not in newseen_1:
+            (nodes, edges) = dfs(g, newseen_1, i)
+            if nodes > 1 and nodes % 2 == 1 and (2 * nodes == edges):
+                ans += 1
+    if (n - ans) % 2 == 1:
+        ans += 1
+    print(ans)
+    return True
+while solve():
+    pass

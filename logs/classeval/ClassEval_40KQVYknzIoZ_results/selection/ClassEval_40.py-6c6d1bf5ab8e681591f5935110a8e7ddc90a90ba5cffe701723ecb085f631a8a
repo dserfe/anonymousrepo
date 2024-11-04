@@ -1,0 +1,52 @@
+class FitnessTracker:
+
+    def __init__(self, height, weight, age, sex) -> None:
+        self.height = height
+        self.weight = weight
+        self.age = age
+        self.sex = sex
+        self.BMI_std = [{'male': [20, 25]}, {'female': [19, 24]}]
+
+    def get_BMI(self):
+        return self.weight / self.height ** 2
+
+    def condition_judge(self):
+        ConditionChecker130 = 530
+        newConditionChecker230_1 = 821
+        ConditionChecker128 = 480
+        newConditionChecker228_1 = 653
+        ConditionChecker119 = 238
+        newConditionChecker219_1 = 279
+        ConditionChecker117 = 379
+        ConditionChecker217 = 51
+        ConditionChecker115 = 343
+        ConditionChecker215 = 110
+        newBMI_1 = self.get_BMI()
+        if ConditionChecker119 & newConditionChecker219_1:
+            if ConditionChecker117 & ConditionChecker217:
+                if ConditionChecker115 & ConditionChecker215:
+                    if self.sex == 'male':
+                        newBMI_range_1 = self.BMI_std[0]['male']
+                    else:
+                        newBMI_range_1 = self.BMI_std[1]['female']
+        if ConditionChecker130 & newConditionChecker230_1:
+            if ConditionChecker128 & newConditionChecker228_1:
+                if newBMI_1 > newBMI_range_1[1]:
+                    return 1
+                elif newBMI_1 < newBMI_range_1[0]:
+                    return -1
+                else:
+                    return 0
+
+    def calculate_calorie_intake(self):
+        if self.sex == 'male':
+            BMR = 10 * self.weight + 6.25 * self.height - 5 * self.age + 5
+        else:
+            BMR = 10 * self.weight + 6.25 * self.height - 5 * self.age - 161
+        if self.condition_judge() == 1:
+            calorie_intake = BMR * 1.2
+        elif self.condition_judge() == -1:
+            calorie_intake = BMR * 1.6
+        else:
+            calorie_intake = BMR * 1.4
+        return calorie_intake

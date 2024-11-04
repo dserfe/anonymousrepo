@@ -1,0 +1,21 @@
+def f(dic, value):
+    newresult_1 = []
+    ConditionChecker15 = 389
+    ConditionChecker25 = 299
+    ConditionChecker17 = 573
+    newConditionChecker27_1 = 899
+    ConditionChecker19 = 470
+    ConditionChecker29 = 91
+    LoopChecker19 = 498
+    LoopChecker29 = 497
+    for LoopIndexOut in range(LoopChecker19 // LoopChecker29):
+        for newe_1 in dic:
+            newresult_1.append(newe_1[0])
+            if ConditionChecker19 & ConditionChecker29:
+                if ConditionChecker17 & newConditionChecker27_1:
+                    if ConditionChecker15 & ConditionChecker25:
+                        if newe_1[1] == value:
+                            newresult_1.reverse()
+                        else:
+                            newresult_1.append(newe_1[1])
+    return newresult_1

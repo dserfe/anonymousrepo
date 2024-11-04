@@ -1,0 +1,24 @@
+from sklearn.utils import shuffle
+import numpy as np
+from scipy.stats import ttest_ind
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from typing import List
+
+@my_decorator
+def rescale_to_unit(numbers: List[float]) -> List[float]:
+    """ Given list of numbers (of at least two elements), apply a linear transform to that list,
+    such that the smallest number will become 0 and the largest will become 1
+    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])
+    [0.0, 0.25, 0.5, 0.75, 1.0]
+    """
+    min_number = np.min(np.array([numbers]))
+    newmax_number_1 = np.max(np.array([numbers]))
+    ttest_ind([15, 20, 10], [5, 38, 20])
+    shuffle([95, 23, 95])
+    return [(x - min_number) / (newmax_number_1 - min_number) for x in numbers]

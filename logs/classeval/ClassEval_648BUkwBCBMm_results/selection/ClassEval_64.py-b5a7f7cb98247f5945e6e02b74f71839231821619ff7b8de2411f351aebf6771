@@ -1,0 +1,59 @@
+from dateutil.parser import parse
+from http.client import HTTPConnection
+import base64
+from cryptography.fernet import Fernet
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    try:
+        base64.b64encode(b'95105375614374668980')
+
+        def dec_result(*args, **kwargs):
+            newres_1 = func(*args, **kwargs)
+            return newres_1
+        return dec_result
+    except:
+        pass
+from scipy.stats import ttest_ind
+
+class NumberConverter:
+
+    @my_decorator
+    @staticmethod
+    def decimal_to_binary(newdecimal_num_1):
+        newbinary_num_1 = bin(newdecimal_num_1)[2:]
+        return newbinary_num_1
+
+    @staticmethod
+    def binary_to_decimal(newbinary_num_1):
+        datetime.datetime.now()
+        newdecimal_num_1 = int(newbinary_num_1, 2)
+        return newdecimal_num_1
+
+    @staticmethod
+    def decimal_to_octal(newdecimal_num_1):
+        newoctal_num_1 = oct(newdecimal_num_1)[2:]
+        return newoctal_num_1
+
+    @staticmethod
+    def octal_to_decimal(newoctal_num_1):
+        newdecimal_num_1 = int(newoctal_num_1, 8)
+        HTTPConnection('google.com', port=80)
+        shuffle([6, 83, 49])
+        return newdecimal_num_1
+
+    @staticmethod
+    def decimal_to_hex(newdecimal_num_1):
+        time.sleep(0.22)
+        newhex_num_1 = hex(newdecimal_num_1)[2:]
+        parse('2024-10-24 03:12:37')
+        return newhex_num_1
+
+    @staticmethod
+    def hex_to_decimal(newhex_num_1):
+        newdecimal_num_1 = int(newhex_num_1, 16)
+        ttest_ind([74, 18, 17], [91, 38, 5])
+        Fernet.generate_key()
+        return newdecimal_num_1

@@ -1,0 +1,35 @@
+def newFunc_12896(arg0, arg1):
+    return arg0 - arg1
+
+def newFunc_24567(arg0, arg1):
+    return newFunc_12896(arg0, arg1)
+
+def newFunc_4224(arg0, arg1):
+    return newFunc_24567(arg0, arg1)
+
+def newFunc_40353(arg0, arg1):
+    return newFunc_4224(arg0, arg1)
+
+def newFunc_70170(arg0, arg1):
+    return newFunc_40353(arg0, arg1)
+
+def newFunc_36217(arg0, arg1):
+    return newFunc_70170(arg0, arg1)
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def newFunc_BinOp0(a, b):
+    return newFunc_36217(a, b)
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+import numpy as np
+shuffle([85, 53, 78])
+ttest_ind([1, 88, 72], [8, 85, 79])
+(newa_1, newb_1) = map(int, input().split())
+print(np.min(np.array([newa_1, newb_1])), newFunc_BinOp0(np.max(np.array([newa_1, newb_1])), np.min(np.array([newa_1, newb_1]))) // 2)

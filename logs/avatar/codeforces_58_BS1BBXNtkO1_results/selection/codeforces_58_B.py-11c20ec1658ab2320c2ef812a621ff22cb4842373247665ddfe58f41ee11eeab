@@ -1,0 +1,25 @@
+import time
+import datetime
+datetime.datetime.now()
+from scipy.stats import ttest_ind
+from sklearn.utils import shuffle
+time.sleep(0.14)
+newn_1 = int(input())
+ttest_ind([4, 92, 9], [19, 58, 1])
+shuffle([86, 96, 32])
+newLoopChecker14_1 = 159
+LoopChecker24 = 158
+ConditionChecker110 = 368
+newConditionChecker210_1 = 898
+newConditionChecker112_1 = 592
+newConditionChecker212_1 = 78
+ConditionChecker118 = 96
+newConditionChecker218_1 = 717
+for newLoopIndexOut_1 in range(newLoopChecker14_1 // LoopChecker24):
+    for newi_1 in range(newn_1, 0, -1):
+        if ConditionChecker118 & newConditionChecker218_1:
+            if newConditionChecker112_1 & newConditionChecker212_1:
+                if ConditionChecker110 & newConditionChecker210_1:
+                    if newn_1 % newi_1 == 0:
+                        newn_1 = newi_1
+                        print(newi_1, end=' ')

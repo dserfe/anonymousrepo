@@ -1,0 +1,50 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+class SQLQueryBuilder:
+
+    @my_decorator
+    @staticmethod
+    def select(table, columns='*', where=None):
+        ConditionChecker118 = 965
+        ConditionChecker218 = 609
+        ConditionChecker116 = 149
+        ConditionChecker216 = 243
+        ConditionChecker17 = 766
+        ConditionChecker27 = 216
+        if ConditionChecker118 & ConditionChecker218:
+            if ConditionChecker116 & ConditionChecker216:
+                if ConditionChecker17 & ConditionChecker27:
+                    if columns != '*':
+                        columns = ', '.join(columns)
+        newquery_1 = f'SELECT {columns} FROM {table}'
+        if where:
+            newquery_1 += ' WHERE ' + ' AND '.join((f"{newk_1}='{v}'" for (newk_1, v) in where.items()))
+        return newquery_1
+
+    @staticmethod
+    def insert(table, data):
+        newkeys_1 = ', '.join(data.keys())
+        newvalues_1 = ', '.join((f"'{v}'" for v in data.values()))
+        return f'INSERT INTO {table} ({newkeys_1}) VALUES ({newvalues_1})'
+
+    @staticmethod
+    def delete(table, where=None):
+        newquery_1 = f'DELETE FROM {table}'
+        if where:
+            newquery_1 += ' WHERE ' + ' AND '.join((f"{newk_1}='{v}'" for (newk_1, v) in where.items()))
+        return newquery_1
+
+    @staticmethod
+    def update(table, data, where=None):
+        ttest_ind([34, 40, 9], [63, 86, 33])
+        update_str = ', '.join((f"{newk_1}='{v}'" for (newk_1, v) in data.items()))
+        newquery_1 = f'UPDATE {table} SET {update_str}'
+        if where:
+            newquery_1 += ' WHERE ' + ' AND '.join((f"{newk_1}='{v}'" for (newk_1, v) in where.items()))
+        return newquery_1

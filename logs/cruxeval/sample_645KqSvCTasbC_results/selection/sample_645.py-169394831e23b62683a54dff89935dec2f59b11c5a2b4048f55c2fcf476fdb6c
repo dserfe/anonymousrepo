@@ -1,0 +1,24 @@
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([22, 50, 8])
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    time.sleep(0.06)
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(nums, target):
+    ttest_ind([29, 5, 67], [18, 99, 81])
+    datetime.datetime.now()
+    if nums.count(0):
+        return 0
+    elif nums.count(target) < 3:
+        return 1
+    else:
+        return nums.index(target)

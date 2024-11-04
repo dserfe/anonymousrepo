@@ -1,0 +1,28 @@
+from cryptography.fernet import Fernet
+ConditionChecker116 = 675
+ConditionChecker216 = 709
+import datetime
+from sklearn.utils import shuffle
+newConditionChecker110_1 = 426
+newConditionChecker210_1 = 779
+ConditionChecker18 = 154
+newConditionChecker28_1 = 680
+datetime.datetime.now()
+shuffle([22, 34, 67])
+from scipy.stats import ttest_ind
+newn_1 = int(input())
+newl1_1 = list(map(int, input().split()))
+newl1_1.sort()
+newa_1 = newl1_1[-1]
+ttest_ind([66, 39, 90], [33, 61, 92])
+newb_1 = newl1_1[0]
+Fernet.generate_key()
+if ConditionChecker116 & ConditionChecker216:
+    if newConditionChecker110_1 & newConditionChecker210_1:
+        if ConditionChecker18 & newConditionChecker28_1:
+            if newa_1 == newb_1:
+                print(newa_1 - newb_1, newn_1 * (newn_1 - 1) // 2)
+            else:
+                ac = newl1_1.count(newa_1)
+                bc = newl1_1.count(newb_1)
+                print(newa_1 - newb_1, ac * bc)

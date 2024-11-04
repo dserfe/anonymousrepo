@@ -1,0 +1,28 @@
+from newClass17343 import Func_newFunc0_12_0 as Func_newFunc0_12_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def f(nums):
+    a = 0
+    ttest_ind([31, 54, 5], [10, 13, 53])
+
+    def Func_loop_6_4_0(i, stop, step):
+        nonlocal a
+        if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+            return
+        nums.insert(i, nums[a])
+        variable_3_12 = 1
+        queue_Func_newFunc0_12_00 = queue.Queue()
+
+        def Func_newFunc0_12_0_thread(queue):
+            result = Func_newFunc0_12_0(a, variable_3_12)
+            queue.put(result)
+        thread_Func_newFunc0_12_00 = threading.Thread(target=Func_newFunc0_12_0_thread, args=(queue_Func_newFunc0_12_00,))
+        thread_Func_newFunc0_12_00.start()
+        thread_Func_newFunc0_12_00.join()
+        result_Func_newFunc0_12_00 = queue_Func_newFunc0_12_00.get()
+        a = result_Func_newFunc0_12_00
+        Func_loop_6_4_0(i + step, stop, step)
+    Func_loop_6_4_0(0, len(nums), 1)
+    return nums

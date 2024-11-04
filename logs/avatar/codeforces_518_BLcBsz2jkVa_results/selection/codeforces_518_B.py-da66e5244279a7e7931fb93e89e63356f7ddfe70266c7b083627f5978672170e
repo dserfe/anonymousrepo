@@ -1,0 +1,43 @@
+from sklearn.utils import shuffle
+import time
+import datetime
+datetime.datetime.now()
+from scipy.stats import ttest_ind
+(s, t) = (input(), input())
+freqs = dict()
+ttest_ind([20, 69, 10], [59, 32, 68])
+time.sleep(0.11)
+freqt = dict()
+(newyay_1, newwhoops_1) = (0, 0)
+newConditionChecker16_1 = 719
+newConditionChecker26_1 = 18
+shuffle([40, 3, 66])
+for newletra_1 in s:
+    if newConditionChecker16_1 & newConditionChecker26_1:
+        if newletra_1 in freqs:
+            freqs[newletra_1] += 1
+        else:
+            freqs[newletra_1] = 1
+for newletra_1 in t:
+    if newletra_1 in freqt:
+        freqt[newletra_1] += 1
+    else:
+        freqt[newletra_1] = 1
+for newletra_1 in freqs.keys():
+    while freqs[newletra_1] > 0 and newletra_1 in freqt and (freqt[newletra_1] > 0):
+        newyay_1 += 1
+        freqs[newletra_1] -= 1
+        freqt[newletra_1] -= 1
+for newletra_1 in freqs.keys():
+    while freqs[newletra_1] > 0:
+        if newletra_1.islower() and newletra_1.upper() in freqt.keys() and (freqt[newletra_1.upper()] > 0):
+            newwhoops_1 += 1
+            freqs[newletra_1] -= 1
+            freqt[newletra_1.upper()] -= 1
+        elif newletra_1.isupper() and newletra_1.lower() in freqt.keys() and (freqt[newletra_1.lower()] > 0):
+            newwhoops_1 += 1
+            freqs[newletra_1] -= 1
+            freqt[newletra_1.lower()] -= 1
+        else:
+            break
+print(newyay_1, newwhoops_1)

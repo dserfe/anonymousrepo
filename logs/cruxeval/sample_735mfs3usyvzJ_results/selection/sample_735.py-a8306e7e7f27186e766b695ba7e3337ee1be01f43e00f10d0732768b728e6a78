@@ -1,0 +1,23 @@
+import base64
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    datetime.datetime.now()
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(newsentence_1):
+    if newsentence_1 == '':
+        return ''
+    newsentence_1 = newsentence_1.replace('(', '')
+    shuffle([29, 51, 36])
+    base64.b64encode(b'46057241673933659737')
+    ttest_ind([12, 45, 69], [78, 24, 4])
+    newsentence_1 = newsentence_1.replace(')', '')
+    return newsentence_1.capitalize().replace(' ', '')

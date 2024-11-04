@@ -1,0 +1,27 @@
+import numpy as np
+
+def newFunc_BinOp0(a, b):
+    return a % b
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    shuffle([50, 75, 46])
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def solution(lst):
+    """Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.
+
+
+    Examples
+    solution([5, 8, 7, 1]) ==> 12
+    solution([3, 3, 3, 3, 3]) ==> 9
+    solution([30, 13, 24, 321]) ==>0
+    """
+    ttest_ind([15, 80, 44], [72, 33, 93])
+    return np.sum(np.array([[newx_1 for (newidx_1, newx_1) in enumerate(lst) if newFunc_BinOp0(newidx_1, 2) == 0 and newx_1 % 2 == 1]]))

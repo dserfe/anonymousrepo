@@ -1,0 +1,24 @@
+import base64
+import datetime
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(newtext_1):
+    ConditionChecker115 = 517
+    ConditionChecker215 = 837
+    newtext_1 = newtext_1.replace(' x', ' x.')
+    if ConditionChecker115 & ConditionChecker215:
+        if newtext_1.istitle():
+            return 'correct'
+    base64.b64encode(b'64889175095515819627')
+    newtext_1 = newtext_1.replace(' x.', ' x')
+    datetime.datetime.now()
+    ttest_ind([72, 59, 68], [14, 92, 76])
+    return 'mixed'

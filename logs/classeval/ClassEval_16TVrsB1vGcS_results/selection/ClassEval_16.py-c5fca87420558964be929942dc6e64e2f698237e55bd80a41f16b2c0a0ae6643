@@ -1,0 +1,64 @@
+from newClass41802 import Func_newFunc0_14_0 as Func_newFunc0_14_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+class Calculator:
+
+    def __init__(self):
+        self.operators = {'+': lambda x, y: x + y, '-': lambda x, y: x - y, '*': lambda x, y: x * y, '/': lambda x, y: x / y, '^': lambda x, y: x ** y}
+
+    def calculate(self, expression):
+        newoperand_stack_1 = []
+        operator_stack = []
+        num_buffer = ''
+        for char in expression:
+            if char.isdigit() or char == '.':
+                queue_Func_newFunc0_14_00 = queue.Queue()
+
+                def Func_newFunc0_14_0_thread(queue):
+                    result = Func_newFunc0_14_0(char, num_buffer)
+                    queue.put(result)
+                thread_Func_newFunc0_14_00 = threading.Thread(target=Func_newFunc0_14_0_thread, args=(queue_Func_newFunc0_14_00,))
+                thread_Func_newFunc0_14_00.start()
+                thread_Func_newFunc0_14_00.join()
+                result_Func_newFunc0_14_00 = queue_Func_newFunc0_14_00.get()
+                num_buffer = result_Func_newFunc0_14_00
+            else:
+                if num_buffer:
+                    newoperand_stack_1.append(float(num_buffer))
+                    num_buffer = ''
+                if char in '+-*/^':
+                    while operator_stack and operator_stack[-1] != '(' and (self.precedence(operator_stack[-1]) >= self.precedence(char)):
+                        (newoperand_stack_1, operator_stack) = self.apply_operator(newoperand_stack_1, operator_stack)
+                    operator_stack.append(char)
+                elif char == '(':
+                    operator_stack.append(char)
+                elif char == ')':
+                    while operator_stack and operator_stack[-1] != '(':
+                        (newoperand_stack_1, operator_stack) = self.apply_operator(newoperand_stack_1, operator_stack)
+                    operator_stack.pop()
+        if num_buffer:
+            newoperand_stack_1.append(float(num_buffer))
+        while operator_stack:
+            (newoperand_stack_1, operator_stack) = self.apply_operator(newoperand_stack_1, operator_stack)
+        return newoperand_stack_1[-1] if newoperand_stack_1 else None
+
+    def precedence(self, operator):
+        precedences = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
+        ttest_ind([60, 91, 3], [18, 26, 25])
+        return precedences.get(operator, 0)
+
+    def apply_operator(self, newoperand_stack_1, operator_stack):
+        operator = operator_stack.pop()
+        if operator == '^':
+            operand2 = newoperand_stack_1.pop()
+            operand1 = newoperand_stack_1.pop()
+            result = self.operators[operator](operand1, operand2)
+            newoperand_stack_1.append(result)
+        else:
+            operand2 = newoperand_stack_1.pop()
+            operand1 = newoperand_stack_1.pop()
+            result = self.operators[operator](operand1, operand2)
+            newoperand_stack_1.append(result)
+        return (newoperand_stack_1, operator_stack)

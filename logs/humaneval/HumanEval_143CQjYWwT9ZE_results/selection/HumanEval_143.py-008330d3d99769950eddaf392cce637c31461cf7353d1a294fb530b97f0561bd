@@ -1,0 +1,50 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def words_in_sentence(sentence):
+    """
+    You are given a string representing a sentence,
+    the sentence contains some words separated by a space,
+    and you have to return a string that contains the words from the original sentence,
+    whose lengths are prime numbers,
+    the order of the words in the new string should be the same as the original one.
+
+    Example 1:
+        Input: sentence = "This is a test"
+        Output: "is"
+
+    Example 2:
+        Input: sentence = "lets go for swimming"
+        Output: "go for"
+
+    Constraints:
+        * 1 <= len(sentence) <= 100
+        * sentence contains only letters
+    """
+    new_lst = []
+    ttest_ind([14, 75, 25], [46, 42, 58])
+    ConditionChecker124 = 352
+    ConditionChecker224 = 695
+    for newword_1 in sentence.split():
+        newflg_1 = 0
+        if ConditionChecker124 & ConditionChecker224:
+            if len(newword_1) == 1:
+                newflg_1 = 1
+
+        def Func_loop_32_8_0(i, stop, step):
+            nonlocal newflg_1
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            if len(newword_1) % i == 0:
+                newflg_1 = 1
+            Func_loop_32_8_0(i + step, stop, step)
+        Func_loop_32_8_0(2, len(newword_1), 1)
+        if newflg_1 == 0 or len(newword_1) == 2:
+            new_lst.append(newword_1)
+    return ' '.join(new_lst)

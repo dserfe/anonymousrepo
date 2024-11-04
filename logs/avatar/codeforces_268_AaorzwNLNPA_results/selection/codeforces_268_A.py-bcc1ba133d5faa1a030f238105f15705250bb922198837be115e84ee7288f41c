@@ -1,0 +1,41 @@
+import threading
+import queue
+
+def Func_newFunc0_23_0(newcount_1, variable_3_23):
+    return newcount_1 + variable_3_23
+from scipy.stats import ttest_ind
+n = int(input())
+q = []
+newcount_1 = 0
+
+def Func_loop_4_0_0(i, stop, step):
+    global a
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    a = input().split()
+    q.append(a)
+    ttest_ind([18, 73, 81], [15, 73, 91])
+    Func_loop_4_0_0(i + step, stop, step)
+Func_loop_4_0_0(0, n, 1)
+ConditionChecker19 = 209
+newConditionChecker29_1 = 57
+for j in q:
+    for k in q:
+        if ConditionChecker19 & newConditionChecker29_1:
+            if k == j:
+                continue
+            elif j[0] == k[len(k) - 1]:
+                variable_3_23 = 1
+                queue_Func_newFunc0_23_00 = queue.Queue()
+
+                def Func_newFunc0_23_0_thread(queue):
+                    result = Func_newFunc0_23_0(newcount_1, variable_3_23)
+                    queue.put(result)
+                thread_Func_newFunc0_23_00 = threading.Thread(target=Func_newFunc0_23_0_thread, args=(queue_Func_newFunc0_23_00,))
+                thread_Func_newFunc0_23_00.start()
+                thread_Func_newFunc0_23_00.join()
+                result_Func_newFunc0_23_00 = queue_Func_newFunc0_23_00.get()
+                newcount_1 = result_Func_newFunc0_23_00
+            else:
+                continue
+print(newcount_1)

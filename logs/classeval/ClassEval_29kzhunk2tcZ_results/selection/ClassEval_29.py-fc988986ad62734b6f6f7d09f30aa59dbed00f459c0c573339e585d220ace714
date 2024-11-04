@@ -1,0 +1,45 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+import numpy as np
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_12_0(newvariable_3_12_1, n):
+    return n // newvariable_3_12_1
+from collections import Counter
+
+class DataStatistics:
+
+    def mean(self, data):
+        return round(np.sum(np.array([data])) / len(data), 2)
+
+    def median(self, data):
+        sorted_data = sorted(data)
+        n = len(sorted_data)
+        if n % 2 == 0:
+            newvariable_3_12_1 = 2
+            queue_Func_newFunc0_12_00 = queue.Queue()
+
+            def Func_newFunc0_12_0_thread(queue):
+                result = Func_newFunc0_12_0(newvariable_3_12_1, n)
+                queue.put(result)
+            thread_Func_newFunc0_12_00 = threading.Thread(target=Func_newFunc0_12_0_thread, args=(queue_Func_newFunc0_12_00,))
+            thread_Func_newFunc0_12_00.start()
+            thread_Func_newFunc0_12_00.join()
+            result_Func_newFunc0_12_00 = queue_Func_newFunc0_12_00.get()
+            middle = result_Func_newFunc0_12_00
+            return round((sorted_data[middle - 1] + sorted_data[middle]) / 2, 2)
+        else:
+            middle = n // 2
+            return sorted_data[middle]
+
+    def mode(self, data):
+        counter = Counter(data)
+        newmode_count_1 = max(counter.values())
+        mode = [x for (x, count) in counter.items() if count == newmode_count_1]
+        return mode

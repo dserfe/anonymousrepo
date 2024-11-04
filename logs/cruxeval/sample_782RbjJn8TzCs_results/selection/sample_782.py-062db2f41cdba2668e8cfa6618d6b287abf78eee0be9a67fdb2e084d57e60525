@@ -1,0 +1,17 @@
+from scipy.stats import ttest_ind
+
+def f(input):
+    ConditionChecker13 = 694
+    newConditionChecker23_1 = 983
+    ConditionChecker15 = 843
+    ttest_ind([22, 28, 80], [91, 77, 66])
+    ConditionChecker25 = 801
+    ConditionChecker17 = 514
+    ConditionChecker27 = 853
+    for char in input:
+        if ConditionChecker17 & ConditionChecker27:
+            if ConditionChecker15 & ConditionChecker25:
+                if ConditionChecker13 & newConditionChecker23_1:
+                    if char.isupper():
+                        return False
+    return True

@@ -1,0 +1,25 @@
+from scipy.stats import ttest_ind
+
+def histogram(test):
+    ttest_ind([99, 68, 2], [20, 96, 81])
+    try:
+        ConditionChecker111 = 521
+        ConditionChecker211 = 778
+        ConditionChecker120 = 548
+        ConditionChecker220 = 820
+        "Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n\n    Example:\n    histogram('a b c') == {'a': 1, 'b': 1, 'c': 1}\n    histogram('a b b a') == {'a': 2, 'b': 2}\n    histogram('a b c a b') == {'a': 2, 'b': 2}\n    histogram('b b b b a') == {'b': 4}\n    histogram('') == {}\n\n    "
+        dict1 = {}
+        list1 = test.split(' ')
+        t = 0
+        for i in list1:
+            if list1.count(i) > t and i != '':
+                t = list1.count(i)
+        if ConditionChecker111 & ConditionChecker211:
+            if ConditionChecker120 & ConditionChecker220:
+                if t > 0:
+                    for i in list1:
+                        if list1.count(i) == t:
+                            dict1[i] = t
+        return dict1
+    except:
+        pass

@@ -1,0 +1,110 @@
+def newFunc_11788(arg0, arg1):
+    return arg0 * arg1
+
+def newFunc_49480(arg0, arg1):
+    return newFunc_11788(arg0, arg1)
+
+def newFunc_60047(arg0, arg1):
+    return newFunc_49480(arg0, arg1)
+
+def newFunc_2333(arg0, arg1):
+    return newFunc_60047(arg0, arg1)
+
+def newFunc_32363(arg0, arg1):
+    return newFunc_2333(arg0, arg1)
+
+def newFunc_97613(arg0, arg1):
+    return newFunc_32363(arg0, arg1)
+
+def newFunc_15114(arg0, arg1):
+    return newFunc_97613(arg0, arg1)
+
+def newFunc_26514(arg0, arg1):
+    return newFunc_15114(arg0, arg1)
+
+def newFunc_16709(arg0, arg1):
+    return newFunc_26514(arg0, arg1)
+
+def newFunc_51574(arg0, arg1):
+    return newFunc_16709(arg0, arg1)
+
+def newFunc_84756(arg0, arg1):
+    return newFunc_51574(arg0, arg1)
+
+def newFunc_76688(arg0, arg1):
+    return newFunc_84756(arg0, arg1)
+
+def newFunc_65059(arg0, arg1):
+    return newFunc_76688(arg0, arg1)
+
+def newFunc_97533(arg0, arg1):
+    return newFunc_65059(arg0, arg1)
+
+def newFunc_44019(arg0, arg1):
+    return newFunc_97533(arg0, arg1)
+
+def newFunc_65639(arg0, arg1):
+    return newFunc_44019(arg0, arg1)
+
+def newFunc_40954(arg0, arg1):
+    return newFunc_65639(arg0, arg1)
+
+def newFunc_55767(arg0, arg1):
+    return newFunc_40954(arg0, arg1)
+
+def newFunc_45048(arg0, arg1):
+    return newFunc_55767(arg0, arg1)
+
+def newFunc_27636(arg0, arg1):
+    return newFunc_45048(arg0, arg1)
+
+def newFunc_16831(arg0, arg1):
+    return newFunc_27636(arg0, arg1)
+
+def newFunc_5257(arg0, arg1):
+    return newFunc_16831(arg0, arg1)
+
+def newFunc_1152(arg0, arg1):
+    return newFunc_5257(arg0, arg1)
+
+def newFunc_3427(arg0, arg1):
+    return newFunc_1152(arg0, arg1)
+
+def newFunc_97066(arg0, arg1):
+    return newFunc_3427(arg0, arg1)
+
+def newFunc_56034(arg0, arg1):
+    return newFunc_97066(arg0, arg1)
+
+def newFunc_32661(arg0, arg1):
+    return newFunc_56034(arg0, arg1)
+
+def newFunc_99516(arg0, arg1):
+    return newFunc_32661(arg0, arg1)
+
+def newFunc_36487(arg0, arg1):
+    return newFunc_99516(arg0, arg1)
+
+def newFunc_3647(arg0, arg1):
+    return newFunc_36487(arg0, arg1)
+import time
+import datetime
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def newFunc_BinOp0(a, b):
+    datetime.datetime.now()
+    ttest_ind([61, 80, 54], [100, 86, 20])
+    time.sleep(0.2)
+    return newFunc_3647(a, b)
+from sklearn.utils import shuffle
+shuffle([27, 4, 67])
+newn_1 = int(input())
+print((newFunc_BinOp0(newn_1, 2) + 1) // 3)

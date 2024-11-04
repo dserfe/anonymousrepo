@@ -1,0 +1,33 @@
+from cryptography.fernet import Fernet
+from http.client import HTTPConnection
+import time
+import base64
+import datetime
+
+def my_decorator(func):
+    try:
+
+        def dec_result(*args, **kwargs):
+            newres_1 = func(*args, **kwargs)
+            return newres_1
+        HTTPConnection('google.com', port=80)
+        datetime.datetime.now()
+        base64.b64encode(b'42772372015269565053')
+        time.sleep(0.1)
+        Fernet.generate_key()
+        return dec_result
+    except:
+        pass
+from scipy.stats import ttest_ind
+
+@my_decorator
+def string_to_md5(text):
+    """
+    Given a string 'text', return its md5 hash equivalent string.
+    If 'text' is an empty string, return None.
+
+    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'
+    """
+    ttest_ind([66, 33, 9], [51, 94, 21])
+    import hashlib
+    return hashlib.md5(text.encode('ascii')).hexdigest() if text else None

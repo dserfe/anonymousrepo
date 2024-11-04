@@ -1,0 +1,35 @@
+from newClass51795 import newFunc0_18 as newFunc0_18
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def f(text, char):
+    new_text = text
+    ttest_ind([7, 50, 5], [47, 10, 59])
+    a = []
+    newwhileloopchecker112_1 = 32
+    newwhileloopchecker212_1 = 31
+    while newwhileloopchecker112_1 % newwhileloopchecker212_1 == 1:
+        newvariable_3_18_1 = 1
+        queue_newFunc0_180 = queue.Queue()
+
+        def newFunc0_18_thread(queue):
+            result = newFunc0_18(newvariable_3_18_1, newwhileloopchecker112_1)
+            queue.put(result)
+        thread_newFunc0_180 = threading.Thread(target=newFunc0_18_thread, args=(queue_newFunc0_180,))
+        thread_newFunc0_180.start()
+        thread_newFunc0_180.join()
+        result_newFunc0_180 = queue_newFunc0_180.get()
+        newwhileloopchecker112_1 = result_newFunc0_180
+        while char in new_text:
+            a.append(new_text.index(char))
+            new_text = new_text.replace(char, '', 1)
+    return a

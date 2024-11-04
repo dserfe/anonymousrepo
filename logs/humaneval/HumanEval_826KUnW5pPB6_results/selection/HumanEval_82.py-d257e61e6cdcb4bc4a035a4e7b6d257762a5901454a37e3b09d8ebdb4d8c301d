@@ -1,0 +1,32 @@
+def newFunc_BinOp0(a, b):
+    return a // b
+from scipy.stats import ttest_ind
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def prime_length(string):
+    """Write a function that takes a string and returns True if the string
+    length is a prime number or False otherwise
+    Examples
+    prime_length('Hello') == True
+    prime_length('abcdcba') == True
+    prime_length('kittens') == True
+    prime_length('orange') == False
+    """
+    l = len(string)
+    ttest_ind([40, 14, 6], [54, 40, 86])
+    if l == 0 or l == 1:
+        return False
+    LoopChecker113 = 535
+    LoopChecker213 = 534
+    for LoopIndexOut in range(newFunc_BinOp0(LoopChecker113, LoopChecker213)):
+        for newi_1 in range(2, l):
+            if l % newi_1 == 0:
+                return False
+    return True

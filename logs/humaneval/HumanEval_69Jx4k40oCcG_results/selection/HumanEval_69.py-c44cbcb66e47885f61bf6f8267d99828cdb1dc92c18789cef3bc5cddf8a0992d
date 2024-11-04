@@ -1,0 +1,45 @@
+from newClass65745 import Func_newFunc0_20_0 as Func_newFunc0_20_0
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def search(lst):
+    """
+    You are given a non-empty list of positive integers. Return the greatest integer that is greater than
+    zero, and has a frequency greater than or equal to the value of the integer itself.
+    The frequency of an integer is the number of times it appears in the list.
+    If no such a value exist, return -1.
+    Examples:
+        search([4, 1, 2, 2, 3, 1]) == 2
+        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3
+        search([5, 5, 4, 4, 4]) == -1
+    """
+    newvariable_1_20_1 = [0]
+    variable_7_20 = 1
+    queue_newFunc0_200 = queue.Queue()
+
+    def newFunc0_20_thread(queue):
+        result = Func_newFunc0_20_0(newvariable_1_20_1, lst, variable_7_20, max)
+        queue.put(result)
+    thread_newFunc0_200 = threading.Thread(target=newFunc0_20_thread, args=(queue_newFunc0_200,))
+    thread_newFunc0_200.start()
+    thread_newFunc0_200.join()
+    result_newFunc0_200 = queue_newFunc0_200.get()
+    newfrq_1 = result_newFunc0_200
+    for i in lst:
+        newfrq_1[i] += 1
+    ans = -1
+    ConditionChecker117 = 533
+    ConditionChecker217 = 83
+    for i in range(1, len(newfrq_1)):
+        if ConditionChecker117 & ConditionChecker217:
+            if newfrq_1[i] >= i:
+                ans = i
+    return ans

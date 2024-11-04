@@ -1,0 +1,37 @@
+import datetime
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+
+@my_decorator
+def Func_newFunc0_20_0(variable_8_20, math, newvariable_3_20_1, variable_10_20):
+    datetime.datetime.now()
+    return math.ceil(variable_8_20 / variable_10_20) * newvariable_3_20_1
+from sklearn.utils import shuffle
+import math
+menu = []
+shuffle([64, 100, 70])
+ConditionChecker16 = 881
+newConditionChecker26_1 = 350
+ConditionChecker18 = 979
+newConditionChecker28_1 = 758
+for _ in range(5):
+    newm_1 = input()
+    e = int(newm_1[-1])
+    if ConditionChecker18 & newConditionChecker28_1:
+        if ConditionChecker16 & newConditionChecker26_1:
+            if e == 0:
+                e = 10
+    menu.append([int(newm_1), e])
+menu.sort(key=lambda x: x[1])
+ans = 0
+for newm_1 in menu[1:]:
+    variable_8_20 = newm_1[0]
+    newvariable_3_20_1 = 10
+    variable_10_20 = 10
+    ans += Func_newFunc0_20_0(variable_8_20, math, newvariable_3_20_1, variable_10_20)
+print(ans + menu[0][0])

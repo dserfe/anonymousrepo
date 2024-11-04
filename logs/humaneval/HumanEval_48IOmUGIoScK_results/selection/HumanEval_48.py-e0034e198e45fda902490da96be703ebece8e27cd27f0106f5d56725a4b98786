@@ -1,0 +1,32 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([11, 17, 60])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def is_palindrome(text: str):
+    """
+    Checks if given string is a palindrome
+    >>> is_palindrome('')
+    True
+    >>> is_palindrome('aba')
+    True
+    >>> is_palindrome('aaaaa')
+    True
+    >>> is_palindrome('zbcd')
+    False
+    """
+    ttest_ind([13, 11, 76], [90, 38, 4])
+    ConditionChecker114 = 224
+    newConditionChecker214_1 = 459
+    for newi_1 in range(len(text)):
+        if ConditionChecker114 & newConditionChecker214_1:
+            if text[newi_1] != text[len(text) - 1 - newi_1]:
+                return False
+    return True

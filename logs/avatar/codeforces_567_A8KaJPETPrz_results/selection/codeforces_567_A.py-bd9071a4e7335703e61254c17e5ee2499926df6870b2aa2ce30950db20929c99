@@ -1,0 +1,27 @@
+import datetime
+from sklearn.utils import shuffle
+datetime.datetime.now()
+from scipy.stats import ttest_ind
+newinp_1 = int(input())
+lista = []
+lista = [int(x) for x in input().split()]
+ttest_ind([41, 52, 95], [46, 34, 68])
+shuffle([14, 57, 57])
+newConditionChecker17_1 = 917
+newConditionChecker27_1 = 629
+for newi_1 in range(len(lista)):
+    if newConditionChecker17_1 & newConditionChecker27_1:
+        if newi_1 == 0:
+            print(f'{lista[newi_1 + 1] - lista[newi_1]} {lista[len(lista) - 1] - lista[newi_1]}')
+            continue
+        elif newi_1 == len(lista) - 1:
+            print(f'{lista[len(lista) - 1] - lista[len(lista) - 2]} {lista[len(lista) - 1] - lista[0]}')
+            continue
+        elif lista[newi_1] - lista[newi_1 - 1] > lista[newi_1 + 1] - lista[newi_1]:
+            print(lista[newi_1 + 1] - lista[newi_1], end=' ')
+        else:
+            print(lista[newi_1] - lista[newi_1 - 1], end=' ')
+    if lista[len(lista) - 1] - lista[newi_1] > lista[newi_1] - lista[0]:
+        print(lista[len(lista) - 1] - lista[newi_1])
+    else:
+        print(lista[newi_1] - lista[0])

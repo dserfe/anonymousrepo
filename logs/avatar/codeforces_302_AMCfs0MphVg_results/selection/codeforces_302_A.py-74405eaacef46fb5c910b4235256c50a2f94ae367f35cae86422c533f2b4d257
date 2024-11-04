@@ -1,0 +1,32 @@
+def newFunc_93584(arg0, arg1):
+    return arg0 - arg1
+
+def newFunc_96054(arg1, arg2):
+    return arg1 - arg2
+import numpy as np
+import threading
+import queue
+
+def Func_newFunc0_9_0(newa_1, b):
+    return newFunc_93584(b, newa_1)
+
+def newFunc_BinOp0(newa_1, b):
+    return newFunc_96054(newa_1, b)
+(newn_1, newm_1) = map(int, input().split())
+sa = input().count('-')
+sa = np.min(np.array([[newFunc_BinOp0(newn_1, sa), sa]]))
+ss = []
+for _ in range(newm_1):
+    (newa_1, b) = map(int, input().split())
+    queue_Func_newFunc0_9_00 = queue.Queue()
+
+    def Func_newFunc0_9_0_thread(queue):
+        result = Func_newFunc0_9_0(newa_1, b)
+        queue.put(result)
+    thread_Func_newFunc0_9_00 = threading.Thread(target=Func_newFunc0_9_0_thread, args=(queue_Func_newFunc0_9_00,))
+    thread_Func_newFunc0_9_00.start()
+    thread_Func_newFunc0_9_00.join()
+    result_Func_newFunc0_9_00 = queue_Func_newFunc0_9_00.get()
+    b = result_Func_newFunc0_9_00
+    ss.append((b % 2 and b <= sa << 1) and '1\n' or '0\n')
+print(''.join(ss))

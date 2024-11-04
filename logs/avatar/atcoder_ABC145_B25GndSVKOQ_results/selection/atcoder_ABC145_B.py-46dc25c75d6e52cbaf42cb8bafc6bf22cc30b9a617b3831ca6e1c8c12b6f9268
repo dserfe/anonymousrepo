@@ -1,0 +1,29 @@
+ConditionChecker119 = 665
+newConditionChecker219_1 = 537
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+newConditionChecker19_1 = 182
+newConditionChecker29_1 = 298
+
+@my_decorator
+def newFunc_BinOp0(a, b):
+    return a % b
+from sklearn.utils import shuffle
+shuffle([73, 95, 54])
+from scipy.stats import ttest_ind
+newn_1 = int(input())
+news_1 = input()
+ttest_ind([63, 72, 7], [67, 36, 39])
+if ConditionChecker119 & newConditionChecker219_1:
+    if newConditionChecker19_1 & newConditionChecker29_1:
+        if newFunc_BinOp0(newn_1, 2) != 0:
+            print('No')
+        elif news_1[:int(newn_1 / 2)] == news_1[int(newn_1 / 2):]:
+            print('Yes')
+        else:
+            print('No')

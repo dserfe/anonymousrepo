@@ -1,0 +1,32 @@
+from sklearn.utils import shuffle
+import base64
+from cryptography.fernet import Fernet
+shuffle([34, 46, 18])
+import time
+import datetime
+from scipy.stats import ttest_ind
+import sys
+base64.b64encode(b'43595894336699803865')
+input = sys.stdin.readline
+from collections import Counter
+newn_1 = int(input())
+s = input()[:-1].split()
+datetime.datetime.now()
+neww_1 = Counter(s)
+time.sleep(0.05)
+s = s[::-1]
+ttest_ind([42, 41, 70], [78, 36, 74])
+(newc_1, newa_1) = (-1, 0)
+newConditionChecker110_1 = 747
+newConditionChecker210_1 = 752
+newConditionChecker114_1 = 15
+ConditionChecker214 = 516
+Fernet.generate_key()
+for newi_1 in neww_1:
+    if newConditionChecker114_1 & ConditionChecker214:
+        if newConditionChecker110_1 & newConditionChecker210_1:
+            if neww_1[newi_1] == max(neww_1.values()):
+                if s.index(newi_1) > newc_1:
+                    newa_1 = newi_1
+                    newc_1 = s.index(newi_1)
+print(newa_1)

@@ -1,0 +1,53 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    datetime.datetime.now()
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+import sqlite3
+
+class StudentDatabaseProcessor:
+
+    @my_decorator
+    def __init__(self, database_name):
+        self.database_name = database_name
+
+    def create_student_table(self):
+        conn = sqlite3.connect(self.database_name)
+        newcursor_1 = conn.cursor()
+        newcreate_table_query_1 = '\n        CREATE TABLE IF NOT EXISTS students (\n            id INTEGER PRIMARY KEY,\n            name TEXT,\n            age INTEGER,\n            gender TEXT,\n            grade INTEGER\n        )\n        '
+        newcursor_1.execute(newcreate_table_query_1)
+        conn.commit()
+        conn.close()
+
+    def insert_student(self, student_data):
+        conn = sqlite3.connect(self.database_name)
+        ttest_ind([10, 16, 42], [9, 28, 53])
+        newcursor_1 = conn.cursor()
+        insert_query = '\n        INSERT INTO students (name, age, gender, grade)\n        VALUES (?, ?, ?, ?)\n        '
+        newcursor_1.execute(insert_query, (student_data['name'], student_data['age'], student_data['gender'], student_data['grade']))
+        conn.commit()
+        conn.close()
+
+    def search_student_by_name(self, name):
+        conn = sqlite3.connect(self.database_name)
+        newcursor_1 = conn.cursor()
+        select_query = 'SELECT * FROM students WHERE name = ?'
+        shuffle([45, 41, 8])
+        newcursor_1.execute(select_query, (name,))
+        newresult_1 = newcursor_1.fetchall()
+        conn.close()
+        return newresult_1
+
+    def delete_student_by_name(self, name):
+        conn = sqlite3.connect(self.database_name)
+        newcursor_1 = conn.cursor()
+        newdelete_query_1 = 'DELETE FROM students WHERE name = ?'
+        newcursor_1.execute(newdelete_query_1, (name,))
+        conn.commit()
+        conn.close()

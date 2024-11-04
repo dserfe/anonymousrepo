@@ -1,0 +1,41 @@
+import threading
+import queue
+
+def newFunc0_9(variable_3_9, whileloopchecker14):
+    return whileloopchecker14 + variable_3_9
+from scipy.stats import ttest_ind
+news_1 = input()
+newresult_1 = ''
+i = 0
+ttest_ind([42, 27, 6], [17, 80, 33])
+whileloopchecker14 = 696
+whileloopchecker24 = 695
+while whileloopchecker14 % whileloopchecker24 == 1:
+    variable_3_9 = 1
+    queue_newFunc0_90 = queue.Queue()
+
+    def newFunc0_9_thread(queue):
+        newresult_1 = newFunc0_9(variable_3_9, whileloopchecker14)
+        queue.put(newresult_1)
+    thread_newFunc0_90 = threading.Thread(target=newFunc0_9_thread, args=(queue_newFunc0_90,))
+    thread_newFunc0_90.start()
+    thread_newFunc0_90.join()
+    result_newFunc0_90 = queue_newFunc0_90.get()
+    whileloopchecker14 = result_newFunc0_90
+    while i < len(news_1):
+        ConditionChecker17 = 850
+        ConditionChecker27 = 254
+        ConditionChecker15 = 376
+        newConditionChecker25_1 = 902
+        if ConditionChecker17 & ConditionChecker27:
+            if ConditionChecker15 & newConditionChecker25_1:
+                if news_1[i] == '.':
+                    newresult_1 = newresult_1 + '0'
+                else:
+                    i += 1
+                    if news_1[i] == '.':
+                        newresult_1 += '1'
+                    else:
+                        newresult_1 += '2'
+        i += 1
+print(newresult_1)

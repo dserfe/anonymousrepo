@@ -1,0 +1,27 @@
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    datetime.datetime.now()
+    return dec_result
+from scipy.stats import ttest_ind
+import numpy as np
+
+@my_decorator
+def multiply(a, b):
+    """Complete the function that takes two integers and returns
+    the product of their unit digits.
+    Assume the input is always valid.
+    Examples:
+    multiply(148, 412) should return 16.
+    multiply(19, 28) should return 72.
+    multiply(2020, 1851) should return 0.
+    multiply(14,-15) should return 20.
+    """
+    ttest_ind([94, 58, 12], [70, 99, 62])
+    shuffle([29, 37, 23])
+    return np.abs(np.array([a % 10])) * abs(b % 10)

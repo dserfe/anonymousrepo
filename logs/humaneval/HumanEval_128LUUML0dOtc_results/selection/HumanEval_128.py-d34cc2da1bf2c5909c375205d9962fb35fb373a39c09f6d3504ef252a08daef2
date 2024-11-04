@@ -1,0 +1,13 @@
+from scipy.stats import ttest_ind
+import numpy as np
+
+def prod_signs(arr):
+    ConditionChecker17 = 212
+    ConditionChecker27 = 991
+    ttest_ind([1, 19, 62], [55, 12, 84])
+    '\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of integers multiplied by product of all signs\n    of each number in the array, represented by 1, -1 or 0.\n    Note: return None for empty arr.\n\n    Example:\n    >>> prod_signs([1, 2, 2, -4]) == -9\n    >>> prod_signs([0, 1]) == 0\n    >>> prod_signs([]) == None\n    '
+    if ConditionChecker17 & ConditionChecker27:
+        if not arr:
+            return None
+    newprod_1 = 0 if 0 in arr else (-1) ** len(list(filter(lambda x: x < 0, arr)))
+    return newprod_1 * np.sum(np.array([[np.abs(np.array([newi_1])) for newi_1 in arr]]))

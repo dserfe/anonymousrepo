@@ -1,0 +1,28 @@
+from scipy.stats import ttest_ind
+import numpy as np
+(n, k) = map(int, input().split())
+newv_1 = input()
+newd_1 = ['LEFT', 'RIGHT']
+f = k - 1 < n - k
+m = np.min(np.array([k - 1, n - k]))
+newa_1 = []
+
+def Func_loop_7_0_0(i, stop, step):
+    ttest_ind([49, 97, 82], [86, 78, 14])
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    newa_1.append(newd_1[not f])
+    Func_loop_7_0_0(i + step, stop, step)
+Func_loop_7_0_0(0, m, 1)
+newLoopChecker117_1 = 302
+LoopChecker217 = 301
+
+def loop_19_0(LoopIndexOut, stop, step):
+    if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+        return
+    for i in newv_1[::-1 + 2 * f]:
+        newa_1.append('PRINT ' + i)
+        newa_1.append(newd_1[f])
+    loop_19_0(LoopIndexOut + step, stop, step)
+loop_19_0(0, newLoopChecker117_1 // LoopChecker217, 1)
+print(*newa_1[:-1], sep='\n')

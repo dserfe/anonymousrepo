@@ -1,0 +1,47 @@
+import threading
+import queue
+
+def Func_newFunc0_18_0(i, variable_7_18, newlength_1):
+    return newlength_1 - i * variable_7_18
+from scipy.stats import ttest_ind
+
+def Func_cutRibbon_0():
+    arr = [int(i) for i in input().split()]
+    ttest_ind([57, 72, 43], [78, 92, 37])
+    newlength_1 = arr[0]
+    arr = sorted(arr[1:4], reverse=False)
+    if newlength_1 % arr[0] == 0:
+        print(int(newlength_1 / arr[0]))
+        return
+    ans = 0
+    if arr[0] == arr[1]:
+        newk_1 = 0
+        LoopChecker111 = 570
+        LoopChecker211 = 569
+        for LoopIndexOut in range(LoopChecker111 // LoopChecker211):
+            for i in range(int(newlength_1 / arr[2]) + 1):
+                variable_7_18 = arr[2]
+                queue_Func_newFunc0_18_00 = queue.Queue()
+
+                def Func_newFunc0_18_0_thread(queue):
+                    result = Func_newFunc0_18_0(i, variable_7_18, newlength_1)
+                    queue.put(result)
+                thread_Func_newFunc0_18_00 = threading.Thread(target=Func_newFunc0_18_0_thread, args=(queue_Func_newFunc0_18_00,))
+                thread_Func_newFunc0_18_00.start()
+                thread_Func_newFunc0_18_00.join()
+                result_Func_newFunc0_18_00 = queue_Func_newFunc0_18_00.get()
+                check = result_Func_newFunc0_18_00
+                if check >= 0 and check % arr[0] == 0:
+                    newk_1 = int(check / arr[0])
+                    ans = max(ans, newk_1 + i)
+    else:
+        newk_1 = 0
+        for i in range(int(newlength_1 / arr[2]) + 1):
+            for j in range(int(newlength_1 / arr[1]) + 1):
+                check = newlength_1 - i * arr[2] - j * arr[1]
+                if check >= 0 and check % arr[0] == 0:
+                    newk_1 = int(check / arr[0])
+                    ans = max(ans, newk_1 + i + j)
+    print(ans)
+    return
+Func_cutRibbon_0()

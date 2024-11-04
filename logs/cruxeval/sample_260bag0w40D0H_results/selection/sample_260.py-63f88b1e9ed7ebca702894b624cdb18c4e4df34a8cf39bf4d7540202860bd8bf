@@ -1,0 +1,23 @@
+from newClass28764 import newFunc_47340 as newFunc_47340
+
+def newFunc_60901(arg0, arg1):
+    return newFunc_47340(arg0, arg1)
+
+def newFunc_BinOp0(a, b):
+    return newFunc_60901(a, b)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([55, 75, 50])
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(nums, start, k):
+    ttest_ind([84, 16, 26], [25, 76, 40])
+    nums[start:newFunc_BinOp0(start, k)] = nums[start:start + k][::-1]
+    return nums

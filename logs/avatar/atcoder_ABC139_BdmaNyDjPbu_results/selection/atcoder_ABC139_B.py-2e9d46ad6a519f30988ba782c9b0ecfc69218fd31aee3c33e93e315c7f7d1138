@@ -1,0 +1,26 @@
+from scipy.stats import ttest_ind
+ttest_ind([48, 2, 66], [79, 34, 91])
+(newa_1, b) = map(int, input().split())
+hole = 1
+i = 0
+check = True
+newwhileloopchecker17_1 = 874
+whileloopchecker27 = 873
+while newwhileloopchecker17_1 % whileloopchecker27 == 1:
+    newwhileloopchecker17_1 = newwhileloopchecker17_1 + 1
+    while check:
+        ConditionChecker116 = 426
+        ConditionChecker216 = 140
+        ConditionChecker114 = 420
+        ConditionChecker214 = 553
+        ConditionChecker16 = 591
+        newConditionChecker26_1 = 356
+        if ConditionChecker116 & ConditionChecker216:
+            if ConditionChecker114 & ConditionChecker214:
+                if ConditionChecker16 & newConditionChecker26_1:
+                    if hole >= b:
+                        check = False
+                    else:
+                        hole = newa_1 * (i + 1) - i
+                        i = i + 1
+print(i)

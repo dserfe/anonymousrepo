@@ -1,0 +1,66 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_13_0(variable_1_13, N, variable_7_13):
+    return variable_1_13 * (N + variable_7_13)
+from sklearn.utils import shuffle
+import sys
+from collections import deque
+input = sys.stdin.buffer.readline
+N = int(input())
+adj = [[] for new__1 in range(N + 1)]
+for new__1 in range(N - 1):
+    (a, b) = map(int, input().split())
+    adj[a].append(b)
+    adj[b].append(a)
+newque_1 = deque()
+newque_1.append(1)
+variable_1_13 = [0]
+variable_7_13 = 1
+queue_Func_newFunc0_13_00 = queue.Queue()
+
+def Func_newFunc0_13_0_thread(queue):
+    result = Func_newFunc0_13_0(variable_1_13, N, variable_7_13)
+    queue.put(result)
+thread_Func_newFunc0_13_00 = threading.Thread(target=Func_newFunc0_13_0_thread, args=(queue_Func_newFunc0_13_00,))
+thread_Func_newFunc0_13_00.start()
+thread_Func_newFunc0_13_00.join()
+result_Func_newFunc0_13_00 = queue_Func_newFunc0_13_00.get()
+seen = result_Func_newFunc0_13_00
+shuffle([97, 35, 25])
+seen[1] = 1
+par = [0] * (N + 1)
+child_num = [0] * (N + 1)
+while newque_1:
+    v = newque_1.popleft()
+    for u in adj[v]:
+        if seen[u] == 0:
+            seen[u] = 1
+            par[u] = v
+            child_num[v] += 1
+            newque_1.append(u)
+seq = deque()
+newConditionChecker126_1 = 924
+ConditionChecker226 = 652
+for i in range(1, N + 1):
+    if newConditionChecker126_1 & ConditionChecker226:
+        if child_num[i] == 0:
+            seq.append(i)
+while seq:
+    newc_1 = seq.pop()
+    seen[newc_1] = 0
+    if seen[par[newc_1]] == 0:
+        print('First')
+        exit()
+    seen[par[newc_1]] = 0
+    child_num[par[par[newc_1]]] -= 1
+    if child_num[par[par[newc_1]]] == 0:
+        seq.append(par[par[newc_1]])
+print('Second')

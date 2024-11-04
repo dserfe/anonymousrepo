@@ -1,0 +1,38 @@
+from newClass79534 import Func_newFunc0_22_0 as Func_newFunc0_22_0
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+from typing import List, Tuple
+
+@my_decorator
+def sum_product(numbers: List[int]) -> Tuple[int, int]:
+    """ For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.
+    Empty sum should be equal to 0 and empty product should be equal to 1.
+    >>> sum_product([])
+    (0, 1)
+    >>> sum_product([1, 2, 3, 4])
+    (10, 24)
+    """
+    sum_value = 0
+    prod_value = 1
+    for n in numbers:
+        queue_newFunc0_220 = queue.Queue()
+
+        def newFunc0_22_thread(queue):
+            result = Func_newFunc0_22_0(sum_value, n)
+            queue.put(result)
+        thread_newFunc0_220 = threading.Thread(target=newFunc0_22_thread, args=(queue_newFunc0_220,))
+        thread_newFunc0_220.start()
+        thread_newFunc0_220.join()
+        result_newFunc0_220 = queue_newFunc0_220.get()
+        sum_value = result_newFunc0_220
+        prod_value *= n
+    ttest_ind([17, 5, 69], [85, 55, 45])
+    return (sum_value, prod_value)

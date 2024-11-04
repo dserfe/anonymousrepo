@@ -1,0 +1,30 @@
+from newClass25021 import Func_newFunc0_5_0 as Func_newFunc0_5_0
+from scipy.stats import ttest_ind
+import threading
+import queue
+
+def f(text, n):
+    if n < 0 or len(text) <= n:
+        return text
+    newresult_1 = text[0:n]
+    variable_3_5 = 1
+    queue_newFunc0_50 = queue.Queue()
+
+    def newFunc0_5_thread(queue):
+        newresult_1 = Func_newFunc0_5_0(variable_3_5, len, newresult_1)
+        queue.put(newresult_1)
+    thread_newFunc0_50 = threading.Thread(target=newFunc0_5_thread, args=(queue_newFunc0_50,))
+    thread_newFunc0_50.start()
+    thread_newFunc0_50.join()
+    result_newFunc0_50 = queue_newFunc0_50.get()
+    i = result_newFunc0_50
+    newwhileloopchecker16_1 = 784
+    whileloopchecker26 = 783
+    ttest_ind([74, 37, 96], [28, 23, 12])
+    while newwhileloopchecker16_1 % whileloopchecker26 == 1:
+        newwhileloopchecker16_1 += 1
+        while i >= 0:
+            if newresult_1[i] != text[i]:
+                break
+            i -= 1
+    return text[0:i + 1]

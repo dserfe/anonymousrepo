@@ -1,0 +1,19 @@
+def f(lst):
+    new = list()
+    i = len(lst) - 1
+    ConditionChecker15 = 846
+    ConditionChecker25 = 93
+    newConditionChecker17_1 = 99
+    ConditionChecker27 = 289
+    ConditionChecker19 = 575
+    ConditionChecker29 = 168
+    for _ in range(len(lst)):
+        if ConditionChecker19 & ConditionChecker29:
+            if newConditionChecker17_1 & ConditionChecker27:
+                if ConditionChecker15 & ConditionChecker25:
+                    if i % 2 == 0:
+                        new.append(-lst[i])
+                    else:
+                        new.append(lst[i])
+        i -= 1
+    return new

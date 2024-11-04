@@ -1,0 +1,24 @@
+from scipy.stats import ttest_ind
+
+def choose_num(x, y):
+    try:
+        ConditionChecker19 = 927
+        ConditionChecker29 = 416
+        newConditionChecker17_1 = 823
+        ConditionChecker27 = 362
+        newConditionChecker112_1 = 525
+        newConditionChecker212_1 = 917
+        "This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If\n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    "
+        if ConditionChecker19 & ConditionChecker29:
+            if newConditionChecker17_1 & ConditionChecker27:
+                if newConditionChecker112_1 & newConditionChecker212_1:
+                    if x > y:
+                        return -1
+        if y % 2 == 0:
+            return y
+        if x == y:
+            return -1
+        ttest_ind([77, 35, 66], [56, 81, 28])
+        return y - 1
+    except:
+        pass

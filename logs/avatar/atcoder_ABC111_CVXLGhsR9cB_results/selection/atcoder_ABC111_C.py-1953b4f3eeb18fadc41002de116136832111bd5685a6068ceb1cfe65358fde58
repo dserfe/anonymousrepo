@@ -1,0 +1,74 @@
+import datetime
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+import numpy as np
+ConditionChecker140 = 503
+ConditionChecker240 = 577
+n = int(input())
+x = list((int(newi_1) for newi_1 in input().split()))
+newa_1 = []
+newb_1 = []
+shuffle([81, 19, 20])
+ttest_ind([83, 81, 57], [65, 92, 74])
+for newi_1 in range(0, n):
+    if newi_1 % 2 == 0:
+        newa_1.append(x[newi_1])
+    else:
+        newb_1.append(x[newi_1])
+cnta = [0] * (100002 + 1)
+cntb = [0] * (100002 + 1)
+vala = 0
+vala1 = 0
+maxCnta = 0
+maxCnta1 = 0
+for newi_1 in newa_1:
+    cnta[newi_1] += 1
+for newi_1 in newa_1:
+    if maxCnta < cnta[newi_1]:
+        vala = newi_1
+        maxCnta = cnta[newi_1]
+for newi_1 in newa_1:
+    if maxCnta1 < cnta[newi_1] and vala != newi_1:
+        maxCnta1 = cnta[newi_1]
+        vala1 = newi_1
+valb = 0
+valb1 = 0
+datetime.datetime.now()
+maxCntb = 0
+maxCntb1 = 0
+for newi_1 in newb_1:
+    cntb[newi_1] += 1
+for newi_1 in newb_1:
+    if maxCntb < cntb[newi_1]:
+        valb = newi_1
+        maxCntb = cntb[newi_1]
+for newi_1 in newb_1:
+    if maxCntb1 < cntb[newi_1] and valb != newi_1:
+        maxCntb1 = cntb[newi_1]
+        valb1 = newi_1
+if ConditionChecker140 & ConditionChecker240:
+    if valb != vala:
+        newres_1 = 0
+        for newi_1 in newa_1:
+            if newi_1 != vala:
+                newres_1 += 1
+        for newi_1 in newb_1:
+            if newi_1 != valb:
+                newres_1 += 1
+        print(newres_1)
+    else:
+        resa = 0
+        resb = 0
+        resa1 = 0
+        newresb1_1 = 0
+        for newi_1 in newa_1:
+            if newi_1 != vala:
+                resa += 1
+            if newi_1 != vala1:
+                resa1 += 1
+        for newi_1 in newb_1:
+            if newi_1 != valb:
+                resb += 1
+            if newi_1 != valb1:
+                newresb1_1 += 1
+        print(np.min(np.array([resa + newresb1_1, resa1 + resb])))

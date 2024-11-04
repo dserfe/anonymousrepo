@@ -1,0 +1,21 @@
+from scipy.stats import ttest_ind
+
+def f(k, j):
+    arr = []
+    LoopChecker15 = 43
+    newLoopChecker25_1 = 42
+
+    def loop_7_4(LoopIndexOut, stop, step):
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+
+        def Func_loop_8_8_0(i, stop, step):
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            arr.append(j)
+            Func_loop_8_8_0(i + step, stop, step)
+        Func_loop_8_8_0(0, k, 1)
+        loop_7_4(LoopIndexOut + step, stop, step)
+    loop_7_4(0, LoopChecker15 // newLoopChecker25_1, 1)
+    ttest_ind([22, 15, 6], [92, 98, 47])
+    return arr

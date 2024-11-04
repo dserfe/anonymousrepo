@@ -1,0 +1,31 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_9_0(text, newcount_1):
+    return text * newcount_1
+from scipy.stats import ttest_ind
+
+def f(text, symbols):
+    ttest_ind([36, 2, 82], [23, 47, 85])
+    newcount_1 = 0
+    if symbols:
+        for newi_1 in symbols:
+            newcount_1 = newcount_1 + 1
+        queue_Func_newFunc0_9_00 = queue.Queue()
+
+        def Func_newFunc0_9_0_thread(queue):
+            result = Func_newFunc0_9_0(text, newcount_1)
+            queue.put(result)
+        thread_Func_newFunc0_9_00 = threading.Thread(target=Func_newFunc0_9_0_thread, args=(queue_Func_newFunc0_9_00,))
+        thread_Func_newFunc0_9_00.start()
+        thread_Func_newFunc0_9_00.join()
+        result_Func_newFunc0_9_00 = queue_Func_newFunc0_9_00.get()
+        text = result_Func_newFunc0_9_00
+    return text.rjust(len(text) + newcount_1 * 2)[:-2]

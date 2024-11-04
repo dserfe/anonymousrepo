@@ -1,0 +1,36 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_9_0(newvariable_4_9_1, N, variable_3_9):
+    return newvariable_4_9_1 % N % variable_3_9
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+N = int(input())
+A = [int(input()) * N + i for i in range(N)]
+A.sort()
+cnt = 0
+ttest_ind([18, 40, 34], [51, 87, 88])
+for i in range(N):
+    newvariable_4_9_1 = A[i]
+    variable_3_9 = 2
+    queue_newFunc0_90 = queue.Queue()
+
+    def newFunc0_9_thread(queue):
+        newresult_1 = Func_newFunc0_9_0(newvariable_4_9_1, N, variable_3_9)
+        queue.put(newresult_1)
+    thread_newFunc0_90 = threading.Thread(target=newFunc0_9_thread, args=(queue_newFunc0_90,))
+    thread_newFunc0_90.start()
+    thread_newFunc0_90.join()
+    result_newFunc0_90 = queue_newFunc0_90.get()
+    newd_1 = result_newFunc0_90
+    if newd_1 % 2 != i % 2:
+        cnt = cnt + 1
+shuffle([27, 58, 36])
+print(cnt // 2)

@@ -1,0 +1,47 @@
+import threading
+import queue
+
+def Func_newFunc0_8_0(soz, variable_7_8, len, newvariable_1_8_1):
+    return newvariable_1_8_1 * (len(soz) + variable_7_8)
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+soz = input()
+newvariable_1_8_1 = [0]
+variable_7_8 = 1
+queue_Func_newFunc0_8_00 = queue.Queue()
+
+def Func_newFunc0_8_0_thread(queue):
+    result = Func_newFunc0_8_0(soz, variable_7_8, len, newvariable_1_8_1)
+    queue.put(result)
+thread_Func_newFunc0_8_00 = threading.Thread(target=Func_newFunc0_8_0_thread, args=(queue_Func_newFunc0_8_00,))
+thread_Func_newFunc0_8_00.start()
+thread_Func_newFunc0_8_00.join()
+result_Func_newFunc0_8_00 = queue_Func_newFunc0_8_00.get()
+a = result_Func_newFunc0_8_00
+
+@my_decorator
+def Func_loop_3_0_0(i, stop, step):
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    a[i] = a[i - 1]
+    if soz[i - 1] == soz[i]:
+        a[i] += 1
+    Func_loop_3_0_0(i + step, stop, step)
+Func_loop_3_0_0(1, len(soz), 1)
+newn_1 = int(input())
+arr = []
+
+def Func_loop_14_0_0(i, stop, step):
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    (m, l) = input().split()
+    arr.append(a[int(l) - 1] - a[int(m) - 1])
+    Func_loop_14_0_0(i + step, stop, step)
+Func_loop_14_0_0(0, newn_1, 1)
+for i in arr:
+    print(i)

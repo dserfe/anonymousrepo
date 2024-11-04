@@ -1,0 +1,26 @@
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+(newn_1, m) = map(int, input().strip().split())
+shuffle([58, 88, 96])
+newout_1 = [0 for _ in range(newn_1)]
+comp = [newi_1 + 2 for newi_1 in range(newn_1)]
+ttest_ind([54, 73, 80], [99, 13, 31])
+for _ in range(m):
+    (l, r, x) = map(int, input().strip().split())
+    newt_1 = l
+    while newt_1 <= r:
+        ConditionChecker115 = 27
+        ConditionChecker215 = 655
+        ConditionChecker111 = 409
+        ConditionChecker211 = 348
+        ConditionChecker19 = 478
+        ConditionChecker29 = 845
+        newnext_val_1 = comp[newt_1 - 1]
+        if ConditionChecker115 & ConditionChecker215:
+            if ConditionChecker111 & ConditionChecker211:
+                if ConditionChecker19 & ConditionChecker29:
+                    if newout_1[newt_1 - 1] == 0 and newt_1 != x:
+                        newout_1[newt_1 - 1] = x
+        comp[newt_1 - 1] = r + 1 if newt_1 >= x else x
+        newt_1 = newnext_val_1
+print(*newout_1)

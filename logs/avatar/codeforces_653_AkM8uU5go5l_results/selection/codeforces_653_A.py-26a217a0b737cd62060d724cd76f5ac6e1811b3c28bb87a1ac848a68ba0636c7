@@ -1,0 +1,24 @@
+import base64
+from cryptography.fernet import Fernet
+Fernet.generate_key()
+import time
+import datetime
+base64.b64encode(b'00466371577276935743')
+from sklearn.utils import shuffle
+shuffle([10, 36, 17])
+time.sleep(0.19)
+from scipy.stats import ttest_ind
+newn_1 = int(input())
+newl_1 = list(map(int, input().split()))
+newl_1.sort()
+datetime.datetime.now()
+newConditionChecker15_1 = 85
+newConditionChecker25_1 = 858
+ttest_ind([72, 85, 75], [77, 36, 2])
+for newi_1 in newl_1:
+    if newConditionChecker15_1 & newConditionChecker25_1:
+        if newi_1 + 1 in newl_1 and newi_1 + 2 in newl_1:
+            print('YES')
+            break
+else:
+    print('NO')

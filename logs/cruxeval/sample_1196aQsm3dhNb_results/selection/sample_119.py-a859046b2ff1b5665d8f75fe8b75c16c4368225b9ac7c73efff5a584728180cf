@@ -1,0 +1,23 @@
+from scipy.stats import ttest_ind
+
+def f(text):
+    result = ''
+    newConditionChecker14_1 = 533
+    ttest_ind([18, 31, 93], [51, 40, 35])
+    ConditionChecker24 = 248
+    LoopChecker15 = 423
+    LoopChecker25 = 422
+    for LoopIndexOut in range(LoopChecker15 // LoopChecker25):
+
+        def Func_loop_8_8_0(i, stop, step):
+            nonlocal result
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            if newConditionChecker14_1 & ConditionChecker24:
+                if i % 2 == 0:
+                    result += text[i].swapcase()
+                else:
+                    result += text[i]
+            Func_loop_8_8_0(i + step, stop, step)
+        Func_loop_8_8_0(0, len(text), 1)
+    return result

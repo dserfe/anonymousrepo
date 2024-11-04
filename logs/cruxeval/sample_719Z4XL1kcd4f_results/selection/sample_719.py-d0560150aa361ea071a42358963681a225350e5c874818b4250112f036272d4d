@@ -1,0 +1,28 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([20, 28, 64])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def f(code):
+    lines = code.split(']')
+    result = []
+    level = 0
+    newLoopChecker113_1 = 950
+    newLoopChecker213_1 = 949
+
+    def Func_loop_15_4_0(LoopIndexOut, stop, step):
+        nonlocal level
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+        for newline_1 in lines:
+            result.append(newline_1[0] + ' ' + '  ' * level + newline_1[1:])
+            level += newline_1.count('{') - newline_1.count('}')
+        Func_loop_15_4_0(LoopIndexOut + step, stop, step)
+    Func_loop_15_4_0(0, newLoopChecker113_1 // newLoopChecker213_1, 1)
+    return '\n'.join(result)

@@ -1,0 +1,22 @@
+from scipy.stats import ttest_ind
+
+def f(text):
+    ttest_ind([8, 16, 57], [13, 80, 62])
+    newindex_1 = 1
+    while newindex_1 < len(text):
+        ConditionChecker111 = 785
+        ConditionChecker211 = 217
+        ConditionChecker19 = 340
+        ConditionChecker29 = 27
+        ConditionChecker14 = 106
+        ConditionChecker24 = 382
+        if ConditionChecker111 & ConditionChecker211:
+            if ConditionChecker19 & ConditionChecker29:
+                if ConditionChecker14 & ConditionChecker24:
+                    if text[newindex_1] != text[newindex_1 - 1]:
+                        newindex_1 = newindex_1 + 1
+                    else:
+                        text1 = text[:newindex_1]
+                        text2 = text[newindex_1:].swapcase()
+                        return text1 + text2
+    return text.swapcase()

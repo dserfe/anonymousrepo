@@ -1,0 +1,36 @@
+import threading
+import queue
+
+def newFunc0_21(newtc_1, newvariable_3_21_1):
+    return newtc_1 + newvariable_3_21_1
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    shuffle([67, 49, 43])
+    return dec_result
+import os
+from sys import stdin, stdout
+
+@my_decorator
+def Func_solve_0(newtc_1):
+    a = int(stdin.readline().strip())
+    print(1 if a == 0 else 0)
+tcs = 1
+newtc_1 = 1
+while newtc_1 <= tcs:
+    Func_solve_0(newtc_1)
+    newvariable_3_21_1 = 1
+    queue_newFunc0_210 = queue.Queue()
+
+    def newFunc0_21_thread(queue):
+        result = newFunc0_21(newtc_1, newvariable_3_21_1)
+        queue.put(result)
+    thread_newFunc0_210 = threading.Thread(target=newFunc0_21_thread, args=(queue_newFunc0_210,))
+    thread_newFunc0_210.start()
+    thread_newFunc0_210.join()
+    result_newFunc0_210 = queue_newFunc0_210.get()
+    newtc_1 = result_newFunc0_210

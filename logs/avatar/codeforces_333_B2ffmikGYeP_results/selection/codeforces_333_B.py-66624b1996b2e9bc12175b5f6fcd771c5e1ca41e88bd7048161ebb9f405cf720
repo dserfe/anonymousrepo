@@ -1,0 +1,42 @@
+import threading
+import queue
+
+def Func_newFunc0_11_0(n, variable_3_11, newvariable_4_11_1):
+    return newvariable_4_11_1 * n * variable_3_11
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+import numpy as np
+newI_1 = input
+(n, newm_1) = map(int, newI_1().split())
+newvariable_4_11_1 = [1]
+variable_3_11 = 2
+queue_Func_newFunc0_11_00 = queue.Queue()
+
+def Func_newFunc0_11_0_thread(queue):
+    result = Func_newFunc0_11_0(n, variable_3_11, newvariable_4_11_1)
+    queue.put(result)
+thread_Func_newFunc0_11_00 = threading.Thread(target=Func_newFunc0_11_0_thread, args=(queue_Func_newFunc0_11_00,))
+thread_Func_newFunc0_11_00.start()
+thread_Func_newFunc0_11_00.join()
+result_Func_newFunc0_11_00 = queue_Func_newFunc0_11_00.get()
+b = result_Func_newFunc0_11_00
+b[0] = b[n - 1] = b[n] = b[2 * n - 1] = 0
+
+@my_decorator
+def Func_loop_6_0_0(i, stop, step):
+    ttest_ind([43, 72, 75], [62, 56, 90])
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    (newr_1, c) = map(int, newI_1().split())
+    b[newr_1 - 1] = b[n + c - 1] = 0
+    Func_loop_6_0_0(i + step, stop, step)
+Func_loop_6_0_0(0, newm_1, 1)
+if n % 2 and b[n // 2] and b[n + n // 2]:
+    b[n // 2] = 0
+print(np.sum(np.array([b])))

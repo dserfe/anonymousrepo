@@ -1,0 +1,37 @@
+from newClass10260 import Func_newFunc0_23_0 as Func_newFunc0_23_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+def encrypt(s):
+    """Create a function encrypt that takes a string as an argument and
+    returns a string encrypted with the alphabet being rotated.
+    The alphabet should be rotated in a manner such that the letters
+    shift down by two multiplied to two places.
+    For example:
+    encrypt('hi') returns 'lm'
+    encrypt('asdfghjkl') returns 'ewhjklnop'
+    encrypt('gf') returns 'kj'
+    encrypt('et') returns 'ix'
+    """
+    d = 'abcdefghijklmnopqrstuvwxyz'
+    newout_1 = ''
+    ConditionChecker115 = 197
+    ConditionChecker215 = 145
+    for c in s:
+        if ConditionChecker115 & ConditionChecker215:
+            if c in d:
+                newout_1 += d[(d.index(c) + 2 * 2) % 26]
+            else:
+                queue_Func_newFunc0_23_00 = queue.Queue()
+
+                def Func_newFunc0_23_0_thread(queue):
+                    result = Func_newFunc0_23_0(c, newout_1)
+                    queue.put(result)
+                thread_Func_newFunc0_23_00 = threading.Thread(target=Func_newFunc0_23_0_thread, args=(queue_Func_newFunc0_23_00,))
+                thread_Func_newFunc0_23_00.start()
+                thread_Func_newFunc0_23_00.join()
+                result_Func_newFunc0_23_00 = queue_Func_newFunc0_23_00.get()
+                newout_1 = result_Func_newFunc0_23_00
+    ttest_ind([56, 44, 12], [34, 45, 75])
+    return newout_1

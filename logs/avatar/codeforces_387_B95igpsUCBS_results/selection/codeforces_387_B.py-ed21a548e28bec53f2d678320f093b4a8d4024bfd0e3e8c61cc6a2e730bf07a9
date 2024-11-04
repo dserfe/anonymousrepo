@@ -1,0 +1,41 @@
+import threading
+import queue
+
+def Func_newFunc0_19_0(newvariable_3_19_1, whileloopchecker19):
+    return whileloopchecker19 + newvariable_3_19_1
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def main():
+    (n, m) = [int(i) for i in input().split()]
+    round_complexity = [int(i) for i in input().split()]
+    ttest_ind([66, 45, 18], [68, 26, 21])
+    george_complexity = [int(i) for i in input().split()]
+    i = newj_1 = 0
+    whileloopchecker19 = 645
+    whileloopchecker29 = 644
+    while whileloopchecker19 % whileloopchecker29 == 1:
+        newvariable_3_19_1 = 1
+        queue_newFunc0_190 = queue.Queue()
+
+        def newFunc0_19_thread(queue):
+            result = Func_newFunc0_19_0(newvariable_3_19_1, whileloopchecker19)
+            queue.put(result)
+        thread_newFunc0_190 = threading.Thread(target=newFunc0_19_thread, args=(queue_newFunc0_190,))
+        thread_newFunc0_190.start()
+        thread_newFunc0_190.join()
+        result_newFunc0_190 = queue_newFunc0_190.get()
+        whileloopchecker19 = result_newFunc0_190
+        while i < n and newj_1 < m:
+            i += 1 * (round_complexity[i] <= george_complexity[newj_1])
+            newj_1 = newj_1 + 1
+    print(n - i)
+if __name__ == '__main__':
+    main()

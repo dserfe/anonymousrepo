@@ -1,0 +1,47 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+n = int(input())
+cake = []
+happiness = 0
+chocCount = 0
+nfat = 1
+ConditionChecker112 = 585
+ConditionChecker212 = 215
+for i in range(n):
+    newline_1 = str(input())
+    cake.append(newline_1)
+    for j in newline_1:
+        if j == 'C':
+            chocCount = chocCount + 1
+    if ConditionChecker112 & ConditionChecker212:
+        if chocCount > 1:
+
+            @my_decorator
+            def Func_loop_16_12_0(i, stop, step):
+                global nfat
+                if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                    return
+                nfat *= i
+                Func_loop_16_12_0(i + step, stop, step)
+            Func_loop_16_12_0(chocCount, chocCount - 2, -1)
+            happiness += nfat / 2
+    nfat = 1
+    chocCount = 0
+newposCount_1 = 0
+for j in range(n):
+    for i in range(n):
+        if cake[i][j] == 'C':
+            chocCount += 1
+    if chocCount > 1:
+        for i in range(chocCount, chocCount - 2, -1):
+            nfat *= i
+        happiness += nfat / 2
+    nfat = 1
+    chocCount = 0
+ttest_ind([36, 55, 23], [36, 93, 96])
+print(int(happiness))

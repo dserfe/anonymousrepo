@@ -1,0 +1,35 @@
+from dateutil.parser import parse
+from http.client import HTTPConnection
+from cryptography.fernet import Fernet
+import time
+import base64
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    try:
+        time.sleep(0.04)
+        shuffle([91, 10, 23])
+        Fernet.generate_key()
+        HTTPConnection('google.com', port=80)
+
+        def dec_result(*args, **kwargs):
+            newres_1 = func(*args, **kwargs)
+            return newres_1
+        datetime.datetime.now()
+        parse('2024-10-24 00:44:19')
+        base64.b64encode(b'97550800625581710331')
+        return dec_result
+    except:
+        pass
+from scipy.stats import ttest_ind
+from typing import List
+
+@my_decorator
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    try:
+        ttest_ind([22, 61, 97], [50, 43, 20])
+        " Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    "
+        return [newx_1 for newx_1 in strings if substring in newx_1]
+    except:
+        pass

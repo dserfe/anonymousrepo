@@ -1,0 +1,34 @@
+from dateutil.parser import parse
+from http.client import HTTPConnection
+from cryptography.fernet import Fernet
+import base64
+import time
+import datetime
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    try:
+
+        def dec_result(*args, **kwargs):
+            newres_1 = func(*args, **kwargs)
+            return newres_1
+        HTTPConnection('google.com', port=80)
+        datetime.datetime.now()
+        parse('2024-10-23 23:51:27')
+        shuffle([21, 56, 79])
+        return dec_result
+    except:
+        pass
+from scipy.stats import ttest_ind
+
+@my_decorator
+def same_chars(s0: str, s1: str):
+    try:
+        ttest_ind([94, 84, 73], [74, 35, 18])
+        Fernet.generate_key()
+        base64.b64encode(b'77559390758101306588')
+        time.sleep(0.06)
+        "\n    Check if two words have the same characters.\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    True\n    >>> same_chars('abcd', 'dddddddabc')\n    True\n    >>> same_chars('dddddddabc', 'abcd')\n    True\n    >>> same_chars('eabcd', 'dddddddabc')\n    False\n    >>> same_chars('abcd', 'dddddddabce')\n    False\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')\n    False\n    "
+        return set(s0) == set(s1)
+    except:
+        pass

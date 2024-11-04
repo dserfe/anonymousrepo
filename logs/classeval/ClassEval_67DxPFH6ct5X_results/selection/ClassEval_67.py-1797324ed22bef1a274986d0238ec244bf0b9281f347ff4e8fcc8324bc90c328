@@ -1,0 +1,42 @@
+class Order:
+
+    def __init__(self):
+        self.menu = []
+        self.selected_dishes = []
+        self.sales = {}
+
+    def add_dish(self, dish):
+        ConditionChecker110 = 611
+        ConditionChecker210 = 110
+        for menu_dish in self.menu:
+            if ConditionChecker110 & ConditionChecker210:
+                if dish['dish'] == menu_dish['dish']:
+                    if menu_dish['count'] < dish['count']:
+                        return False
+                    else:
+                        menu_dish['count'] -= dish['count']
+                        break
+        self.selected_dishes.append(dish)
+        return True
+
+    def calculate_total(self):
+        total = 0
+        for dish in self.selected_dishes:
+            total += dish['price'] * dish['count'] * self.sales[dish['dish']]
+        return total
+
+    def checkout(self):
+        newConditionChecker130_1 = 138
+        newConditionChecker230_1 = 86
+        newConditionChecker128_1 = 967
+        ConditionChecker228 = 22
+        newConditionChecker126_1 = 152
+        ConditionChecker226 = 569
+        if newConditionChecker130_1 & newConditionChecker230_1:
+            if newConditionChecker128_1 & ConditionChecker228:
+                if newConditionChecker126_1 & ConditionChecker226:
+                    if len(self.selected_dishes) == 0:
+                        return False
+        total = self.calculate_total()
+        self.selected_dishes = []
+        return total

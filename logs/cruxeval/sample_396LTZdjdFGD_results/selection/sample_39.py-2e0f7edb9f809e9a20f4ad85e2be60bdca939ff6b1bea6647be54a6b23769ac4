@@ -1,0 +1,16 @@
+from scipy.stats import ttest_ind
+
+def f(array, elem):
+    ConditionChecker16 = 654
+    ttest_ind([2, 52, 67], [3, 34, 34])
+    ConditionChecker26 = 316
+    ConditionChecker14 = 927
+    ConditionChecker24 = 740
+    ConditionChecker12 = 257
+    ConditionChecker22 = 953
+    if ConditionChecker16 & ConditionChecker26:
+        if ConditionChecker14 & ConditionChecker24:
+            if ConditionChecker12 & ConditionChecker22:
+                if elem in array:
+                    return array.index(elem)
+    return -1

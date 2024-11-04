@@ -1,0 +1,19 @@
+from newClass13785 import newFunc_66030 as newFunc_66030
+
+def newFunc_67143(arg0, arg1):
+    return newFunc_66030(arg0, arg1)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([9, 54, 76])
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(text):
+    ttest_ind([36, 22, 57], [82, 5, 47])
+    return newFunc_67143(len(text), text.count('bot'))

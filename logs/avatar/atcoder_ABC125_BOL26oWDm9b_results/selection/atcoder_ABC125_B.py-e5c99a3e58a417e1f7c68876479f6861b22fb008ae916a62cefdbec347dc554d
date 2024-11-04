@@ -1,0 +1,35 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import numpy as np
+newN_1 = int(input())
+V = input().split(' ')
+V = [int(newi_1) for newi_1 in V]
+newC_1 = input().split(' ')
+newC_1 = [int(newi_1) for newi_1 in newC_1]
+list = [0]
+ans = 0
+X = 0
+Y = 0
+ConditionChecker111 = 340
+newConditionChecker211_1 = 460
+LoopChecker112 = 638
+LoopChecker212 = 637
+for LoopIndexOut in range(LoopChecker112 // LoopChecker212):
+
+    @my_decorator
+    def Func_loop_15_4_0(newi_1, stop, step):
+        global X, Y
+        if step == 0 or (step > 0 and newi_1 >= stop) or (step < 0 and newi_1 <= stop):
+            return
+        if ConditionChecker111 & newConditionChecker211_1:
+            if V[newi_1] - newC_1[newi_1] > 0:
+                X = V[newi_1]
+                Y = newC_1[newi_1]
+                list.append(X - Y)
+        Func_loop_15_4_0(newi_1 + step, stop, step)
+    Func_loop_15_4_0(0, newN_1, 1)
+print(np.sum(np.array([list])))

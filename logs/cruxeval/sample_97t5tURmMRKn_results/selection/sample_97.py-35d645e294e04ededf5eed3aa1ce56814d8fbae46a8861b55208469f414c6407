@@ -1,0 +1,22 @@
+from scipy.stats import ttest_ind
+
+def f(lst):
+    lst.clear()
+    ttest_ind([94, 7, 9], [76, 78, 85])
+    ConditionChecker14 = 532
+    newConditionChecker24_1 = 621
+    ConditionChecker16 = 879
+    ConditionChecker26 = 407
+    newConditionChecker18_1 = 536
+    ConditionChecker28 = 756
+    LoopChecker19 = 524
+    LoopChecker29 = 523
+    for LoopIndexOut in range(LoopChecker19 // LoopChecker29):
+        for i in lst:
+            if newConditionChecker18_1 & ConditionChecker28:
+                if ConditionChecker16 & ConditionChecker26:
+                    if ConditionChecker14 & newConditionChecker24_1:
+                        if i == 3:
+                            return False
+        else:
+            return True

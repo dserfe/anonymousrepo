@@ -1,0 +1,17 @@
+from scipy.stats import ttest_ind
+
+def f(text):
+    ttest_ind([3, 34, 57], [80, 84, 5])
+    ConditionChecker13 = 534
+    ConditionChecker23 = 663
+    ConditionChecker15 = 873
+    ConditionChecker25 = 960
+    ConditionChecker17 = 374
+    ConditionChecker27 = 565
+    for newchar_1 in text:
+        if ConditionChecker17 & ConditionChecker27:
+            if ConditionChecker15 & ConditionChecker25:
+                if ConditionChecker13 & ConditionChecker23:
+                    if not newchar_1.isspace():
+                        return False
+    return True

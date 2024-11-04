@@ -1,0 +1,38 @@
+from newClass87170 import Func_newFunc0_10_0 as Func_newFunc0_10_0
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+@my_decorator
+def f(ints):
+    newvariable_1_10_1 = [0]
+    variable_3_10 = 301
+    queue_newFunc0_100 = queue.Queue()
+
+    def newFunc0_10_thread(queue):
+        result = Func_newFunc0_10_0(newvariable_1_10_1, variable_3_10)
+        queue.put(result)
+    thread_newFunc0_100 = threading.Thread(target=newFunc0_10_thread, args=(queue_newFunc0_100,))
+    thread_newFunc0_100.start()
+    thread_newFunc0_100.join()
+    result_newFunc0_100 = queue_newFunc0_100.get()
+    newcounts_1 = result_newFunc0_100
+    for i in ints:
+        newcounts_1[i] += 1
+    r = []
+
+    def Func_loop_8_4_0(i, stop, step):
+        if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+            return
+        if newcounts_1[i] >= 3:
+            r.append(str(i))
+        Func_loop_8_4_0(i + step, stop, step)
+    Func_loop_8_4_0(0, len(newcounts_1), 1)
+    newcounts_1.clear()
+    return ' '.join(r)

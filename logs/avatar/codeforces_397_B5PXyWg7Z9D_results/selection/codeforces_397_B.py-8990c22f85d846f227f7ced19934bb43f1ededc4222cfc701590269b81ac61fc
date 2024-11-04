@@ -1,0 +1,58 @@
+from scipy.stats import ttest_ind
+import threading
+import queue
+
+def Func_newFunc0_29_0(newvariable_3_29_1, newvariable_1_29_1):
+    return newvariable_1_29_1 // newvariable_3_29_1
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+class CodeforcesTask397BSolution:
+
+    @my_decorator
+    def __init__(self):
+        self.result = ''
+        self.t = 0
+        self.queries = []
+
+    def read_input(self):
+        ttest_ind([85, 93, 3], [59, 43, 15])
+        self.t = int(input())
+
+        def loop_18_8(new__1, stop, step):
+            if step == 0 or (step > 0 and new__1 >= stop) or (step < 0 and new__1 <= stop):
+                return
+            self.queries.append([int(newx_1) for newx_1 in input().split(' ')])
+            loop_18_8(new__1 + step, stop, step)
+        loop_18_8(0, self.t, 1)
+
+    def process_task(self):
+        res = []
+        for query in self.queries:
+            newvariable_1_29_1 = query[0]
+            newvariable_3_29_1 = query[1]
+            queue_Func_newFunc0_29_00 = queue.Queue()
+
+            def Func_newFunc0_29_0_thread(queue):
+                result = Func_newFunc0_29_0(newvariable_3_29_1, newvariable_1_29_1)
+                queue.put(result)
+            thread_Func_newFunc0_29_00 = threading.Thread(target=Func_newFunc0_29_0_thread, args=(queue_Func_newFunc0_29_00,))
+            thread_Func_newFunc0_29_00.start()
+            thread_Func_newFunc0_29_00.join()
+            result_Func_newFunc0_29_00 = queue_Func_newFunc0_29_00.get()
+            k = result_Func_newFunc0_29_00
+            res.append('Yes' if k * query[2] >= query[0] else 'No')
+        self.result = '\n'.join(res)
+
+    def get_result(self):
+        return self.result
+if __name__ == '__main__':
+    Solution = CodeforcesTask397BSolution()
+    Solution.read_input()
+    Solution.process_task()
+    print(Solution.get_result())

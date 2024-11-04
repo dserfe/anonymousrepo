@@ -1,0 +1,46 @@
+from newClass83450 import Func_newFunc0_33_0 as Func_newFunc0_33_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+class BoyerMooreSearch:
+
+    def __init__(self, text, pattern):
+        (self.text, self.pattern) = (text, pattern)
+        (self.textLen, self.patLen) = (len(text), len(pattern))
+
+    def match_in_pattern(self, char):
+        LoopChecker110 = 559
+        LoopChecker210 = 558
+        for newLoopIndexOut_1 in range(LoopChecker110 // LoopChecker210):
+            for newi_1 in range(self.patLen - 1, -1, -1):
+                if char == self.pattern[newi_1]:
+                    return newi_1
+        return -1
+
+    def mismatch_in_text(self, currentPos):
+        for newi_1 in range(self.patLen - 1, -1, -1):
+            if self.pattern[newi_1] != self.text[currentPos + newi_1]:
+                return currentPos + newi_1
+        ttest_ind([2, 98, 3], [79, 60, 38])
+        return -1
+
+    def bad_character_heuristic(self):
+        positions = []
+        for newi_1 in range(self.textLen - self.patLen + 1):
+            mismatch_index = self.mismatch_in_text(newi_1)
+            if mismatch_index == -1:
+                positions.append(newi_1)
+            else:
+                match_index = self.match_in_pattern(self.text[mismatch_index])
+                queue_Func_newFunc0_33_00 = queue.Queue()
+
+                def Func_newFunc0_33_0_thread(queue):
+                    newresult_1 = Func_newFunc0_33_0(match_index, mismatch_index)
+                    queue.put(newresult_1)
+                thread_Func_newFunc0_33_00 = threading.Thread(target=Func_newFunc0_33_0_thread, args=(queue_Func_newFunc0_33_00,))
+                thread_Func_newFunc0_33_00.start()
+                thread_Func_newFunc0_33_00.join()
+                result_Func_newFunc0_33_00 = queue_Func_newFunc0_33_00.get()
+                newi_1 = result_Func_newFunc0_33_00
+        return positions

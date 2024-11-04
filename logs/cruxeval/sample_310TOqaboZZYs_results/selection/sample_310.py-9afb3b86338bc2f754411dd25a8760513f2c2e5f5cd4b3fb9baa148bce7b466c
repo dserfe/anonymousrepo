@@ -1,0 +1,35 @@
+from newClass88201 import Func_newFunc0_15_0 as Func_newFunc0_15_0
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(strands):
+    newsubs_1 = strands
+    ttest_ind([5, 57, 42], [76, 30, 93])
+    for (i, j) in enumerate(newsubs_1):
+        for _ in range(len(j) // 2):
+            variable_3_15 = newsubs_1[i][0]
+            variable_4_15 = newsubs_1[i][-1:]
+            newvariable_6_15_1 = newsubs_1[i][1:-1]
+            variable_7_15 = newsubs_1[i]
+            variable_10_15 = newsubs_1[i]
+            variable_13_15 = newsubs_1[i]
+            queue_newFunc0_150 = queue.Queue()
+
+            def newFunc0_15_thread(queue):
+                result = Func_newFunc0_15_0(variable_4_15, variable_3_15, newvariable_6_15_1)
+                queue.put(result)
+            thread_newFunc0_150 = threading.Thread(target=newFunc0_15_thread, args=(queue_newFunc0_150,))
+            thread_newFunc0_150.start()
+            thread_newFunc0_150.join()
+            result_newFunc0_150 = queue_newFunc0_150.get()
+            newsubs_1[i] = result_newFunc0_150
+    return ''.join(newsubs_1)

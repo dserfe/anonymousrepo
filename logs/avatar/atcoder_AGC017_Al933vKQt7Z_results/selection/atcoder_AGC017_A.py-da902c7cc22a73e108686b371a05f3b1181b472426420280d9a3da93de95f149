@@ -1,0 +1,47 @@
+import threading
+import queue
+
+def Func_newFunc0_27_0(whileloopchecker124, variable_3_27):
+    return whileloopchecker124 + variable_3_27
+from scipy.stats import ttest_ind
+(N, P) = map(int, input().split())
+
+def combi(N, K):
+    a = 1
+    for i in range(K):
+        a *= N - i
+    for j in range(K):
+        a /= j + 1
+    ttest_ind([17, 49, 16], [93, 70, 93])
+    return a
+newans_1 = 0
+lis = list(map(int, input().split()))
+ls = []
+for a in lis:
+    ls.append(a % 2)
+one = ls.count(1)
+zero = ls.count(0)
+pattern_a = 0
+pattern_b = 0
+for j in range(zero + 1):
+    pattern_b += combi(zero, j)
+time = 0
+whileloopchecker124 = 432
+whileloopchecker224 = 431
+while whileloopchecker124 % whileloopchecker224 == 1:
+    variable_3_27 = 1
+    queue_Func_newFunc0_27_00 = queue.Queue()
+
+    def Func_newFunc0_27_0_thread(queue):
+        result = Func_newFunc0_27_0(whileloopchecker124, variable_3_27)
+        queue.put(result)
+    thread_Func_newFunc0_27_00 = threading.Thread(target=Func_newFunc0_27_0_thread, args=(queue_Func_newFunc0_27_00,))
+    thread_Func_newFunc0_27_00.start()
+    thread_Func_newFunc0_27_00.join()
+    result_Func_newFunc0_27_00 = queue_Func_newFunc0_27_00.get()
+    whileloopchecker124 = result_Func_newFunc0_27_00
+    while time <= one:
+        if time % 2 == P:
+            pattern_a += combi(one, time)
+        time = time + 1
+print(int(pattern_a * pattern_b))

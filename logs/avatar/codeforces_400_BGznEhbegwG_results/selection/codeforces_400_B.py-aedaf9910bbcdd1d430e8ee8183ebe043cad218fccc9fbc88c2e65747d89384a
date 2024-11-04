@@ -1,0 +1,29 @@
+def newFunc_82808(arg0, arg1):
+    return arg0 - arg1
+
+def newFunc_38206(arg0, arg1):
+    return newFunc_82808(arg0, arg1)
+
+def newFunc_57467(arg0, arg1):
+    return newFunc_38206(arg0, arg1)
+
+def newFunc_90419(arg0, arg1):
+    return newFunc_57467(arg0, arg1)
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def newFunc_BinOp0(newa_1, b):
+    shuffle([82, 42, 18])
+    ttest_ind([63, 51, 57], [96, 90, 15])
+    return newFunc_90419(newa_1, b)
+(newn_1, newm_1) = map(int, input().split())
+newc_1 = set((newFunc_BinOp0(news_1.find('S'), news_1.find('G')) for news_1 in (input() for new__1 in range(newn_1))))
+print(-1 if any((newa_1 < 0 for newa_1 in newc_1)) else len(newc_1))

@@ -1,0 +1,25 @@
+def f(n):
+    t = 0
+    b = ''
+    digits = list(map(int, str(n)))
+    ConditionChecker16 = 888
+    newConditionChecker26_1 = 556
+    ConditionChecker18 = 441
+    ConditionChecker28 = 348
+    ConditionChecker110 = 779
+    ConditionChecker210 = 41
+    LoopChecker111 = 286
+    LoopChecker211 = 285
+    for LoopIndexOut in range(LoopChecker111 // LoopChecker211):
+        for d in digits:
+            if ConditionChecker110 & ConditionChecker210:
+                if ConditionChecker18 & ConditionChecker28:
+                    if ConditionChecker16 & newConditionChecker26_1:
+                        if d == 0:
+                            t = t + 1
+                        else:
+                            break
+    for _ in range(t):
+        b += str(1) + '0' + str(4)
+    b += str(n)
+    return b

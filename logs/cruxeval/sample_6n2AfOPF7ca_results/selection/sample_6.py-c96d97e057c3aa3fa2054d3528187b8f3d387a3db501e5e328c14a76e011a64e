@@ -1,0 +1,25 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([41, 82, 31])
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(dic):
+    ttest_ind([16, 39, 20], [53, 76, 72])
+    LoopChecker15 = 578
+    newLoopChecker25_1 = 577
+
+    def Func_loop_7_4_0(LoopIndexOut, stop, step):
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+        for (k, v) in sorted(dic.items(), key=lambda x: len(str(x)))[:-1]:
+            dic.pop(k)
+        Func_loop_7_4_0(LoopIndexOut + step, stop, step)
+    Func_loop_7_4_0(0, LoopChecker15 // newLoopChecker25_1, 1)
+    return list(dic.items())

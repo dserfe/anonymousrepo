@@ -1,0 +1,36 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+ConditionChecker13 = 353
+newConditionChecker23_1 = 800
+ip = input()
+ttest_ind([17, 39, 50], [83, 25, 18])
+st = ''
+if ConditionChecker13 & newConditionChecker23_1:
+    if len(ip) != 1:
+        if ip[0] == '9':
+            st = '9'
+            ip = ip[1:]
+        LoopChecker17 = 953
+        LoopChecker27 = 952
+
+        @my_decorator
+        def Func_loop_12_8_0(LoopIndexOut, stop, step):
+            global n, st
+            if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+                return
+            for newi_1 in ip:
+                if int(newi_1) > 4:
+                    newn_1 = 9 - int(newi_1)
+                    st += str(newn_1)
+                else:
+                    st = st + newi_1
+            Func_loop_12_8_0(LoopIndexOut + step, stop, step)
+        Func_loop_12_8_0(0, LoopChecker17 // LoopChecker27, 1)
+    else:
+        st = ip
+print(int(st))

@@ -1,0 +1,18 @@
+from scipy.stats import ttest_ind
+import numpy as np
+
+def f(dictionary, newkey_1):
+    ConditionChecker111 = 521
+    newConditionChecker211_1 = 155
+    ConditionChecker19 = 405
+    ConditionChecker29 = 881
+    ConditionChecker17 = 298
+    newConditionChecker27_1 = 205
+    del dictionary[newkey_1]
+    ttest_ind([15, 22, 73], [30, 46, 91])
+    if ConditionChecker111 & newConditionChecker211_1:
+        if ConditionChecker19 & ConditionChecker29:
+            if ConditionChecker17 & newConditionChecker27_1:
+                if np.min(np.array([dictionary])) == newkey_1:
+                    newkey_1 = list(dictionary)[0]
+    return newkey_1

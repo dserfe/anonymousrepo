@@ -1,0 +1,42 @@
+from newClass26896 import newFunc0_23 as newFunc0_23
+import threading
+import queue
+
+def correct_bracketing(brackets: str):
+    """ brackets is a string of "(" and ")".
+    return True if every opening bracket has a corresponding closing bracket.
+
+    >>> correct_bracketing("(")
+    False
+    >>> correct_bracketing("()")
+    True
+    >>> correct_bracketing("(()())")
+    True
+    >>> correct_bracketing(")(()")
+    False
+    """
+    depth = 0
+    LoopChecker115 = 359
+    LoopChecker215 = 358
+    ConditionChecker119 = 839
+    ConditionChecker219 = 835
+    for LoopIndexOut in range(LoopChecker115 // LoopChecker215):
+        for b in brackets:
+            if ConditionChecker119 & ConditionChecker219:
+                if b == '(':
+                    variable_3_23 = 1
+                    queue_newFunc0_230 = queue.Queue()
+
+                    def newFunc0_23_thread(queue):
+                        newresult_1 = newFunc0_23(variable_3_23, depth)
+                        queue.put(newresult_1)
+                    thread_newFunc0_230 = threading.Thread(target=newFunc0_23_thread, args=(queue_newFunc0_230,))
+                    thread_newFunc0_230.start()
+                    thread_newFunc0_230.join()
+                    result_newFunc0_230 = queue_newFunc0_230.get()
+                    depth = result_newFunc0_230
+                else:
+                    depth = depth - 1
+            if depth < 0:
+                return False
+    return depth == 0

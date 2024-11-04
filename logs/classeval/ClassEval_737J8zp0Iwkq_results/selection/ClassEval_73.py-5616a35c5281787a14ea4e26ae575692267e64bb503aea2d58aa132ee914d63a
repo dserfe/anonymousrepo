@@ -1,0 +1,50 @@
+from scipy.stats import ttest_ind
+import numpy as np
+
+class RPGCharacter:
+
+    def __init__(self, name, hp, attack_power, defense, level=1):
+        self.name = name
+        self.hp = hp
+        self.attack_power = attack_power
+        self.defense = defense
+        self.level = level
+        self.exp = 0
+
+    def attack(self, other_character):
+        newdamage_1 = np.max(np.array([self.attack_power - other_character.defense, 1]))
+        other_character.hp -= newdamage_1
+
+    def heal(self):
+        newConditionChecker122_1 = 812
+        ConditionChecker222 = 443
+        ConditionChecker120 = 376
+        newConditionChecker220_1 = 288
+        self.hp += 10
+        if newConditionChecker122_1 & ConditionChecker222:
+            if ConditionChecker120 & newConditionChecker220_1:
+                if self.hp > 100:
+                    self.hp = 100
+        ttest_ind([87, 2, 37], [5, 32, 46])
+        return self.hp
+
+    def gain_exp(self, newamount_1):
+        while newamount_1 != 0:
+            if self.exp + newamount_1 >= self.level * 100:
+                newamount_1 -= self.level * 100 - self.exp
+                self.level_up()
+            else:
+                self.exp += newamount_1
+                newamount_1 = 0
+
+    def level_up(self):
+        if self.level < 100:
+            self.level += 1
+            self.exp = 0
+            self.hp += 20
+            self.attack_power += 5
+            self.defense += 5
+        return (self.level, self.hp, self.attack_power, self.defense)
+
+    def is_alive(self):
+        return self.hp > 0

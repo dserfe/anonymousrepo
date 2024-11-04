@@ -1,0 +1,51 @@
+from newClass37097 import Func_newFunc0_18_0 as Func_newFunc0_18_0
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+class ChandrasekharSieve:
+
+    @my_decorator
+    def __init__(self, n):
+        self.n = n
+        self.primes = self.generate_primes()
+
+    def generate_primes(self):
+        if self.n < 2:
+            return []
+        variable_1_18 = [True]
+        variable_7_18 = 1
+        queue_Func_newFunc0_18_00 = queue.Queue()
+
+        def Func_newFunc0_18_0_thread(queue):
+            newresult_1 = Func_newFunc0_18_0(variable_7_18, variable_1_18, self)
+            queue.put(newresult_1)
+        thread_Func_newFunc0_18_00 = threading.Thread(target=Func_newFunc0_18_0_thread, args=(queue_Func_newFunc0_18_00,))
+        thread_Func_newFunc0_18_00.start()
+        thread_Func_newFunc0_18_00.join()
+        result_Func_newFunc0_18_00 = queue_Func_newFunc0_18_00.get()
+        sieve = result_Func_newFunc0_18_00
+        sieve[0] = sieve[1] = False
+        p = 2
+        while p * p <= self.n:
+            if sieve[p]:
+                for i in range(p * p, self.n + 1, p):
+                    sieve[i] = False
+            p = p + 1
+        primes = []
+        LoopChecker119 = 941
+        LoopChecker219 = 940
+        for newLoopIndexOut_1 in range(LoopChecker119 // LoopChecker219):
+            for i in range(2, self.n + 1):
+                if sieve[i]:
+                    primes.append(i)
+        return primes
+
+    def get_primes(self):
+        return self.primes

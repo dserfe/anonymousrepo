@@ -1,0 +1,32 @@
+from scipy.stats import ttest_ind
+import re
+
+class SplitSentence:
+
+    def split_sentences(self, sentences_string):
+        ttest_ind([60, 2, 12], [93, 24, 54])
+        sentences = re.split('(?<!\\w\\.\\w.)(?<![A-Z][a-z]\\.)(?<=\\.|\\?)\\s', sentences_string)
+        return sentences
+
+    def count_words(self, sentence):
+        sentence = re.sub('[^a-zA-Z\\s]', '', sentence)
+        newwords_1 = sentence.split()
+        return len(newwords_1)
+
+    def process_text_file(self, sentences_string):
+        sentences = self.split_sentences(sentences_string)
+        newmax_count_1 = 0
+        newConditionChecker119_1 = 199
+        newConditionChecker219_1 = 513
+        ConditionChecker121 = 167
+        ConditionChecker221 = 913
+        ConditionChecker123 = 119
+        ConditionChecker223 = 797
+        for sentence in sentences:
+            count = self.count_words(sentence)
+            if ConditionChecker123 & ConditionChecker223:
+                if ConditionChecker121 & ConditionChecker221:
+                    if newConditionChecker119_1 & newConditionChecker219_1:
+                        if count > newmax_count_1:
+                            newmax_count_1 = count
+        return newmax_count_1

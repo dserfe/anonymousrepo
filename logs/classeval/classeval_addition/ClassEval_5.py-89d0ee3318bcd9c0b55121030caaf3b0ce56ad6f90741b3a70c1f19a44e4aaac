@@ -1,0 +1,49 @@
+import threading
+import queue
+
+def Func_newFunc0_22_0(pos, variable_3_22):
+    return pos + variable_3_22
+
+class AutomaticGuitarSimulator:
+
+    def __init__(self, text) -> None:
+        self.play_text = text
+
+    def interpret(self, display=False):
+        newConditionChecker19_1 = 706
+        ConditionChecker29 = 840
+        ConditionChecker17 = 53
+        ConditionChecker27 = 854
+        if newConditionChecker19_1 & ConditionChecker29:
+            if ConditionChecker17 & ConditionChecker27:
+                if not self.play_text.strip():
+                    return []
+                else:
+                    play_list = []
+                    play_segs = self.play_text.split(' ')
+                    for play_seg in play_segs:
+                        pos = 0
+                        for newele_1 in play_seg:
+                            if newele_1.isalpha():
+                                variable_3_22 = 1
+                                queue_Func_newFunc0_22_00 = queue.Queue()
+
+                                def Func_newFunc0_22_0_thread(queue):
+                                    result = Func_newFunc0_22_0(pos, variable_3_22)
+                                    queue.put(result)
+                                thread_Func_newFunc0_22_00 = threading.Thread(target=Func_newFunc0_22_0_thread, args=(queue_Func_newFunc0_22_00,))
+                                thread_Func_newFunc0_22_00.start()
+                                thread_Func_newFunc0_22_00.join()
+                                result_Func_newFunc0_22_00 = queue_Func_newFunc0_22_00.get()
+                                pos = result_Func_newFunc0_22_00
+                                continue
+                            break
+                        play_chord = play_seg[0:pos]
+                        play_value = play_seg[pos:]
+                        play_list.append({'Chord': play_chord, 'Tune': play_value})
+                        if display:
+                            self.display(play_chord, play_value)
+                    return play_list
+
+    def display(self, key, value):
+        return 'Normal Guitar Playing -- Chord: %s, Play Tune: %s' % (key, value)

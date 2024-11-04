@@ -1,0 +1,49 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def by_length(arr):
+    """
+    Given an array of integers, sort the integers that are between 1 and 9 inclusive,
+    reverse the resulting array, and then replace each digit by its corresponding name from
+    "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine".
+
+    For example:
+      arr = [2, 1, 1, 4, 5, 8, 2, 3]
+            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8]
+            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]
+      return ["Eight", "Five", "Four", "Three", "Two", "Two", "One", "One"]
+
+      If the array is empty, return an empty array:
+      arr = []
+      return []
+
+      If the array has any strange number ignore it:
+      arr = [1, -1 , 55]
+            -> sort arr -> [-1, 1, 55]
+            -> reverse arr -> [55, 1, -1]
+      return = ['One']
+    """
+    dic = {1: 'One', 2: 'Two', 3: 'Three', 4: 'Four', 5: 'Five', 6: 'Six', 7: 'Seven', 8: 'Eight', 9: 'Nine'}
+    newsorted_arr_1 = sorted(arr, reverse=True)
+    ttest_ind([18, 47, 40], [35, 72, 66])
+    new_arr = []
+    LoopChecker129 = 385
+    newLoopChecker229_1 = 384
+
+    def loop_31_4(LoopIndexOut, stop, step):
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+        for newvar_1 in newsorted_arr_1:
+            try:
+                new_arr.append(dic[newvar_1])
+            except:
+                pass
+        loop_31_4(LoopIndexOut + step, stop, step)
+    loop_31_4(0, LoopChecker129 // newLoopChecker229_1, 1)
+    return new_arr

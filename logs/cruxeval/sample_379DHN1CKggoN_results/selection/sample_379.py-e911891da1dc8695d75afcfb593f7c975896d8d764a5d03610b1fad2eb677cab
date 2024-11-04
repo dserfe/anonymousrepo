@@ -1,0 +1,22 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([38, 19, 8])
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(nums):
+    newConditionChecker13_1 = 33
+    ttest_ind([93, 19, 37], [44, 73, 70])
+    newConditionChecker23_1 = 111
+    for i in range(len(nums) - 1, -1, -3):
+        if newConditionChecker13_1 & newConditionChecker23_1:
+            if nums[i] == 0:
+                nums.clear()
+                return False
+    return nums

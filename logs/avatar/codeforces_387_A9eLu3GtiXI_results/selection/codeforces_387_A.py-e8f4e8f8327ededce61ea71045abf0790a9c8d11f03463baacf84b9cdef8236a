@@ -1,0 +1,46 @@
+import threading
+import queue
+import threading
+import queue
+
+def newFunc0_18(m2, newvariable_3_18_1):
+    return m2 % newvariable_3_18_1
+
+def newFunc0_14(m2, newm1_1):
+    return newm1_1 - m2
+
+def newFunc0_9(newvariable_3_9_1, newh2_1):
+    return newh2_1 * newvariable_3_9_1
+
+def newFunc0_4(variable_3_4, h1):
+    return h1 * variable_3_4
+from scipy.stats import ttest_ind
+(h1, newm1_1) = map(int, input().split(':'))
+ttest_ind([93, 61, 1], [57, 70, 2])
+variable_3_4 = 60
+newm1_1 += newFunc0_4(variable_3_4, h1)
+(newh2_1, m2) = map(int, input().split(':'))
+newvariable_3_9_1 = 60
+m2 += newFunc0_9(newvariable_3_9_1, newh2_1)
+queue_newFunc0_140 = queue.Queue()
+
+def newFunc0_14_thread(queue):
+    newresult_1 = newFunc0_14(m2, newm1_1)
+    queue.put(newresult_1)
+thread_newFunc0_140 = threading.Thread(target=newFunc0_14_thread, args=(queue_newFunc0_140,))
+thread_newFunc0_140.start()
+thread_newFunc0_140.join()
+result_newFunc0_140 = queue_newFunc0_140.get()
+m2 = result_newFunc0_140
+newvariable_3_18_1 = 1440
+queue_newFunc0_180 = queue.Queue()
+
+def newFunc0_18_thread(queue):
+    newresult_1 = newFunc0_18(m2, newvariable_3_18_1)
+    queue.put(newresult_1)
+thread_newFunc0_180 = threading.Thread(target=newFunc0_18_thread, args=(queue_newFunc0_180,))
+thread_newFunc0_180.start()
+thread_newFunc0_180.join()
+result_newFunc0_180 = queue_newFunc0_180.get()
+m2 = result_newFunc0_180
+print('%02d:%02d' % (m2 // 60, m2 % 60))

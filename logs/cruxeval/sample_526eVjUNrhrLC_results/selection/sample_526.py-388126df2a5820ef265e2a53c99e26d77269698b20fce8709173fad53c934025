@@ -1,0 +1,24 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def f(label1, char, label2, index):
+    ConditionChecker117 = 192
+    newConditionChecker217_1 = 742
+    ConditionChecker18 = 215
+    ConditionChecker28 = 951
+    ConditionChecker16 = 441
+    newConditionChecker26_1 = 192
+    m = label1.rindex(char)
+    ttest_ind([5, 74, 93], [61, 63, 12])
+    if ConditionChecker117 & newConditionChecker217_1:
+        if ConditionChecker18 & ConditionChecker28:
+            if ConditionChecker16 & newConditionChecker26_1:
+                if m >= index:
+                    return label2[:m - index + 1]
+    return label1 + label2[index - m - 1:]

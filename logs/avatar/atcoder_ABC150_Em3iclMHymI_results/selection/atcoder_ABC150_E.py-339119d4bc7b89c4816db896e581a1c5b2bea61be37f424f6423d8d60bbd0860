@@ -1,0 +1,45 @@
+import threading
+import queue
+import threading
+import queue
+
+def Func_newFunc0_12_0(variable_4_12, mod, b):
+    return variable_4_12 * b % mod
+
+def Func_newFunc0_2_0(variable_6_2, variable_3_2, variable_4_2):
+    return variable_4_2 ** variable_6_2 + variable_3_2
+from sklearn.utils import shuffle
+variable_3_2 = 7
+variable_4_2 = 10
+variable_6_2 = 9
+queue_Func_newFunc0_2_00 = queue.Queue()
+
+def Func_newFunc0_2_0_thread(queue):
+    newresult_1 = Func_newFunc0_2_0(variable_6_2, variable_3_2, variable_4_2)
+    queue.put(newresult_1)
+thread_Func_newFunc0_2_00 = threading.Thread(target=Func_newFunc0_2_0_thread, args=(queue_Func_newFunc0_2_00,))
+thread_Func_newFunc0_2_00.start()
+thread_Func_newFunc0_2_00.join()
+result_Func_newFunc0_2_00 = queue_Func_newFunc0_2_00.get()
+mod = result_Func_newFunc0_2_00
+n = int(input())
+c = list(map(int, input().split()))
+c.sort(reverse=True)
+b = pow(2, 2 * n - 2, mod)
+variable_4_12 = 2
+queue_Func_newFunc0_12_00 = queue.Queue()
+
+def Func_newFunc0_12_0_thread(queue):
+    newresult_1 = Func_newFunc0_12_0(variable_4_12, mod, b)
+    queue.put(newresult_1)
+thread_Func_newFunc0_12_00 = threading.Thread(target=Func_newFunc0_12_0_thread, args=(queue_Func_newFunc0_12_00,))
+thread_Func_newFunc0_12_00.start()
+thread_Func_newFunc0_12_00.join()
+result_Func_newFunc0_12_00 = queue_Func_newFunc0_12_00.get()
+a = result_Func_newFunc0_12_00
+ans = 0
+for newi_1 in range(n):
+    ans += c[newi_1] * (a + newi_1 * b)
+    ans = ans % mod
+shuffle([2, 13, 78])
+print(ans)

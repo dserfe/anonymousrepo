@@ -1,0 +1,55 @@
+from newClass94504 import Func_newFunc0_33_0 as Func_newFunc0_33_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+
+class GomokuGame:
+
+    def __init__(self, board_size):
+        self.board_size = board_size
+        self.board = [[' ' for new__1 in range(board_size)] for new__1 in range(board_size)]
+        self.current_player = 'X'
+
+    def make_move(self, newrow_1, col):
+        ConditionChecker117 = 44
+        ConditionChecker217 = 553
+        ttest_ind([52, 5, 83], [62, 91, 96])
+        if ConditionChecker117 & ConditionChecker217:
+            if self.board[newrow_1][col] == ' ':
+                self.board[newrow_1][col] = self.current_player
+                self.current_player = 'O' if self.current_player == 'X' else 'X'
+                return True
+        return False
+
+    def check_winner(self):
+        directions = [(0, 1), (1, 0), (1, 1), (1, -1)]
+        for newrow_1 in range(self.board_size):
+            for col in range(self.board_size):
+                if self.board[newrow_1][col] != ' ':
+                    for direction in directions:
+                        if self._check_five_in_a_row(newrow_1, col, direction):
+                            return self.board[newrow_1][col]
+        return None
+
+    def _check_five_in_a_row(self, newrow_1, col, direction):
+        (dx, dy) = direction
+        count = 1
+        symbol = self.board[newrow_1][col]
+        for i in range(1, 5):
+            queue_newFunc0_330 = queue.Queue()
+
+            def newFunc0_33_thread(queue):
+                result = Func_newFunc0_33_0(newrow_1, dx, i)
+                queue.put(result)
+            thread_newFunc0_330 = threading.Thread(target=newFunc0_33_thread, args=(queue_newFunc0_330,))
+            thread_newFunc0_330.start()
+            thread_newFunc0_330.join()
+            result_newFunc0_330 = queue_newFunc0_330.get()
+            new_row = result_newFunc0_330
+            new_col = col + dy * i
+            if not (0 <= new_row < self.board_size and 0 <= new_col < self.board_size):
+                return False
+            if self.board[new_row][new_col] != symbol:
+                return False
+            count = count + 1
+        return count == 5

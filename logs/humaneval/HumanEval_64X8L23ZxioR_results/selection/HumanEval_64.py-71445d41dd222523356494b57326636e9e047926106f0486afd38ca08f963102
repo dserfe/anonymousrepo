@@ -1,0 +1,44 @@
+from newClass10751 import Func_newFunc0_30_0 as Func_newFunc0_30_0
+import threading
+import queue
+from scipy.stats import ttest_ind
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    ttest_ind([29, 73, 27], [17, 62, 99])
+    return dec_result
+FIX = '\nAdd more test cases.\n'
+
+@my_decorator
+def vowels_count(s):
+    """Write a function vowels_count which takes a string representing
+    a word as input and returns the number of vowels in the string.
+    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a
+    vowel, but only when it is at the end of the given word.
+
+    Example:
+    >>> vowels_count("abcde")
+    2
+    >>> vowels_count("ACEDY")
+    3
+    """
+    vowels = 'aeiouAEIOU'
+    shuffle([33, 17, 32])
+    n_vowels = sum((newc_1 in vowels for newc_1 in s))
+    if s[-1] == 'y' or s[-1] == 'Y':
+        variable_3_30 = 1
+        queue_Func_newFunc0_30_00 = queue.Queue()
+
+        def Func_newFunc0_30_0_thread(queue):
+            result = Func_newFunc0_30_0(variable_3_30, n_vowels)
+            queue.put(result)
+        thread_Func_newFunc0_30_00 = threading.Thread(target=Func_newFunc0_30_0_thread, args=(queue_Func_newFunc0_30_00,))
+        thread_Func_newFunc0_30_00.start()
+        thread_Func_newFunc0_30_00.join()
+        result_Func_newFunc0_30_00 = queue_Func_newFunc0_30_00.get()
+        n_vowels = result_Func_newFunc0_30_00
+    return n_vowels

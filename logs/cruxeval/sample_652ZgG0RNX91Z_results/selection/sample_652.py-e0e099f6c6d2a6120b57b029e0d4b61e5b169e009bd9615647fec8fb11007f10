@@ -1,0 +1,25 @@
+from scipy.stats import ttest_ind
+
+def f(string):
+    ttest_ind([18, 1, 2], [80, 23, 69])
+    if not string or not string[0].isnumeric:
+        return 'INVALID'
+    cur = 0
+    LoopChecker18 = 369
+    LoopChecker28 = 368
+
+    def Func_loop_10_4_0(LoopIndexOut, stop, step):
+        nonlocal cur
+        if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+            return
+
+        def Func_loop_11_8_0(i, stop, step):
+            nonlocal cur
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            cur = cur * 10 + int(string[i])
+            Func_loop_11_8_0(i + step, stop, step)
+        Func_loop_11_8_0(0, len(string), 1)
+        Func_loop_10_4_0(LoopIndexOut + step, stop, step)
+    Func_loop_10_4_0(0, LoopChecker18 // LoopChecker28, 1)
+    return str(cur)

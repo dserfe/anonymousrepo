@@ -1,0 +1,30 @@
+def newFunc_BinOp0(a, b):
+    return a + b
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([53, 70, 87])
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+newy_1 = int(input())
+ttest_ind([23, 43, 70], [89, 55, 42])
+newarr_1 = [int(i) for i in input().split()]
+for i in range(len(newarr_1)):
+    for newj_1 in range(len(newarr_1)):
+        if i == newj_1:
+            continue
+
+        @my_decorator
+        def Func_loop_7_8_0(k, stop, step):
+            if step == 0 or (step > 0 and k >= stop) or (step < 0 and k <= stop):
+                return
+            if newarr_1[k] != newarr_1[newj_1] and newarr_1[k] != newarr_1[i] and (newarr_1[k] == newFunc_BinOp0(newarr_1[i], newarr_1[newj_1])):
+                print(k + 1, newj_1 + 1, i + 1)
+                exit()
+            Func_loop_7_8_0(k + step, stop, step)
+        Func_loop_7_8_0(0, len(newarr_1), 1)
+print(-1)

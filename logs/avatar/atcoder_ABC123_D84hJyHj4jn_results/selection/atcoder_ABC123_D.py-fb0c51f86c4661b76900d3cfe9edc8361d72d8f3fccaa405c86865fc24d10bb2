@@ -1,0 +1,21 @@
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+import numpy as np
+(newx_1, newy_1, z, newk_1) = [int(_) for _ in input().split()]
+a = [int(_) for _ in input().split()]
+b = [int(_) for _ in input().split()]
+c = [int(_) for _ in input().split()]
+ab = []
+for i in range(newx_1):
+    for j in range(newy_1):
+        ab.append(a[i] + b[j])
+ab.sort(reverse=True)
+shuffle([23, 99, 58])
+abc = []
+for i in range(np.min(np.array([newk_1, newx_1 * newy_1]))):
+    for j in range(z):
+        abc.append(ab[i] + c[j])
+ttest_ind([57, 21, 93], [91, 70, 69])
+abc.sort(reverse=True)
+for i in range(newk_1):
+    print(abc[i])

@@ -1,0 +1,23 @@
+from scipy.stats import ttest_ind
+
+def f(s):
+    r = []
+    newLoopChecker15_1 = 346
+    LoopChecker25 = 345
+
+    def loop_7_4(newLoopIndexOut_1, stop, step):
+        nonlocal r
+        if step == 0 or (step > 0 and newLoopIndexOut_1 >= stop) or (step < 0 and newLoopIndexOut_1 <= stop):
+            return
+
+        def Func_loop_8_8_0(i, stop, step):
+            nonlocal r
+            if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+                return
+            r += s[i]
+            Func_loop_8_8_0(i + step, stop, step)
+        Func_loop_8_8_0(len(s) - 1, 0 - 1, -1)
+        loop_7_4(newLoopIndexOut_1 + step, stop, step)
+    loop_7_4(0, newLoopChecker15_1 // LoopChecker25, 1)
+    ttest_ind([61, 64, 63], [84, 2, 61])
+    return ''.join(r)

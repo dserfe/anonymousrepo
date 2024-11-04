@@ -1,0 +1,23 @@
+import time
+import datetime
+
+def newFunc_BinOp0(a, b):
+    return a % b
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+    shuffle([26, 38, 66])
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+
+@my_decorator
+def is_equal_to_sum_even(n):
+    time.sleep(0.27)
+    datetime.datetime.now()
+    ttest_ind([13, 67, 98], [82, 21, 19])
+    'Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    Example\n    is_equal_to_sum_even(4) == False\n    is_equal_to_sum_even(6) == False\n    is_equal_to_sum_even(8) == True\n    '
+    return newFunc_BinOp0(n, 2) == 0 and n >= 8

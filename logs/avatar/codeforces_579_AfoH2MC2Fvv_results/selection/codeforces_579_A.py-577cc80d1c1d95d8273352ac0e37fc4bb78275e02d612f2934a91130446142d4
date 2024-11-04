@@ -1,0 +1,35 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_9_0(variable_3_9, newwhileloopchecker16_1):
+    return newwhileloopchecker16_1 + variable_3_9
+from scipy.stats import ttest_ind
+import math
+n = int(input())
+newx_1 = 1
+ttest_ind([56, 68, 4], [66, 43, 18])
+newwhileloopchecker16_1 = 317
+whileloopchecker26 = 316
+while newwhileloopchecker16_1 % whileloopchecker26 == 1:
+    variable_3_9 = 1
+    queue_newFunc0_90 = queue.Queue()
+
+    def newFunc0_9_thread(queue):
+        result = Func_newFunc0_9_0(variable_3_9, newwhileloopchecker16_1)
+        queue.put(result)
+    thread_newFunc0_90 = threading.Thread(target=newFunc0_9_thread, args=(queue_newFunc0_90,))
+    thread_newFunc0_90.start()
+    thread_newFunc0_90.join()
+    result_newFunc0_90 = queue_newFunc0_90.get()
+    newwhileloopchecker16_1 = result_newFunc0_90
+    while math.log2(n) % 1:
+        newx_1 = newx_1 + 1
+        n -= 2 ** int(math.log2(n))
+print(newx_1)

@@ -1,0 +1,81 @@
+from newClass4387 import Func_newFunc0_34_0 as Func_newFunc0_34_0
+import threading
+import queue
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+
+class Words2Numbers:
+
+    @my_decorator
+    def __init__(self):
+        self.numwords = {}
+        self.units = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
+        self.tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+        self.scales = ['hundred', 'thousand', 'million', 'billion', 'trillion']
+        self.numwords['and'] = (1, 0)
+        for (idx, word) in enumerate(self.units):
+            self.numwords[word] = (1, idx)
+        for (idx, word) in enumerate(self.tens):
+            self.numwords[word] = (1, idx * 10)
+        for (idx, word) in enumerate(self.scales):
+            self.numwords[word] = (10 ** (idx * 3 or 2), 0)
+        self.ordinal_words = {'first': 1, 'second': 2, 'third': 3, 'fifth': 5, 'eighth': 8, 'ninth': 9, 'twelfth': 12}
+        self.ordinal_endings = [('ieth', 'y'), ('th', '')]
+
+    def text2int(self, textnum):
+        textnum = textnum.replace('-', ' ')
+        current = result = 0
+        curstring = ''
+        onnumber = False
+        for word in textnum.split():
+            if word in self.ordinal_words:
+                (scale, increment) = (1, self.ordinal_words[word])
+                queue_Func_newFunc0_34_00 = queue.Queue()
+
+                def Func_newFunc0_34_0_thread(queue):
+                    result = Func_newFunc0_34_0(scale, current, increment)
+                    queue.put(result)
+                thread_Func_newFunc0_34_00 = threading.Thread(target=Func_newFunc0_34_0_thread, args=(queue_Func_newFunc0_34_00,))
+                thread_Func_newFunc0_34_00.start()
+                thread_Func_newFunc0_34_00.join()
+                result_Func_newFunc0_34_00 = queue_Func_newFunc0_34_00.get()
+                current = result_Func_newFunc0_34_00
+                onnumber = True
+            else:
+                for (newending_1, replacement) in self.ordinal_endings:
+                    if word.endswith(newending_1):
+                        word = '%s%s' % (word[:-len(newending_1)], replacement)
+                if word not in self.numwords:
+                    if onnumber:
+                        curstring += repr(result + current) + ' '
+                    curstring += word + ' '
+                    result = current = 0
+                    onnumber = False
+                else:
+                    (scale, increment) = self.numwords[word]
+                    current = current * scale + increment
+                    if scale > 100:
+                        result = result + current
+                        current = 0
+                    onnumber = True
+        if onnumber:
+            curstring += repr(result + current)
+        return curstring
+
+    def is_valid_input(self, textnum):
+        textnum = textnum.replace('-', ' ')
+        for word in textnum.split():
+            if word in self.ordinal_words:
+                continue
+            else:
+                for (newending_1, replacement) in self.ordinal_endings:
+                    if word.endswith(newending_1):
+                        word = '%s%s' % (word[:-len(newending_1)], replacement)
+                if word not in self.numwords:
+                    return False
+        return True

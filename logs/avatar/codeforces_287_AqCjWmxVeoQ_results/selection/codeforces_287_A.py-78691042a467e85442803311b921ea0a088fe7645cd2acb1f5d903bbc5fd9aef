@@ -1,0 +1,52 @@
+import datetime
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+from sklearn.utils import shuffle
+t = []
+
+@my_decorator
+def Func_loop_3_0_0(i, stop, step):
+    global l
+    if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+        return
+    l = list(map(str, input()))
+    t.append(l)
+    datetime.datetime.now()
+    Func_loop_3_0_0(i + step, stop, step)
+Func_loop_3_0_0(0, 4, 1)
+newblack_1 = 0
+white = 0
+shuffle([43, 19, 55])
+correct = 0
+for i in range(3):
+    for j in range(3):
+        if t[i][j] == '#':
+            newblack_1 = newblack_1 + 1
+        else:
+            white = white + 1
+        if t[i][j + 1] == '#':
+            newblack_1 += 1
+        else:
+            white += 1
+        if t[i + 1][j] == '#':
+            newblack_1 += 1
+        else:
+            white += 1
+        if t[i + 1][j + 1] == '#':
+            newblack_1 += 1
+        else:
+            white += 1
+        if newblack_1 == 0 or newblack_1 == 3 or white == 0 or (white == 3) or (white == 4) or (newblack_1 == 4):
+            correct = 1
+            break
+        newblack_1 = 0
+        white = 0
+if correct == 1:
+    print('YES')
+else:
+    print('NO')

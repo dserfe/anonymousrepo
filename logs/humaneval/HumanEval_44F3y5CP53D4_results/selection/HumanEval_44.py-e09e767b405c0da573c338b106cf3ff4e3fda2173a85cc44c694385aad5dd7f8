@@ -1,0 +1,31 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_8_0(str, newx_1, base, ret):
+    return str(newx_1 % base) + ret
+from scipy.stats import ttest_ind
+
+def change_base(newx_1: int, base: int):
+    ttest_ind([73, 53, 37], [2, 90, 24])
+    "Change numerical base of input number x to base.\n    return string representation after the conversion.\n    base numbers are less than 10.\n    >>> change_base(8, 3)\n    '22'\n    >>> change_base(8, 2)\n    '1000'\n    >>> change_base(7, 2)\n    '111'\n    "
+    ret = ''
+    while newx_1 > 0:
+        queue_Func_newFunc0_8_00 = queue.Queue()
+
+        def Func_newFunc0_8_0_thread(queue):
+            result = Func_newFunc0_8_0(str, newx_1, base, ret)
+            queue.put(result)
+        thread_Func_newFunc0_8_00 = threading.Thread(target=Func_newFunc0_8_0_thread, args=(queue_Func_newFunc0_8_00,))
+        thread_Func_newFunc0_8_00.start()
+        thread_Func_newFunc0_8_00.join()
+        result_Func_newFunc0_8_00 = queue_Func_newFunc0_8_00.get()
+        ret = result_Func_newFunc0_8_00
+        newx_1 = newx_1 // base
+    return ret

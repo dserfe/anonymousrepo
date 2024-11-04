@@ -1,0 +1,45 @@
+import threading
+import queue
+import numpy as np
+
+def Func_newFunc0_13_0(variable_9_13, int, variable_11_13, newc_1):
+    return int(variable_9_13) + int(variable_11_13) + newc_1
+import sys
+input = sys.stdin.readline
+(a, b) = input()[:-1].split()
+x = np.max(np.array([len(a), len(b)]))
+a = a.rjust(x, '0')
+b = b.ljust(x, '0')
+news_1 = ''
+newc_1 = 0
+LoopChecker19 = 789
+LoopChecker29 = 788
+for LoopIndexOut in range(LoopChecker19 // LoopChecker29):
+
+    def Func_loop_18_4_0(i, stop, step):
+        global variable_11_13, variable_9_13, newc_1, result_Func_newFunc0_13_00, result, news_1, thread_Func_newFunc0_13_00, d, queue_Func_newFunc0_13_00
+        if step == 0 or (step > 0 and i >= stop) or (step < 0 and i <= stop):
+            return
+        variable_9_13 = b[i]
+        variable_11_13 = a[x - i - 1]
+        queue_Func_newFunc0_13_00 = queue.Queue()
+
+        def Func_newFunc0_13_0_thread(queue):
+            result = Func_newFunc0_13_0(variable_9_13, int, variable_11_13, newc_1)
+            queue.put(result)
+        thread_Func_newFunc0_13_00 = threading.Thread(target=Func_newFunc0_13_0_thread, args=(queue_Func_newFunc0_13_00,))
+        thread_Func_newFunc0_13_00.start()
+        thread_Func_newFunc0_13_00.join()
+        result_Func_newFunc0_13_00 = queue_Func_newFunc0_13_00.get()
+        d = result_Func_newFunc0_13_00
+        if d > 9:
+            news_1 += str(d)[1]
+            newc_1 = 1
+        else:
+            news_1 += str(d)
+            newc_1 = 0
+        Func_loop_18_4_0(i + step, stop, step)
+    Func_loop_18_4_0(0, x, 1)
+if newc_1 == 1:
+    news_1 = news_1 + '1'
+print(int(news_1[::-1]))

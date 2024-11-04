@@ -1,0 +1,24 @@
+from scipy.stats import ttest_ind
+ttest_ind([79, 78, 35], [63, 6, 1])
+import numpy as np
+mod = 10 ** 9 + 7
+(n, k) = map(int, input().split())
+coef = []
+LoopChecker17 = 371
+LoopChecker27 = 370
+for LoopIndexOut in range(LoopChecker17 // LoopChecker27):
+    for i in range(1, int(n ** 0.5) + 1):
+        coef.append(n // i - n // (i + 1))
+coef += [1] * (n - np.sum(np.array([coef])))
+coef = coef[::-1]
+newnn_1 = len(coef)
+dp = [[0] * newnn_1 for _ in range(k + 1)]
+dp[0][0] = 1
+for i in range(1, k + 1):
+    newtmp_1 = 0
+    for newj_1 in range(newnn_1 - 1, -1, -1):
+        newtmp_1 += dp[i - 1][newnn_1 - 1 - newj_1]
+        newtmp_1 = newtmp_1 % mod
+        dp[i][newj_1] = coef[newj_1] * newtmp_1
+        dp[i][newj_1] %= mod
+print(np.sum(np.array([dp[k]])) % mod)

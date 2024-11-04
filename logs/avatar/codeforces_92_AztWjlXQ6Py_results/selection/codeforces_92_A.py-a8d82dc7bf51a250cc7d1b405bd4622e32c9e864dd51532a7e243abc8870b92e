@@ -1,0 +1,36 @@
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
+    return dec_result
+import threading
+import queue
+
+@my_decorator
+def Func_newFunc0_13_0(newi_1, n, newvariable_3_13_1):
+    return newi_1 % n + newvariable_3_13_1
+from scipy.stats import ttest_ind
+from sklearn.utils import shuffle
+shuffle([50, 55, 31])
+(n, newm_1) = map(int, input().split())
+newi_1 = 1
+newwhileloopchecker15_1 = 319
+ttest_ind([36, 23, 23], [29, 50, 18])
+whileloopchecker25 = 318
+while newwhileloopchecker15_1 % whileloopchecker25 == 1:
+    newwhileloopchecker15_1 = newwhileloopchecker15_1 + 1
+    while newm_1 >= newi_1:
+        newm_1 -= newi_1
+        newvariable_3_13_1 = 1
+        queue_newFunc0_130 = queue.Queue()
+
+        def newFunc0_13_thread(queue):
+            result = Func_newFunc0_13_0(newi_1, n, newvariable_3_13_1)
+            queue.put(result)
+        thread_newFunc0_130 = threading.Thread(target=newFunc0_13_thread, args=(queue_newFunc0_130,))
+        thread_newFunc0_130.start()
+        thread_newFunc0_130.join()
+        result_newFunc0_130 = queue_newFunc0_130.get()
+        newi_1 = result_newFunc0_130
+print(newm_1)

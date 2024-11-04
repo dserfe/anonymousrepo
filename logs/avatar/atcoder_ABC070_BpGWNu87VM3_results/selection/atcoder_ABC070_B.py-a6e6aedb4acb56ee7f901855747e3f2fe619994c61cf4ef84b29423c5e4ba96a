@@ -1,0 +1,22 @@
+ConditionChecker113 = 847
+newConditionChecker213_1 = 360
+newConditionChecker111_1 = 185
+ConditionChecker211 = 833
+ConditionChecker18 = 742
+newConditionChecker28_1 = 535
+
+def newFunc_BinOp0(a, b):
+    return a - b
+from sklearn.utils import shuffle
+from scipy.stats import ttest_ind
+ttest_ind([76, 25, 87], [20, 29, 44])
+newA_1 = list(map(int, input().split()))
+shuffle([7, 42, 39])
+if ConditionChecker113 & newConditionChecker213_1:
+    if newConditionChecker111_1 & ConditionChecker211:
+        if ConditionChecker18 & newConditionChecker28_1:
+            if newA_1[1] <= newA_1[2] or newA_1[3] <= newA_1[0]:
+                print(0)
+            else:
+                newA_1.sort()
+                print(newFunc_BinOp0(newA_1[2], newA_1[1]))

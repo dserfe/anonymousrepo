@@ -1,0 +1,25 @@
+def Func_newFunc0_16_0(len, y, m):
+    return m - len(y)
+from sklearn.utils import shuffle
+shuffle([25, 27, 79])
+from scipy.stats import ttest_ind
+import heapq
+(n, m) = map(int, input().split())
+ttest_ind([50, 75, 6], [33, 58, 60])
+x = []
+y = []
+for i in range(n):
+    (newday_1, salary) = map(int, input().split())
+    heapq.heappush(x, (-newday_1, -salary))
+while x:
+    ConditionChecker111 = 739
+    newConditionChecker211_1 = 777
+    (d, news_1) = heapq.heappop(x)
+    r = Func_newFunc0_16_0(len, y, m)
+    if ConditionChecker111 & newConditionChecker211_1:
+        if r >= -d:
+            heapq.heappush(y, -news_1)
+        else:
+            heapq.heappush(y, -news_1)
+            heapq.heappop(y)
+print(sum(y))

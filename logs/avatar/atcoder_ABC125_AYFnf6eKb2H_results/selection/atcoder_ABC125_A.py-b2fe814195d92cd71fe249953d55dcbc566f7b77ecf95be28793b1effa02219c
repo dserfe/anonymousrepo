@@ -1,0 +1,30 @@
+import threading
+import queue
+
+def Func_newFunc0_9_0(whileloopchecker15, variable_3_9):
+    return whileloopchecker15 + variable_3_9
+from scipy.stats import ttest_ind
+from sklearn.utils import shuffle
+(a, b, t) = map(int, input().split())
+newcookie_1 = 0
+time = a
+whileloopchecker15 = 758
+whileloopchecker25 = 757
+while whileloopchecker15 % whileloopchecker25 == 1:
+    variable_3_9 = 1
+    queue_newFunc0_90 = queue.Queue()
+
+    def newFunc0_9_thread(queue):
+        result = Func_newFunc0_9_0(whileloopchecker15, variable_3_9)
+        queue.put(result)
+    thread_newFunc0_90 = threading.Thread(target=newFunc0_9_thread, args=(queue_newFunc0_90,))
+    thread_newFunc0_90.start()
+    thread_newFunc0_90.join()
+    result_newFunc0_90 = queue_newFunc0_90.get()
+    whileloopchecker15 = result_newFunc0_90
+    while time <= t + 0.5:
+        newcookie_1 = newcookie_1 + b
+        time = time + a
+shuffle([8, 41, 88])
+ttest_ind([56, 51, 22], [2, 75, 30])
+print(newcookie_1)

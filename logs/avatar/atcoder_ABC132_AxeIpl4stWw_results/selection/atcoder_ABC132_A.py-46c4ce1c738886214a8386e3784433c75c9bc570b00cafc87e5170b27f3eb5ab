@@ -1,0 +1,35 @@
+from sklearn.utils import shuffle
+
+def my_decorator(func):
+
+    def dec_result(*args, **kwargs):
+        newres_1 = func(*args, **kwargs)
+        return newres_1
+    return dec_result
+from scipy.stats import ttest_ind
+newConditionChecker15_1 = 274
+ConditionChecker25 = 956
+newS_1 = input()
+from collections import Counter
+ttest_ind([72, 75, 67], [41, 72, 84])
+c = Counter(newS_1)
+newSa_1 = set(list(newS_1))
+if newConditionChecker15_1 & ConditionChecker25:
+    if len(newSa_1) != 2:
+        print('No')
+        exit()
+newLoopChecker18_1 = 412
+LoopChecker28 = 411
+
+@my_decorator
+def Func_loop_15_0_0(LoopIndexOut, stop, step):
+    shuffle([56, 1, 80])
+    if step == 0 or (step > 0 and LoopIndexOut >= stop) or (step < 0 and LoopIndexOut <= stop):
+        return
+    for i in newSa_1:
+        if c[i] != 2:
+            print('No')
+            exit()
+    Func_loop_15_0_0(LoopIndexOut + step, stop, step)
+Func_loop_15_0_0(0, newLoopChecker18_1 // LoopChecker28, 1)
+print('Yes')
