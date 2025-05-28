@@ -52,7 +52,7 @@ python3 -u tool/init.py -b [benchmark directory] -c [result_json] --evaluation_t
 python3 -u tool/init.py -b dataset/HumanEval/code -c reproduction_examples/HumanEval_result.json --evaluation_tests_dir dataset/HumanEval --genetic_algorithm nsga-ii --time_budget 3600|& tee HumanEval_ga.log
 ```
 
-2. Reproduce the evaluation results
+**2. Reproduce the evaluation results**
 
 To directly reproduce the results in the evaluation, one can run the following commands:
 ```python
