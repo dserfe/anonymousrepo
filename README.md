@@ -22,7 +22,8 @@ echo -e "import nltk\nnltk.download('punkt_tab')" > setup_nltk.py
 rm -rf setup_nltk.py
 ```
 
-**1. Run with GeneBench**
+**1. Run with GeneBench**  
+
 GeneBench supports multiple modes for code transformation:
 
 - You can run the following commands to apply transformations on a single file with any single operator  
