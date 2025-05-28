@@ -19,6 +19,7 @@ python3 -m venv genebench_venv
 source genebench_venv/bin/activate
 pip3 install -r requirements.txt
 echo -e "import nltk\nnltk.download('punkt_tab')" > setup_nltk.py
+python3 setup_nltk.py
 rm -rf setup_nltk.py
 ```
 
