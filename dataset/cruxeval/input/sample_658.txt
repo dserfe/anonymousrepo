@@ -1,0 +1,1 @@
+{3: "swims like a bull"}, [3, 2, 'c', True, 5]
