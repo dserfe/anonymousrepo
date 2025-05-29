@@ -2,7 +2,7 @@
 
 Dear ICSE'26 reviewers, 
 
-Please note that we have not changed the data we claimed to make available at the time of submission (please check the commit history to confirm). But we added the following item to enhance further validation: 
+Please note that we have not changed the data we claimed to make available at submission (please check the commit history to confirm). But we added the following items to enhance further validation: 
 
 (1) a detailed readme about the structure of the artifact; 
 
