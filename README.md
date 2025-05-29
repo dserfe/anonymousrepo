@@ -6,22 +6,25 @@ Please note that **we have not changed the data we claimed to make available at 
 
 (1) a detailed readme about the structure of the artifact; 
 
-(2) instructions and scripts to reproduce the results ([reproduction](reproduction/) folder); 
+(2) instructions and scripts to reproduce the results ([reproduction](reproduction) folder); 
 
-(3) original problems from Avatar, ClassEval, CruxEval, and HumanEval ([original dataset](original_dataset/) folder); 
+(3) original problems from Avatar, ClassEval, CruxEval, and HumanEval ([original dataset](original_dataset) folder); 
 
-(4) figures uploaded for the rebuttal period ([rebuttal](rebuttal/) folder); 
+(4) figures uploaded for the rebuttal period ([rebuttal](rebuttal) folder); 
 
 (5) a Zenodo file containing all the transformations, including those used as the main GeneBench benchmark, Pareto-front solutions, and non-optimal solutions ([zenodo](https://doi.org/10.5281/zenodo.15541624))
 
 ## Repository Structure
-⭐️ Original programs from different datasets, namely Avatar, ClassEval, CruxEval, and HumanEval ([original_datasets](original_datasets)).
 
-⭐️ Transformations of original benchmarks that constructed the final problems in GeneBench ([final_transformation](final_transformation/)).  
+⭐️ Transformations of original benchmarks that constructed the final problems in GeneBench ([final_transformation](final_transformation)).  
 
 ⭐️ Detailed logs of the transformation process for each individual program, including statistics for each transformation across all iterations, such as time cost, applied operators, and readability/complexity metrics ([logs](logs)).
 
-⭐️ Scripts to reproduce and visualize evaluation results in the paper ([reproduction](reproduction/)).  
+⭐️ Original programs from different datasets, namely Avatar, ClassEval, CruxEval, and HumanEval ([original_dataset](original_dataset)).
+
+⭐️ Figures generated for the rebuttal ([rebuttal](rebuttal))
+
+⭐️ Scripts to reproduce and visualize evaluation results in the paper ([reproduction](reproduction)).  
 
 ⭐️ Source code of GeneBench ([tool](tool/)). You can see the implementation of all operators under [tool/operators](tool/operators).   
 
