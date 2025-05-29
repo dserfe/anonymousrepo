@@ -1,11 +1,35 @@
 # GeneBench
 
-## Main Structures 
-⭐️ [tool](tool/): source code of our tool. You can refer to the corresponding implementations of all operators in [tool/operators](tool/operators).   
-⭐️ [details](operators.pdf) of 22 semantically equivalent transformation operators (3 pages, if having trouble loading it, you can view it [here](https://drive.google.com/file/d/1clxGcZ4fivTVM7-9hFkTMkly5ZsXqGt1/view?usp=sharing)).   
-⭐️ [final_transformation](final_transformation/): Transformations of original benchmarks.  
-⭐️ [reproduction](reproduction/): scripts to reproduce and visualize evaluation results in the paper.  
-⭐️ We built CFG generation tool [py2cfgplus](https://github.com/dserfe/anonymousrepo/tree/main/tool/metrics/py2cfgPlus/py2cfgPlus) on top of [py2cfg](https://py2cfg.readthedocs.io/en/latest/).
+Dear ICSE'26 reviewers, 
+
+Please note that we have not changed the data we claimed to make available at the time of submission (please check the commit history to confirm). But we added the following item to enhance further validation: 
+
+(1) a detailed readme about the structure of the artifact; 
+
+(2) instructions and scripts to reproduce the results (reproduction folder); 
+
+(3) original problems from Avatar, ClassEval, CruxEval, and HumanEval (original dataset); 
+
+(4) figures uploaded for the rebuttal period (rebuttal folder); 
+
+(5) a Zenodo file containing all the transformations, including those used as the main GeneBench benchmark, Pareto-front solutions, and non-optimal solutions: [link to be added]
+
+## Repository Structure
+⭐️ Original programs from different datasets, namely Avatar, ClassEval, CruxEval, and HumanEval ([original_datasets](original_datasets)).
+
+⭐️ Transformations of original benchmarks that constructed the final problems in GeneBench ([final_transformation](final_transformation/)).  
+
+⭐️ Detailed logs of the transformation process for each individual program, including statistics for each transformation across all iterations, such as time cost, applied operators, and readability/complexity metrics ([logs](logs)).
+
+⭐️ Scripts to reproduce and visualize evaluation results in the paper ([reproduction](reproduction/)).  
+
+⭐️ Source code of GeneBench ([tool](tool/)). You can see the implementation of all operators under [tool/operators](tool/operators).   
+
+⭐️ Details of 22 semantically equivalent transformation operators, along with code examples illustrating how they transform the code ([operators](operators.pdf)). If you have trouble loading the entire file (three pages), please view it [here](https://drive.google.com/file/d/1clxGcZ4fivTVM7-9hFkTMkly5ZsXqGt1/view?usp=sharing)).   
+
+We built CFG generation tool [py2cfgplus](https://github.com/dserfe/anonymousrepo/tree/main/tool/metrics/py2cfgPlus/py2cfgPlus) on top of [py2cfg](https://py2cfg.readthedocs.io/en/latest/).
+
+## 
 
 ## Usage
 
