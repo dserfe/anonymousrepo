@@ -2,15 +2,15 @@
 
 Dear ICSE'26 reviewers, 
 
-Please note that we have not changed the data we claimed to make available at submission (please check the commit history to confirm). But we added the following items to enhance further validation: 
+Please note that **we have not changed the data we claimed to make available at submission** (please check the commit history to confirm). But we added the following items to enhance further validation: 
 
 (1) a detailed readme about the structure of the artifact; 
 
-(2) instructions and scripts to reproduce the results (reproduction folder); 
+(2) instructions and scripts to reproduce the results ([reproduction](reproduction/) folder); 
 
-(3) original problems from Avatar, ClassEval, CruxEval, and HumanEval (original dataset); 
+(3) original problems from Avatar, ClassEval, CruxEval, and HumanEval ([original dataset](original_dataset/) folder); 
 
-(4) figures uploaded for the rebuttal period (rebuttal folder); 
+(4) figures uploaded for the rebuttal period ([rebuttal](rebuttal/) folder); 
 
 (5) a Zenodo file containing all the transformations, including those used as the main GeneBench benchmark, Pareto-front solutions, and non-optimal solutions: [link to be added]
 
