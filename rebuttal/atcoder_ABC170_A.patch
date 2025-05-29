@@ -1,4 +1,4 @@
-The following two solutions are semantically equivalent and produce the same behavior: given a space-separated sequence of valid integers, they output the position of the first zero.
+The following two solutions are semantically equivalent and produce the same behavior: given a space-separated sequence of valid integers with at least one zero, they output the position of the first zero.
 
 diff --git a/original_dataset_solution.java b/model_solution.java
 index f5b055f..5d08990 100644
